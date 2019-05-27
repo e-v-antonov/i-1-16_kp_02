@@ -39,10 +39,10 @@
             this.tbUserServer = new System.Windows.Forms.TextBox();
             this.tbPasswordServer = new System.Windows.Forms.TextBox();
             this.sstStatusConnection = new System.Windows.Forms.StatusStrip();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.lbStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbsstStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.btnConnect = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.sstStatusConnection.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,44 +104,51 @@
             // cbAddressServer
             // 
             this.cbAddressServer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbAddressServer.Enabled = false;
             this.cbAddressServer.FormattingEnabled = true;
             this.cbAddressServer.Location = new System.Drawing.Point(0, 17);
             this.cbAddressServer.Name = "cbAddressServer";
-            this.cbAddressServer.Size = new System.Drawing.Size(361, 24);
+            this.cbAddressServer.Size = new System.Drawing.Size(385, 24);
             this.cbAddressServer.TabIndex = 5;
             // 
             // cbNameServer
             // 
             this.cbNameServer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbNameServer.Enabled = false;
             this.cbNameServer.FormattingEnabled = true;
             this.cbNameServer.Location = new System.Drawing.Point(0, 58);
             this.cbNameServer.Name = "cbNameServer";
-            this.cbNameServer.Size = new System.Drawing.Size(361, 24);
+            this.cbNameServer.Size = new System.Drawing.Size(385, 24);
             this.cbNameServer.TabIndex = 6;
             // 
             // cbListDataBase
             // 
             this.cbListDataBase.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbListDataBase.Enabled = false;
             this.cbListDataBase.FormattingEnabled = true;
             this.cbListDataBase.Location = new System.Drawing.Point(0, 177);
             this.cbListDataBase.Name = "cbListDataBase";
-            this.cbListDataBase.Size = new System.Drawing.Size(361, 24);
+            this.cbListDataBase.Size = new System.Drawing.Size(385, 24);
             this.cbListDataBase.TabIndex = 7;
             // 
             // tbUserServer
             // 
             this.tbUserServer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbUserServer.Enabled = false;
             this.tbUserServer.Location = new System.Drawing.Point(0, 99);
             this.tbUserServer.Name = "tbUserServer";
-            this.tbUserServer.Size = new System.Drawing.Size(361, 22);
+            this.tbUserServer.PasswordChar = '*';
+            this.tbUserServer.Size = new System.Drawing.Size(385, 22);
             this.tbUserServer.TabIndex = 8;
             // 
             // tbPasswordServer
             // 
             this.tbPasswordServer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbPasswordServer.Enabled = false;
             this.tbPasswordServer.Location = new System.Drawing.Point(0, 138);
             this.tbPasswordServer.Name = "tbPasswordServer";
-            this.tbPasswordServer.Size = new System.Drawing.Size(361, 22);
+            this.tbPasswordServer.PasswordChar = '*';
+            this.tbPasswordServer.Size = new System.Drawing.Size(385, 22);
             this.tbPasswordServer.TabIndex = 9;
             // 
             // sstStatusConnection
@@ -149,65 +156,70 @@
             this.sstStatusConnection.Dock = System.Windows.Forms.DockStyle.Top;
             this.sstStatusConnection.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.sstStatusConnection.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lbStatus});
+            this.lbsstStatus});
             this.sstStatusConnection.Location = new System.Drawing.Point(0, 297);
             this.sstStatusConnection.Name = "sstStatusConnection";
-            this.sstStatusConnection.Size = new System.Drawing.Size(361, 22);
+            this.sstStatusConnection.Size = new System.Drawing.Size(385, 22);
             this.sstStatusConnection.TabIndex = 10;
             this.sstStatusConnection.Text = "statusStrip1";
             // 
-            // button1
+            // lbsstStatus
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(0, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(361, 32);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Проверить";
-            this.button1.UseVisualStyleBackColor = false;
+            this.lbsstStatus.Font = new System.Drawing.Font("Arial", 9F);
+            this.lbsstStatus.Name = "lbsstStatus";
+            this.lbsstStatus.Size = new System.Drawing.Size(13, 17);
+            this.lbsstStatus.Text = "-";
             // 
-            // button2
+            // btnCheck
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(0, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(361, 32);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Подключить";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCheck.BackColor = System.Drawing.Color.Transparent;
+            this.btnCheck.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCheck.Enabled = false;
+            this.btnCheck.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnCheck.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCheck.Location = new System.Drawing.Point(0, 201);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(385, 32);
+            this.btnCheck.TabIndex = 11;
+            this.btnCheck.Text = "Проверить";
+            this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
-            // button3
+            // btnConnect
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(0, 265);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(361, 32);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Отменить";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnConnect.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConnect.Enabled = false;
+            this.btnConnect.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnConnect.Location = new System.Drawing.Point(0, 233);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(385, 32);
+            this.btnConnect.TabIndex = 12;
+            this.btnConnect.Text = "Подключить";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
-            // lbStatus
+            // btnCancel
             // 
-            this.lbStatus.Font = new System.Drawing.Font("Arial", 9F);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(13, 19);
-            this.lbStatus.Text = "-";
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCancel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnCancel.Location = new System.Drawing.Point(0, 265);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(385, 32);
+            this.btnCancel.TabIndex = 13;
+            this.btnCancel.Text = "Отменить";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // ConnectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(361, 343);
+            this.ClientSize = new System.Drawing.Size(385, 343);
             this.Controls.Add(this.sstStatusConnection);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnConnect);
+            this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.cbListDataBase);
             this.Controls.Add(this.lbListDataBase);
             this.Controls.Add(this.tbPasswordServer);
@@ -220,9 +232,11 @@
             this.Controls.Add(this.lbAddressServer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "ConnectionForm";
-            this.Text = "Настройка подключения к БД";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Подключение к БД";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConnectionForm_FormClosing);
+            this.Load += new System.EventHandler(this.ConnectionForm_Load);
             this.sstStatusConnection.ResumeLayout(false);
             this.sstStatusConnection.PerformLayout();
             this.ResumeLayout(false);
@@ -243,9 +257,9 @@
         private System.Windows.Forms.TextBox tbUserServer;
         private System.Windows.Forms.TextBox tbPasswordServer;
         private System.Windows.Forms.StatusStrip sstStatusConnection;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ToolStripStatusLabel lbStatus;
+        private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ToolStripStatusLabel lbsstStatus;
     }
 }

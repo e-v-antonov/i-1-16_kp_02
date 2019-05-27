@@ -13,7 +13,10 @@ namespace Library
             storedProcedure.CommandType = System.Data.CommandType.StoredProcedure;
         }
 
-        public void SPRegistrationCardReaderInsert(string surnameReader, string nameReader, string patronymicReader, DateTime birthdayReader, string passportSeriesReader, string passportNumberReader, string whoGivePassportReader, string whenGivePassportReader, string townReader, string streetReader, UInt32 buildingReader, UInt32 apartmentReader, string homePhoneReader, string mobilePhoneReader, string emailReader, DateTime registrationDateReader)  //добавление регистрационной карточки
+        public void SPRegistrationCardReaderInsert(string surnameReader, string nameReader, string patronymicReader, DateTime birthdayReader, 
+            string passportSeriesReader, string passportNumberReader, string whoGivePassportReader, string whenGivePassportReader, string townReader, 
+            string streetReader, UInt32 buildingReader, UInt32 apartmentReader, string homePhoneReader, string mobilePhoneReader, string emailReader, 
+            DateTime registrationDateReader)  //добавление регистрационной карточки
         {
             ConfigurationProcedure("Registration_Card_Reader_Insert");
 
@@ -37,7 +40,10 @@ namespace Library
             ExecuteStoredProcedure();
         }
 
-        public void SPRegistrationCardReaderUpdate(Int32 idRegistrationCardReader, string surnameReader, string nameReader, string patronymicReader, DateTime birthdayReader, string passportSeriesReader, string passportNumberReader, string whoGivePassportReader, string whenGivePassportReader, string townReader, string streetReader, UInt32 buildingReader, UInt32 apartmentReader, string homePhoneReader, string mobilePhoneReader, string emailReader, DateTime registrationDateReader)  //обновление ррегистрационной картчоки
+        public void SPRegistrationCardReaderUpdate(Int32 idRegistrationCardReader, string surnameReader, string nameReader, string patronymicReader, 
+            DateTime birthdayReader, string passportSeriesReader, string passportNumberReader, string whoGivePassportReader, string whenGivePassportReader, 
+            string townReader, string streetReader, UInt32 buildingReader, UInt32 apartmentReader, string homePhoneReader, string mobilePhoneReader, 
+            string emailReader, DateTime registrationDateReader)  //обновление ррегистрационной картчоки
         {
             ConfigurationProcedure("Registration_Card_Reader_Update");
 
@@ -195,7 +201,8 @@ namespace Library
             ExecuteStoredProcedure();
         }
 
-        public void SPBookInsert(string bookTitle, UInt32 publicationDate, UInt32 numberPages, string ISBNBook, UInt32 costBook, UInt32 totalNumberCopiesBook, DateTime dateAcceptanceBook, Int32 writerID, Int32 genreBookID, Int32 publishingBookID)  //добавление книги
+        public void SPBookInsert(string bookTitle, UInt32 publicationDate, UInt32 numberPages, string ISBNBook, UInt32 costBook, UInt32 totalNumberCopiesBook, 
+            DateTime dateAcceptanceBook, Int32 writerID, Int32 genreBookID, Int32 publishingBookID)  //добавление книги
         {
             ConfigurationProcedure("Book_Insert");
 
@@ -213,7 +220,8 @@ namespace Library
             ExecuteStoredProcedure();
         }
 
-        public void SPBookUpdate(Int32 idBook, string bookTitle, UInt32 publicationDate, UInt32 numberPages, string ISBNBook, UInt32 costBook, UInt32 totalNumberCopiesBook, DateTime dateAcceptanceBook, Int32 writerID, Int32 genreBookID, Int32 publishingBookID)    //обновление книги
+        public void SPBookUpdate(Int32 idBook, string bookTitle, UInt32 publicationDate, UInt32 numberPages, string ISBNBook, UInt32 costBook, 
+            UInt32 totalNumberCopiesBook, DateTime dateAcceptanceBook, Int32 writerID, Int32 genreBookID, Int32 publishingBookID)    //обновление книги
         {
             ConfigurationProcedure("Book_Update");
 
@@ -307,7 +315,8 @@ namespace Library
             ExecuteStoredProcedure();
         }
 
-        public void SPRoleUserUpdate(Int32 idRoleUser, string roleName, UInt32 administratorUser, UInt32 guestUser, UInt32 directorUser, UInt32 bibliographerUser, UInt32 librarianUser)    //обновление роли
+        public void SPRoleUserUpdate(Int32 idRoleUser, string roleName, UInt32 administratorUser, UInt32 guestUser, UInt32 directorUser, UInt32 bibliographerUser, 
+            UInt32 librarianUser)    //обновление роли
         {
             ConfigurationProcedure("Role_User_Update");
 
