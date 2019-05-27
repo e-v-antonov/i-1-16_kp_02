@@ -15,14 +15,14 @@ namespace Library
         RegistryData registryData = new RegistryData();
 
 
-        public void GetServers()
+        public void GetServers()    //получение серверов
         {
             SqlDataSourceEnumerator sqlDataSourceEnumerator = SqlDataSourceEnumerator.Instance;
 
             DataTableServers(sqlDataSourceEnumerator.GetDataSources());
         }
 
-        public void GetDataBases()
+        public void GetDataBases()  //получение баз данных
         {
             SqlConnection sqlConnection = new SqlConnection("Data Source = " + ConnectionDS + "; Initial Catalog = master; Persist Security Info = true; " +
                 " User ID = " + ConnectionUID + "; Password = \"" + ConnectionPassword + "\"");
@@ -46,7 +46,7 @@ namespace Library
             }
         }
 
-        public void CheckConnection()
+        public void CheckConnection()   //проверка подключения к базе данных данными из реестра
         {
             registryData.GetRegistry();
 

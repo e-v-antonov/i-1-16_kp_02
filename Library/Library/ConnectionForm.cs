@@ -16,17 +16,14 @@ namespace Library
         private DBConnection dbConnection = new DBConnection();
         private int status = 1;
         public Thread threadGetServers;
-        public Thread threadMessage;
-        public Thread threadMessage1;
-        public Thread threadGetDataBases;
-        
+        public Thread threadMessage;        
 
         public ConnectionForm()
         {
             InitializeComponent();
         }
 
-        private void ConnectionForm_Load(object sender, EventArgs e)
+        private void ConnectionForm_Load(object sender, EventArgs e)    //загрузка формы
         {
             switch (DBConnection.LogConnection)
             {
@@ -56,7 +53,7 @@ namespace Library
             }
         }
 
-        private void DTServers(DataTable table)
+        private void DTServers(DataTable table) //загрузка списка серверов
         {
             status = 0;
 
@@ -84,7 +81,7 @@ namespace Library
             }
         }
 
-        private void StatusStripMessage()
+        private void StatusStripMessage()   //сообщение о статусе подключения
         {
             for (int i = 0; i < status;)
             {
@@ -123,7 +120,7 @@ namespace Library
             }
         }
 
-        private void btnCheck_Click(object sender, EventArgs e)
+        private void btnCheck_Click(object sender, EventArgs e) //проверка данных
         {
             if ((cbAddressServer.SelectedIndex == -1) || (cbNameServer.SelectedIndex == -1) || (tbUserServer.Text == String.Empty) || (tbPasswordServer.Text == String.Empty))
                 MessageBox.Show("Заполните все поля!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -136,16 +133,16 @@ namespace Library
                 lbsstStatus.Text = "Поиск баз данных";
                 lbsstStatus.Visible = true;
                 dbConnection.DataTableDatabases += ListDataBases;
-                Thread threadMessage1 = new Thread(StatusStripMessage);
+                Thread threadMessageCheck = new Thread(StatusStripMessage);
                 Thread threadGetDataBases = new Thread(dbConnection.GetDataBases);
-                threadMessage1.Priority = ThreadPriority.Lowest;
-                threadMessage1.IsBackground = true;
-                threadMessage1.Start();
+                threadMessageCheck.Priority = ThreadPriority.Lowest;
+                threadMessageCheck.IsBackground = true;
+                threadMessageCheck.Start();
                 threadGetDataBases.Start();
             }
         }
 
-        private void ListDataBases(DataTable table)
+        private void ListDataBases(DataTable table) //получение списка баз данных
         {
             Action action = () =>
             {
@@ -161,7 +158,7 @@ namespace Library
             Invoke(action);
         }
 
-        private void btnConnect_Click(object sender, EventArgs e)
+        private void btnConnect_Click(object sender, EventArgs e)   //подключение к базе данных
         {
             if ((cbAddressServer.SelectedIndex == -1) || (cbNameServer.SelectedIndex == -1) || (tbUserServer.Text == String.Empty) || (tbPasswordServer.Text == String.Empty) || (cbListDataBase.SelectedIndex == -1))
                 MessageBox.Show("Заполните все поля!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -175,12 +172,12 @@ namespace Library
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)    //кнопка отмены
         {
             Close();                    
         }
 
-        private void ConnectionForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void ConnectionForm_FormClosing(object sender, FormClosingEventArgs e)  //закрытие формы
         {
             switch (DBConnection.LogConnection)
             {
@@ -188,7 +185,6 @@ namespace Library
                     e.Cancel = false;
                     break;
                 case (false):
-                    //Application.Exit();
                     break;
             }
         }

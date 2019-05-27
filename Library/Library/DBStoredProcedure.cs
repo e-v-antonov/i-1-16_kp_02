@@ -400,19 +400,24 @@ namespace Library
         {
             try
             {
-                //открываем подключение
-                //сообщение предупреждение
+                RegistryData.DBConnectionString.Open();
+                RegistryData.DBConnectionString.InfoMessage += MessageInformation;
                 storedProcedure.ExecuteNonQuery();
                 storedProcedure.Parameters.Clear();
             }
             catch (SqlException ex)
             {
-                //сообщение об ошибке
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " " + ex.Message;
             }
             finally
             {
-                //закрываем подключение
+                RegistryData.DBConnectionString.Close();
             }
+        }
+
+        private void MessageInformation(object sender, SqlInfoMessageEventArgs e)   //информационное сообщение от SQL
+        {
+            RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " " + e.Message;
         }
     }
 }

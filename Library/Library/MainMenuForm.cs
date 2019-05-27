@@ -16,7 +16,7 @@ namespace Library
             InitializeComponent();
         }
 
-        public void MainMenu_Load(object sender, EventArgs e)
+        public void MainMenu_Load(object sender, EventArgs e)   //загрузка формы
         {
             lbsstConnection.Visible = true;
             lbsstConnection.Text = "Определение сервера...";
@@ -25,7 +25,7 @@ namespace Library
             threadCheckConnection.Start();
         }
 
-        private void InformationConnection(bool value)
+        private void InformationConnection(bool value)  //проверка подключенияк базе данных
         {
             try
             {
@@ -58,13 +58,13 @@ namespace Library
             }
         }
 
-        private void miSettings_Click(object sender, EventArgs e)
+        private void miSettings_Click(object sender, EventArgs e)   //открытие окна подключения к базе данных
         {
             ConnectionForm connectionFormOpen = new ConnectionForm();
             connectionFormOpen.Show(this);
         }
 
-        private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)    //закрытие формы
         {
             Application.Exit();
         }
