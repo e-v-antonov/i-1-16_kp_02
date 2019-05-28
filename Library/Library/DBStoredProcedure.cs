@@ -5,7 +5,7 @@ namespace Library
 {
     class DBStoredProcedure
     {
-        private SqlCommand storedProcedure = new SqlCommand();  //добавить подключение к БД
+        private SqlCommand storedProcedure = new SqlCommand("", RegistryData.DBConnectionString);  //добавить подключение к БД
 
         private void ConfigurationProcedure(string nameProcedure)   //задание названия процедуры
         {

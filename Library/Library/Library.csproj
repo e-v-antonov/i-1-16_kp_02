@@ -54,6 +54,19 @@
     </Compile>
     <Compile Include="DBConnection.cs" />
     <Compile Include="DBStoredProcedure.cs" />
+    <Compile Include="DBTables.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenreBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenreBookForm.Designer.cs">
+      <DependentUpon>GenreBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +78,12 @@
     <Compile Include="RegistryData.cs" />
     <EmbeddedResource Include="ConnectionForm.resx">
       <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenreBookForm.resx">
+      <DependentUpon>GenreBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>

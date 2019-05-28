@@ -40,6 +40,7 @@
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.miGenreBook = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +67,7 @@
             this.miExitSystem});
             this.miSystem.Font = new System.Drawing.Font("Arial", 9F);
             this.miSystem.Name = "miSystem";
-            this.miSystem.Size = new System.Drawing.Size(80, 21);
+            this.miSystem.Size = new System.Drawing.Size(80, 24);
             this.miSystem.Text = "Система";
             // 
             // miExitProfile
@@ -90,16 +91,18 @@
             // 
             // miHandbook
             // 
+            this.miHandbook.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miGenreBook});
             this.miHandbook.Font = new System.Drawing.Font("Arial", 9F);
             this.miHandbook.Name = "miHandbook";
-            this.miHandbook.Size = new System.Drawing.Size(110, 21);
+            this.miHandbook.Size = new System.Drawing.Size(110, 24);
             this.miHandbook.Text = "Справочники";
             // 
             // miInformationSystem
             // 
             this.miInformationSystem.Font = new System.Drawing.Font("Arial", 9F);
             this.miInformationSystem.Name = "miInformationSystem";
-            this.miInformationSystem.Size = new System.Drawing.Size(88, 21);
+            this.miInformationSystem.Size = new System.Drawing.Size(88, 24);
             this.miInformationSystem.Text = "Сведения";
             // 
             // sstInformation
@@ -130,6 +133,13 @@
             // timer
             // 
             this.timer.Enabled = true;
+            // 
+            // miGenreBook
+            // 
+            this.miGenreBook.Name = "miGenreBook";
+            this.miGenreBook.Size = new System.Drawing.Size(216, 26);
+            this.miGenreBook.Text = "Жанры книг...";
+            this.miGenreBook.Click += new System.EventHandler(this.miGenreBook_Click);
             // 
             // MainMenuForm
             // 
@@ -168,6 +178,7 @@
         private System.Windows.Forms.ToolStripMenuItem miExitSystem;
         private System.Windows.Forms.ToolStripStatusLabel lbsstDateTime;
         private System.Windows.Forms.ToolStripStatusLabel lbsstConnection;
+        private System.Windows.Forms.ToolStripMenuItem miGenreBook;
     }
 }
 

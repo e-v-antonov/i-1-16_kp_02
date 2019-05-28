@@ -68,5 +68,13 @@ namespace Library
         {
             Application.Exit();
         }
+
+        private void miGenreBook_Click(object sender, EventArgs e)
+        {
+            //Form1 form1 = new Form1();
+            //form1.Show(this);
+            GenreBookForm genreBookForm = new GenreBookForm();
+            genreBookForm.Show(this);
+        }
     }
 }
