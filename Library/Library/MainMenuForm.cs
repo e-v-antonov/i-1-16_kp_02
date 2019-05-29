@@ -70,11 +70,15 @@ namespace Library
         }
 
         private void miGenreBook_Click(object sender, EventArgs e)
-        {
-            //Form1 form1 = new Form1();
-            //form1.Show(this);
+        {           
             GenreBookForm genreBookForm = new GenreBookForm();
             genreBookForm.Show(this);
+        }
+
+        private void miPublishingBook_Click(object sender, EventArgs e)
+        {
+            PublishingBookForm publishingBookForm = new PublishingBookForm();
+            publishingBookForm.Show();
         }
     }
 }
