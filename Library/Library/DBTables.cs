@@ -8,6 +8,7 @@ namespace Library
     {
         public SqlCommand CommandGenreBook = new SqlCommand("select [dbo].[Genre_Book].[ID_Genre_Book], [dbo].[Genre_Book].[Genre]  from [dbo].[Genre_Book] where [dbo].[Genre_Book].[Genre_Book_Logical_Delete] = 0", RegistryData.DBConnectionString);
         public SqlCommand CommandPublishingBook = new SqlCommand("select [dbo].[Publishing_Book].[ID_Publishing_Book], [dbo].[Publishing_Book].[Publishing] from [dbo].[Publishing_Book] where [dbo].[Publishing_Book].[Publishing_Book_Logical_Delete] = 0", RegistryData.DBConnectionString);
+        public SqlCommand CommandWriterBook = new SqlCommand("select [dbo].[Writer_Book].[ID_Writer], [dbo].[Writer_Book].[Surname_Writer], [dbo].[Writer_Book].[Name_Writer], [dbo].[Writer_Book].[Patronymic_Writer]  from [dbo].[Writer_Book] where [dbo].[Writer_Book].[Writer_Book_Logical_Delete] = 0", RegistryData.DBConnectionString);
         //public DataTable DTGenreBook = new DataTable("Genre_Book");
         //public SqlDependency Dependency = new SqlDependency();
         //public string QRGenreBook = "select [dbo].[Genre_Book].[ID_Genre_Book], [dbo].[Genre_Book].[Genre]  from [dbo].[Genre_Book] where [dbo].[Genre_Book].[Genre_Book_Logical_Delete] = 0";

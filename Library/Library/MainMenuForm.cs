@@ -80,5 +80,11 @@ namespace Library
             PublishingBookForm publishingBookForm = new PublishingBookForm();
             publishingBookForm.Show();
         }
+
+        private void авторыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WriterBookForm writerBookForm = new WriterBookForm();
+            writerBookForm.Show(this);
+        }
     }
 }
