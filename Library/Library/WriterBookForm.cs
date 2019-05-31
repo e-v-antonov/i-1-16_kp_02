@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -121,7 +122,7 @@ namespace Library
         {
             switch (chbFiltration.CheckState)
             {
-                case (CheckState.Checked):
+                case (CheckState.Checked):  //фильтрация
                     DataTable data = new DataTable("Writer_Book");
                     commandSearchWriter.CommandText = dbTables.CommandWriterBook.CommandText + " and [Surname_Writer] like '%" + tbSearch.Text 
                         + "%' or [Name_Writer] like '%" + tbSearch.Text + "%' or [Patronymic_Writer] like '%" + tbSearch.Text + "%'";
@@ -135,7 +136,7 @@ namespace Library
                     dgvWriterBook.Columns[3].HeaderText = "Отчество";
                     dgvWriterBook.ClearSelection();
                     break;
-                case (CheckState.Unchecked):
+                case (CheckState.Unchecked):    //поиск
                     WriterBookFill();
                     for (int i = 0; i < dgvWriterBook.RowCount; i++)
                     {

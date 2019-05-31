@@ -28,32 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ltbGenre = new System.Windows.Forms.ListBox();
+            this.dgvRegistrationCard = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrationCard)).BeginInit();
             this.SuspendLayout();
             // 
-            // ltbGenre
+            // dgvRegistrationCard
             // 
-            this.ltbGenre.FormattingEnabled = true;
-            this.ltbGenre.ItemHeight = 16;
-            this.ltbGenre.Location = new System.Drawing.Point(80, 32);
-            this.ltbGenre.Name = "ltbGenre";
-            this.ltbGenre.Size = new System.Drawing.Size(312, 196);
-            this.ltbGenre.TabIndex = 1;
+            this.dgvRegistrationCard.AllowUserToAddRows = false;
+            this.dgvRegistrationCard.AllowUserToDeleteRows = false;
+            this.dgvRegistrationCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegistrationCard.Location = new System.Drawing.Point(32, 32);
+            this.dgvRegistrationCard.Name = "dgvRegistrationCard";
+            this.dgvRegistrationCard.ReadOnly = true;
+            this.dgvRegistrationCard.RowTemplate.Height = 24;
+            this.dgvRegistrationCard.Size = new System.Drawing.Size(720, 360);
+            this.dgvRegistrationCard.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ltbGenre);
+            this.Controls.Add(this.dgvRegistrationCard);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrationCard)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ListBox ltbGenre;
+
+        private System.Windows.Forms.DataGridView dgvRegistrationCard;
     }
 }

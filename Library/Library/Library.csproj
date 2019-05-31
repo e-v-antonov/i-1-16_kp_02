@@ -81,6 +81,12 @@
     <Compile Include="PublishingBookForm.Designer.cs">
       <DependentUpon>PublishingBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrationCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationCardForm.Designer.cs">
+      <DependentUpon>RegistrationCardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistryData.cs" />
     <Compile Include="WriterBookForm.cs">
       <SubType>Form</SubType>
@@ -111,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="PublishingBookForm.resx">
       <DependentUpon>PublishingBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationCardForm.resx">
+      <DependentUpon>RegistrationCardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WriterBookForm.resx">
       <DependentUpon>WriterBookForm.cs</DependentUpon>

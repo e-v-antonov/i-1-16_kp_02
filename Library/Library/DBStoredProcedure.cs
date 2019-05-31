@@ -13,10 +13,10 @@ namespace Library
             storedProcedure.CommandType = System.Data.CommandType.StoredProcedure;
         }
 
-        public void SPRegistrationCardReaderInsert(string surnameReader, string nameReader, string patronymicReader, DateTime birthdayReader, 
+        public void SPRegistrationCardReaderInsert(string surnameReader, string nameReader, string patronymicReader, string birthdayReader, 
             string passportSeriesReader, string passportNumberReader, string whoGivePassportReader, string whenGivePassportReader, string townReader, 
-            string streetReader, UInt32 buildingReader, UInt32 apartmentReader, string homePhoneReader, string mobilePhoneReader, string emailReader, 
-            DateTime registrationDateReader)  //добавление регистрационной карточки
+            string streetReader, Int32 buildingReader, Int32 apartmentReader, string homePhoneReader, string mobilePhoneReader, string emailReader, 
+            string registrationDateReader)  //добавление регистрационной карточки
         {
             ConfigurationProcedure("Registration_Card_Reader_Insert");
 
@@ -41,9 +41,9 @@ namespace Library
         }
 
         public void SPRegistrationCardReaderUpdate(Int32 idRegistrationCardReader, string surnameReader, string nameReader, string patronymicReader, 
-            DateTime birthdayReader, string passportSeriesReader, string passportNumberReader, string whoGivePassportReader, string whenGivePassportReader, 
-            string townReader, string streetReader, UInt32 buildingReader, UInt32 apartmentReader, string homePhoneReader, string mobilePhoneReader, 
-            string emailReader, DateTime registrationDateReader)  //обновление ррегистрационной картчоки
+            string birthdayReader, string passportSeriesReader, string passportNumberReader, string whoGivePassportReader, string whenGivePassportReader, 
+            string townReader, string streetReader, Int32 buildingReader, Int32 apartmentReader, string homePhoneReader, string mobilePhoneReader, 
+            string emailReader)  //обновление регистрационной карточки
         {
             ConfigurationProcedure("Registration_Card_Reader_Update");
 
@@ -63,7 +63,6 @@ namespace Library
             storedProcedure.Parameters.AddWithValue("@Home_Phone_Reader", homePhoneReader);
             storedProcedure.Parameters.AddWithValue("@Mobile_Phone_Reader", mobilePhoneReader);
             storedProcedure.Parameters.AddWithValue("@Email_Reader", emailReader);
-            storedProcedure.Parameters.AddWithValue("@Registration_Date_Reader", registrationDateReader);
 
             ExecuteStoredProcedure();
         }

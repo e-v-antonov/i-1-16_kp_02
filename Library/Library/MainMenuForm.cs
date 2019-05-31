@@ -25,7 +25,7 @@ namespace Library
             threadCheckConnection.Start();
         }
 
-        private void InformationConnection(bool value)  //проверка подключенияк базе данных
+        private void InformationConnection(bool value)  //проверка подключения к базе данных
         {
             try
             {
@@ -85,6 +85,12 @@ namespace Library
         {
             WriterBookForm writerBookForm = new WriterBookForm();
             writerBookForm.Show(this);
+        }
+
+        private void miRegistrationCardReader_Click(object sender, EventArgs e)
+        {
+            RegistrationCardForm registrationCardForm = new RegistrationCardForm();
+            registrationCardForm.Show(this);
         }
     }
 }
