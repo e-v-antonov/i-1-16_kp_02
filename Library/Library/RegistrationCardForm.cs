@@ -30,6 +30,9 @@ namespace Library
         private string birthday = "";
         private string whenGivePassport = "";
         private string today = "";
+        private bool uniquePassport = false;
+        private bool uniqueMobilePhone = false;
+        private bool uniqueEmail = false;
 
         public RegistrationCardForm()
         {
@@ -189,6 +192,54 @@ namespace Library
             return checkErrorEmail;
         }
 
+        private bool UniquePassportSeiesNumber()    //проверка уникальности комбинации серии и номера паспорта
+        {
+            for (int i = 0; i < dgvRegistrationCard.RowCount; i++)
+            {
+                if ((tbPassportSeries.Text + tbPassportNumber.Text) == (dgvRegistrationCard.Rows[i].Cells[5].Value.ToString() + dgvRegistrationCard.Rows[i].Cells[6].Value.ToString()))
+                {
+                    uniquePassport = false;
+                    return uniquePassport;
+                }
+                else
+                    uniquePassport = true;
+            }
+
+            return uniquePassport;
+        }
+
+        private bool UniqueMobile() //проверка уникальности номера мобильного телефона
+        {
+            for(int i = 0; i < dgvRegistrationCard.RowCount; i++)
+            {
+                if (mtbMobilePhone.Text == dgvRegistrationCard.Rows[i].Cells[13].Value.ToString())
+                {
+                    uniqueMobilePhone = false;
+                    return uniqueMobilePhone;
+                }
+                else
+                    uniqueMobilePhone = true;
+            }
+
+            return uniqueMobilePhone;
+        }
+
+        private bool UniqueEmailAddress()   //проверка уникальности адреса электронной почты
+        {
+            for (int i = 0; i < dgvRegistrationCard.RowCount; i++)
+            {
+                if (tbEmail.Text == dgvRegistrationCard.Rows[i].Cells[15].Value.ToString())
+                {
+                    uniqueEmail = false;
+                    return uniqueEmail;
+                }
+                else
+                    uniqueEmail = true;
+            }
+
+            return uniqueEmail;
+        }
+
         private void btnInsert_Click(object sender, EventArgs e)  //кнопка добавления записи
         {
             try   //конвертация дат
@@ -205,7 +256,7 @@ namespace Library
                 MessageBox.Show("Введите правильные даты!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (CheckPassportSeries() == false && CheckPassportNumber() == false && CheckWhoGivePassport() == false && CheckTown() == false && CheckStreet() == false && CheckEmail() == false)
+            if (CheckPassportSeries() == false && CheckPassportNumber() == false && CheckWhoGivePassport() == false && CheckTown() == false && CheckStreet() == false && CheckEmail() == false && UniquePassportSeiesNumber() == true && UniqueMobile() == true && UniqueEmailAddress() == true)
                 try
                 {
                     storedProcedure.SPRegistrationCardReaderInsert(tbSurname.Text, tbName.Text, tbPatronymic.Text, birthday,
@@ -219,7 +270,8 @@ namespace Library
             else
                 RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + "Проверьте правильность ввода данных! Поля Серия паспорта и " +
                     "Номер паспорта должны содержать 4 и 6 цифр соответственно.\n Поля Кем выдан паспорт, Город, Улица не должны содержать других " +
-                    "знаков кроме русских букв, цифр, точки, и дефиса.\n Поле адрес электронной почты обязательно должен содержать знак @ и точку после него.";
+                    "знаков кроме русских букв, цифр, точки, и дефиса.\n Поле адрес электронной почты обязательно должен содержать знак @ и точку после него.\n " +
+                    "Комбинация серии и номера паспорта, а также номер мобильного телефона и адрес электронной почты должны быть уникальными по отношению к данным в базе данных.";
 
             tbSurname.Clear();
             tbName.Clear();
