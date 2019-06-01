@@ -136,6 +136,7 @@ namespace Library
                     dgvWriterBook.Columns[3].HeaderText = "Отчество";
                     dgvWriterBook.ClearSelection();
                     break;
+
                 case (CheckState.Unchecked):    //поиск
                     WriterBookFill();
                     for (int i = 0; i < dgvWriterBook.RowCount; i++)

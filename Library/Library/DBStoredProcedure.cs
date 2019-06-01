@@ -200,8 +200,8 @@ namespace Library
             ExecuteStoredProcedure();
         }
 
-        public void SPBookInsert(string bookTitle, UInt32 publicationDate, UInt32 numberPages, string ISBNBook, UInt32 costBook, UInt32 totalNumberCopiesBook, 
-            DateTime dateAcceptanceBook, Int32 writerID, Int32 genreBookID, Int32 publishingBookID)  //добавление книги
+        public void SPBookInsert(string bookTitle, Int32 publicationDate, Int32 numberPages, string ISBNBook, Int32 costBook, Int32 totalNumberCopiesBook, 
+            string dateAcceptanceBook, Int32 writerID, Int32 genreBookID, Int32 publishingBookID)  //добавление книги
         {
             ConfigurationProcedure("Book_Insert");
 
@@ -219,8 +219,8 @@ namespace Library
             ExecuteStoredProcedure();
         }
 
-        public void SPBookUpdate(Int32 idBook, string bookTitle, UInt32 publicationDate, UInt32 numberPages, string ISBNBook, UInt32 costBook, 
-            UInt32 totalNumberCopiesBook, DateTime dateAcceptanceBook, Int32 writerID, Int32 genreBookID, Int32 publishingBookID)    //обновление книги
+        public void SPBookUpdate(Int32 idBook, string bookTitle, Int32 publicationDate, Int32 numberPages, string ISBNBook, Int32 costBook, 
+            Int32 totalNumberCopiesBook, string dateAcceptanceBook, Int32 writerID, Int32 genreBookID, Int32 publishingBookID)    //обновление книги
         {
             ConfigurationProcedure("Book_Update");
 
@@ -232,6 +232,7 @@ namespace Library
             storedProcedure.Parameters.AddWithValue("@Cost_Book", costBook);
             storedProcedure.Parameters.AddWithValue("@Total_Number_Copies_Book", totalNumberCopiesBook);
             storedProcedure.Parameters.AddWithValue("@Date_Acceptance_Book", dateAcceptanceBook);
+            storedProcedure.Parameters.AddWithValue("@Available_Number_Copies_Book ", totalNumberCopiesBook);
             storedProcedure.Parameters.AddWithValue("@Writer_ID", writerID);
             storedProcedure.Parameters.AddWithValue("@Genre_Book_ID", genreBookID);
             storedProcedure.Parameters.AddWithValue("@Publishing_Book_ID", publishingBookID);

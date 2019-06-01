@@ -87,7 +87,7 @@ namespace Library
                 }
                 catch
                 {
-
+                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -265,7 +265,7 @@ namespace Library
                 }
                 catch
                 {
-                    RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " Поля Дом и Квартира должны быть заполнены числами! Проверьте правильность ввода данных!";
+                    RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " Поля Дом и Квартира должны быть заполнены целыми числами! Проверьте правильность ввода данных!";
                 }
             else
                 RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + "Проверьте правильность ввода данных! Поля Серия паспорта и " +
@@ -308,7 +308,7 @@ namespace Library
                 MessageBox.Show("Введите правильные даты!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (CheckPassportSeries() == false && CheckPassportNumber() == false && CheckWhoGivePassport() == false && CheckTown() == false && CheckStreet() == false && CheckEmail() == false)
+            if (CheckPassportSeries() == false && CheckPassportNumber() == false && CheckWhoGivePassport() == false && CheckTown() == false && CheckStreet() == false && CheckEmail() == false && UniquePassportSeiesNumber() == true && UniqueMobile() == true && UniqueEmailAddress() == true)
                 try
                 {
                     storedProcedure.SPRegistrationCardReaderUpdate(Convert.ToInt32(dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString()), tbSurname.Text, tbName.Text, tbPatronymic.Text, birthday,
@@ -349,6 +349,22 @@ namespace Library
             {
                 case DialogResult.Yes:
                     storedProcedure.SPRegistrationCardReaderDelete(Convert.ToInt32(dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString()));
+                    tbSurname.Clear();
+                    tbName.Clear();
+                    tbPatronymic.Clear();
+                    mtbBirthday.Clear();
+                    tbPassportSeries.Clear();
+                    tbPassportNumber.Clear();
+                    tbWhoGivePassport.Clear();
+                    mtbWhenGivePassport.Clear();
+                    tbTown.Clear();
+                    tbStreet.Clear();
+                    tbBuilding.Clear();
+                    tbApartment.Clear();
+                    mtbHomePhone.Clear();
+                    mtbMobilePhone.Clear();
+                    tbEmail.Clear();
+                    dgvRegistrationCard.ClearSelection();
                     RegistrationCardFill();
                     break;
             }
@@ -417,6 +433,7 @@ namespace Library
                     dgvRegistrationCard.Columns[16].HeaderText = "Наличие книги";
                     dgvRegistrationCard.ClearSelection();
                     break;
+
                 case (CheckState.Unchecked):    //поиск
                     RegistrationCardFill();
 

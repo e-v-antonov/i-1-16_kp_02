@@ -29,6 +29,19 @@ namespace Library
             "CONVERT([nvarchar] (129), DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Email_Reader])), " +
             "[dbo].[Registration_Card_Reader].[Book_On_Hand_Reader] from [dbo].[Registration_Card_Reader] where " +
             "[dbo].[Registration_Card_Reader].[Registration_Card_Reader_Logical_Delete] = 0", RegistryData.DBConnectionString);
+        public SqlCommand CommandBook = new SqlCommand("select [dbo].[Book].[ID_Book], [dbo].[Book].[Book_Title], [dbo].[Book].[Writer_ID], [dbo].[Writer_Book].[Surname_Writer] + ' ' + " +
+            "[dbo].[Writer_Book].[Name_Writer] + ' ' + [dbo].[Writer_Book].[Patronymic_Writer], [dbo].[Book].[Genre_Book_ID], [dbo].[Genre_Book].[Genre], " +
+            "[dbo].[Book].[Publishing_Book_ID], [dbo].[Publishing_Book].[Publishing], [dbo].[Book].[Publication_Date], [dbo].[Book].[Number_Pages], " +
+            "[dbo].[Book].[ISBN_Book], [dbo].[Book].[Cost_Book], [dbo].[Book].[Total_Number_Copies_Book], " +
+            "[dbo].[Book].[Available_Number_Copies_Book], CONVERT([varchar] (10), [dbo].[Book].[Date_Acceptance_Book], 104) from [dbo].[Book] inner join " +
+            "[dbo].[Writer_Book] on [dbo].[Book].[Writer_ID] = [dbo].[Writer_Book].[ID_Writer] inner join [dbo].[Genre_Book] on " +
+            "[dbo].[Book].[Genre_Book_ID] = [dbo].[Genre_Book].[ID_Genre_Book] inner join [dbo].[Publishing_Book] on " +
+            "[dbo].[Book].[Publishing_Book_ID] = [dbo].[Publishing_Book].[ID_Publishing_Book] where [dbo].[Book].[Book_Logical_Delete] = 0 " +
+            "and [dbo].[Genre_Book].[Genre_Book_Logical_Delete] = 0 and [dbo].[Publishing_Book].[Publishing_Book_Logical_Delete] = 0 " +
+            "and [dbo].[Writer_Book].[Writer_Book_Logical_Delete] = 0", RegistryData.DBConnectionString);
+        public SqlCommand CommandWriterForComboBox = new SqlCommand("select [dbo].[Writer_Book].[ID_Writer], [dbo].[Writer_Book].[Surname_Writer] + ' ' + " +
+            "[dbo].[Writer_Book].[Name_Writer] + ' ' + [dbo].[Writer_Book].[Patronymic_Writer] as \"FIO_Writer\" from [dbo].[Writer_Book] where " +
+            "[dbo].[Writer_Book].[Writer_Book_Logical_Delete] = 0", RegistryData.DBConnectionString);
         //public DataTable DTGenreBook = new DataTable("Genre_Book");
         //public string QRGenreBook = "select [dbo].[Genre_Book].[ID_Genre_Book], [dbo].[Genre_Book].[Genre]  from [dbo].[Genre_Book] where [dbo].[Genre_Book].[Genre_Book_Logical_Delete] = 0";
 

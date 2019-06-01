@@ -35,6 +35,7 @@
             this.miSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.miExitSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.miHandbook = new System.Windows.Forms.ToolStripMenuItem();
+            this.miRegistrationCardReader = new System.Windows.Forms.ToolStripMenuItem();
             this.miWriterBook = new System.Windows.Forms.ToolStripMenuItem();
             this.miPublishingBook = new System.Windows.Forms.ToolStripMenuItem();
             this.miGenreBook = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,7 @@
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.miRegistrationCardReader = new System.Windows.Forms.ToolStripMenuItem();
+            this.книгиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +97,7 @@
             // 
             this.miHandbook.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miRegistrationCardReader,
+            this.книгиToolStripMenuItem,
             this.miWriterBook,
             this.miPublishingBook,
             this.miGenreBook});
@@ -103,6 +105,13 @@
             this.miHandbook.Name = "miHandbook";
             this.miHandbook.Size = new System.Drawing.Size(110, 24);
             this.miHandbook.Text = "Справочники";
+            // 
+            // miRegistrationCardReader
+            // 
+            this.miRegistrationCardReader.Name = "miRegistrationCardReader";
+            this.miRegistrationCardReader.Size = new System.Drawing.Size(280, 26);
+            this.miRegistrationCardReader.Text = "Регистрационные карточки...";
+            this.miRegistrationCardReader.Click += new System.EventHandler(this.miRegistrationCardReader_Click);
             // 
             // miWriterBook
             // 
@@ -161,12 +170,12 @@
             // 
             this.timer.Enabled = true;
             // 
-            // miRegistrationCardReader
+            // книгиToolStripMenuItem
             // 
-            this.miRegistrationCardReader.Name = "miRegistrationCardReader";
-            this.miRegistrationCardReader.Size = new System.Drawing.Size(280, 26);
-            this.miRegistrationCardReader.Text = "Регистрационные карточки...";
-            this.miRegistrationCardReader.Click += new System.EventHandler(this.miRegistrationCardReader_Click);
+            this.книгиToolStripMenuItem.Name = "книгиToolStripMenuItem";
+            this.книгиToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.книгиToolStripMenuItem.Text = "Книги...";
+            this.книгиToolStripMenuItem.Click += new System.EventHandler(this.книгиToolStripMenuItem_Click);
             // 
             // MainMenuForm
             // 
@@ -209,6 +218,7 @@
         private System.Windows.Forms.ToolStripMenuItem miPublishingBook;
         private System.Windows.Forms.ToolStripMenuItem miWriterBook;
         private System.Windows.Forms.ToolStripMenuItem miRegistrationCardReader;
+        private System.Windows.Forms.ToolStripMenuItem книгиToolStripMenuItem;
     }
 }
 
