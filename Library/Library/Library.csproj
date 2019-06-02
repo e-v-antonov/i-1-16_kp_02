@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -99,6 +104,7 @@
     <Compile Include="RegistrationCardForm.Designer.cs">
       <DependentUpon>RegistrationCardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrationCardWord.cs" />
     <Compile Include="RegistryData.cs" />
     <Compile Include="WriterBookForm.cs">
       <SubType>Form</SubType>

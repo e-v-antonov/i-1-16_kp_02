@@ -35,6 +35,7 @@
             this.miSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.miExitSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.miHandbook = new System.Windows.Forms.ToolStripMenuItem();
+            this.miFormulars = new System.Windows.Forms.ToolStripMenuItem();
             this.miRegistrationCardReader = new System.Windows.Forms.ToolStripMenuItem();
             this.miBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.miWriterBook = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,7 @@
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.miFormulars = new System.Windows.Forms.ToolStripMenuItem();
+            this.документToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +58,8 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miSystem,
             this.miHandbook,
-            this.miInformationSystem});
+            this.miInformationSystem,
+            this.документToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(800, 28);
@@ -107,6 +109,13 @@
             this.miHandbook.Name = "miHandbook";
             this.miHandbook.Size = new System.Drawing.Size(110, 24);
             this.miHandbook.Text = "Справочники";
+            // 
+            // miFormulars
+            // 
+            this.miFormulars.Name = "miFormulars";
+            this.miFormulars.Size = new System.Drawing.Size(280, 26);
+            this.miFormulars.Text = "Формуляры...";
+            this.miFormulars.Click += new System.EventHandler(this.miFormulars_Click);
             // 
             // miRegistrationCardReader
             // 
@@ -179,12 +188,12 @@
             // 
             this.timer.Enabled = true;
             // 
-            // miFormulars
+            // документToolStripMenuItem
             // 
-            this.miFormulars.Name = "miFormulars";
-            this.miFormulars.Size = new System.Drawing.Size(280, 26);
-            this.miFormulars.Text = "Формуляры...";
-            this.miFormulars.Click += new System.EventHandler(this.miFormulars_Click);
+            this.документToolStripMenuItem.Name = "документToolStripMenuItem";
+            this.документToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.документToolStripMenuItem.Text = "Документ";
+            this.документToolStripMenuItem.Click += new System.EventHandler(this.документToolStripMenuItem_Click);
             // 
             // MainMenuForm
             // 
@@ -229,6 +238,7 @@
         private System.Windows.Forms.ToolStripMenuItem miRegistrationCardReader;
         private System.Windows.Forms.ToolStripMenuItem miBooks;
         private System.Windows.Forms.ToolStripMenuItem miFormulars;
+        private System.Windows.Forms.ToolStripMenuItem документToolStripMenuItem;
     }
 }
 

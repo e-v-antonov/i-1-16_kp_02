@@ -104,5 +104,11 @@ namespace Library
             FormularForm formularForm = new FormularForm();
             formularForm.Show(this);
         }
+
+        private void документToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistrationCardWord registrationCardWord = new RegistrationCardWord();
+            registrationCardWord.CreateDoc();
+        }
     }
 }
