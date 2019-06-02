@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvRegistrationCard = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistrationCard)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +45,20 @@
             this.dgvRegistrationCard.Size = new System.Drawing.Size(720, 360);
             this.dgvRegistrationCard.TabIndex = 0;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(208, 416);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dgvRegistrationCard);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -61,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvRegistrationCard;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

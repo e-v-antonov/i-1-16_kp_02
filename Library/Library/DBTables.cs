@@ -58,69 +58,39 @@ namespace Library
             "[dbo].[Registration_Card_Reader].[Surname_Reader] + ' ' + [dbo].[Registration_Card_Reader].[Name_Reader] + ' ' + " +
             "[dbo].[Registration_Card_Reader].[Patronymic_Reader] + ', ' +  CONVERT([nvarchar] (4), " +
             "DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Passport_Series_Reader])) + ' ' + CONVERT([nvarchar] (6), " +
-            "DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Passport_Number_Reader])) as \"Reader\" from [dbo].[Registration_Card_Reader]", RegistryData.DBConnectionString); 
+            "DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Passport_Number_Reader])) as \"Reader\" from [dbo].[Registration_Card_Reader]", RegistryData.DBConnectionString);
 
 
-        //public DataTable DTGenreBook = new DataTable("Genre_Book");
-        //public string QRGenreBook = "select [dbo].[Genre_Book].[ID_Genre_Book], [dbo].[Genre_Book].[Genre]  from [dbo].[Genre_Book] where [dbo].[Genre_Book].[Genre_Book_Logical_Delete] = 0";
+        public SqlCommand command = new SqlCommand("", RegistryData.DBConnectionString);
+        public DataTable DTGenre = new DataTable("Genre");
+        public string QRGenre = "select [ID_Genre_Book], [Genre] from [dbo].[Genre_Book] where [Genre_Book_Logical_Delete] = 0";
+        public SqlDependency dependency = new SqlDependency();
 
-        public void FillGenre()
+        private void DataTableFill(DataTable table, string query)
         {
-            //try
-            //{
-            //    Command.Notification = null;
-            //    Command.CommandText = QRGenreBook;
-            //    RegistryData.DBConnectionString.Open();
-            //    DTGenreBook.Load(Command.ExecuteReader());
-            //    SqlDependency dependency = new SqlDependency(Command);
-            //    SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-            //    dependency.OnChange += new OnChangeEventHandler(OnDataChanged);
-            //}
-            //catch (Exception ex)
-            //{
-            //    RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + ex.Message;
-            //}
-            //finally
-            //{
-            //    RegistryData.DBConnectionString.Close();
-            //}
+            try
+            {
+                table.Clear();
+                command.Notification = null;
+                command.CommandText = query;
+                dependency.AddCommandDependency(command);
+                SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
+                RegistryData.DBConnectionString.Open();
+                table.Load(command.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + ex.Message;
+            }
+            finally
+            {
+                RegistryData.DBConnectionString.Close();
+            }
         }
 
-        public void OnDataChanged(object sender, SqlNotificationEventArgs e)
+        public void DTGenreFill()
         {
-            //if (e.Info != SqlNotificationInfo.Invalid)
-            //{
-            //    Form1 form = new Form1();
-            //    form.GetData();
-            //}
+            DataTableFill(DTGenre, QRGenre);
         }
-
-        //private void FillDataTable(DataTable table, string query)
-        //{
-        //    try
-        //    {
-        //        //table.Clear();
-        //        Command.Notification = null;
-        //        Command.CommandText = query;
-        //        //Dependency.AddCommandDependency(Command);
-        //        //SqlDependency dependency = new SqlDependency(Command);
-        //        //SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-        //        RegistryData.DBConnectionString.Open();
-        //        table.Load(Command.ExecuteReader());
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + ex.Message;
-        //    }
-        //    finally
-        //    {
-        //        RegistryData.DBConnectionString.Close();
-        //    }
-        //}
-
-        //public void FillDataTableGenreBook()
-        //{
-        //    FillDataTable(DTGenreBook, QRGenreBook);
-        //}
     }
 }

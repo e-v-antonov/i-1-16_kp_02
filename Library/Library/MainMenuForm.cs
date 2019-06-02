@@ -107,8 +107,11 @@ namespace Library
 
         private void документToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistrationCardWord registrationCardWord = new RegistrationCardWord();
-            registrationCardWord.CreateDoc();
+            //RegistrationCardWord registrationCardWord = new RegistrationCardWord();
+            //registrationCardWord.CreateDoc();
+
+            Form1 form1 = new Form1();
+            form1.Show(this);
         }
     }
 }

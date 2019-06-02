@@ -107,7 +107,8 @@ namespace Library
             tbSurname.Text = dgvRegistrationCard.CurrentRow.Cells[1].Value.ToString();
             tbName.Text = dgvRegistrationCard.CurrentRow.Cells[2].Value.ToString();
             tbPatronymic.Text = dgvRegistrationCard.CurrentRow.Cells[3].Value.ToString();
-            mtbBirthday.Text = dgvRegistrationCard.CurrentRow.Cells[4].Value.ToString();
+            dtpBirthday.Value = Convert.ToDateTime(dgvRegistrationCard.CurrentRow.Cells[4].Value.ToString());
+            //mtbBirthday.Text = dgvRegistrationCard.CurrentRow.Cells[4].Value.ToString();
             tbPassportSeries.Text = dgvRegistrationCard.CurrentRow.Cells[5].Value.ToString();
             tbPassportNumber.Text = dgvRegistrationCard.CurrentRow.Cells[6].Value.ToString();
             tbWhoGivePassport.Text = dgvRegistrationCard.CurrentRow.Cells[7].Value.ToString();
@@ -192,49 +193,79 @@ namespace Library
             return checkErrorEmail;
         }
 
-        private bool UniquePassportSeiesNumber()    //проверка уникальности комбинации серии и номера паспорта
+        private bool UniquePassportSeiesNumber(Button button)    //проверка уникальности комбинации серии и номера паспорта
         {
+            int currentRow = 0;
+
+            if (button.Name == "btnUpdate")
+                currentRow = Convert.ToInt32(dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString());
+            else
+                currentRow = -1;
+
             for (int i = 0; i < dgvRegistrationCard.RowCount; i++)
             {
-                if ((tbPassportSeries.Text + tbPassportNumber.Text) == (dgvRegistrationCard.Rows[i].Cells[5].Value.ToString() + dgvRegistrationCard.Rows[i].Cells[6].Value.ToString()))
-                {
-                    uniquePassport = false;
-                    return uniquePassport;
-                }
+                if (i + 1 == currentRow)
+                    continue;
                 else
-                    uniquePassport = true;
+                    if ((tbPassportSeries.Text + tbPassportNumber.Text) == (dgvRegistrationCard.Rows[i].Cells[5].Value.ToString() + dgvRegistrationCard.Rows[i].Cells[6].Value.ToString()))
+                    {
+                        uniquePassport = false;
+                        return uniquePassport;
+                    }
+                    else
+                        uniquePassport = true;
             }
 
             return uniquePassport;
         }
 
-        private bool UniqueMobile() //проверка уникальности номера мобильного телефона
+        private bool UniqueMobile(Button button) //проверка уникальности номера мобильного телефона
         {
-            for(int i = 0; i < dgvRegistrationCard.RowCount; i++)
+            int currentRow = 0;
+
+            if (button.Name == "btnUpdate")
+                currentRow = Convert.ToInt32(dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString());
+            else
+                currentRow = -1;
+
+            for (int i = 0; i < dgvRegistrationCard.RowCount; i++)
             {
-                if (mtbMobilePhone.Text == dgvRegistrationCard.Rows[i].Cells[13].Value.ToString())
-                {
-                    uniqueMobilePhone = false;
-                    return uniqueMobilePhone;
-                }
+                if (i + 1 == currentRow)
+                    continue;
                 else
-                    uniqueMobilePhone = true;
+                    if (mtbMobilePhone.Text == dgvRegistrationCard.Rows[i].Cells[13].Value.ToString())
+                    {
+                        uniqueMobilePhone = false;
+                        return uniqueMobilePhone;
+                    }
+                    else
+                        uniqueMobilePhone = true;
             }
 
             return uniqueMobilePhone;
         }
 
-        private bool UniqueEmailAddress()   //проверка уникальности адреса электронной почты
+        private bool UniqueEmailAddress(Button button)   //проверка уникальности адреса электронной почты
         {
+            int currentRow = 0;
+
+            if (button.Name == "btnUpdate")
+                currentRow = Convert.ToInt32(dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString());
+            else
+                currentRow = -1;
+
             for (int i = 0; i < dgvRegistrationCard.RowCount; i++)
             {
-                if (tbEmail.Text == dgvRegistrationCard.Rows[i].Cells[15].Value.ToString())
-                {
-                    uniqueEmail = false;
-                    return uniqueEmail;
-                }
+                if (i + 1 == currentRow)
+                    continue;
                 else
-                    uniqueEmail = true;
+                    if (tbEmail.Text == dgvRegistrationCard.Rows[i].Cells[15].Value.ToString())
+                    {
+                        uniqueEmail = false;
+                        return uniqueEmail;
+                    }
+                    else
+                        uniqueEmail = true;
             }
 
             return uniqueEmail;
@@ -242,11 +273,14 @@ namespace Library
 
         private void btnInsert_Click(object sender, EventArgs e)  //кнопка добавления записи
         {
+            var nameButton = sender as Button;
+
             try   //конвертация дат
             {
-                dateBirthday = Convert.ToDateTime(mtbBirthday.Text);
+                //dateBirthday = Convert.ToDateTime(mtbBirthday.Text);
                 dateWhenGivePassport = Convert.ToDateTime(mtbWhenGivePassport.Text);
-                birthday = dateBirthday.Date.ToString("yyyy-MM-dd");
+                //birthday = dateBirthday.Date.ToString("yyyy-MM-dd");
+                birthday = dtpBirthday.Value.ToString("yyyy-MM-dd");
                 whenGivePassport = dateWhenGivePassport.Date.ToString("yyyy-MM-dd");
                 dateToday = DateTime.Now;
                 today = dateToday.Date.ToString("yyyy-MM-dd");
@@ -256,7 +290,7 @@ namespace Library
                 MessageBox.Show("Введите правильные даты!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (CheckPassportSeries() == false && CheckPassportNumber() == false && CheckWhoGivePassport() == false && CheckTown() == false && CheckStreet() == false && CheckEmail() == false && UniquePassportSeiesNumber() == true && UniqueMobile() == true && UniqueEmailAddress() == true)
+            if (CheckPassportSeries() == false && CheckPassportNumber() == false && CheckWhoGivePassport() == false && CheckTown() == false && CheckStreet() == false && CheckEmail() == false && UniquePassportSeiesNumber(nameButton) == true && UniqueMobile(nameButton) == true && UniqueEmailAddress(nameButton) == true)
                 try
                 {
                     storedProcedure.SPRegistrationCardReaderInsert(tbSurname.Text, tbName.Text, tbPatronymic.Text, birthday,
@@ -276,7 +310,8 @@ namespace Library
             tbSurname.Clear();
             tbName.Clear();
             tbPatronymic.Clear();
-            mtbBirthday.Clear();
+            dtpBirthday.Value = DateTime.Now;
+            //mtbBirthday.Clear();
             tbPassportSeries.Clear();
             tbPassportNumber.Clear();
             tbWhoGivePassport.Clear();
@@ -294,11 +329,14 @@ namespace Library
 
         private void btnUpdate_Click(object sender, EventArgs e)    //кнопка изменения записи
         {
+            var nameButton = sender as Button;
+
             try  //конвертация дат
             {
-                dateBirthday = Convert.ToDateTime(mtbBirthday.Text);
+                //dateBirthday = Convert.ToDateTime(mtbBirthday.Text);
                 dateWhenGivePassport = Convert.ToDateTime(mtbWhenGivePassport.Text);
-                birthday = dateBirthday.Date.ToString("yyyy-MM-dd");
+                //birthday = dateBirthday.Date.ToString("yyyy-MM-dd");
+                birthday = dtpBirthday.Value.ToString("yyyy-MM-dd");
                 whenGivePassport = dateWhenGivePassport.Date.ToString("yyyy-MM-dd");
                 dateToday = DateTime.Now;
                 today = dateToday.Date.ToString("yyyy-MM-dd");
@@ -308,7 +346,7 @@ namespace Library
                 MessageBox.Show("Введите правильные даты!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (CheckPassportSeries() == false && CheckPassportNumber() == false && CheckWhoGivePassport() == false && CheckTown() == false && CheckStreet() == false && CheckEmail() == false && UniquePassportSeiesNumber() == true && UniqueMobile() == true && UniqueEmailAddress() == true)
+            if (CheckPassportSeries() == false && CheckPassportNumber() == false && CheckWhoGivePassport() == false && CheckTown() == false && CheckStreet() == false && CheckEmail() == false && UniquePassportSeiesNumber(nameButton) == true && UniqueMobile(nameButton) == true && UniqueEmailAddress(nameButton) == true)
                 try
                 {
                     storedProcedure.SPRegistrationCardReaderUpdate(Convert.ToInt32(dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString()), tbSurname.Text, tbName.Text, tbPatronymic.Text, birthday,
@@ -327,7 +365,8 @@ namespace Library
             tbSurname.Clear();
             tbName.Clear();
             tbPatronymic.Clear();
-            mtbBirthday.Clear();
+            dtpBirthday.Value = DateTime.Now;
+            //mtbBirthday.Clear();
             tbPassportSeries.Clear();
             tbPassportNumber.Clear();
             tbWhoGivePassport.Clear();
@@ -352,7 +391,8 @@ namespace Library
                     tbSurname.Clear();
                     tbName.Clear();
                     tbPatronymic.Clear();
-                    mtbBirthday.Clear();
+                    dtpBirthday.Value = DateTime.Now;
+                    //mtbBirthday.Clear();
                     tbPassportSeries.Clear();
                     tbPassportNumber.Clear();
                     tbWhoGivePassport.Clear();

@@ -68,7 +68,6 @@
             this.tbPassportSeries = new System.Windows.Forms.TextBox();
             this.lbPassportSeries = new System.Windows.Forms.Label();
             this.gbPersonalData = new System.Windows.Forms.GroupBox();
-            this.mtbBirthday = new System.Windows.Forms.MaskedTextBox();
             this.lbBirthday = new System.Windows.Forms.Label();
             this.tbPatronymic = new System.Windows.Forms.TextBox();
             this.lbPatronymic = new System.Windows.Forms.Label();
@@ -77,6 +76,7 @@
             this.tbSurname = new System.Windows.Forms.TextBox();
             this.lbSurname = new System.Windows.Forms.Label();
             this.dgvRegistrationCard = new System.Windows.Forms.DataGridView();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.pnCancel.SuspendLayout();
             this.gbSearchAndFiltration.SuspendLayout();
             this.pnFiltration.SuspendLayout();
@@ -186,9 +186,9 @@
             this.gbManipulationData.Controls.Add(this.gbPassportData);
             this.gbManipulationData.Controls.Add(this.gbPersonalData);
             this.gbManipulationData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gbManipulationData.Location = new System.Drawing.Point(0, 408);
+            this.gbManipulationData.Location = new System.Drawing.Point(0, 368);
             this.gbManipulationData.Name = "gbManipulationData";
-            this.gbManipulationData.Size = new System.Drawing.Size(1155, 178);
+            this.gbManipulationData.Size = new System.Drawing.Size(1155, 218);
             this.gbManipulationData.TabIndex = 2;
             this.gbManipulationData.TabStop = false;
             this.gbManipulationData.Text = "Манипулирование данными:";
@@ -207,7 +207,7 @@
             // btnDelete
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDelete.Location = new System.Drawing.Point(0, 52);
+            this.btnDelete.Location = new System.Drawing.Point(0, 53);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(209, 26);
             this.btnDelete.TabIndex = 20;
@@ -218,7 +218,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUpdate.Location = new System.Drawing.Point(0, 26);
+            this.btnUpdate.Location = new System.Drawing.Point(0, 27);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(209, 26);
             this.btnUpdate.TabIndex = 21;
@@ -232,7 +232,7 @@
             this.btnInsert.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInsert.Location = new System.Drawing.Point(0, 0);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(209, 26);
+            this.btnInsert.Size = new System.Drawing.Size(209, 27);
             this.btnInsert.TabIndex = 22;
             this.btnInsert.Text = "Добавить регистрационную карточку";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -259,7 +259,7 @@
             this.gbContactInformation.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbContactInformation.Location = new System.Drawing.Point(708, 19);
             this.gbContactInformation.Name = "gbContactInformation";
-            this.gbContactInformation.Size = new System.Drawing.Size(235, 156);
+            this.gbContactInformation.Size = new System.Drawing.Size(235, 196);
             this.gbContactInformation.TabIndex = 19;
             this.gbContactInformation.TabStop = false;
             this.gbContactInformation.Text = "Контактные данные:";
@@ -333,7 +333,7 @@
             this.gbPlaceResidence.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbPlaceResidence.Location = new System.Drawing.Point(473, 19);
             this.gbPlaceResidence.Name = "gbPlaceResidence";
-            this.gbPlaceResidence.Size = new System.Drawing.Size(235, 156);
+            this.gbPlaceResidence.Size = new System.Drawing.Size(235, 196);
             this.gbPlaceResidence.TabIndex = 18;
             this.gbPlaceResidence.TabStop = false;
             this.gbPlaceResidence.Text = "Место проживания:";
@@ -423,7 +423,7 @@
             this.gbPassportData.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbPassportData.Location = new System.Drawing.Point(238, 19);
             this.gbPassportData.Name = "gbPassportData";
-            this.gbPassportData.Size = new System.Drawing.Size(235, 156);
+            this.gbPassportData.Size = new System.Drawing.Size(235, 196);
             this.gbPassportData.TabIndex = 17;
             this.gbPassportData.TabStop = false;
             this.gbPassportData.Text = "Паспортные данные:";
@@ -503,7 +503,7 @@
             // 
             // gbPersonalData
             // 
-            this.gbPersonalData.Controls.Add(this.mtbBirthday);
+            this.gbPersonalData.Controls.Add(this.dtpBirthday);
             this.gbPersonalData.Controls.Add(this.lbBirthday);
             this.gbPersonalData.Controls.Add(this.tbPatronymic);
             this.gbPersonalData.Controls.Add(this.lbPatronymic);
@@ -514,19 +514,10 @@
             this.gbPersonalData.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbPersonalData.Location = new System.Drawing.Point(3, 19);
             this.gbPersonalData.Name = "gbPersonalData";
-            this.gbPersonalData.Size = new System.Drawing.Size(235, 156);
+            this.gbPersonalData.Size = new System.Drawing.Size(235, 196);
             this.gbPersonalData.TabIndex = 16;
             this.gbPersonalData.TabStop = false;
             this.gbPersonalData.Text = "Личные данные:";
-            // 
-            // mtbBirthday
-            // 
-            this.mtbBirthday.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mtbBirthday.Location = new System.Drawing.Point(3, 152);
-            this.mtbBirthday.Mask = "00.00.0000";
-            this.mtbBirthday.Name = "mtbBirthday";
-            this.mtbBirthday.Size = new System.Drawing.Size(229, 23);
-            this.mtbBirthday.TabIndex = 7;
             // 
             // lbBirthday
             // 
@@ -604,9 +595,20 @@
             this.dgvRegistrationCard.Name = "dgvRegistrationCard";
             this.dgvRegistrationCard.ReadOnly = true;
             this.dgvRegistrationCard.RowTemplate.Height = 24;
-            this.dgvRegistrationCard.Size = new System.Drawing.Size(1155, 360);
+            this.dgvRegistrationCard.Size = new System.Drawing.Size(1155, 320);
             this.dgvRegistrationCard.TabIndex = 3;
             this.dgvRegistrationCard.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistrationCard_CellClick);
+            // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBirthday.Location = new System.Drawing.Point(3, 152);
+            this.dtpBirthday.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthday.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(229, 23);
+            this.dtpBirthday.TabIndex = 7;
             // 
             // RegistrationCardForm
             // 
@@ -668,7 +670,6 @@
         private System.Windows.Forms.TextBox tbWhoGivePassport;
         private System.Windows.Forms.Label lbWhoGivePassport;
         private System.Windows.Forms.GroupBox gbPersonalData;
-        private System.Windows.Forms.MaskedTextBox mtbBirthday;
         private System.Windows.Forms.Label lbBirthday;
         private System.Windows.Forms.TextBox tbPatronymic;
         private System.Windows.Forms.Label lbPatronymic;
@@ -698,5 +699,6 @@
         private System.Windows.Forms.DataGridView dgvRegistrationCard;
         private System.Windows.Forms.Panel pnButtons;
         private System.Windows.Forms.Label lbHaveBook;
+        private System.Windows.Forms.DateTimePicker dtpBirthday;
     }
 }
