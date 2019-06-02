@@ -42,6 +42,25 @@ namespace Library
         public SqlCommand CommandWriterForComboBox = new SqlCommand("select [dbo].[Writer_Book].[ID_Writer], [dbo].[Writer_Book].[Surname_Writer] + ' ' + " +
             "[dbo].[Writer_Book].[Name_Writer] + ' ' + [dbo].[Writer_Book].[Patronymic_Writer] as \"FIO_Writer\" from [dbo].[Writer_Book] where " +
             "[dbo].[Writer_Book].[Writer_Book_Logical_Delete] = 0", RegistryData.DBConnectionString);
+        public SqlCommand CommandFormular = new SqlCommand("select [dbo].[Formular_Reader].[ID_Formular_Reader], [dbo].[Registration_Card_Reader].[ID_Registration_Card_Reader], " +
+            "[dbo].[Registration_Card_Reader].[Surname_Reader] + ' ' + [dbo].[Registration_Card_Reader].[Name_Reader] + ' ' + " +
+            "[dbo].[Registration_Card_Reader].[Patronymic_Reader], CONVERT([nvarchar] (4), " +
+            "DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Passport_Series_Reader])) + ' ' + " +
+            "CONVERT([nvarchar] (6), DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Passport_Number_Reader])), " +
+            "[dbo].[Book].[ID_Book], [dbo].[Book].[Book_Title], CONVERT([varchar] (10), [dbo].[Formular_Reader].[Date_Issue_Book], 104), [dbo].[Formular_Reader].[Number_Days_Issue_Book], " +
+            "CONVERT([varchar] (10), [dbo].[Formular_Reader].[Date_Return_Book], 104), [dbo].[Formular_Reader].[Book_Returned] from [dbo].[Formular_Reader] " +
+            "inner join [dbo].[Registration_Card_Reader] on [dbo].[Formular_Reader].[Registration_Card_Reader_ID] = " +
+            "[Dbo].[Registration_Card_Reader].[ID_Registration_Card_Reader] inner join [dbo].[Book] on [dbo].[Formular_Reader].[Book_ID] = " +
+            "[dbo].[Book].[ID_Book] where [dbo].[Formular_Reader].[Formular_Reader_Logical_Delete] = 0 and " +
+            "[dbo].[Registration_Card_Reader].[Registration_Card_Reader_Logical_Delete] = 0 and [dbo].[Book].[Book_Logical_Delete] = 0", RegistryData.DBConnectionString);
+        public SqlCommand CommandBookForComboBox = new SqlCommand("select [dbo].[Book].[ID_Book], [dbo].[Book].[Book_Title] from [dbo].[Book] where [dbo].[Book].[Book_Logical_Delete] = 0", RegistryData.DBConnectionString);
+        public SqlCommand CommandReaderForComboBox = new SqlCommand("select [dbo].[Registration_Card_Reader].[ID_Registration_Card_Reader], " +
+            "[dbo].[Registration_Card_Reader].[Surname_Reader] + ' ' + [dbo].[Registration_Card_Reader].[Name_Reader] + ' ' + " +
+            "[dbo].[Registration_Card_Reader].[Patronymic_Reader] + ', ' +  CONVERT([nvarchar] (4), " +
+            "DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Passport_Series_Reader])) + ' ' + CONVERT([nvarchar] (6), " +
+            "DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Passport_Number_Reader])) as \"Reader\" from [dbo].[Registration_Card_Reader]", RegistryData.DBConnectionString); 
+
+
         //public DataTable DTGenreBook = new DataTable("Genre_Book");
         //public string QRGenreBook = "select [dbo].[Genre_Book].[ID_Genre_Book], [dbo].[Genre_Book].[Genre]  from [dbo].[Genre_Book] where [dbo].[Genre_Book].[Genre_Book_Logical_Delete] = 0";
 

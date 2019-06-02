@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Library
@@ -28,12 +22,11 @@ namespace Library
         private void BookForm_Load(object sender, EventArgs e)  //загрузка формы
         {
             Thread threadBookFill = new Thread(BookFill);
-            threadBookFill.Start();
-
             Thread threadWriterBookFill = new Thread(WriterBookFill);
             Thread threadPublushingFill = new Thread(PublishingFill);
             Thread threadGenreFill = new Thread(GenreFill);
 
+            threadBookFill.Start();
             threadWriterBookFill.Start();
             threadPublushingFill.Start();
             threadGenreFill.Start();
@@ -123,6 +116,7 @@ namespace Library
                     cbWriter.DataSource = dataTable;
                     cbWriter.ValueMember = "ID_Writer";
                     cbWriter.DisplayMember = "FIO_Writer";
+                    cbWriter.SelectedValue = -1;
                 }
                 catch
                 {
@@ -151,6 +145,7 @@ namespace Library
                     cbPublishing.DataSource = dataTable;
                     cbPublishing.ValueMember = "ID_Publishing_Book";
                     cbPublishing.DisplayMember = "Publishing";
+                    cbPublishing.SelectedValue = -1;
                 }
                 catch
                 {
@@ -179,6 +174,7 @@ namespace Library
                     cbGenre.DataSource = dataTable;
                     cbGenre.ValueMember = "ID_Genre_Book";
                     cbGenre.DisplayMember = "Genre";
+                    cbGenre.SelectedValue = -1;
                 }
                 catch
                 {
@@ -301,14 +297,14 @@ namespace Library
 
         private void tbSearch_Enter(object sender, EventArgs e) //поле поиска стало активным
         {
-            if (tbSearch.Text == "" + tbSearch.Text + "едите данные книги...")
+            if (tbSearch.Text == "" + tbSearch.Text + "Введите данные книги...")
                 tbSearch.Clear();
         }
 
         private void tbSearch_Leave(object sender, EventArgs e) //поле поиска больше не в фокусе
         {
             if (tbSearch.Text == "")
-                tbSearch.Text = "" + tbSearch.Text + "едите данные книги...";
+                tbSearch.Text = "" + tbSearch.Text + "Введите данные книги...";
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)   //введение текста в поле поиска
@@ -372,7 +368,7 @@ namespace Library
             }
         }
 
-        private void btnUpdateWriter_Click(object sender, EventArgs e)  //открытия справочника авторы
+        private void btnUpdateWriter_Click(object sender, EventArgs e)  //открытие справочника авторы
         {
             WriterBookForm writerBookForm = new WriterBookForm();
             writerBookForm.Show(this);

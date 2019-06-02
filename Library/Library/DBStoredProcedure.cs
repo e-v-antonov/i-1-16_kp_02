@@ -258,7 +258,7 @@ namespace Library
             ExecuteStoredProcedure();
         }
 
-        public void SPFormularReaderInsert(DateTime dateIssueBook, UInt32 numberDaysIssueBook, Int32 registrationCardReaderID, Int32 bookID)    //добавление формуляра
+        public void SPFormularReaderInsert(string dateIssueBook, Int32 numberDaysIssueBook, Int32 registrationCardReaderID, Int32 bookID)    //добавление формуляра
         {
             ConfigurationProcedure("Formular_Reader_Insert");
 
@@ -270,13 +270,14 @@ namespace Library
             ExecuteStoredProcedure();
         }
 
-        public void SPFormularReaderUpdate(Int32 idFormularReader, DateTime dateIssueBook, UInt32 numberDaysIssueBook, Int32 registrationCardReaderID, Int32 bookID)    //обновление формуляра
+        public void SPFormularReaderUpdate(Int32 idFormularReader, string dateIssueBook, Int32 numberDaysIssueBook, Int32 bookReturned, Int32 registrationCardReaderID, Int32 bookID)    //обновление формуляра
         {
             ConfigurationProcedure("Formular_Reader_Update");
 
             storedProcedure.Parameters.AddWithValue("@ID_Formular_Reader", idFormularReader);
             storedProcedure.Parameters.AddWithValue("@Date_Issue_Book", dateIssueBook);
             storedProcedure.Parameters.AddWithValue("@Number_Days_Issue_Book", numberDaysIssueBook);
+            storedProcedure.Parameters.AddWithValue("@Book_Returned", bookReturned);
             storedProcedure.Parameters.AddWithValue("@Registration_Card_Reader_ID", registrationCardReaderID);
             storedProcedure.Parameters.AddWithValue("@Book_ID", bookID);
 

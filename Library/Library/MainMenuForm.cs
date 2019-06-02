@@ -93,10 +93,16 @@ namespace Library
             registrationCardForm.Show(this);
         }
 
-        private void книгиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void miBooks_Click(object sender, EventArgs e)
         {
             BookForm bookForm = new BookForm();
             bookForm.Show(this);
+        }
+
+        private void miFormulars_Click(object sender, EventArgs e)
+        {
+            FormularForm formularForm = new FormularForm();
+            formularForm.Show(this);
         }
     }
 }
