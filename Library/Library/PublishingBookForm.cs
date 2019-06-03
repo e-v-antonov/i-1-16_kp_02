@@ -8,7 +8,6 @@ namespace Library
 {
     public partial class PublishingBookForm : Form
     {
-        DBTables dbTables = new DBTables();
         DBStoredProcedure storedProcedure = new DBStoredProcedure();
 
         public PublishingBookForm()
@@ -18,23 +17,21 @@ namespace Library
 
         private void PublishingBookForm_Load(object sender, EventArgs e)    //загрузка формы
         {
-            Thread threadGenre = new Thread(PublishingBookFill);
-            threadGenre.Start();
+            Thread threadPublishing = new Thread(PublishingBookFill);
+            threadPublishing.Start();
         }
 
         private void PublishingBookFill() //заполнение combo box данными из базы данных
         {
+            DBTables dbTables = new DBTables();
+
             Action action = () =>
             {
-                dbTables.CommandPublishingBook.Notification = null;
-                SqlDependency sqlDependency = new SqlDependency(dbTables.CommandPublishingBook);
-                SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                sqlDependency.OnChange += new OnChangeEventHandler(ChangeDataPublishing);
-                RegistryData.DBConnectionString.Open();
-                DataTable dataTable = new DataTable("Publishing_Book");
-                dataTable.Load(dbTables.CommandPublishingBook.ExecuteReader());
-                RegistryData.DBConnectionString.Close();
-                ltbPublishing.DataSource = dataTable;
+                dbTables.DTPublishing.Clear();
+                dbTables.DTPublishingFill();
+                dbTables.dependency.OnChange += ChangeDataPublishing;
+
+                ltbPublishing.DataSource = dbTables.DTPublishing;
                 ltbPublishing.ValueMember = "ID_Publishing_Book";
                 ltbPublishing.DisplayMember = "Publishing";
             };
