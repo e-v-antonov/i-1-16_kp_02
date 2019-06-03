@@ -14,7 +14,7 @@ namespace Library
 {
     public partial class Form1 : Form
     {
-        DBTables dbTables = new DBTables();
+        
 
         public Form1()
         {
@@ -29,6 +29,7 @@ namespace Library
 
         private void GenreFill()
         {
+            DBTables dbTables = new DBTables();
             Action action = () =>
             {
                 dbTables.DTGenre.Clear();
@@ -46,7 +47,6 @@ namespace Library
         {         
             if (e.Info != SqlNotificationInfo.Invalid)
             {
-                e = null;
                 GenreFill();                
             }            
         }

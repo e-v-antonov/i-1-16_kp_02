@@ -58,6 +58,7 @@ namespace Library
             text.Range.Text = "Регистрационный номер:\nДата заполнения:\nФамилия:\nИмя:\nОтчество:\nДата рождения:\nСерия и номер паспорта:\nКем выдан:\nКогда выдан:\nАдрес проживания:\nДомашний телефон:\nМобильный телефон:\nАдрес электронной почты:\n";
 
             document.Paragraphs.Add();
+            document.Paragraphs.Add();
 
             word.Paragraph agreement = document.Paragraphs.Add();
             agreement.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphJustify;
@@ -69,6 +70,9 @@ namespace Library
             //agreement.Range.ParagraphFormat.LeftIndent = application.CentimetersToPoints(Convert.ToSingle(1.5));
             agreement.Range.Text = "    Подтверждаю, что я ознакомлен и полностью согласен с условиями оказания мне библиотечных услуг библиотекой №127 изложенными в «Правилах пользования библиотекой №127», я согласен с тем, что библиотека может отказать мне в обслуживании в случае их нарушения. Также даю свое согласие на обработку моих персональных данных, указанных в настоящей регистрационной карточке.";
 
+            document.Paragraphs.Add();
+            document.Paragraphs.Add();
+
             word.Paragraph agreement1 = document.Paragraphs.Add();
             agreement1.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphJustify;
             agreement1.Range.Font.Name = "Times New Roman";
@@ -78,15 +82,25 @@ namespace Library
             agreement1.Range.ParagraphFormat.LineSpacingRule = word.WdLineSpacing.wdLineSpace1pt5;
             agreement1.Range.Text = "    Данное согласие действует до моего прямого отказа от пользования услугами библиотеки, выраженного мною лично в устной или письменной форме.";
 
+
+            document.Paragraphs.Add();
+            document.Paragraphs.Add();
+
+
             word.Paragraph signature = document.Paragraphs.Add();
-            signature.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphRight;
+            
             signature.Range.Font.Name = "Times New Roman";
             signature.Range.Font.Size = 14;
             signature.Range.ParagraphFormat.SpaceAfter = 0;
             signature.Range.ParagraphFormat.SpaceBefore = 0;
             signature.Range.ParagraphFormat.LineSpacingRule = word.WdLineSpacing.wdLineSpaceSingle;
             signature.Range.Text = "____________ / ____________";
-            
+            signature.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphRight;
+
+            document.Paragraphs.Add();
+            document.Paragraphs.Add();
+
+
             word.Paragraph decryptione = document.Paragraphs.Add();
             decryptione.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphLeft;
             decryptione.Range.Font.Name = "Times New Roman";

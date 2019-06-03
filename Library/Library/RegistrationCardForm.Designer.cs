@@ -59,7 +59,6 @@
             this.tbTown = new System.Windows.Forms.TextBox();
             this.lbTown = new System.Windows.Forms.Label();
             this.gbPassportData = new System.Windows.Forms.GroupBox();
-            this.mtbWhenGivePassport = new System.Windows.Forms.MaskedTextBox();
             this.lbWhenGivePassport = new System.Windows.Forms.Label();
             this.tbWhoGivePassport = new System.Windows.Forms.TextBox();
             this.lbWhoGivePassport = new System.Windows.Forms.Label();
@@ -68,6 +67,7 @@
             this.tbPassportSeries = new System.Windows.Forms.TextBox();
             this.lbPassportSeries = new System.Windows.Forms.Label();
             this.gbPersonalData = new System.Windows.Forms.GroupBox();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.lbBirthday = new System.Windows.Forms.Label();
             this.tbPatronymic = new System.Windows.Forms.TextBox();
             this.lbPatronymic = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             this.tbSurname = new System.Windows.Forms.TextBox();
             this.lbSurname = new System.Windows.Forms.Label();
             this.dgvRegistrationCard = new System.Windows.Forms.DataGridView();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.dtpWhenGivePassport = new System.Windows.Forms.DateTimePicker();
             this.pnCancel.SuspendLayout();
             this.gbSearchAndFiltration.SuspendLayout();
             this.pnFiltration.SuspendLayout();
@@ -186,9 +186,9 @@
             this.gbManipulationData.Controls.Add(this.gbPassportData);
             this.gbManipulationData.Controls.Add(this.gbPersonalData);
             this.gbManipulationData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gbManipulationData.Location = new System.Drawing.Point(0, 368);
+            this.gbManipulationData.Location = new System.Drawing.Point(0, 408);
             this.gbManipulationData.Name = "gbManipulationData";
-            this.gbManipulationData.Size = new System.Drawing.Size(1155, 218);
+            this.gbManipulationData.Size = new System.Drawing.Size(1155, 178);
             this.gbManipulationData.TabIndex = 2;
             this.gbManipulationData.TabStop = false;
             this.gbManipulationData.Text = "Манипулирование данными:";
@@ -259,7 +259,7 @@
             this.gbContactInformation.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbContactInformation.Location = new System.Drawing.Point(708, 19);
             this.gbContactInformation.Name = "gbContactInformation";
-            this.gbContactInformation.Size = new System.Drawing.Size(235, 196);
+            this.gbContactInformation.Size = new System.Drawing.Size(235, 156);
             this.gbContactInformation.TabIndex = 19;
             this.gbContactInformation.TabStop = false;
             this.gbContactInformation.Text = "Контактные данные:";
@@ -333,7 +333,7 @@
             this.gbPlaceResidence.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbPlaceResidence.Location = new System.Drawing.Point(473, 19);
             this.gbPlaceResidence.Name = "gbPlaceResidence";
-            this.gbPlaceResidence.Size = new System.Drawing.Size(235, 196);
+            this.gbPlaceResidence.Size = new System.Drawing.Size(235, 156);
             this.gbPlaceResidence.TabIndex = 18;
             this.gbPlaceResidence.TabStop = false;
             this.gbPlaceResidence.Text = "Место проживания:";
@@ -412,7 +412,7 @@
             // 
             // gbPassportData
             // 
-            this.gbPassportData.Controls.Add(this.mtbWhenGivePassport);
+            this.gbPassportData.Controls.Add(this.dtpWhenGivePassport);
             this.gbPassportData.Controls.Add(this.lbWhenGivePassport);
             this.gbPassportData.Controls.Add(this.tbWhoGivePassport);
             this.gbPassportData.Controls.Add(this.lbWhoGivePassport);
@@ -423,19 +423,10 @@
             this.gbPassportData.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbPassportData.Location = new System.Drawing.Point(238, 19);
             this.gbPassportData.Name = "gbPassportData";
-            this.gbPassportData.Size = new System.Drawing.Size(235, 196);
+            this.gbPassportData.Size = new System.Drawing.Size(235, 156);
             this.gbPassportData.TabIndex = 17;
             this.gbPassportData.TabStop = false;
             this.gbPassportData.Text = "Паспортные данные:";
-            // 
-            // mtbWhenGivePassport
-            // 
-            this.mtbWhenGivePassport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mtbWhenGivePassport.Location = new System.Drawing.Point(3, 152);
-            this.mtbWhenGivePassport.Mask = "00.00.0000";
-            this.mtbWhenGivePassport.Name = "mtbWhenGivePassport";
-            this.mtbWhenGivePassport.Size = new System.Drawing.Size(229, 23);
-            this.mtbWhenGivePassport.TabIndex = 15;
             // 
             // lbWhenGivePassport
             // 
@@ -514,10 +505,21 @@
             this.gbPersonalData.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbPersonalData.Location = new System.Drawing.Point(3, 19);
             this.gbPersonalData.Name = "gbPersonalData";
-            this.gbPersonalData.Size = new System.Drawing.Size(235, 196);
+            this.gbPersonalData.Size = new System.Drawing.Size(235, 156);
             this.gbPersonalData.TabIndex = 16;
             this.gbPersonalData.TabStop = false;
             this.gbPersonalData.Text = "Личные данные:";
+            // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBirthday.Location = new System.Drawing.Point(3, 152);
+            this.dtpBirthday.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthday.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(229, 23);
+            this.dtpBirthday.TabIndex = 7;
             // 
             // lbBirthday
             // 
@@ -595,20 +597,20 @@
             this.dgvRegistrationCard.Name = "dgvRegistrationCard";
             this.dgvRegistrationCard.ReadOnly = true;
             this.dgvRegistrationCard.RowTemplate.Height = 24;
-            this.dgvRegistrationCard.Size = new System.Drawing.Size(1155, 320);
+            this.dgvRegistrationCard.Size = new System.Drawing.Size(1155, 360);
             this.dgvRegistrationCard.TabIndex = 3;
             this.dgvRegistrationCard.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistrationCard_CellClick);
             // 
-            // dtpBirthday
+            // dtpWhenGivePassport
             // 
-            this.dtpBirthday.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBirthday.Location = new System.Drawing.Point(3, 152);
-            this.dtpBirthday.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dtpBirthday.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(229, 23);
-            this.dtpBirthday.TabIndex = 7;
+            this.dtpWhenGivePassport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpWhenGivePassport.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpWhenGivePassport.Location = new System.Drawing.Point(3, 152);
+            this.dtpWhenGivePassport.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtpWhenGivePassport.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpWhenGivePassport.Name = "dtpWhenGivePassport";
+            this.dtpWhenGivePassport.Size = new System.Drawing.Size(229, 23);
+            this.dtpWhenGivePassport.TabIndex = 15;
             // 
             // RegistrationCardForm
             // 
@@ -662,7 +664,6 @@
         private System.Windows.Forms.GroupBox gbManipulationData;
         private System.Windows.Forms.GroupBox gbPassportData;
         private System.Windows.Forms.TextBox tbPassportNumber;
-        private System.Windows.Forms.MaskedTextBox mtbWhenGivePassport;
         private System.Windows.Forms.Label lbPassportNumber;
         private System.Windows.Forms.TextBox tbPassportSeries;
         private System.Windows.Forms.Label lbWhenGivePassport;
@@ -700,5 +701,6 @@
         private System.Windows.Forms.Panel pnButtons;
         private System.Windows.Forms.Label lbHaveBook;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
+        private System.Windows.Forms.DateTimePicker dtpWhenGivePassport;
     }
 }

@@ -24,8 +24,6 @@ namespace Library
         private bool checkErrorTown = true;
         private bool checkErrorStreet = true;
         private bool checkErrorEmail = true;
-        private DateTime dateBirthday;
-        private DateTime dateWhenGivePassport;
         private DateTime dateToday = DateTime.Now;
         private string birthday = "";
         private string whenGivePassport = "";
@@ -108,11 +106,10 @@ namespace Library
             tbName.Text = dgvRegistrationCard.CurrentRow.Cells[2].Value.ToString();
             tbPatronymic.Text = dgvRegistrationCard.CurrentRow.Cells[3].Value.ToString();
             dtpBirthday.Value = Convert.ToDateTime(dgvRegistrationCard.CurrentRow.Cells[4].Value.ToString());
-            //mtbBirthday.Text = dgvRegistrationCard.CurrentRow.Cells[4].Value.ToString();
             tbPassportSeries.Text = dgvRegistrationCard.CurrentRow.Cells[5].Value.ToString();
             tbPassportNumber.Text = dgvRegistrationCard.CurrentRow.Cells[6].Value.ToString();
             tbWhoGivePassport.Text = dgvRegistrationCard.CurrentRow.Cells[7].Value.ToString();
-            mtbWhenGivePassport.Text = dgvRegistrationCard.CurrentRow.Cells[8].Value.ToString();
+            dtpWhenGivePassport.Value = Convert.ToDateTime(dgvRegistrationCard.CurrentRow.Cells[8].Value.ToString());
             tbTown.Text = dgvRegistrationCard.CurrentRow.Cells[9].Value.ToString();
             tbStreet.Text = dgvRegistrationCard.CurrentRow.Cells[10].Value.ToString();
             tbBuilding.Text = dgvRegistrationCard.CurrentRow.Cells[11].Value.ToString();
@@ -277,11 +274,8 @@ namespace Library
 
             try   //конвертация дат
             {
-                //dateBirthday = Convert.ToDateTime(mtbBirthday.Text);
-                dateWhenGivePassport = Convert.ToDateTime(mtbWhenGivePassport.Text);
-                //birthday = dateBirthday.Date.ToString("yyyy-MM-dd");
                 birthday = dtpBirthday.Value.ToString("yyyy-MM-dd");
-                whenGivePassport = dateWhenGivePassport.Date.ToString("yyyy-MM-dd");
+                whenGivePassport = dtpWhenGivePassport.Value.ToString("yyyy-MM-dd");
                 dateToday = DateTime.Now;
                 today = dateToday.Date.ToString("yyyy-MM-dd");
             }
@@ -311,11 +305,10 @@ namespace Library
             tbName.Clear();
             tbPatronymic.Clear();
             dtpBirthday.Value = DateTime.Now;
-            //mtbBirthday.Clear();
             tbPassportSeries.Clear();
             tbPassportNumber.Clear();
             tbWhoGivePassport.Clear();
-            mtbWhenGivePassport.Clear();
+            dtpWhenGivePassport.Value = DateTime.Now;
             tbTown.Clear();
             tbStreet.Clear();
             tbBuilding.Clear();
@@ -333,11 +326,8 @@ namespace Library
 
             try  //конвертация дат
             {
-                //dateBirthday = Convert.ToDateTime(mtbBirthday.Text);
-                dateWhenGivePassport = Convert.ToDateTime(mtbWhenGivePassport.Text);
-                //birthday = dateBirthday.Date.ToString("yyyy-MM-dd");
                 birthday = dtpBirthday.Value.ToString("yyyy-MM-dd");
-                whenGivePassport = dateWhenGivePassport.Date.ToString("yyyy-MM-dd");
+                whenGivePassport = dtpWhenGivePassport.Value.ToString("yyyy-MM-dd");
                 dateToday = DateTime.Now;
                 today = dateToday.Date.ToString("yyyy-MM-dd");
             }
@@ -366,11 +356,10 @@ namespace Library
             tbName.Clear();
             tbPatronymic.Clear();
             dtpBirthday.Value = DateTime.Now;
-            //mtbBirthday.Clear();
             tbPassportSeries.Clear();
             tbPassportNumber.Clear();
             tbWhoGivePassport.Clear();
-            mtbWhenGivePassport.Clear();
+            dtpWhenGivePassport.Value = DateTime.Now;
             tbTown.Clear();
             tbStreet.Clear();
             tbBuilding.Clear();
@@ -392,11 +381,10 @@ namespace Library
                     tbName.Clear();
                     tbPatronymic.Clear();
                     dtpBirthday.Value = DateTime.Now;
-                    //mtbBirthday.Clear();
                     tbPassportSeries.Clear();
                     tbPassportNumber.Clear();
                     tbWhoGivePassport.Clear();
-                    mtbWhenGivePassport.Clear();
+                    dtpWhenGivePassport.Value = DateTime.Now;
                     tbTown.Clear();
                     tbStreet.Clear();
                     tbBuilding.Clear();
