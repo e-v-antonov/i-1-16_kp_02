@@ -7,10 +7,10 @@ using System.Windows.Forms;
 namespace Library
 {
     public partial class WriterBookForm : Form
-    {
-        DBTables dbTables = new DBTables();
+    {     
         DBStoredProcedure storedProcedure = new DBStoredProcedure();
         private SqlCommand commandSearchWriter = new SqlCommand("", RegistryData.DBConnectionString);
+        private string filterWriterBook = "";
 
         public WriterBookForm()
         {
@@ -25,19 +25,18 @@ namespace Library
 
         private void WriterBookFill()   //заполнение data grid view данными из базы данных
         {
+            DBTables dbTables = new DBTables();
+
             Action action = () =>
             {
                 try
                 {
-                    dbTables.CommandWriterBook.Notification = null;
-                    SqlDependency sqlDependency = new SqlDependency(dbTables.CommandWriterBook);
-                    SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                    sqlDependency.OnChange += new OnChangeEventHandler(ChangeDataWriter);
-                    RegistryData.DBConnectionString.Open();
-                    DataTable dataTable = new DataTable("Writer_Book");
-                    dataTable.Load(dbTables.CommandWriterBook.ExecuteReader());
-                    RegistryData.DBConnectionString.Close();
-                    dgvWriterBook.DataSource = dataTable;
+                    dbTables.DTWriterBook.Clear();
+                    dbTables.DTWriterBookFill();
+                    filterWriterBook = dbTables.QRWriterBook;
+                    dbTables.dependency.OnChange += ChangeDataWriter;
+
+                    dgvWriterBook.DataSource = dbTables.DTWriterBook;
                     dgvWriterBook.Columns[0].Visible = false;
                     dgvWriterBook.Columns[1].HeaderText = "Фамилия";
                     dgvWriterBook.Columns[2].HeaderText = "Имя";
@@ -123,7 +122,7 @@ namespace Library
             {
                 case (CheckState.Checked):  //фильтрация
                     DataTable data = new DataTable("Writer_Book");
-                    commandSearchWriter.CommandText = dbTables.CommandWriterBook.CommandText + " and [Surname_Writer] like '%" + tbSearch.Text 
+                    commandSearchWriter.CommandText = filterWriterBook + " and [Surname_Writer] like '%" + tbSearch.Text 
                         + "%' or [Name_Writer] like '%" + tbSearch.Text + "%' or [Patronymic_Writer] like '%" + tbSearch.Text + "%'";
                     RegistryData.DBConnectionString.Open();
                     data.Load(commandSearchWriter.ExecuteReader());

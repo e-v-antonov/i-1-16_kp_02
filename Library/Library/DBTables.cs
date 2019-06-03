@@ -64,8 +64,10 @@ namespace Library
         public SqlCommand command = new SqlCommand("", RegistryData.DBConnectionString);
         public DataTable DTGenre = new DataTable("Genre");
         public DataTable DTPublishing = new DataTable("Publishing");
+        public DataTable DTWriterBook = new DataTable("Writer_Book");
         public string QRGenre = "select [ID_Genre_Book], [Genre] from [dbo].[Genre_Book] where [Genre_Book_Logical_Delete] = 0";
         public string QRPublishing = "select [ID_Publishing_Book],[Publishing] from [dbo].[Publishing_Book] where [Publishing_Book_Logical_Delete] = 0";
+        public string QRWriterBook = "select [ID_Writer], [Surname_Writer], [Name_Writer], [Patronymic_Writer]  from [dbo].[Writer_Book] where [Writer_Book_Logical_Delete] = 0";
         public SqlDependency dependency = new SqlDependency();
 
         private void DataTableFill(DataTable table, string query)
@@ -98,6 +100,11 @@ namespace Library
         public void DTPublishingFill()
         {
             DataTableFill(DTPublishing, QRPublishing);
+        }
+
+        public void DTWriterBookFill()
+        {
+            DataTableFill(DTWriterBook, QRWriterBook);
         }
     }
 }
