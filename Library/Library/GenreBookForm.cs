@@ -8,7 +8,7 @@ namespace Library
 {
     public partial class GenreBookForm : Form
     {
-        DBTables dbTables = new DBTables();
+       
         DBStoredProcedure storedProcedure = new DBStoredProcedure();
 
         public GenreBookForm()
@@ -24,17 +24,14 @@ namespace Library
 
         private void GenreBookFill() //заполнение combo box данными из базы данных
         {
+            DBTables dbTables = new DBTables();
             Action action = () =>
             {
-                dbTables.CommandGenreBook.Notification = null;
-                SqlDependency sqlDependency = new SqlDependency(dbTables.CommandGenreBook);
-                SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                sqlDependency.OnChange += new OnChangeEventHandler(ChangeDataGenre);
-                RegistryData.DBConnectionString.Open();
-                DataTable dataTable = new DataTable("Genre_Book");
-                dataTable.Load(dbTables.CommandGenreBook.ExecuteReader());
-                RegistryData.DBConnectionString.Close();
-                ltbGenre.DataSource = dataTable;
+                dbTables.DTGenre.Clear();
+                dbTables.DTGenreFill();
+                dbTables.dependency.OnChange += ChangeDataGenre;
+
+                ltbGenre.DataSource = dbTables.DTGenre;
                 ltbGenre.ValueMember = "ID_Genre_Book";
                 ltbGenre.DisplayMember = "Genre";
             };
