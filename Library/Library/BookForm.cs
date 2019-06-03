@@ -103,7 +103,7 @@ namespace Library
                 try
                 {
                     dbTables.DTWriterBook.Clear();
-                    dbTables.DTWriterBookFill();
+                    dbTables.DTWriterForComboBoxFill();
                     dbTables.dependency.OnChange += ChangeDataWriterBook;
 
                     cbWriter.DataSource = dbTables.DTWriterBook;

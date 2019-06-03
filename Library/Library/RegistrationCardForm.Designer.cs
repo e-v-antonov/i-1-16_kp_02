@@ -59,6 +59,7 @@
             this.tbTown = new System.Windows.Forms.TextBox();
             this.lbTown = new System.Windows.Forms.Label();
             this.gbPassportData = new System.Windows.Forms.GroupBox();
+            this.dtpWhenGivePassport = new System.Windows.Forms.DateTimePicker();
             this.lbWhenGivePassport = new System.Windows.Forms.Label();
             this.tbWhoGivePassport = new System.Windows.Forms.TextBox();
             this.lbWhoGivePassport = new System.Windows.Forms.Label();
@@ -76,7 +77,6 @@
             this.tbSurname = new System.Windows.Forms.TextBox();
             this.lbSurname = new System.Windows.Forms.Label();
             this.dgvRegistrationCard = new System.Windows.Forms.DataGridView();
-            this.dtpWhenGivePassport = new System.Windows.Forms.DateTimePicker();
             this.pnCancel.SuspendLayout();
             this.gbSearchAndFiltration.SuspendLayout();
             this.pnFiltration.SuspendLayout();
@@ -428,6 +428,17 @@
             this.gbPassportData.TabStop = false;
             this.gbPassportData.Text = "Паспортные данные:";
             // 
+            // dtpWhenGivePassport
+            // 
+            this.dtpWhenGivePassport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpWhenGivePassport.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpWhenGivePassport.Location = new System.Drawing.Point(3, 152);
+            this.dtpWhenGivePassport.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtpWhenGivePassport.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpWhenGivePassport.Name = "dtpWhenGivePassport";
+            this.dtpWhenGivePassport.Size = new System.Drawing.Size(229, 23);
+            this.dtpWhenGivePassport.TabIndex = 15;
+            // 
             // lbWhenGivePassport
             // 
             this.lbWhenGivePassport.AutoSize = true;
@@ -600,17 +611,7 @@
             this.dgvRegistrationCard.Size = new System.Drawing.Size(1155, 360);
             this.dgvRegistrationCard.TabIndex = 3;
             this.dgvRegistrationCard.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistrationCard_CellClick);
-            // 
-            // dtpWhenGivePassport
-            // 
-            this.dtpWhenGivePassport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpWhenGivePassport.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpWhenGivePassport.Location = new System.Drawing.Point(3, 152);
-            this.dtpWhenGivePassport.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dtpWhenGivePassport.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtpWhenGivePassport.Name = "dtpWhenGivePassport";
-            this.dtpWhenGivePassport.Size = new System.Drawing.Size(229, 23);
-            this.dtpWhenGivePassport.TabIndex = 15;
+            this.dgvRegistrationCard.Click += new System.EventHandler(this.dgvRegistrationCard_Click);
             // 
             // RegistrationCardForm
             // 
@@ -627,7 +628,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрационные карточки читателей";
             this.Load += new System.EventHandler(this.RegistrationCardForm_Load);
-            this.Click += new System.EventHandler(this.RegistrationCardForm_Click);
             this.pnCancel.ResumeLayout(false);
             this.gbSearchAndFiltration.ResumeLayout(false);
             this.pnFiltration.ResumeLayout(false);

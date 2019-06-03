@@ -9,9 +9,9 @@ namespace Library
 {
     public partial class RegistrationCardForm : Form
     {
-        DBTables dbTables = new DBTables();
         DBStoredProcedure storedProcedure = new DBStoredProcedure();
         private SqlCommand commandSearchCard = new SqlCommand("", RegistryData.DBConnectionString);
+        private string filterWriterBook = "";
         private string constraintPassportSeries = @"\d{4}";
         private string constraintPassportNumber = @"\d{6}";
         private string symbolConstraint = @"!@#$%^&*()+=/|\<>:;{}[]?`~№";
@@ -45,25 +45,18 @@ namespace Library
 
         private void RegistrationCardFill() //заполнение data grid view данными из базы данных
         {
+            DBTables dbTables = new DBTables();
+
             Action action = () =>
             {
                 try
                 {
-                    dbTables.CommandRegistrationCard.Notification = null;
-                    dbTables.CommandOpenKey.CommandType = System.Data.CommandType.StoredProcedure;
-                    dbTables.CommandCloseKey.CommandType = System.Data.CommandType.StoredProcedure;
-                    SqlDependency sqlDependency = new SqlDependency(dbTables.CommandRegistrationCard);
-                    SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                    sqlDependency.OnChange += new OnChangeEventHandler(ChangeDataRegistrationCard);
-                    RegistryData.DBConnectionString.Open();
-                    DataTable dataTable = new DataTable("Registration_Card_Reader");
-                    dataTable.Clear();
-                    dbTables.CommandOpenKey.ExecuteNonQuery();
-                    dataTable.Load(dbTables.CommandRegistrationCard.ExecuteReader());
-                    dbTables.CommandCloseKey.ExecuteNonQuery();
-                    RegistryData.DBConnectionString.Close();
+                    dbTables.DTRegistrationCard.Clear();
+                    dbTables.DTRegistrationCardFill();
+                    filterWriterBook = dbTables.QRRegistrationCard;
+                    dbTables.dependency.OnChange += ChangeDataRegistrationCard;
 
-                    dgvRegistrationCard.DataSource = dataTable;
+                    dgvRegistrationCard.DataSource = dbTables.DTRegistrationCard;
                     dgvRegistrationCard.Columns[0].Visible = false;
                     dgvRegistrationCard.Columns[1].HeaderText = "Фамилия";
                     dgvRegistrationCard.Columns[2].HeaderText = "Имя";
@@ -421,12 +414,12 @@ namespace Library
         }
 
         private void chbFiltration_CheckedChanged(object sender, EventArgs e)   //изменение check box
-        {
+        {         
             switch (chbFiltration.CheckState)
             {
                 case (CheckState.Checked):  //фильтрация
                     DataTable data = new DataTable("Registration_Card_Reader");
-                    commandSearchCard.CommandText = dbTables.CommandRegistrationCard.CommandText + "and [Surname_Reader] like '%" +
+                    commandSearchCard.CommandText = filterWriterBook + "and [Surname_Reader] like '%" +
                         tbSearch.Text + "%' or [Name_Reader] like '%" + tbSearch.Text + "%' or [Patronymic_Reader] like '%" +
                         tbSearch.Text + "%' or CONVERT([varchar] (10), [dbo].[Registration_Card_Reader].[Birthday_Reader], 104) like '%" + tbSearch.Text + "%' or CONVERT([nvarchar] (4), DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Passport_Series_Reader])) like '%" +
                         tbSearch.Text + "%' or CONVERT([nvarchar] (6), DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Passport_Number_Reader])) like '%" + tbSearch.Text + "%' or [Who_Give_Passport_Reader] like '%"
@@ -436,6 +429,7 @@ namespace Library
                         "%' or CONVERT([nvarchar] (15), DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Mobile_Phone_Reader])) like '%" + tbSearch.Text + "%' or CONVERT([nvarchar] (129), DECRYPTBYKEY([dbo].[Registration_Card_Reader].[Email_Reader])) like '%" + tbSearch.Text +
                         "%' or [Book_On_Hand_Reader] like '%" + tbSearch.Text + "%'";
                     RegistryData.DBConnectionString.Open();
+                    DBTables dbTables = new DBTables();
                     dbTables.CommandOpenKey.ExecuteNonQuery();
                     data.Load(commandSearchCard.ExecuteReader());
                     dbTables.CommandCloseKey.ExecuteNonQuery();
@@ -491,14 +485,9 @@ namespace Library
             Close();
         }
 
-        private void RegistrationCardForm_MouseMove(object sender, MouseEventArgs e)    //наведение курсора на форму
+        private void dgvRegistrationCard_Click(object sender, EventArgs e)  //клик по data grid view
         {
-           //RegistrationCardFill();
-        }
-
-        private void RegistrationCardForm_Click(object sender, EventArgs e) //клик по форме
-        {
-            //RegistrationCardFill();
+            RegistrationCardFill();
         }
     }
 }

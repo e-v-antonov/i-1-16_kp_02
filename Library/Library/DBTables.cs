@@ -66,10 +66,25 @@ namespace Library
         public DataTable DTPublishing = new DataTable("Publishing");
         public DataTable DTWriterBook = new DataTable("Writer_Book");
         public DataTable DTBook = new DataTable("Book");
+        public DataTable DTRegistrationCard = new DataTable("Registration_Card_Reader");
         public string QRGenre = "select [ID_Genre_Book], [Genre] from [dbo].[Genre_Book] where [Genre_Book_Logical_Delete] = 0";
         public string QRPublishing = "select [ID_Publishing_Book],[Publishing] from [dbo].[Publishing_Book] where [Publishing_Book_Logical_Delete] = 0";
         public string QRWriterBook = "select [ID_Writer], [Surname_Writer], [Name_Writer], [Patronymic_Writer]  from [dbo].[Writer_Book] where [Writer_Book_Logical_Delete] = 0";
-        public string QRBook = "select [ID_Book], [Book_Title], [Writer_ID], [Surname_Writer] + ' ' + [Name_Writer] + ' ' + [Patronymic_Writer], [Genre_Book_ID], [Genre], [Publishing_Book_ID], [Publishing], [Publication_Date], [Number_Pages], [ISBN_Book], [Cost_Book], [Total_Number_Copies_Book], [Available_Number_Copies_Book], CONVERT([varchar] (10), [Date_Acceptance_Book], 104) from [dbo].[Book] inner join [dbo].[Writer_Book] on [dbo].[Book].[Writer_ID] = [dbo].[Writer_Book].[ID_Writer] inner join [dbo].[Genre_Book] on [dbo].[Book].[Genre_Book_ID] = [dbo].[Genre_Book].[ID_Genre_Book] inner join [dbo].[Publishing_Book] on [dbo].[Book].[Publishing_Book_ID] = [dbo].[Publishing_Book].[ID_Publishing_Book] where [Book_Logical_Delete] = 0 and [Genre_Book_Logical_Delete] = 0 and [Publishing_Book_Logical_Delete] = 0 and [Writer_Book_Logical_Delete] = 0";
+        public string QRBook = "select [ID_Book], [Book_Title], [Writer_ID], [Surname_Writer] + ' ' + [Name_Writer] + ' ' + [Patronymic_Writer], " +
+            "[Genre_Book_ID], [Genre], [Publishing_Book_ID], [Publishing], [Publication_Date], [Number_Pages], [ISBN_Book], [Cost_Book], " +
+            "[Total_Number_Copies_Book], [Available_Number_Copies_Book], CONVERT([varchar] (10), [Date_Acceptance_Book], 104) from [dbo].[Book] " +
+            "inner join [dbo].[Writer_Book] on [dbo].[Book].[Writer_ID] = [dbo].[Writer_Book].[ID_Writer] inner join [dbo].[Genre_Book] on " +
+            "[dbo].[Book].[Genre_Book_ID] = [dbo].[Genre_Book].[ID_Genre_Book] inner join [dbo].[Publishing_Book] on" +
+            " [dbo].[Book].[Publishing_Book_ID] = [dbo].[Publishing_Book].[ID_Publishing_Book] where [Book_Logical_Delete] = 0 and " +
+            "[Genre_Book_Logical_Delete] = 0 and [Publishing_Book_Logical_Delete] = 0 and [Writer_Book_Logical_Delete] = 0";
+        public string QRWriterForComboBox = "select [ID_Writer], [Surname_Writer] + ' ' + [Name_Writer] + ' ' + [Patronymic_Writer] as \"FIO_Writer\" from [dbo].[Writer_Book] where [Writer_Book_Logical_Delete] = 0";
+        public string QRRegistrationCard = "select [ID_Registration_Card_Reader], [Surname_Reader], [Name_Reader], [Patronymic_Reader], " +
+            "CONVERT([varchar] (10), [Birthday_Reader], 104), CONVERT([nvarchar] (4), DECRYPTBYKEY([Passport_Series_Reader])), " +
+            "CONVERT([nvarchar] (6), DECRYPTBYKEY([Passport_Number_Reader])), [Who_Give_Passport_Reader], CONVERT([varchar] (10), " +
+            "[When_Give_Passport_Reader], 104), [Town_Reader], CONVERT([nvarchar] (50), DECRYPTBYKEY([Street_Reader])), [Building_Reader], " +
+            "[Apartment_Reader], CONVERT([nvarchar] (15), DECRYPTBYKEY([Home_Phone_Reader])), CONVERT([nvarchar] (15), " +
+            "DECRYPTBYKEY([Mobile_Phone_Reader])), CONVERT([nvarchar] (129), DECRYPTBYKEY([Email_Reader])), [Book_On_Hand_Reader] from " +
+            "[dbo].[Registration_Card_Reader] where [Registration_Card_Reader_Logical_Delete] = 0";
         public SqlDependency dependency = new SqlDependency();
 
         private void DataTableFill(DataTable table, string query)
@@ -82,7 +97,9 @@ namespace Library
                 dependency.AddCommandDependency(command);
                 SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
                 RegistryData.DBConnectionString.Open();
+                CommandOpenKey.ExecuteNonQuery();
                 table.Load(command.ExecuteReader());
+                CommandCloseKey.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -112,6 +129,16 @@ namespace Library
         public void DTBookFill()
         {
             DataTableFill(DTBook, QRBook);
+        }
+
+        public void DTWriterForComboBoxFill()
+        {
+            DataTableFill(DTWriterBook, QRWriterForComboBox);
+        }
+
+        public void DTRegistrationCardFill()
+        {
+            DataTableFill(DTRegistrationCard, QRRegistrationCard);
         }
     }
 }
