@@ -52,9 +52,9 @@
             this.lbDateReturn = new System.Windows.Forms.Label();
             this.nudNumberDays = new System.Windows.Forms.NumericUpDown();
             this.lbNumberDays = new System.Windows.Forms.Label();
-            this.mtbDateIssue = new System.Windows.Forms.MaskedTextBox();
             this.lbDateIssue = new System.Windows.Forms.Label();
             this.dgvFormular = new System.Windows.Forms.DataGridView();
+            this.dtpDateIssue = new System.Windows.Forms.DateTimePicker();
             this.gbSearchAndFiltration.SuspendLayout();
             this.pnSearch.SuspendLayout();
             this.pnFiltration.SuspendLayout();
@@ -163,7 +163,7 @@
             this.gbManipulationData.Controls.Add(this.lbDateReturn);
             this.gbManipulationData.Controls.Add(this.nudNumberDays);
             this.gbManipulationData.Controls.Add(this.lbNumberDays);
-            this.gbManipulationData.Controls.Add(this.mtbDateIssue);
+            this.gbManipulationData.Controls.Add(this.dtpDateIssue);
             this.gbManipulationData.Controls.Add(this.lbDateIssue);
             this.gbManipulationData.Dock = System.Windows.Forms.DockStyle.Left;
             this.gbManipulationData.Location = new System.Drawing.Point(0, 48);
@@ -344,16 +344,6 @@
             this.lbNumberDays.TabIndex = 3;
             this.lbNumberDays.Text = "Количество дней выдачи";
             // 
-            // mtbDateIssue
-            // 
-            this.mtbDateIssue.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mtbDateIssue.Location = new System.Drawing.Point(3, 35);
-            this.mtbDateIssue.Mask = "00.00.0000";
-            this.mtbDateIssue.Name = "mtbDateIssue";
-            this.mtbDateIssue.Size = new System.Drawing.Size(274, 23);
-            this.mtbDateIssue.TabIndex = 2;
-            this.mtbDateIssue.TextChanged += new System.EventHandler(this.mtbDateIssue_TextChanged);
-            // 
             // lbDateIssue
             // 
             this.lbDateIssue.AutoSize = true;
@@ -380,6 +370,18 @@
             this.dgvFormular.TabIndex = 7;
             this.dgvFormular.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFormular_CellClick);
             this.dgvFormular.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dgvFormular_MouseMove);
+            // 
+            // dtpDateIssue
+            // 
+            this.dtpDateIssue.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpDateIssue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateIssue.Location = new System.Drawing.Point(3, 35);
+            this.dtpDateIssue.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtpDateIssue.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpDateIssue.Name = "dtpDateIssue";
+            this.dtpDateIssue.Size = new System.Drawing.Size(274, 23);
+            this.dtpDateIssue.TabIndex = 18;
+            this.dtpDateIssue.ValueChanged += new System.EventHandler(this.dtpDateIssue_ValueChanged);
             // 
             // FormularForm
             // 
@@ -437,9 +439,9 @@
         private System.Windows.Forms.Label lbDateReturn;
         private System.Windows.Forms.NumericUpDown nudNumberDays;
         private System.Windows.Forms.Label lbNumberDays;
-        private System.Windows.Forms.MaskedTextBox mtbDateIssue;
         private System.Windows.Forms.Label lbDateIssue;
         private System.Windows.Forms.Panel pnComboBox;
         private System.Windows.Forms.DataGridView dgvFormular;
+        private System.Windows.Forms.DateTimePicker dtpDateIssue;
     }
 }

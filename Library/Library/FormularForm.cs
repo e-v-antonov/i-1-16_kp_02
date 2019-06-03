@@ -156,7 +156,8 @@ namespace Library
 
         private void dgvFormular_CellClick(object sender, DataGridViewCellEventArgs e)  //клик по полю data grid view
         {
-            mtbDateIssue.Text = dgvFormular.CurrentRow.Cells[6].Value.ToString();
+            //mtbDateIssue.Text = dgvFormular.CurrentRow.Cells[6].Value.ToString();
+            dtpDateIssue.Value = Convert.ToDateTime(dgvFormular.CurrentRow.Cells[6].Value.ToString());
             nudNumberDays.Value = Convert.ToInt32(dgvFormular.CurrentRow.Cells[7].Value.ToString());
             tbDateReturn.Text = dgvFormular.CurrentRow.Cells[8].Value.ToString();
             if (dgvFormular.CurrentRow.Cells[9].Value.ToString() == "1")
@@ -167,35 +168,42 @@ namespace Library
             cbBook.SelectedValue = dgvFormular.CurrentRow.Cells[4].Value.ToString();
         }
 
-        private void mtbDateIssue_TextChanged(object sender, EventArgs e) //изменение текста в поле ввода даты выдачи книги
+        //private void mtbDateIssue_TextChanged(object sender, EventArgs e) //изменение текста в поле ввода даты выдачи книги
+        //{
+        //    if (mtbDateIssue.MaskCompleted == true)
+        //    {
+        //        try
+        //        {
+        //            dateIssue = Convert.ToDateTime(mtbDateIssue.Text);
+        //            tbDateReturn.Text = dateIssue.AddDays(Convert.ToDouble(nudNumberDays.Value)).ToString("dd.MM.yyyy");
+        //        }
+        //        catch
+        //        {
+        //            MessageBox.Show("Введен неправильный формат даты!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //    }
+        //    else
+        //        tbDateReturn.Clear();
+        //}
+
+        private void dtpDateIssue_ValueChanged(object sender, EventArgs e)
         {
-            if (mtbDateIssue.MaskCompleted == true)
-            {
-                try
-                {
-                    dateIssue = Convert.ToDateTime(mtbDateIssue.Text);
-                    tbDateReturn.Text = dateIssue.AddDays(Convert.ToDouble(nudNumberDays.Value)).ToString("dd.MM.yyyy");
-                }
-                catch
-                {
-                    MessageBox.Show("Введен неправильный формат даты!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-                tbDateReturn.Clear();
+            dateIssue = dtpDateIssue.Value;
+            tbDateReturn.Text = dateIssue.AddDays(Convert.ToDouble(nudNumberDays.Value)).ToString("dd.MM.yyyy");
         }
 
         private void nudNumberDays_ValueChanged(object sender, EventArgs e) //изменение значения numeric up down
         {
-            mtbDateIssue_TextChanged(sender, e);
+            dtpDateIssue_ValueChanged(sender, e);
+            //mtbDateIssue_TextChanged(sender, e);
         }
 
         private void btnInsert_Click(object sender, EventArgs e)    //кнопка добавления записи
         {
             try
             {
-                dateIssue = Convert.ToDateTime(mtbDateIssue.Text);
-                issueBook = dateIssue.ToString("yyyy-MM-dd");
+                //dateIssue = Convert.ToDateTime(mtbDateIssue.Text);
+                issueBook = dtpDateIssue.Value.ToString("yyyy-MM-dd");
             }
             catch
             {
@@ -208,7 +216,8 @@ namespace Library
                 storedProcedure.SPFormularReaderInsert(issueBook, Convert.ToInt32(nudNumberDays.Value), Convert.ToInt32(cbReader.SelectedValue.ToString()), Convert.ToInt32(cbBook.SelectedValue.ToString()));
 
             FormularFill();
-            mtbDateIssue.Clear();
+            dtpDateIssue.Value = DateTime.Now;
+            //mtbDateIssue.Clear();
             nudNumberDays.Value = 1;
             cbReader.SelectedValue = -1;
             cbBook.SelectedValue = -1;
@@ -218,8 +227,8 @@ namespace Library
         {
             try
             {
-                dateIssue = Convert.ToDateTime(mtbDateIssue.Text);
-                issueBook = dateIssue.ToString("yyyy-MM-dd");
+                //dateIssue = Convert.ToDateTime(mtbDateIssue.Text);
+                issueBook = dtpDateIssue.Value.ToString("yyyy-MM-dd");
             }
             catch
             {
@@ -236,7 +245,8 @@ namespace Library
             storedProcedure.SPFormularReaderUpdate(Convert.ToInt32(dgvFormular.CurrentRow.Cells[0].Value.ToString()), issueBook, Convert.ToInt32(nudNumberDays.Value), returnedBook, Convert.ToInt32(cbReader.SelectedValue.ToString()), Convert.ToInt32(cbBook.SelectedValue.ToString()));
 
             FormularFill();
-            mtbDateIssue.Clear();
+            dtpDateIssue.Value = DateTime.Now;
+            //mtbDateIssue.Clear();
             nudNumberDays.Value = 1;
             cbReader.SelectedValue = -1;
             cbBook.SelectedValue = -1;
@@ -249,7 +259,8 @@ namespace Library
                 case DialogResult.Yes:
                     storedProcedure.SPFormularReaderDelete(Convert.ToInt32(dgvFormular.CurrentRow.Cells[0].Value.ToString()));
                     FormularFill();
-                    mtbDateIssue.Clear();
+                    dtpDateIssue.Value = DateTime.Now;
+                    //mtbDateIssue.Clear();
                     nudNumberDays.Value = 1;
                     cbReader.SelectedValue = -1;
                     cbBook.SelectedValue = -1;
