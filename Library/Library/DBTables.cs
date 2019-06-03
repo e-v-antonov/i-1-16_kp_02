@@ -67,6 +67,7 @@ namespace Library
         public DataTable DTWriterBook = new DataTable("Writer_Book");
         public DataTable DTBook = new DataTable("Book");
         public DataTable DTRegistrationCard = new DataTable("Registration_Card_Reader");
+        public DataTable DTFormular = new DataTable("Formular_Reader");
         public string QRGenre = "select [ID_Genre_Book], [Genre] from [dbo].[Genre_Book] where [Genre_Book_Logical_Delete] = 0";
         public string QRPublishing = "select [ID_Publishing_Book],[Publishing] from [dbo].[Publishing_Book] where [Publishing_Book_Logical_Delete] = 0";
         public string QRWriterBook = "select [ID_Writer], [Surname_Writer], [Name_Writer], [Patronymic_Writer]  from [dbo].[Writer_Book] where [Writer_Book_Logical_Delete] = 0";
@@ -77,7 +78,7 @@ namespace Library
             "[dbo].[Book].[Genre_Book_ID] = [dbo].[Genre_Book].[ID_Genre_Book] inner join [dbo].[Publishing_Book] on" +
             " [dbo].[Book].[Publishing_Book_ID] = [dbo].[Publishing_Book].[ID_Publishing_Book] where [Book_Logical_Delete] = 0 and " +
             "[Genre_Book_Logical_Delete] = 0 and [Publishing_Book_Logical_Delete] = 0 and [Writer_Book_Logical_Delete] = 0";
-        public string QRWriterForComboBox = "select [ID_Writer], [Surname_Writer] + ' ' + [Name_Writer] + ' ' + [Patronymic_Writer] as \"FIO_Writer\" from [dbo].[Writer_Book] where [Writer_Book_Logical_Delete] = 0";
+        private string QRWriterForComboBox = "select [ID_Writer], [Surname_Writer] + ' ' + [Name_Writer] + ' ' + [Patronymic_Writer] as \"FIO_Writer\" from [dbo].[Writer_Book] where [Writer_Book_Logical_Delete] = 0";
         public string QRRegistrationCard = "select [ID_Registration_Card_Reader], [Surname_Reader], [Name_Reader], [Patronymic_Reader], " +
             "CONVERT([varchar] (10), [Birthday_Reader], 104), CONVERT([nvarchar] (4), DECRYPTBYKEY([Passport_Series_Reader])), " +
             "CONVERT([nvarchar] (6), DECRYPTBYKEY([Passport_Number_Reader])), [Who_Give_Passport_Reader], CONVERT([varchar] (10), " +
@@ -85,6 +86,19 @@ namespace Library
             "[Apartment_Reader], CONVERT([nvarchar] (15), DECRYPTBYKEY([Home_Phone_Reader])), CONVERT([nvarchar] (15), " +
             "DECRYPTBYKEY([Mobile_Phone_Reader])), CONVERT([nvarchar] (129), DECRYPTBYKEY([Email_Reader])), [Book_On_Hand_Reader] from " +
             "[dbo].[Registration_Card_Reader] where [Registration_Card_Reader_Logical_Delete] = 0";
+        public string QRFormular = "select[ID_Formular_Reader], [ID_Registration_Card_Reader], [Surname_Reader] + ' ' + [Name_Reader] + ' ' + " +
+            "[Patronymic_Reader], CONVERT([nvarchar] (4), DECRYPTBYKEY([Passport_Series_Reader])) + ' ' + CONVERT([nvarchar] (6), " +
+            "DECRYPTBYKEY([Passport_Number_Reader])), [ID_Book], [Book_Title], CONVERT([varchar] (10), [Date_Issue_Book], 104), " +
+            "[Number_Days_Issue_Book], CONVERT([varchar] (10), [Date_Return_Book], 104), [Book_Returned] from [dbo].[Formular_Reader] " +
+            "inner join [dbo].[Registration_Card_Reader] on [dbo].[Formular_Reader].[Registration_Card_Reader_ID] = " +
+            "[dbo].[Registration_Card_Reader].[ID_Registration_Card_Reader] inner join [dbo].[Book] on [dbo].[Formular_Reader].[Book_ID] = " +
+            "[dbo].[Book].[ID_Book] where [Formular_Reader_Logical_Delete] = 0 and [Registration_Card_Reader_Logical_Delete] = 0 and " +
+            "[Book_Logical_Delete] = 0";
+        private string QRBookForComboBox = "select [ID_Book], [Book_Title] from [dbo].[Book] where [Book_Logical_Delete] = 0";
+        private string QRReaderForComboBox = "select [ID_Registration_Card_Reader], [Surname_Reader] + ' ' + [Name_Reader] + ' ' + " +
+            "[Patronymic_Reader] + ', ' +  CONVERT([nvarchar] (4), DECRYPTBYKEY([Passport_Series_Reader])) + ' ' + CONVERT([nvarchar] (6), " +
+            "DECRYPTBYKEY([Passport_Number_Reader])) as \"Reader\" from [dbo].[Registration_Card_Reader]";
+
         public SqlDependency dependency = new SqlDependency();
 
         private void DataTableFill(DataTable table, string query)
@@ -139,6 +153,21 @@ namespace Library
         public void DTRegistrationCardFill()
         {
             DataTableFill(DTRegistrationCard, QRRegistrationCard);
+        }
+
+        public void DTFormularFill()
+        {
+            DataTableFill(DTFormular, QRFormular);
+        }
+
+        public void DTBookForComboBoxFill()
+        {
+            DataTableFill(DTBook, QRBookForComboBox);
+        }
+
+        public void DTReaderForComboBoxFill()
+        {
+            DataTableFill(DTRegistrationCard, QRReaderForComboBox);
         }
     }
 }

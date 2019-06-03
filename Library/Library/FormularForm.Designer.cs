@@ -52,9 +52,9 @@
             this.lbDateReturn = new System.Windows.Forms.Label();
             this.nudNumberDays = new System.Windows.Forms.NumericUpDown();
             this.lbNumberDays = new System.Windows.Forms.Label();
+            this.dtpDateIssue = new System.Windows.Forms.DateTimePicker();
             this.lbDateIssue = new System.Windows.Forms.Label();
             this.dgvFormular = new System.Windows.Forms.DataGridView();
-            this.dtpDateIssue = new System.Windows.Forms.DateTimePicker();
             this.gbSearchAndFiltration.SuspendLayout();
             this.pnSearch.SuspendLayout();
             this.pnFiltration.SuspendLayout();
@@ -250,6 +250,7 @@
             this.cbBook.Name = "cbBook";
             this.cbBook.Size = new System.Drawing.Size(274, 24);
             this.cbBook.TabIndex = 9;
+            this.cbBook.DropDown += new System.EventHandler(this.cbBook_DropDown);
             // 
             // lbBook
             // 
@@ -269,6 +270,7 @@
             this.cbReader.Name = "cbReader";
             this.cbReader.Size = new System.Drawing.Size(274, 24);
             this.cbReader.TabIndex = 8;
+            this.cbReader.DropDown += new System.EventHandler(this.cbReader_DropDown);
             // 
             // lbReader
             // 
@@ -344,6 +346,18 @@
             this.lbNumberDays.TabIndex = 3;
             this.lbNumberDays.Text = "Количество дней выдачи";
             // 
+            // dtpDateIssue
+            // 
+            this.dtpDateIssue.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpDateIssue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateIssue.Location = new System.Drawing.Point(3, 35);
+            this.dtpDateIssue.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtpDateIssue.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpDateIssue.Name = "dtpDateIssue";
+            this.dtpDateIssue.Size = new System.Drawing.Size(274, 23);
+            this.dtpDateIssue.TabIndex = 18;
+            this.dtpDateIssue.ValueChanged += new System.EventHandler(this.dtpDateIssue_ValueChanged);
+            // 
             // lbDateIssue
             // 
             this.lbDateIssue.AutoSize = true;
@@ -369,19 +383,7 @@
             this.dgvFormular.Size = new System.Drawing.Size(793, 433);
             this.dgvFormular.TabIndex = 7;
             this.dgvFormular.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFormular_CellClick);
-            this.dgvFormular.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dgvFormular_MouseMove);
-            // 
-            // dtpDateIssue
-            // 
-            this.dtpDateIssue.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpDateIssue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateIssue.Location = new System.Drawing.Point(3, 35);
-            this.dtpDateIssue.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dtpDateIssue.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtpDateIssue.Name = "dtpDateIssue";
-            this.dtpDateIssue.Size = new System.Drawing.Size(274, 23);
-            this.dtpDateIssue.TabIndex = 18;
-            this.dtpDateIssue.ValueChanged += new System.EventHandler(this.dtpDateIssue_ValueChanged);
+            this.dgvFormular.Click += new System.EventHandler(this.dgvFormular_Click);
             // 
             // FormularForm
             // 

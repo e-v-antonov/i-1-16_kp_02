@@ -7,13 +7,13 @@ using System.Windows.Forms;
 namespace Library
 {
     public partial class FormularForm : Form
-    {
-        DBTables dbTables = new DBTables();
+    {        
         DBStoredProcedure storedProcedure = new DBStoredProcedure();
         private SqlCommand commandSearchBook = new SqlCommand("", RegistryData.DBConnectionString);
         private DateTime dateIssue;
         private string issueBook = "";
-  
+        private string filterBook = "";
+
         public FormularForm()
         {
             InitializeComponent();
@@ -32,23 +32,18 @@ namespace Library
 
         private void FormularFill() //заполнение data grid view данными из базы данных
         {
+            DBTables dbTables = new DBTables();
+
             Action action = () =>
             {
                 try
                 {
-                    dbTables.CommandFormular.Notification = null;
-                    SqlDependency sqlDependencyFormular = new SqlDependency(dbTables.CommandFormular);
-                    SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                    sqlDependencyFormular.OnChange += new OnChangeEventHandler(ChangeDataFormular);
-                    RegistryData.DBConnectionString.Open();
-                    DataTable dataTable = new DataTable("Formular_Reader");
-                    dataTable.Clear();
-                    dbTables.CommandOpenKey.ExecuteNonQuery();
-                    dataTable.Load(dbTables.CommandFormular.ExecuteReader());
-                    dbTables.CommandCloseKey.ExecuteNonQuery();
-                    RegistryData.DBConnectionString.Close();
+                    dbTables.DTFormular.Clear();
+                    dbTables.DTFormularFill();
+                    dbTables.dependency.OnChange += ChangeDataFormular;
+                    filterBook = dbTables.QRFormular;
 
-                    dgvFormular.DataSource = dataTable;
+                    dgvFormular.DataSource = dbTables.DTFormular;
                     dgvFormular.Columns[0].Visible = false;
                     dgvFormular.Columns[1].Visible = false;
                     dgvFormular.Columns[2].HeaderText = "Читатель";
@@ -79,24 +74,17 @@ namespace Library
 
         private void ReaderFill()    //заполнение combo box данными из базы данных
         {
+            DBTables dbTables = new DBTables();
+
             Action action = () =>
             {
                 try
                 {
+                    dbTables.DTRegistrationCard.Clear();
+                    dbTables.DTReaderForComboBoxFill();
+                    dbTables.dependency.OnChange += ChangeDataReader;
 
-                    dbTables.CommandReaderForComboBox.Notification = null;
-                    SqlDependency sqlDependencyReader = new SqlDependency(dbTables.CommandReaderForComboBox);
-                    SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                    sqlDependencyReader.OnChange += new OnChangeEventHandler(ChangeDataReader);
-                    RegistryData.DBConnectionString.Open();
-                    DataTable dataTable = new DataTable("Registration_Card_Reader");
-                    dataTable.Clear();
-                    dbTables.CommandOpenKey.ExecuteNonQuery();
-                    dataTable.Load(dbTables.CommandReaderForComboBox.ExecuteReader());
-                    dbTables.CommandCloseKey.ExecuteNonQuery();
-                    RegistryData.DBConnectionString.Close();
-
-                    cbReader.DataSource = dataTable;
+                    cbReader.DataSource = dbTables.DTRegistrationCard;
                     cbReader.ValueMember = "ID_Registration_Card_Reader";
                     cbReader.DisplayMember = "Reader";
                     cbReader.SelectedValue = -1;
@@ -111,21 +99,17 @@ namespace Library
 
         private void BookFill()  //заполнение combo box данными из базы данных
         {
+            DBTables dbTables = new DBTables();
+
             Action action = () =>
             {
                 try
                 {
-                    dbTables.CommandBookForComboBox.Notification = null;
-                    SqlDependency sqlDependencyBook = new SqlDependency(dbTables.CommandBook);
-                    SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                    sqlDependencyBook.OnChange += new OnChangeEventHandler(ChangeDataBook);
-                    RegistryData.DBConnectionString.Open();
-                    DataTable dataTable = new DataTable("Book");
-                    dataTable.Clear();
-                    dataTable.Load(dbTables.CommandBookForComboBox.ExecuteReader());
-                    RegistryData.DBConnectionString.Close();
+                    dbTables.DTBook.Clear();
+                    dbTables.DTBookForComboBoxFill();
+                    dbTables.dependency.OnChange += ChangeDataBook;
 
-                    cbBook.DataSource = dataTable;
+                    cbBook.DataSource = dbTables.DTBook;
                     cbBook.ValueMember = "ID_Book";
                     cbBook.DisplayMember = "Book_Title";
                     cbBook.SelectedValue = -1;
@@ -272,7 +256,7 @@ namespace Library
                 case (CheckState.Checked):  //фильтрация
                     DataTable data = new DataTable("Book");
                     commandSearchBook.Notification = null;
-                    commandSearchBook.CommandText = dbTables.CommandFormular.CommandText + " and [Date_Issue_Book] like '%" + tbSearch.Text
+                    commandSearchBook.CommandText = filterBook + " and [Date_Issue_Book] like '%" + tbSearch.Text
                         + "%' or [Number_Days_Issue_Book] like '%" + tbSearch.Text + "%' or [Date_Return_Book] like '%" + tbSearch.Text
                         + "%' or [Book_Returned] like '%" + tbSearch.Text + "%' or [dbo].[Book].[Book_Title] like '%" + tbSearch.Text
                         + "%' or [dbo].[Registration_Card_Reader].[Surname_Reader] like '%" + tbSearch.Text
@@ -283,6 +267,7 @@ namespace Library
                         + tbSearch.Text + "%'";
 
                     RegistryData.DBConnectionString.Open();
+                    DBTables dbTables = new DBTables();
                     dbTables.CommandOpenKey.ExecuteNonQuery();
                     data.Load(commandSearchBook.ExecuteReader());
                     dbTables.CommandCloseKey.ExecuteNonQuery();
@@ -343,9 +328,19 @@ namespace Library
             Close();
         }
 
-        private void dgvFormular_MouseMove(object sender, MouseEventArgs e)
+        private void cbReader_DropDown(object sender, EventArgs e)  //открытие списка combo box
         {
-           // FormularFill();
+            ReaderFill();
+        }
+
+        private void cbBook_DropDown(object sender, EventArgs e)    //открытие списка combo box
+        {
+            BookFill();
+        }
+
+        private void dgvFormular_Click(object sender, EventArgs e)  //клик по полю data grid view
+        {
+            FormularFill();
         }
     }
 }
