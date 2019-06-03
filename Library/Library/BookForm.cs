@@ -7,12 +7,12 @@ using System.Windows.Forms;
 namespace Library
 {
     public partial class BookForm : Form
-    {
-        DBTables dbTables = new DBTables();
+    {        
         DBStoredProcedure storedProcedure = new DBStoredProcedure();
         private SqlCommand commandSearchBook = new SqlCommand("", RegistryData.DBConnectionString);
         private DateTime dateToday;
         private string today = "";
+        private string filterBook = "";
 
         public BookForm()
         {
@@ -34,21 +34,18 @@ namespace Library
 
         private void BookFill() //заполнение data grid view данными из базы данных
         {
+            DBTables dbTables = new DBTables();
+
             Action action = () =>
             {
                 try
                 {
-                    dbTables.CommandBook.Notification = null;
-                    SqlDependency sqlDependencyBook = new SqlDependency(dbTables.CommandBook);
-                    SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                    sqlDependencyBook.OnChange += new OnChangeEventHandler(ChangeDataBook);
-                    RegistryData.DBConnectionString.Open();
-                    DataTable dataTable = new DataTable("Book");
-                    dataTable.Clear();
-                    dataTable.Load(dbTables.CommandBook.ExecuteReader());
-                    RegistryData.DBConnectionString.Close();
+                    dbTables.DTBook.Clear();
+                    dbTables.DTBookFill();
+                    dbTables.dependency.OnChange += ChangeDataBook;
+                    filterBook = dbTables.QRBook;
 
-                    dgvBook.DataSource = dataTable;
+                    dgvBook.DataSource = dbTables.DTBook;
                     dgvBook.Columns[0].Visible = false;
                     dgvBook.Columns[1].HeaderText = "Название книги";
                     dgvBook.Columns[2].Visible = false;
@@ -99,21 +96,17 @@ namespace Library
 
         private void WriterBookFill()   //заполнение combo box данными из базы данных
         {
+            DBTables dbTables = new DBTables();
+
             Action action = () =>
             {
                 try
                 {
-                    dbTables.CommandWriterForComboBox.Notification = null;
-                    SqlDependency sqlDependencyWriter = new SqlDependency(dbTables.CommandWriterForComboBox);
-                    SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                    sqlDependencyWriter.OnChange += new OnChangeEventHandler(ChangeDataWriterBook);
-                    RegistryData.DBConnectionString.Open();
-                    DataTable dataTable = new DataTable("Writer_Book");
-                    dataTable.Clear();
-                    dataTable.Load(dbTables.CommandWriterForComboBox.ExecuteReader());
-                    RegistryData.DBConnectionString.Close();
+                    dbTables.DTWriterBook.Clear();
+                    dbTables.DTWriterBookFill();
+                    dbTables.dependency.OnChange += ChangeDataWriterBook;
 
-                    cbWriter.DataSource = dataTable;
+                    cbWriter.DataSource = dbTables.DTWriterBook;
                     cbWriter.ValueMember = "ID_Writer";
                     cbWriter.DisplayMember = "FIO_Writer";
                     cbWriter.SelectedValue = -1;
@@ -128,21 +121,17 @@ namespace Library
 
         private void PublishingFill()   //заполнение combo box данными из базы данных
         {
+            DBTables dbTables = new DBTables();
+
             Action action = () =>
             {
                 try
                 {
-                    dbTables.CommandPublishingBook.Notification = null;
-                    SqlDependency sqlDependencyPublishing = new SqlDependency(dbTables.CommandPublishingBook);
-                    SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                    sqlDependencyPublishing.OnChange += new OnChangeEventHandler(ChangeDataPublishing);
-                    RegistryData.DBConnectionString.Open();
-                    DataTable dataTable = new DataTable("Publishing_Book");
-                    dataTable.Clear();
-                    dataTable.Load(dbTables.CommandPublishingBook.ExecuteReader());
-                    RegistryData.DBConnectionString.Close();
+                    dbTables.DTPublishing.Clear();
+                    dbTables.DTPublishingFill();
+                    dbTables.dependency.OnChange += ChangeDataPublishing;
 
-                    cbPublishing.DataSource = dataTable;
+                    cbPublishing.DataSource = dbTables.DTPublishing;
                     cbPublishing.ValueMember = "ID_Publishing_Book";
                     cbPublishing.DisplayMember = "Publishing";
                     cbPublishing.SelectedValue = -1;
@@ -157,21 +146,17 @@ namespace Library
 
         private void GenreFill()    //заполнение combo box данными из базы данных
         {
+            DBTables dbTables = new DBTables();
+
             Action action = () =>
             {
                 try
                 {
-                    dbTables.CommandGenreBook.Notification = null;
-                    SqlDependency sqlDependencyGenre = new SqlDependency(dbTables.CommandGenreBook);
-                    SqlDependency.Start(RegistryData.DBConnectionString.ConnectionString);
-                    sqlDependencyGenre.OnChange += new OnChangeEventHandler(ChangeDataGenre);
-                    RegistryData.DBConnectionString.Open();
-                    DataTable dataTable = new DataTable("Genre_Book");
-                    dataTable.Clear();
-                    dataTable.Load(dbTables.CommandGenreBook.ExecuteReader());
-                    RegistryData.DBConnectionString.Close();
+                    dbTables.DTGenre.Clear();
+                    dbTables.DTGenreFill();
+                    dbTables.dependency.OnChange += ChangeDataGenre;
 
-                    cbGenre.DataSource = dataTable;
+                    cbGenre.DataSource = dbTables.DTGenre;
                     cbGenre.ValueMember = "ID_Genre_Book";
                     cbGenre.DisplayMember = "Genre";
                     cbGenre.SelectedValue = -1;
@@ -319,7 +304,7 @@ namespace Library
                 case (CheckState.Checked):  //фильтрация
                     DataTable data = new DataTable("Book");
                     commandSearchBook.Notification = null;
-                    commandSearchBook.CommandText = dbTables.CommandBook.CommandText + " and [Book_Title] like '%" + tbSearch.Text + "%' or [Publication_Date] like '%" + tbSearch.Text + "%' " +
+                    commandSearchBook.CommandText = filterBook + " and [Book_Title] like '%" + tbSearch.Text + "%' or [Publication_Date] like '%" + tbSearch.Text + "%' " +
                         "or [Number_Pages] like '%" + tbSearch.Text + "%' or [ISBN_Book] like '%" + tbSearch.Text + "%' or [Cost_Book] like '%" + tbSearch.Text + "%' or [Total_Number_Copies_Book] like '%" + tbSearch.Text + "%' or" +
                         " CONVERT([varchar] (10), [Date_Acceptance_Book], 104) like '%" + tbSearch.Text + "%' or [Available_Number_Copies_Book] like '%" + tbSearch.Text + "%' or " +
                         "[dbo].[Genre_Book].[Genre] like '%" + tbSearch.Text + "%' or [dbo].[Publishing_Book].[Publishing] like '%" + tbSearch.Text + "%' or " +

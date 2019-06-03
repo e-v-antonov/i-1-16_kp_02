@@ -65,9 +65,11 @@ namespace Library
         public DataTable DTGenre = new DataTable("Genre");
         public DataTable DTPublishing = new DataTable("Publishing");
         public DataTable DTWriterBook = new DataTable("Writer_Book");
+        public DataTable DTBook = new DataTable("Book");
         public string QRGenre = "select [ID_Genre_Book], [Genre] from [dbo].[Genre_Book] where [Genre_Book_Logical_Delete] = 0";
         public string QRPublishing = "select [ID_Publishing_Book],[Publishing] from [dbo].[Publishing_Book] where [Publishing_Book_Logical_Delete] = 0";
         public string QRWriterBook = "select [ID_Writer], [Surname_Writer], [Name_Writer], [Patronymic_Writer]  from [dbo].[Writer_Book] where [Writer_Book_Logical_Delete] = 0";
+        public string QRBook = "select [ID_Book], [Book_Title], [Writer_ID], [Surname_Writer] + ' ' + [Name_Writer] + ' ' + [Patronymic_Writer], [Genre_Book_ID], [Genre], [Publishing_Book_ID], [Publishing], [Publication_Date], [Number_Pages], [ISBN_Book], [Cost_Book], [Total_Number_Copies_Book], [Available_Number_Copies_Book], CONVERT([varchar] (10), [Date_Acceptance_Book], 104) from [dbo].[Book] inner join [dbo].[Writer_Book] on [dbo].[Book].[Writer_ID] = [dbo].[Writer_Book].[ID_Writer] inner join [dbo].[Genre_Book] on [dbo].[Book].[Genre_Book_ID] = [dbo].[Genre_Book].[ID_Genre_Book] inner join [dbo].[Publishing_Book] on [dbo].[Book].[Publishing_Book_ID] = [dbo].[Publishing_Book].[ID_Publishing_Book] where [Book_Logical_Delete] = 0 and [Genre_Book_Logical_Delete] = 0 and [Publishing_Book_Logical_Delete] = 0 and [Writer_Book_Logical_Delete] = 0";
         public SqlDependency dependency = new SqlDependency();
 
         private void DataTableFill(DataTable table, string query)
@@ -105,6 +107,11 @@ namespace Library
         public void DTWriterBookFill()
         {
             DataTableFill(DTWriterBook, QRWriterBook);
+        }
+
+        public void DTBookFill()
+        {
+            DataTableFill(DTBook, QRBook);
         }
     }
 }
