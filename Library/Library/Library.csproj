@@ -72,6 +72,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormationActsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormationActsForm.Designer.cs">
+      <DependentUpon>FormationActsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormationCardAndFormularForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormationCardAndFormularForm.Designer.cs">
+      <DependentUpon>FormationCardAndFormularForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,11 +96,23 @@
     <Compile Include="GenreBookForm.Designer.cs">
       <DependentUpon>GenreBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IssueBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueBookForm.Designer.cs">
+      <DependentUpon>IssueBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostForm.Designer.cs">
+      <DependentUpon>PostForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +130,18 @@
     </Compile>
     <Compile Include="RegistrationCardWord.cs" />
     <Compile Include="RegistryData.cs" />
+    <Compile Include="ReturnBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnBookForm.Designer.cs">
+      <DependentUpon>ReturnBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WriterBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,14 +157,26 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormationActsForm.resx">
+      <DependentUpon>FormationActsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormationCardAndFormularForm.resx">
+      <DependentUpon>FormationCardAndFormularForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularForm.resx">
       <DependentUpon>FormularForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenreBookForm.resx">
       <DependentUpon>GenreBookForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IssueBookForm.resx">
+      <DependentUpon>IssueBookForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostForm.resx">
+      <DependentUpon>PostForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -144,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationCardForm.resx">
       <DependentUpon>RegistrationCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnBookForm.resx">
+      <DependentUpon>ReturnBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WriterBookForm.resx">
       <DependentUpon>WriterBookForm.cs</DependentUpon>

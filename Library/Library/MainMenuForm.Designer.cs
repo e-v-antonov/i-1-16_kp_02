@@ -41,12 +41,15 @@
             this.miWriterBook = new System.Windows.Forms.ToolStripMenuItem();
             this.miPublishingBook = new System.Windows.Forms.ToolStripMenuItem();
             this.miGenreBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.miStaffing = new System.Windows.Forms.ToolStripMenuItem();
+            this.miPost = new System.Windows.Forms.ToolStripMenuItem();
+            this.miUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.miInformationSystem = new System.Windows.Forms.ToolStripMenuItem();
+            this.документToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sstInformation = new System.Windows.Forms.StatusStrip();
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.документToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -104,7 +107,8 @@
             this.miBooks,
             this.miWriterBook,
             this.miPublishingBook,
-            this.miGenreBook});
+            this.miGenreBook,
+            this.miStaffing});
             this.miHandbook.Font = new System.Drawing.Font("Arial", 9F);
             this.miHandbook.Name = "miHandbook";
             this.miHandbook.Size = new System.Drawing.Size(110, 24);
@@ -152,12 +156,42 @@
             this.miGenreBook.Text = "Жанры книг...";
             this.miGenreBook.Click += new System.EventHandler(this.miGenreBook_Click);
             // 
+            // miStaffing
+            // 
+            this.miStaffing.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miPost,
+            this.miUsers});
+            this.miStaffing.Name = "miStaffing";
+            this.miStaffing.Size = new System.Drawing.Size(280, 26);
+            this.miStaffing.Text = "Кадровое обеспечение";
+            // 
+            // miPost
+            // 
+            this.miPost.Name = "miPost";
+            this.miPost.Size = new System.Drawing.Size(190, 26);
+            this.miPost.Text = "Должности...";
+            this.miPost.Click += new System.EventHandler(this.miPost_Click);
+            // 
+            // miUsers
+            // 
+            this.miUsers.Name = "miUsers";
+            this.miUsers.Size = new System.Drawing.Size(190, 26);
+            this.miUsers.Text = "Пользователи...";
+            this.miUsers.Click += new System.EventHandler(this.miUsers_Click);
+            // 
             // miInformationSystem
             // 
             this.miInformationSystem.Font = new System.Drawing.Font("Arial", 9F);
             this.miInformationSystem.Name = "miInformationSystem";
             this.miInformationSystem.Size = new System.Drawing.Size(88, 24);
             this.miInformationSystem.Text = "Сведения";
+            // 
+            // документToolStripMenuItem
+            // 
+            this.документToolStripMenuItem.Name = "документToolStripMenuItem";
+            this.документToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.документToolStripMenuItem.Text = "Документ";
+            this.документToolStripMenuItem.Click += new System.EventHandler(this.документToolStripMenuItem_Click);
             // 
             // sstInformation
             // 
@@ -187,13 +221,6 @@
             // timer
             // 
             this.timer.Enabled = true;
-            // 
-            // документToolStripMenuItem
-            // 
-            this.документToolStripMenuItem.Name = "документToolStripMenuItem";
-            this.документToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
-            this.документToolStripMenuItem.Text = "Документ";
-            this.документToolStripMenuItem.Click += new System.EventHandler(this.документToolStripMenuItem_Click);
             // 
             // MainMenuForm
             // 
@@ -239,6 +266,9 @@
         private System.Windows.Forms.ToolStripMenuItem miBooks;
         private System.Windows.Forms.ToolStripMenuItem miFormulars;
         private System.Windows.Forms.ToolStripMenuItem документToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miStaffing;
+        private System.Windows.Forms.ToolStripMenuItem miPost;
+        private System.Windows.Forms.ToolStripMenuItem miUsers;
     }
 }
 

@@ -487,7 +487,7 @@ namespace Library
 
         private void dgvRegistrationCard_Click(object sender, EventArgs e)  //клик по data grid view
         {
-            RegistrationCardFill();
+            //RegistrationCardFill();
         }
     }
 }

@@ -340,7 +340,7 @@ namespace Library
 
         private void dgvFormular_Click(object sender, EventArgs e)  //клик по полю data grid view
         {
-            FormularFill();
+            //FormularFill();
         }
     }
 }
