@@ -366,7 +366,7 @@ namespace Library
 
         public void SPUserUpdate(Int32 idUser, string surnameUser, string nameUser, string patronymicUser, string loginUser, string passwordUser, Int32 roleUserID) //обновление пользователя
         {
-            ConfigurationProcedure("User_Insert");
+            ConfigurationProcedure("User_Update");
 
             storedProcedure.Parameters.AddWithValue("@ID_User", idUser);
             storedProcedure.Parameters.AddWithValue("@Surname_User", surnameUser);
