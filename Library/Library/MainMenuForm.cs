@@ -110,9 +110,6 @@ namespace Library
             //RegistrationCardWord registrationCardWord = new RegistrationCardWord();
             //registrationCardWord.CreateDoc();
 
-            ReturnBookForm returnBookForm = new ReturnBookForm();
-            returnBookForm.Show(this);
-
             //Form1 form1 = new Form1();
             //form1.Show(this);
         }
@@ -127,6 +124,18 @@ namespace Library
         {
             UsersForm usersForm = new UsersForm();
             usersForm.Show();
+        }
+
+        private void miIssueBook_Click(object sender, EventArgs e)
+        {
+            IssueBookForm issueBookForm = new IssueBookForm();
+            issueBookForm.Show(this);
+        }
+
+        private void miReturnBook_Click(object sender, EventArgs e)
+        {
+            ReturnBookForm returnBookForm = new ReturnBookForm();
+            returnBookForm.Show(this);
         }
     }
 }

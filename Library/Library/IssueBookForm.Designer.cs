@@ -31,75 +31,75 @@
             this.pnCancel = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnError = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbSearchReader = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnRegistrationReader = new System.Windows.Forms.Button();
+            this.btnIdentificationReader = new System.Windows.Forms.Button();
+            this.pnPassportNumber = new System.Windows.Forms.Panel();
+            this.tbPassportNumber = new System.Windows.Forms.TextBox();
+            this.lbPassportNumber = new System.Windows.Forms.Label();
+            this.pnPassportSeries = new System.Windows.Forms.Panel();
+            this.tbPassportSeries = new System.Windows.Forms.TextBox();
+            this.lbPassportSeries = new System.Windows.Forms.Label();
+            this.pnPatronymic = new System.Windows.Forms.Panel();
+            this.tbPatronymic = new System.Windows.Forms.TextBox();
+            this.lbPatronymic = new System.Windows.Forms.Label();
+            this.pnName = new System.Windows.Forms.Panel();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.lbName = new System.Windows.Forms.Label();
+            this.pnSurname = new System.Windows.Forms.Panel();
+            this.tbSurname = new System.Windows.Forms.TextBox();
+            this.lbSurname = new System.Windows.Forms.Label();
+            this.gbSearchBook = new System.Windows.Forms.GroupBox();
+            this.dgvBook = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnCheckBook = new System.Windows.Forms.Button();
+            this.pnPublishing = new System.Windows.Forms.Panel();
+            this.cbPublishing = new System.Windows.Forms.ComboBox();
+            this.lbPublishing = new System.Windows.Forms.Label();
+            this.pnGenre = new System.Windows.Forms.Panel();
+            this.cbGenre = new System.Windows.Forms.ComboBox();
+            this.lbGenre = new System.Windows.Forms.Label();
+            this.pnWriter = new System.Windows.Forms.Panel();
+            this.cbWriter = new System.Windows.Forms.ComboBox();
+            this.lbWriter = new System.Windows.Forms.Label();
+            this.pnTitleBook = new System.Windows.Forms.Panel();
+            this.tbTitleBook = new System.Windows.Forms.TextBox();
+            this.lbTitleBook = new System.Windows.Forms.Label();
+            this.gbIssueBook = new System.Windows.Forms.GroupBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnIssueBook = new System.Windows.Forms.Button();
+            this.pnDateRetirnBook = new System.Windows.Forms.Panel();
             this.tbDateReturn = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.lbDateReturnBook = new System.Windows.Forms.Label();
+            this.pnNumberDays = new System.Windows.Forms.Panel();
             this.nudNumberDays = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.dtpDateIssue = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbNumberDays = new System.Windows.Forms.Label();
+            this.pnDateIssueBook = new System.Windows.Forms.Panel();
+            this.dtpDateIssueBook = new System.Windows.Forms.DateTimePicker();
+            this.lbDateIssueBook = new System.Windows.Forms.Label();
             this.pnCancel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbSearchReader.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnPassportNumber.SuspendLayout();
+            this.pnPassportSeries.SuspendLayout();
+            this.pnPatronymic.SuspendLayout();
+            this.pnName.SuspendLayout();
+            this.pnSurname.SuspendLayout();
+            this.gbSearchBook.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
             this.panel11.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.pnPublishing.SuspendLayout();
+            this.pnGenre.SuspendLayout();
+            this.pnWriter.SuspendLayout();
+            this.pnTitleBook.SuspendLayout();
+            this.gbIssueBook.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel13.SuspendLayout();
+            this.pnDateRetirnBook.SuspendLayout();
+            this.pnNumberDays.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumberDays)).BeginInit();
-            this.panel12.SuspendLayout();
+            this.pnDateIssueBook.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnCancel
@@ -132,409 +132,426 @@
             this.btnError.Text = "Ошибки";
             this.btnError.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbSearchReader
             // 
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.panel6);
-            this.groupBox1.Controls.Add(this.panel5);
-            this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1062, 72);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Поиск читателя";
+            this.gbSearchReader.Controls.Add(this.panel1);
+            this.gbSearchReader.Controls.Add(this.pnPassportNumber);
+            this.gbSearchReader.Controls.Add(this.pnPassportSeries);
+            this.gbSearchReader.Controls.Add(this.pnPatronymic);
+            this.gbSearchReader.Controls.Add(this.pnName);
+            this.gbSearchReader.Controls.Add(this.pnSurname);
+            this.gbSearchReader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbSearchReader.Location = new System.Drawing.Point(0, 0);
+            this.gbSearchReader.Name = "gbSearchReader";
+            this.gbSearchReader.Size = new System.Drawing.Size(1062, 72);
+            this.gbSearchReader.TabIndex = 6;
+            this.gbSearchReader.TabStop = false;
+            this.gbSearchReader.Text = "Поиск читателя";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnRegistrationReader);
+            this.panel1.Controls.Add(this.btnIdentificationReader);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(728, 19);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(331, 50);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // btnRegistrationReader
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(331, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Регистрация читателя";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRegistrationReader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistrationReader.Location = new System.Drawing.Point(0, 23);
+            this.btnRegistrationReader.Name = "btnRegistrationReader";
+            this.btnRegistrationReader.Size = new System.Drawing.Size(331, 23);
+            this.btnRegistrationReader.TabIndex = 1;
+            this.btnRegistrationReader.Text = "Регистрация читателя";
+            this.btnRegistrationReader.UseVisualStyleBackColor = true;
+            this.btnRegistrationReader.Click += new System.EventHandler(this.btnRegistrationReader_Click);
             // 
-            // button1
+            // btnIdentificationReader
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(331, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Идентификация читателя";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnIdentificationReader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnIdentificationReader.Location = new System.Drawing.Point(0, 0);
+            this.btnIdentificationReader.Name = "btnIdentificationReader";
+            this.btnIdentificationReader.Size = new System.Drawing.Size(331, 23);
+            this.btnIdentificationReader.TabIndex = 0;
+            this.btnIdentificationReader.Text = "Идентификация читателя";
+            this.btnIdentificationReader.UseVisualStyleBackColor = true;
+            this.btnIdentificationReader.Click += new System.EventHandler(this.btnIdentificationReader_Click);
             // 
-            // panel6
+            // pnPassportNumber
             // 
-            this.panel6.Controls.Add(this.textBox5);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(583, 19);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(145, 50);
-            this.panel6.TabIndex = 5;
+            this.pnPassportNumber.Controls.Add(this.tbPassportNumber);
+            this.pnPassportNumber.Controls.Add(this.lbPassportNumber);
+            this.pnPassportNumber.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnPassportNumber.Location = new System.Drawing.Point(583, 19);
+            this.pnPassportNumber.Name = "pnPassportNumber";
+            this.pnPassportNumber.Size = new System.Drawing.Size(145, 50);
+            this.pnPassportNumber.TabIndex = 5;
             // 
-            // textBox5
+            // tbPassportNumber
             // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox5.Location = new System.Drawing.Point(0, 16);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(145, 23);
-            this.textBox5.TabIndex = 3;
+            this.tbPassportNumber.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbPassportNumber.Location = new System.Drawing.Point(0, 16);
+            this.tbPassportNumber.Name = "tbPassportNumber";
+            this.tbPassportNumber.Size = new System.Drawing.Size(145, 23);
+            this.tbPassportNumber.TabIndex = 3;
             // 
-            // label5
+            // lbPassportNumber
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 16);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Номер паспорта";
+            this.lbPassportNumber.AutoSize = true;
+            this.lbPassportNumber.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbPassportNumber.Location = new System.Drawing.Point(0, 0);
+            this.lbPassportNumber.Name = "lbPassportNumber";
+            this.lbPassportNumber.Size = new System.Drawing.Size(117, 16);
+            this.lbPassportNumber.TabIndex = 1;
+            this.lbPassportNumber.Text = "Номер паспорта";
             // 
-            // panel5
+            // pnPassportSeries
             // 
-            this.panel5.Controls.Add(this.textBox4);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(438, 19);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(145, 50);
-            this.panel5.TabIndex = 4;
+            this.pnPassportSeries.Controls.Add(this.tbPassportSeries);
+            this.pnPassportSeries.Controls.Add(this.lbPassportSeries);
+            this.pnPassportSeries.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnPassportSeries.Location = new System.Drawing.Point(438, 19);
+            this.pnPassportSeries.Name = "pnPassportSeries";
+            this.pnPassportSeries.Size = new System.Drawing.Size(145, 50);
+            this.pnPassportSeries.TabIndex = 4;
             // 
-            // textBox4
+            // tbPassportSeries
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox4.Location = new System.Drawing.Point(0, 16);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 23);
-            this.textBox4.TabIndex = 3;
+            this.tbPassportSeries.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbPassportSeries.Location = new System.Drawing.Point(0, 16);
+            this.tbPassportSeries.Name = "tbPassportSeries";
+            this.tbPassportSeries.Size = new System.Drawing.Size(145, 23);
+            this.tbPassportSeries.TabIndex = 3;
             // 
-            // label4
+            // lbPassportSeries
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 16);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Серия паспорта";
+            this.lbPassportSeries.AutoSize = true;
+            this.lbPassportSeries.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbPassportSeries.Location = new System.Drawing.Point(0, 0);
+            this.lbPassportSeries.Name = "lbPassportSeries";
+            this.lbPassportSeries.Size = new System.Drawing.Size(116, 16);
+            this.lbPassportSeries.TabIndex = 1;
+            this.lbPassportSeries.Text = "Серия паспорта";
             // 
-            // panel4
+            // pnPatronymic
             // 
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(293, 19);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(145, 50);
-            this.panel4.TabIndex = 3;
+            this.pnPatronymic.Controls.Add(this.tbPatronymic);
+            this.pnPatronymic.Controls.Add(this.lbPatronymic);
+            this.pnPatronymic.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnPatronymic.Location = new System.Drawing.Point(293, 19);
+            this.pnPatronymic.Name = "pnPatronymic";
+            this.pnPatronymic.Size = new System.Drawing.Size(145, 50);
+            this.pnPatronymic.TabIndex = 3;
             // 
-            // textBox3
+            // tbPatronymic
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox3.Location = new System.Drawing.Point(0, 16);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 23);
-            this.textBox3.TabIndex = 3;
+            this.tbPatronymic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbPatronymic.Location = new System.Drawing.Point(0, 16);
+            this.tbPatronymic.Name = "tbPatronymic";
+            this.tbPatronymic.Size = new System.Drawing.Size(145, 23);
+            this.tbPatronymic.TabIndex = 3;
             // 
-            // label3
+            // lbPatronymic
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Отчество";
+            this.lbPatronymic.AutoSize = true;
+            this.lbPatronymic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbPatronymic.Location = new System.Drawing.Point(0, 0);
+            this.lbPatronymic.Name = "lbPatronymic";
+            this.lbPatronymic.Size = new System.Drawing.Size(70, 16);
+            this.lbPatronymic.TabIndex = 1;
+            this.lbPatronymic.Text = "Отчество";
             // 
-            // panel3
+            // pnName
             // 
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(148, 19);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(145, 50);
-            this.panel3.TabIndex = 2;
+            this.pnName.Controls.Add(this.tbName);
+            this.pnName.Controls.Add(this.lbName);
+            this.pnName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnName.Location = new System.Drawing.Point(148, 19);
+            this.pnName.Name = "pnName";
+            this.pnName.Size = new System.Drawing.Size(145, 50);
+            this.pnName.TabIndex = 2;
             // 
-            // textBox2
+            // tbName
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox2.Location = new System.Drawing.Point(0, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 23);
-            this.textBox2.TabIndex = 3;
+            this.tbName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbName.Location = new System.Drawing.Point(0, 16);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(145, 23);
+            this.tbName.TabIndex = 3;
             // 
-            // label2
+            // lbName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Имя";
+            this.lbName.AutoSize = true;
+            this.lbName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbName.Location = new System.Drawing.Point(0, 0);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(36, 16);
+            this.lbName.TabIndex = 1;
+            this.lbName.Text = "Имя";
             // 
-            // panel2
+            // pnSurname
             // 
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(3, 19);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(145, 50);
-            this.panel2.TabIndex = 1;
+            this.pnSurname.Controls.Add(this.tbSurname);
+            this.pnSurname.Controls.Add(this.lbSurname);
+            this.pnSurname.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnSurname.Location = new System.Drawing.Point(3, 19);
+            this.pnSurname.Name = "pnSurname";
+            this.pnSurname.Size = new System.Drawing.Size(145, 50);
+            this.pnSurname.TabIndex = 1;
             // 
-            // textBox1
+            // tbSurname
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(0, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 23);
-            this.textBox1.TabIndex = 2;
+            this.tbSurname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbSurname.Location = new System.Drawing.Point(0, 16);
+            this.tbSurname.Name = "tbSurname";
+            this.tbSurname.Size = new System.Drawing.Size(145, 23);
+            this.tbSurname.TabIndex = 2;
             // 
-            // label1
+            // lbSurname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Фамилия";
+            this.lbSurname.AutoSize = true;
+            this.lbSurname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbSurname.Location = new System.Drawing.Point(0, 0);
+            this.lbSurname.Name = "lbSurname";
+            this.lbSurname.Size = new System.Drawing.Size(69, 16);
+            this.lbSurname.TabIndex = 0;
+            this.lbSurname.Text = "Фамилия";
             // 
-            // groupBox2
+            // gbSearchBook
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.panel11);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 72);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1062, 376);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Поиск книги";
+            this.gbSearchBook.Controls.Add(this.dgvBook);
+            this.gbSearchBook.Controls.Add(this.panel11);
+            this.gbSearchBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbSearchBook.Location = new System.Drawing.Point(0, 72);
+            this.gbSearchBook.Name = "gbSearchBook";
+            this.gbSearchBook.Size = new System.Drawing.Size(1062, 376);
+            this.gbSearchBook.TabIndex = 7;
+            this.gbSearchBook.TabStop = false;
+            this.gbSearchBook.Text = "Поиск книги";
             // 
-            // dataGridView1
+            // dgvBook
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 59);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1056, 314);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvBook.AllowUserToAddRows = false;
+            this.dgvBook.AllowUserToDeleteRows = false;
+            this.dgvBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBook.BackgroundColor = System.Drawing.Color.White;
+            this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBook.Enabled = false;
+            this.dgvBook.Location = new System.Drawing.Point(3, 59);
+            this.dgvBook.Name = "dgvBook";
+            this.dgvBook.ReadOnly = true;
+            this.dgvBook.RowTemplate.Height = 24;
+            this.dgvBook.Size = new System.Drawing.Size(1056, 314);
+            this.dgvBook.TabIndex = 7;
+            this.dgvBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellClick);
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.button3);
-            this.panel11.Controls.Add(this.panel10);
-            this.panel11.Controls.Add(this.panel9);
-            this.panel11.Controls.Add(this.panel8);
-            this.panel11.Controls.Add(this.panel7);
+            this.panel11.Controls.Add(this.btnCheckBook);
+            this.panel11.Controls.Add(this.pnPublishing);
+            this.panel11.Controls.Add(this.pnGenre);
+            this.panel11.Controls.Add(this.pnWriter);
+            this.panel11.Controls.Add(this.pnTitleBook);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(3, 19);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1056, 40);
             this.panel11.TabIndex = 6;
             // 
-            // button3
+            // btnCheckBook
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Location = new System.Drawing.Point(913, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 45);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Проверить наличие книги";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCheckBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCheckBook.Enabled = false;
+            this.btnCheckBook.Location = new System.Drawing.Point(913, 0);
+            this.btnCheckBook.Name = "btnCheckBook";
+            this.btnCheckBook.Size = new System.Drawing.Size(143, 45);
+            this.btnCheckBook.TabIndex = 6;
+            this.btnCheckBook.Text = "Проверить наличие книги";
+            this.btnCheckBook.UseVisualStyleBackColor = true;
+            this.btnCheckBook.Click += new System.EventHandler(this.btnCheckBook_Click);
             // 
-            // panel10
+            // pnPublishing
             // 
-            this.panel10.Controls.Add(this.comboBox3);
-            this.panel10.Controls.Add(this.label9);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel10.Location = new System.Drawing.Point(677, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(236, 40);
-            this.panel10.TabIndex = 5;
+            this.pnPublishing.Controls.Add(this.cbPublishing);
+            this.pnPublishing.Controls.Add(this.lbPublishing);
+            this.pnPublishing.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnPublishing.Location = new System.Drawing.Point(677, 0);
+            this.pnPublishing.Name = "pnPublishing";
+            this.pnPublishing.Size = new System.Drawing.Size(236, 40);
+            this.pnPublishing.TabIndex = 5;
             // 
-            // comboBox3
+            // cbPublishing
             // 
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(0, 16);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(236, 24);
-            this.comboBox3.TabIndex = 1;
+            this.cbPublishing.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbPublishing.Enabled = false;
+            this.cbPublishing.FormattingEnabled = true;
+            this.cbPublishing.Location = new System.Drawing.Point(0, 16);
+            this.cbPublishing.Name = "cbPublishing";
+            this.cbPublishing.Size = new System.Drawing.Size(236, 24);
+            this.cbPublishing.TabIndex = 1;
+            this.cbPublishing.TextChanged += new System.EventHandler(this.cbPublishing_TextChanged);
             // 
-            // label9
+            // lbPublishing
             // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(168, 16);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Выберите издательство";
+            this.lbPublishing.AutoSize = true;
+            this.lbPublishing.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbPublishing.Location = new System.Drawing.Point(0, 0);
+            this.lbPublishing.Name = "lbPublishing";
+            this.lbPublishing.Size = new System.Drawing.Size(168, 16);
+            this.lbPublishing.TabIndex = 0;
+            this.lbPublishing.Text = "Выберите издательство";
             // 
-            // panel9
+            // pnGenre
             // 
-            this.panel9.Controls.Add(this.comboBox2);
-            this.panel9.Controls.Add(this.label8);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(441, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(236, 40);
-            this.panel9.TabIndex = 4;
+            this.pnGenre.Controls.Add(this.cbGenre);
+            this.pnGenre.Controls.Add(this.lbGenre);
+            this.pnGenre.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnGenre.Location = new System.Drawing.Point(441, 0);
+            this.pnGenre.Name = "pnGenre";
+            this.pnGenre.Size = new System.Drawing.Size(236, 40);
+            this.pnGenre.TabIndex = 4;
             // 
-            // comboBox2
+            // cbGenre
             // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(0, 16);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(236, 24);
-            this.comboBox2.TabIndex = 1;
+            this.cbGenre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbGenre.Enabled = false;
+            this.cbGenre.FormattingEnabled = true;
+            this.cbGenre.Location = new System.Drawing.Point(0, 16);
+            this.cbGenre.Name = "cbGenre";
+            this.cbGenre.Size = new System.Drawing.Size(236, 24);
+            this.cbGenre.TabIndex = 1;
+            this.cbGenre.TextChanged += new System.EventHandler(this.cbGenre_TextChanged);
             // 
-            // label8
+            // lbGenre
             // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Выберите жанр";
+            this.lbGenre.AutoSize = true;
+            this.lbGenre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbGenre.Location = new System.Drawing.Point(0, 0);
+            this.lbGenre.Name = "lbGenre";
+            this.lbGenre.Size = new System.Drawing.Size(111, 16);
+            this.lbGenre.TabIndex = 0;
+            this.lbGenre.Text = "Выберите жанр";
             // 
-            // panel8
+            // pnWriter
             // 
-            this.panel8.Controls.Add(this.comboBox1);
-            this.panel8.Controls.Add(this.label7);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(205, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(236, 40);
-            this.panel8.TabIndex = 3;
+            this.pnWriter.Controls.Add(this.cbWriter);
+            this.pnWriter.Controls.Add(this.lbWriter);
+            this.pnWriter.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnWriter.Location = new System.Drawing.Point(205, 0);
+            this.pnWriter.Name = "pnWriter";
+            this.pnWriter.Size = new System.Drawing.Size(236, 40);
+            this.pnWriter.TabIndex = 3;
             // 
-            // comboBox1
+            // cbWriter
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(236, 24);
-            this.comboBox1.TabIndex = 1;
+            this.cbWriter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbWriter.Enabled = false;
+            this.cbWriter.FormattingEnabled = true;
+            this.cbWriter.Location = new System.Drawing.Point(0, 16);
+            this.cbWriter.Name = "cbWriter";
+            this.cbWriter.Size = new System.Drawing.Size(236, 24);
+            this.cbWriter.TabIndex = 1;
+            this.cbWriter.TextChanged += new System.EventHandler(this.cbWriter_TextChanged);
             // 
-            // label7
+            // lbWriter
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Выберите автора";
+            this.lbWriter.AutoSize = true;
+            this.lbWriter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbWriter.Location = new System.Drawing.Point(0, 0);
+            this.lbWriter.Name = "lbWriter";
+            this.lbWriter.Size = new System.Drawing.Size(124, 16);
+            this.lbWriter.TabIndex = 0;
+            this.lbWriter.Text = "Выберите автора";
             // 
-            // panel7
+            // pnTitleBook
             // 
-            this.panel7.Controls.Add(this.textBox6);
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(205, 40);
-            this.panel7.TabIndex = 2;
+            this.pnTitleBook.Controls.Add(this.tbTitleBook);
+            this.pnTitleBook.Controls.Add(this.lbTitleBook);
+            this.pnTitleBook.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnTitleBook.Location = new System.Drawing.Point(0, 0);
+            this.pnTitleBook.Name = "pnTitleBook";
+            this.pnTitleBook.Size = new System.Drawing.Size(205, 40);
+            this.pnTitleBook.TabIndex = 2;
             // 
-            // textBox6
+            // tbTitleBook
             // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox6.Location = new System.Drawing.Point(0, 16);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(205, 23);
-            this.textBox6.TabIndex = 2;
+            this.tbTitleBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbTitleBook.Enabled = false;
+            this.tbTitleBook.Location = new System.Drawing.Point(0, 16);
+            this.tbTitleBook.Name = "tbTitleBook";
+            this.tbTitleBook.Size = new System.Drawing.Size(205, 23);
+            this.tbTitleBook.TabIndex = 2;
+            this.tbTitleBook.TextChanged += new System.EventHandler(this.tbTitleBook_TextChanged);
             // 
-            // label6
+            // lbTitleBook
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 16);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Введите название";
+            this.lbTitleBook.AutoSize = true;
+            this.lbTitleBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbTitleBook.Location = new System.Drawing.Point(0, 0);
+            this.lbTitleBook.Name = "lbTitleBook";
+            this.lbTitleBook.Size = new System.Drawing.Size(128, 16);
+            this.lbTitleBook.TabIndex = 0;
+            this.lbTitleBook.Text = "Введите название";
             // 
-            // groupBox3
+            // gbIssueBook
             // 
-            this.groupBox3.Controls.Add(this.panel15);
-            this.groupBox3.Controls.Add(this.panel14);
-            this.groupBox3.Controls.Add(this.panel13);
-            this.groupBox3.Controls.Add(this.panel12);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(0, 448);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1062, 72);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Настройка длительности выдачи";
+            this.gbIssueBook.Controls.Add(this.panel15);
+            this.gbIssueBook.Controls.Add(this.pnDateRetirnBook);
+            this.gbIssueBook.Controls.Add(this.pnNumberDays);
+            this.gbIssueBook.Controls.Add(this.pnDateIssueBook);
+            this.gbIssueBook.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gbIssueBook.Location = new System.Drawing.Point(0, 448);
+            this.gbIssueBook.Name = "gbIssueBook";
+            this.gbIssueBook.Size = new System.Drawing.Size(1062, 72);
+            this.gbIssueBook.TabIndex = 8;
+            this.gbIssueBook.TabStop = false;
+            this.gbIssueBook.Text = "Настройка длительности выдачи";
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.button4);
-            this.panel15.Controls.Add(this.button5);
+            this.panel15.Controls.Add(this.btnCancel);
+            this.panel15.Controls.Add(this.btnIssueBook);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(618, 19);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(441, 50);
             this.panel15.TabIndex = 6;
             // 
-            // button4
+            // btnCancel
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.Location = new System.Drawing.Point(0, 23);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(441, 23);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Отмена";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCancel.Location = new System.Drawing.Point(0, 23);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(441, 23);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "Отмена";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnIssueBook
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(441, 23);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Выдать книгу";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnIssueBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnIssueBook.Enabled = false;
+            this.btnIssueBook.Location = new System.Drawing.Point(0, 0);
+            this.btnIssueBook.Name = "btnIssueBook";
+            this.btnIssueBook.Size = new System.Drawing.Size(441, 23);
+            this.btnIssueBook.TabIndex = 0;
+            this.btnIssueBook.Text = "Выдать книгу";
+            this.btnIssueBook.UseVisualStyleBackColor = true;
+            this.btnIssueBook.Click += new System.EventHandler(this.btnIssueBook_Click);
             // 
-            // panel14
+            // pnDateRetirnBook
             // 
-            this.panel14.Controls.Add(this.tbDateReturn);
-            this.panel14.Controls.Add(this.label12);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(413, 19);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(205, 50);
-            this.panel14.TabIndex = 5;
+            this.pnDateRetirnBook.Controls.Add(this.tbDateReturn);
+            this.pnDateRetirnBook.Controls.Add(this.lbDateReturnBook);
+            this.pnDateRetirnBook.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnDateRetirnBook.Location = new System.Drawing.Point(413, 19);
+            this.pnDateRetirnBook.Name = "pnDateRetirnBook";
+            this.pnDateRetirnBook.Size = new System.Drawing.Size(205, 50);
+            this.pnDateRetirnBook.TabIndex = 5;
             // 
             // tbDateReturn
             // 
@@ -545,29 +562,30 @@
             this.tbDateReturn.Size = new System.Drawing.Size(205, 23);
             this.tbDateReturn.TabIndex = 5;
             // 
-            // label12
+            // lbDateReturnBook
             // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(142, 16);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Дата возврата книги";
+            this.lbDateReturnBook.AutoSize = true;
+            this.lbDateReturnBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbDateReturnBook.Location = new System.Drawing.Point(0, 0);
+            this.lbDateReturnBook.Name = "lbDateReturnBook";
+            this.lbDateReturnBook.Size = new System.Drawing.Size(142, 16);
+            this.lbDateReturnBook.TabIndex = 0;
+            this.lbDateReturnBook.Text = "Дата возврата книги";
             // 
-            // panel13
+            // pnNumberDays
             // 
-            this.panel13.Controls.Add(this.nudNumberDays);
-            this.panel13.Controls.Add(this.label11);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel13.Location = new System.Drawing.Point(208, 19);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(205, 50);
-            this.panel13.TabIndex = 4;
+            this.pnNumberDays.Controls.Add(this.nudNumberDays);
+            this.pnNumberDays.Controls.Add(this.lbNumberDays);
+            this.pnNumberDays.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnNumberDays.Location = new System.Drawing.Point(208, 19);
+            this.pnNumberDays.Name = "pnNumberDays";
+            this.pnNumberDays.Size = new System.Drawing.Size(205, 50);
+            this.pnNumberDays.TabIndex = 4;
             // 
             // nudNumberDays
             // 
             this.nudNumberDays.Dock = System.Windows.Forms.DockStyle.Top;
+            this.nudNumberDays.Enabled = false;
             this.nudNumberDays.Location = new System.Drawing.Point(0, 16);
             this.nudNumberDays.Maximum = new decimal(new int[] {
             365,
@@ -587,47 +605,49 @@
             0,
             0,
             0});
+            this.nudNumberDays.ValueChanged += new System.EventHandler(this.nudNumberDays_ValueChanged);
             // 
-            // label11
+            // lbNumberDays
             // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label11.Location = new System.Drawing.Point(0, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(172, 16);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Количество дней выдачи";
+            this.lbNumberDays.AutoSize = true;
+            this.lbNumberDays.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbNumberDays.Location = new System.Drawing.Point(0, 0);
+            this.lbNumberDays.Name = "lbNumberDays";
+            this.lbNumberDays.Size = new System.Drawing.Size(172, 16);
+            this.lbNumberDays.TabIndex = 0;
+            this.lbNumberDays.Text = "Количество дней выдачи";
             // 
-            // panel12
+            // pnDateIssueBook
             // 
-            this.panel12.Controls.Add(this.dtpDateIssue);
-            this.panel12.Controls.Add(this.label10);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel12.Location = new System.Drawing.Point(3, 19);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(205, 50);
-            this.panel12.TabIndex = 3;
+            this.pnDateIssueBook.Controls.Add(this.dtpDateIssueBook);
+            this.pnDateIssueBook.Controls.Add(this.lbDateIssueBook);
+            this.pnDateIssueBook.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnDateIssueBook.Location = new System.Drawing.Point(3, 19);
+            this.pnDateIssueBook.Name = "pnDateIssueBook";
+            this.pnDateIssueBook.Size = new System.Drawing.Size(205, 50);
+            this.pnDateIssueBook.TabIndex = 3;
             // 
-            // dtpDateIssue
+            // dtpDateIssueBook
             // 
-            this.dtpDateIssue.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpDateIssue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateIssue.Location = new System.Drawing.Point(0, 16);
-            this.dtpDateIssue.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dtpDateIssue.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtpDateIssue.Name = "dtpDateIssue";
-            this.dtpDateIssue.Size = new System.Drawing.Size(205, 23);
-            this.dtpDateIssue.TabIndex = 19;
+            this.dtpDateIssueBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpDateIssueBook.Enabled = false;
+            this.dtpDateIssueBook.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateIssueBook.Location = new System.Drawing.Point(0, 16);
+            this.dtpDateIssueBook.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtpDateIssueBook.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpDateIssueBook.Name = "dtpDateIssueBook";
+            this.dtpDateIssueBook.Size = new System.Drawing.Size(205, 23);
+            this.dtpDateIssueBook.TabIndex = 19;
             // 
-            // label10
+            // lbDateIssueBook
             // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 16);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Дата выдачи книги";
+            this.lbDateIssueBook.AutoSize = true;
+            this.lbDateIssueBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbDateIssueBook.Location = new System.Drawing.Point(0, 0);
+            this.lbDateIssueBook.Name = "lbDateIssueBook";
+            this.lbDateIssueBook.Size = new System.Drawing.Size(131, 16);
+            this.lbDateIssueBook.TabIndex = 0;
+            this.lbDateIssueBook.Text = "Дата выдачи книги";
             // 
             // IssueBookForm
             // 
@@ -635,47 +655,47 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1062, 556);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbSearchBook);
+            this.Controls.Add(this.gbIssueBook);
+            this.Controls.Add(this.gbSearchReader);
             this.Controls.Add(this.pnCancel);
             this.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "IssueBookForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IssueBookForm";
             this.pnCancel.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.gbSearchReader.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnPassportNumber.ResumeLayout(false);
+            this.pnPassportNumber.PerformLayout();
+            this.pnPassportSeries.ResumeLayout(false);
+            this.pnPassportSeries.PerformLayout();
+            this.pnPatronymic.ResumeLayout(false);
+            this.pnPatronymic.PerformLayout();
+            this.pnName.ResumeLayout(false);
+            this.pnName.PerformLayout();
+            this.pnSurname.ResumeLayout(false);
+            this.pnSurname.PerformLayout();
+            this.gbSearchBook.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();
             this.panel11.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            this.pnPublishing.ResumeLayout(false);
+            this.pnPublishing.PerformLayout();
+            this.pnGenre.ResumeLayout(false);
+            this.pnGenre.PerformLayout();
+            this.pnWriter.ResumeLayout(false);
+            this.pnWriter.PerformLayout();
+            this.pnTitleBook.ResumeLayout(false);
+            this.pnTitleBook.PerformLayout();
+            this.gbIssueBook.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
+            this.pnDateRetirnBook.ResumeLayout(false);
+            this.pnDateRetirnBook.PerformLayout();
+            this.pnNumberDays.ResumeLayout(false);
+            this.pnNumberDays.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumberDays)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            this.pnDateIssueBook.ResumeLayout(false);
+            this.pnDateIssueBook.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -685,52 +705,52 @@
         private System.Windows.Forms.Panel pnCancel;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnError;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbSearchReader;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnRegistrationReader;
+        private System.Windows.Forms.Button btnIdentificationReader;
+        private System.Windows.Forms.Panel pnPassportNumber;
+        private System.Windows.Forms.TextBox tbPassportNumber;
+        private System.Windows.Forms.Label lbPassportNumber;
+        private System.Windows.Forms.Panel pnPassportSeries;
+        private System.Windows.Forms.TextBox tbPassportSeries;
+        private System.Windows.Forms.Label lbPassportSeries;
+        private System.Windows.Forms.Panel pnPatronymic;
+        private System.Windows.Forms.TextBox tbPatronymic;
+        private System.Windows.Forms.Label lbPatronymic;
+        private System.Windows.Forms.Panel pnName;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Panel pnSurname;
+        private System.Windows.Forms.TextBox tbSurname;
+        private System.Windows.Forms.Label lbSurname;
+        private System.Windows.Forms.GroupBox gbSearchBook;
+        private System.Windows.Forms.DataGridView dgvBook;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnCheckBook;
+        private System.Windows.Forms.Panel pnPublishing;
+        private System.Windows.Forms.ComboBox cbPublishing;
+        private System.Windows.Forms.Label lbPublishing;
+        private System.Windows.Forms.Panel pnGenre;
+        private System.Windows.Forms.ComboBox cbGenre;
+        private System.Windows.Forms.Label lbGenre;
+        private System.Windows.Forms.Panel pnWriter;
+        private System.Windows.Forms.ComboBox cbWriter;
+        private System.Windows.Forms.Label lbWriter;
+        private System.Windows.Forms.Panel pnTitleBook;
+        private System.Windows.Forms.TextBox tbTitleBook;
+        private System.Windows.Forms.Label lbTitleBook;
+        private System.Windows.Forms.GroupBox gbIssueBook;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dtpDateIssue;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnIssueBook;
+        private System.Windows.Forms.Panel pnDateRetirnBook;
+        private System.Windows.Forms.Label lbDateReturnBook;
+        private System.Windows.Forms.Panel pnNumberDays;
+        private System.Windows.Forms.Label lbNumberDays;
+        private System.Windows.Forms.Panel pnDateIssueBook;
+        private System.Windows.Forms.Label lbDateIssueBook;
+        private System.Windows.Forms.DateTimePicker dtpDateIssueBook;
         private System.Windows.Forms.NumericUpDown nudNumberDays;
         private System.Windows.Forms.TextBox tbDateReturn;
     }

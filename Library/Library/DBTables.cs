@@ -18,7 +18,7 @@ namespace Library
         public string QRGenre = "select [ID_Genre_Book], [Genre] from [dbo].[Genre_Book] where [Genre_Book_Logical_Delete] = 0";
         public string QRPublishing = "select [ID_Publishing_Book],[Publishing] from [dbo].[Publishing_Book] where [Publishing_Book_Logical_Delete] = 0";
         public string QRWriterBook = "select [ID_Writer], [Surname_Writer], [Name_Writer], [Patronymic_Writer]  from [dbo].[Writer_Book] where [Writer_Book_Logical_Delete] = 0";
-        public string QRBook = "select [ID_Book], [Book_Title], [Writer_ID], [Surname_Writer] + ' ' + [Name_Writer] + ' ' + [Patronymic_Writer], " +
+        public string QRBook = "select [ID_Book], [Book_Title], [Writer_ID], [Surname_Writer] + ' ' + [Name_Writer] + ' ' + [Patronymic_Writer] as \"FIO_Writer\", " +
             "[Genre_Book_ID], [Genre], [Publishing_Book_ID], [Publishing], [Publication_Date], [Number_Pages], [ISBN_Book], [Cost_Book], " +
             "[Total_Number_Copies_Book], [Available_Number_Copies_Book], CONVERT([varchar] (10), [Date_Acceptance_Book], 104) from [dbo].[Book] " +
             "inner join [dbo].[Writer_Book] on [dbo].[Book].[Writer_ID] = [dbo].[Writer_Book].[ID_Writer] inner join [dbo].[Genre_Book] on " +

@@ -32,7 +32,7 @@ namespace Library
             threadGenreFill.Start();
         }
 
-        private void BookFill() //заполнение data grid view данными из базы данных
+        public void BookFill() //заполнение data grid view данными из базы данных
         {
             DBTables dbTables = new DBTables();
 

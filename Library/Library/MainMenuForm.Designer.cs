@@ -50,6 +50,8 @@
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.miIssueBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.miReturnBook = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +62,8 @@
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miSystem,
+            this.miIssueBook,
+            this.miReturnBook,
             this.miHandbook,
             this.miInformationSystem,
             this.документToolStripMenuItem});
@@ -222,6 +226,20 @@
             // 
             this.timer.Enabled = true;
             // 
+            // miIssueBook
+            // 
+            this.miIssueBook.Name = "miIssueBook";
+            this.miIssueBook.Size = new System.Drawing.Size(117, 24);
+            this.miIssueBook.Text = "Выдача книги";
+            this.miIssueBook.Click += new System.EventHandler(this.miIssueBook_Click);
+            // 
+            // miReturnBook
+            // 
+            this.miReturnBook.Name = "miReturnBook";
+            this.miReturnBook.Size = new System.Drawing.Size(121, 24);
+            this.miReturnBook.Text = "Возврат книги";
+            this.miReturnBook.Click += new System.EventHandler(this.miReturnBook_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,6 +287,8 @@
         private System.Windows.Forms.ToolStripMenuItem miStaffing;
         private System.Windows.Forms.ToolStripMenuItem miPost;
         private System.Windows.Forms.ToolStripMenuItem miUsers;
+        private System.Windows.Forms.ToolStripMenuItem miIssueBook;
+        private System.Windows.Forms.ToolStripMenuItem miReturnBook;
     }
 }
 

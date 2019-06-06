@@ -151,7 +151,7 @@ namespace Library
             cbBook.SelectedValue = dgvFormular.CurrentRow.Cells[4].Value.ToString();
         }
 
-        private void dtpDateIssue_ValueChanged(object sender, EventArgs e)
+        private void dtpDateIssue_ValueChanged(object sender, EventArgs e)  //изменение значения в date time picker
         {
             dateIssue = dtpDateIssue.Value;
             tbDateReturn.Text = dateIssue.AddDays(Convert.ToDouble(nudNumberDays.Value)).ToString("dd.MM.yyyy");
