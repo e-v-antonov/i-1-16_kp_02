@@ -397,6 +397,15 @@ namespace Library
             ExecuteStoredProcedure();
         }
 
+        public void SPFormularReturnBookUpdate(Int32 idFormularReader)   //логическое удаление пользователя
+        {
+            ConfigurationProcedure("Formular_Retirn_Book_Update");
+
+            storedProcedure.Parameters.AddWithValue("@ID_Formular_Reader", idFormularReader);
+
+            ExecuteStoredProcedure();
+        }
+
         private void ExecuteStoredProcedure()   //выполнение процедуры
         {
             try
