@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
       <DependentUpon>RegistrationCardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistrationCardWord.cs" />
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistryData.cs" />
     <Compile Include="ReturnBookForm.cs">
       <SubType>Form</SubType>
@@ -148,6 +160,9 @@
     <Compile Include="WriterBookForm.Designer.cs">
       <DependentUpon>WriterBookForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookForm.resx">
       <DependentUpon>BookForm.cs</DependentUpon>
     </EmbeddedResource>

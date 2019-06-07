@@ -34,6 +34,8 @@
             this.miExitProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.miSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.miExitSystem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miIssueBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.miReturnBook = new System.Windows.Forms.ToolStripMenuItem();
             this.miHandbook = new System.Windows.Forms.ToolStripMenuItem();
             this.miFormulars = new System.Windows.Forms.ToolStripMenuItem();
             this.miRegistrationCardReader = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,13 +47,11 @@
             this.miPost = new System.Windows.Forms.ToolStripMenuItem();
             this.miUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.miInformationSystem = new System.Windows.Forms.ToolStripMenuItem();
-            this.документToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miDocument = new System.Windows.Forms.ToolStripMenuItem();
             this.sstInformation = new System.Windows.Forms.StatusStrip();
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.miIssueBook = new System.Windows.Forms.ToolStripMenuItem();
-            this.miReturnBook = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -66,12 +66,11 @@
             this.miReturnBook,
             this.miHandbook,
             this.miInformationSystem,
-            this.документToolStripMenuItem});
+            this.miDocument});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(800, 28);
             this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "menuStrip1";
             // 
             // miSystem
             // 
@@ -86,12 +85,15 @@
             // 
             // miExitProfile
             // 
+            this.miExitProfile.Enabled = false;
             this.miExitProfile.Name = "miExitProfile";
             this.miExitProfile.Size = new System.Drawing.Size(394, 26);
             this.miExitProfile.Text = "Выход из профиля";
+            this.miExitProfile.Click += new System.EventHandler(this.miExitProfile_Click);
             // 
             // miSettings
             // 
+            this.miSettings.Enabled = false;
             this.miSettings.Name = "miSettings";
             this.miSettings.Size = new System.Drawing.Size(394, 26);
             this.miSettings.Text = "Настройки";
@@ -102,6 +104,23 @@
             this.miExitSystem.Name = "miExitSystem";
             this.miExitSystem.Size = new System.Drawing.Size(394, 26);
             this.miExitSystem.Text = "Завершить работу информационной системы";
+            this.miExitSystem.Click += new System.EventHandler(this.miExitSystem_Click);
+            // 
+            // miIssueBook
+            // 
+            this.miIssueBook.Enabled = false;
+            this.miIssueBook.Name = "miIssueBook";
+            this.miIssueBook.Size = new System.Drawing.Size(117, 24);
+            this.miIssueBook.Text = "Выдача книги";
+            this.miIssueBook.Click += new System.EventHandler(this.miIssueBook_Click);
+            // 
+            // miReturnBook
+            // 
+            this.miReturnBook.Enabled = false;
+            this.miReturnBook.Name = "miReturnBook";
+            this.miReturnBook.Size = new System.Drawing.Size(121, 24);
+            this.miReturnBook.Text = "Возврат книги";
+            this.miReturnBook.Click += new System.EventHandler(this.miReturnBook_Click);
             // 
             // miHandbook
             // 
@@ -113,6 +132,7 @@
             this.miPublishingBook,
             this.miGenreBook,
             this.miStaffing});
+            this.miHandbook.Enabled = false;
             this.miHandbook.Font = new System.Drawing.Font("Arial", 9F);
             this.miHandbook.Name = "miHandbook";
             this.miHandbook.Size = new System.Drawing.Size(110, 24);
@@ -190,12 +210,13 @@
             this.miInformationSystem.Size = new System.Drawing.Size(88, 24);
             this.miInformationSystem.Text = "Сведения";
             // 
-            // документToolStripMenuItem
+            // miDocument
             // 
-            this.документToolStripMenuItem.Name = "документToolStripMenuItem";
-            this.документToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
-            this.документToolStripMenuItem.Text = "Документ";
-            this.документToolStripMenuItem.Click += new System.EventHandler(this.документToolStripMenuItem_Click);
+            this.miDocument.Enabled = false;
+            this.miDocument.Name = "miDocument";
+            this.miDocument.Size = new System.Drawing.Size(88, 24);
+            this.miDocument.Text = "Документ";
+            this.miDocument.Click += new System.EventHandler(this.документToolStripMenuItem_Click);
             // 
             // sstInformation
             // 
@@ -225,20 +246,6 @@
             // timer
             // 
             this.timer.Enabled = true;
-            // 
-            // miIssueBook
-            // 
-            this.miIssueBook.Name = "miIssueBook";
-            this.miIssueBook.Size = new System.Drawing.Size(117, 24);
-            this.miIssueBook.Text = "Выдача книги";
-            this.miIssueBook.Click += new System.EventHandler(this.miIssueBook_Click);
-            // 
-            // miReturnBook
-            // 
-            this.miReturnBook.Name = "miReturnBook";
-            this.miReturnBook.Size = new System.Drawing.Size(121, 24);
-            this.miReturnBook.Text = "Возврат книги";
-            this.miReturnBook.Click += new System.EventHandler(this.miReturnBook_Click);
             // 
             // MainMenuForm
             // 
@@ -283,7 +290,7 @@
         private System.Windows.Forms.ToolStripMenuItem miRegistrationCardReader;
         private System.Windows.Forms.ToolStripMenuItem miBooks;
         private System.Windows.Forms.ToolStripMenuItem miFormulars;
-        private System.Windows.Forms.ToolStripMenuItem документToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miDocument;
         private System.Windows.Forms.ToolStripMenuItem miStaffing;
         private System.Windows.Forms.ToolStripMenuItem miPost;
         private System.Windows.Forms.ToolStripMenuItem miUsers;

@@ -121,6 +121,7 @@
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Закрыть";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnError
             // 
@@ -131,6 +132,7 @@
             this.btnError.TabIndex = 0;
             this.btnError.Text = "Ошибки";
             this.btnError.UseVisualStyleBackColor = true;
+            this.btnError.Click += new System.EventHandler(this.btnError_Click);
             // 
             // gbSearchReader
             // 
@@ -662,7 +664,7 @@
             this.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "IssueBookForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "IssueBookForm";
+            this.Text = "Выдача книги";
             this.pnCancel.ResumeLayout(false);
             this.gbSearchReader.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

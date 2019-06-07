@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Windows.Forms;
+using static Library.Program;
 
 namespace Library
 {
@@ -8,13 +9,13 @@ namespace Library
     {
         private DBConnection dbConnection = new DBConnection();
         private RegistryData registryData = new RegistryData();
-        private Thread threadCheckConnection;
-
+        private Thread threadCheckConnection;              
 
         public MainMenuForm()
         {
             InitializeComponent();
-        }
+            EnableComponent.EventHandler = new EnableComponent.MyEvent(UpdateEnable);
+        }       
 
         public void MainMenu_Load(object sender, EventArgs e)   //загрузка формы
         {
@@ -35,6 +36,8 @@ namespace Library
                     {
                         case (true):
                             lbsstConnection.Text = RegistryData.DataSourceIP + "\\" + RegistryData.DataSourceServerName + " - " + RegistryData.InitialCatalog;
+                            AuthorizationForm authorizationForm = new AuthorizationForm();
+                            authorizationForm.Show(this);                            
                             break;
                         case (false):
                             lbsstConnection.Text = "Подключение отсутствует!";
@@ -56,6 +59,16 @@ namespace Library
             {
                 threadCheckConnection.Abort();
             }
+        }
+
+        private void UpdateEnable(bool valueUpdateEnable)
+        {
+            miExitProfile.Enabled = valueUpdateEnable;
+            miSettings.Enabled = valueUpdateEnable;
+            miIssueBook.Enabled = valueUpdateEnable;
+            miReturnBook.Enabled = valueUpdateEnable;
+            miHandbook.Enabled = valueUpdateEnable;
+            miDocument.Enabled = valueUpdateEnable;
         }
 
         private void miSettings_Click(object sender, EventArgs e)   //открытие окна подключения к базе данных
@@ -136,6 +149,19 @@ namespace Library
         {
             ReturnBookForm returnBookForm = new ReturnBookForm();
             returnBookForm.Show(this);
+        }
+
+        private void miExitSystem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void miExitProfile_Click(object sender, EventArgs e)
+        {
+            EnableComponent.EventHandler(false);
+            AuthorizationForm authorizationForm = new AuthorizationForm();
+            authorizationForm.Show(this);
+            AuthorizationForm.userRole = 0;
         }
     }
 }

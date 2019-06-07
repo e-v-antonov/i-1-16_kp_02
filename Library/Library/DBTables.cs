@@ -48,7 +48,7 @@ namespace Library
             "[Patronymic_Reader] + ', ' +  CONVERT([nvarchar] (4), DECRYPTBYKEY([Passport_Series_Reader])) + ' ' + CONVERT([nvarchar] (6), " +
             "DECRYPTBYKEY([Passport_Number_Reader])) as \"Reader\" from [dbo].[Registration_Card_Reader]";
         public string QRUsers = "select [ID_User], [Surname_User], [Name_User], [Patronymic_User], CONVERT([nvarchar] (16), " +
-            "DECRYPTBYKEY([Login_User])), CONVERT([nvarchar] (15), DECRYPTBYKEY([Password_User])), [ID_Role_User], [Role_Name] from [dbo].[User] inner join " +
+            "DECRYPTBYKEY([Login_User])), CONVERT([nvarchar] (16), DECRYPTBYKEY([Password_User])), [ID_Role_User], [Role_Name] from [dbo].[User] inner join " +
             "[dbo].[Role_User] on [Role_User_ID] = [ID_Role_User] where [User_Logical_Delete] = 0 and [Role_User_Logical_Delete] = 0";
         private string QRRoleUserForComboBox = "select [ID_Role_User], [Role_Name] from [dbo].[Role_User] where [Role_User_Logical_Delete] = 0";
         public SqlDependency dependency = new SqlDependency();
