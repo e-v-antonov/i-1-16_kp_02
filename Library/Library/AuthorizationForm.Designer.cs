@@ -82,6 +82,7 @@
             this.tbPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbPassword.Location = new System.Drawing.Point(0, 98);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(311, 23);
             this.tbPassword.TabIndex = 4;
             // 

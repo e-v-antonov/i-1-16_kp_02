@@ -64,7 +64,7 @@ namespace Library
         {
             RegistrationForm registrationForm = new RegistrationForm();
             this.Hide();
-            registrationForm.Show(this);
+            registrationForm.Show();
         }
     }
 }

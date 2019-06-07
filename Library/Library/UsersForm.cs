@@ -110,49 +110,49 @@ namespace Library
             cbRole.SelectedValue = dgvUsers.CurrentRow.Cells[6].Value.ToString();
         }
 
-        private bool CheckPasswordUpperLatin()  //проверка наличия заглавных английских букв
+        public bool CheckPasswordUpperLatin()  //проверка наличия заглавных английских букв
         {
             checkUpperLatin = Regex.IsMatch(tbPassword.Text, constraintUpperLatin, RegexOptions.None) ? true : false;
 
             return checkUpperLatin;
         }
 
-        private bool CheckPasswordLowerLatin()  //проверка наличия прописных английских букв
+        public bool CheckPasswordLowerLatin()  //проверка наличия прописных английских букв
         {
             checkLowerLatin = Regex.IsMatch(tbPassword.Text, constraintLowerLatin, RegexOptions.None) ? true : false;
 
             return checkLowerLatin;
         }
 
-        private bool CheckPasswordUpperCyrill() //проверка наличия заглавных русских букв
+        public bool CheckPasswordUpperCyrill() //проверка наличия заглавных русских букв
         {
             checkUpperCyrill = Regex.IsMatch(tbPassword.Text, constraintUpperCyrill, RegexOptions.None) ? true : false;
 
             return checkUpperCyrill;
         }
 
-        private bool CheckPasswordLowerCyrill() //проверка наличия прописных русских букв
+        public bool CheckPasswordLowerCyrill() //проверка наличия прописных русских букв
         {
             checkLowerCyrill = Regex.IsMatch(tbPassword.Text, constraintLowerCyrill, RegexOptions.None) ? true : false;
 
             return checkLowerCyrill;
         }
 
-        private bool CheckPasswordNumber()  //проверка наличия цифр
+        public bool CheckPasswordNumber()  //проверка наличия цифр
         {
             checkNumber = Regex.IsMatch(tbPassword.Text, constraintNumber, RegexOptions.None) ? true : false;
 
             return checkUpperLatin;
         }
 
-        private bool CheckPassworSymbol()   //проверка наличия символов
+        public bool CheckPassworSymbol()   //проверка наличия символов
         {
             checkSymbol = Regex.IsMatch(tbPassword.Text, constraintSymbol, RegexOptions.None) ? true : false;
 
             return checkSymbol;
         }
 
-        private bool CheckLoginCyrill() //проверка наличия русских букв
+        public bool CheckLoginCyrill() //проверка наличия русских букв
         {
             checkLoginCyrill = Regex.IsMatch(tbPassword.Text, constraintLoginCyrill, RegexOptions.None) ? false : true;
 
@@ -211,7 +211,7 @@ namespace Library
             return uniquePassword;
         }
 
-        private void btnInsert_Click(object sender, EventArgs e)    //кнопка добавления записии
+        private void btnInsert_Click(object sender, EventArgs e)    //кнопка добавления записи
         {
             var nameButton = sender as Button;
 
