@@ -30,7 +30,7 @@ namespace Library
             InitializeComponent();
         }
 
-        private void FormationCardAndFormularForm_Load(object sender, EventArgs e)
+        private void FormationCardAndFormularForm_Load(object sender, EventArgs e)  //загрузка форма
         {
             Thread threadRegistrationCard = new Thread(RegistrationCardFill);
             threadRegistrationCard.Start();
@@ -85,13 +85,16 @@ namespace Library
             }
         }
 
-        private void btnCreateWordRegistrationCard_Click(object sender, EventArgs e)
+        private void btnCreateWordRegistrationCard_Click(object sender, EventArgs e)    //клик по кнопке формирование регистрационной карточки в формате docx
         {
             if (dgvRegistrationCard.CurrentRow != null)
             {
                 RegistrationCardWord registrationCardWord = new RegistrationCardWord();
                 DataStorage();
-                new Thread(() => registrationCardWord.CreateRegistrationCard(registrationNumber, dateRegistration, surname, name, patronymic, birthday, passportSeries, passportNumber, whoGivePassport, whenGivePassport, town, street, building, apartment, mobilePhone, homePhone, email, false)).Start();
+                new Thread(() => registrationCardWord.CreateRegistrationCard(registrationNumber, dateRegistration, surname, name, patronymic, 
+                    birthday, passportSeries, passportNumber, whoGivePassport, whenGivePassport, town, street, building, apartment, 
+                    mobilePhone, homePhone, email, false)).Start();
+                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -99,13 +102,16 @@ namespace Library
             }
         }
 
-        private void btnPdfRegistrationCard_Click(object sender, EventArgs e)
+        private void btnPdfRegistrationCard_Click(object sender, EventArgs e)   //клик по кнопке формирование регистрационной карточки в формате pdf
         {
             if (dgvRegistrationCard.CurrentRow != null)
             {
                 RegistrationCardWord registrationCardWord = new RegistrationCardWord();
                 DataStorage();
-                new Thread(() => registrationCardWord.CreateRegistrationCard(registrationNumber, dateRegistration, surname, name, patronymic, birthday, passportSeries, passportNumber, whoGivePassport, whenGivePassport, town, street, building, apartment, mobilePhone, homePhone, email, true)).Start();
+                new Thread(() => registrationCardWord.CreateRegistrationCard(registrationNumber, dateRegistration, surname, name, patronymic,
+                    birthday, passportSeries, passportNumber, whoGivePassport, whenGivePassport, town, street, building, apartment,
+                    mobilePhone, homePhone, email, true)).Start();
+                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

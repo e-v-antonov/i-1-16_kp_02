@@ -17,9 +17,9 @@ namespace Library
         {
             try
             {
-                fileName = @"D:\Games\Регистрационная карточка " + surname + " " + name + " " + patronymic + " от " + DateTime.Now.ToString("hh.mm.ss_dd.MM.yyyy") + ".docx";
+                fileName = @"D:\Games\Регистрационная карточка " + surname + " " + name + " " + patronymic + " от " + DateTime.Now.ToString("HH.mm.ss_dd.MM.yyyy") + ".docx";
 
-                using (DocX document = DocX.Create(fileName))
+                using (DocX document = DocX.Create(fileName))   //формирование документа в формате docx
                 {
                     document.MarginTop = 56.6f;
                     document.MarginLeft = 56.6f;
@@ -50,7 +50,7 @@ namespace Library
 
                     document.Save();
 
-                    if (pdf == true)
+                    if (pdf == true)    //формирование документа pdf
                     {
                         Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
                         var wordDocument = appWord.Documents.Open(fileName);
