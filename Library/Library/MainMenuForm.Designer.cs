@@ -52,6 +52,7 @@
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.miCreatedRegistrationCardAndFormular = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -212,10 +213,11 @@
             // 
             // miDocument
             // 
-            this.miDocument.Enabled = false;
+            this.miDocument.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miCreatedRegistrationCardAndFormular});
             this.miDocument.Name = "miDocument";
-            this.miDocument.Size = new System.Drawing.Size(88, 24);
-            this.miDocument.Text = "Документ";
+            this.miDocument.Size = new System.Drawing.Size(207, 24);
+            this.miDocument.Text = "Формирование документа";
             this.miDocument.Click += new System.EventHandler(this.документToolStripMenuItem_Click);
             // 
             // sstInformation
@@ -246,6 +248,13 @@
             // timer
             // 
             this.timer.Enabled = true;
+            // 
+            // miCreatedRegistrationCardAndFormular
+            // 
+            this.miCreatedRegistrationCardAndFormular.Name = "miCreatedRegistrationCardAndFormular";
+            this.miCreatedRegistrationCardAndFormular.Size = new System.Drawing.Size(550, 26);
+            this.miCreatedRegistrationCardAndFormular.Text = "Формирование регистрационной карточки и формуляра читателя";
+            this.miCreatedRegistrationCardAndFormular.Click += new System.EventHandler(this.miCreatedRegistrationCardAndFormular_Click);
             // 
             // MainMenuForm
             // 
@@ -296,6 +305,7 @@
         private System.Windows.Forms.ToolStripMenuItem miUsers;
         private System.Windows.Forms.ToolStripMenuItem miIssueBook;
         private System.Windows.Forms.ToolStripMenuItem miReturnBook;
+        private System.Windows.Forms.ToolStripMenuItem miCreatedRegistrationCardAndFormular;
     }
 }
 

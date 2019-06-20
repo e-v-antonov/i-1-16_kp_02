@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Xceed.Words.NET;
 
 namespace Library
 {
@@ -49,6 +50,16 @@ namespace Library
             {
                 GenreFill();                
             }            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string fileName = @"D:\Games\Library.docx";
+
+            using (DocX document = DocX.Create(fileName))
+            {
+                               
+            }
         }
     }
 }

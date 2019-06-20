@@ -29,9 +29,9 @@ namespace Library
         public string QRRegistrationCard = "select [ID_Registration_Card_Reader], [Surname_Reader], [Name_Reader], [Patronymic_Reader], " +
             "CONVERT([varchar] (10), [Birthday_Reader], 104), CONVERT([nvarchar] (4), DECRYPTBYKEY([Passport_Series_Reader])), " +
             "CONVERT([nvarchar] (6), DECRYPTBYKEY([Passport_Number_Reader])), [Who_Give_Passport_Reader], CONVERT([varchar] (10), " +
-            "[When_Give_Passport_Reader], 104), [Town_Reader], CONVERT([nvarchar] (50), DECRYPTBYKEY([Street_Reader])), [Building_Reader], " +
+            "[When_Give_Passport_Reader], 104), [Town_Reader], CONVERT([nvarchar] (50), DECRYPTBYKEY([Street_Reader])), [Building_Reader]," +
             "[Apartment_Reader], CONVERT([nvarchar] (15), DECRYPTBYKEY([Home_Phone_Reader])), CONVERT([nvarchar] (15), " +
-            "DECRYPTBYKEY([Mobile_Phone_Reader])), CONVERT([nvarchar] (129), DECRYPTBYKEY([Email_Reader])), [Book_On_Hand_Reader] from " +
+            "DECRYPTBYKEY([Mobile_Phone_Reader])), CONVERT([nvarchar] (129), DECRYPTBYKEY([Email_Reader])), [Book_On_Hand_Reader], CONVERT([varchar] (10), [Registration_Date_Reader], 104) from " +
             "[dbo].[Registration_Card_Reader] where [Registration_Card_Reader_Logical_Delete] = 0";
         public string QRFormular = "select[ID_Formular_Reader], [ID_Registration_Card_Reader], [Surname_Reader] + ' ' + [Name_Reader] + ' ' + " +
             "[Patronymic_Reader], CONVERT([nvarchar] (4), DECRYPTBYKEY([Passport_Series_Reader])) + ' ' + CONVERT([nvarchar] (6), " +

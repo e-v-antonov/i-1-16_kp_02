@@ -74,6 +74,7 @@ namespace Library
                     dgvRegistrationCard.Columns[14].HeaderText = "Номер домашнего телефона";
                     dgvRegistrationCard.Columns[15].HeaderText = "Адрес электронной почты";
                     dgvRegistrationCard.Columns[16].HeaderText = "Наличие книги";
+                    dgvRegistrationCard.Columns[17].Visible = false;
                     dgvRegistrationCard.ClearSelection();
                 }
                 catch
@@ -88,7 +89,6 @@ namespace Library
         {
             if (e.Info != SqlNotificationInfo.Invalid)
             {
-                //e = null;
                 RegistrationCardFill();
             }
         }

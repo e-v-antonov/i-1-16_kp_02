@@ -36,8 +36,8 @@ namespace Library
                     {
                         case (true):
                             lbsstConnection.Text = RegistryData.DataSourceIP + "\\" + RegistryData.DataSourceServerName + " - " + RegistryData.InitialCatalog;
-                            AuthorizationForm authorizationForm = new AuthorizationForm();
-                            authorizationForm.Show(this);                            
+                            //AuthorizationForm authorizationForm = new AuthorizationForm();
+                            //authorizationForm.Show(this);                            
                             break;
                         case (false):
                             lbsstConnection.Text = "Подключение отсутствует!";
@@ -162,6 +162,12 @@ namespace Library
             AuthorizationForm authorizationForm = new AuthorizationForm();
             authorizationForm.Show(this);
             AuthorizationForm.userRole = 0;
+        }
+
+        private void miCreatedRegistrationCardAndFormular_Click(object sender, EventArgs e)
+        {
+            FormationCardAndFormularForm formationCardAndFormularForm = new FormationCardAndFormularForm();
+            formationCardAndFormularForm.Show(this);
         }
     }
 }

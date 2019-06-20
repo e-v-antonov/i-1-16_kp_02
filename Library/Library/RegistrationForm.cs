@@ -17,14 +17,14 @@ namespace Library
             InitializeComponent();
         }
 
-        private void btnAuthorization_Click(object sender, EventArgs e) //кнопка аторизация
+        private void btnAuthorization_Click(object sender, EventArgs e) //кнопка авторизация
         {
             AuthorizationForm authorizationForm = new AuthorizationForm();
             this.Hide();
             authorizationForm.Show();
         }
 
-        private bool CheckOccupancyTextBox()    //функция проверки количества симвоолов в полях для ввода
+        private bool CheckOccupancyTextBox()    //функция проверки количества символов в полях для ввода
         {
             if (tbSurname.TextLength == 0 || tbName.TextLength == 0 || tbPatronymic.TextLength == 0 || tbPassword.TextLength == 0 || tbRepeatPassword.TextLength == 0)
                 MessageBox.Show("Должны быть заполнены все поля!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);

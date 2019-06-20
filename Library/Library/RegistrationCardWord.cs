@@ -1,122 +1,73 @@
 ﻿using System;
 using System.Data;
+using System.IO;
 using System.Threading;
-using word = Microsoft.Office.Interop.Word;
+using Xceed.Words.NET;
 
 namespace Library
 {
     class RegistrationCardWord
     {
-        //private word.Paragraphs listParagraph;
-        //private word.Paragraph wordparagraph;
+        string fileName;
+        string oldFileName;
 
-        public void CreateDoc()
+        public void CreateRegistrationCard(string registrationNumber, string dateRegistration, string surname, string name, string patronymic, string birthday, string passportSeries,
+            string passportNumber, string whoGivePassport, string whenGivePassport, string town, string street, string building, 
+            string apartment, string mobilePhone, string homePhone, string email, bool pdf)
         {
-            //Thread thread = new Thread(CreateRegistrationCardWord);
-            //thread.Start();
-            CreateRegistrationCardWord();
-        }
+            try
+            {
+                fileName = @"D:\Games\Регистрационная карточка " + surname + " " + name + " " + patronymic + " от " + DateTime.Now.ToString("hh.mm.ss_dd.MM.yyyy") + ".docx";
 
-        private void CreateRegistrationCardWord()
-        {
-            word.Application application = new word.Application();
-            application.Visible = false;
+                using (DocX document = DocX.Create(fileName))
+                {
+                    document.MarginTop = 56.6f;
+                    document.MarginLeft = 56.6f;
+                    document.MarginRight = 28.3f;
+                    document.MarginBottom = 56.6f;
 
-            object missing = Type.Missing;
-            word.Document document = application.Documents.Add(ref missing, ref missing, ref missing, ref missing);
-            //word.Range range = document.Range(0, 0);
-            //range.ParagraphFormat.Alignment = word.WdParagraphAlignment.wdAlignParagraphCenter;
+                    var title = document.InsertParagraph();
+                    var data = document.InsertParagraph();
+                    var text = document.InsertParagraph();
+                    var placeOfSignature = document.InsertParagraph();
+                    var instruction = document.InsertParagraph();
 
-            string fileName = @"D:\Games\Пример.docx";
+                    title.Append("Регистрационная карточка читателя \n библиотеки №127").Font(new Font("Times New Roman")).FontSize(16).Bold().SetLineSpacing(LineSpacingType.Line, 1.5f);
+                    title.Alignment = Alignment.center;
 
-            document.Sections.PageSetup.LeftMargin = application.CentimetersToPoints(2);
-            document.Sections.PageSetup.RightMargin = application.CentimetersToPoints(1);
-            document.Sections.PageSetup.TopMargin = application.CentimetersToPoints(2);
-            document.Sections.PageSetup.BottomMargin = application.CentimetersToPoints(2);
+                    data.Append("Регистрационный номер: " + registrationNumber + "\nДата заполнения: " + dateRegistration + "\nФамилия: " + surname + "\nИмя: " + name + "\nОтчество: " + patronymic + "\nДата рождения: " + birthday + "\nСерия и номер паспорта: " + passportSeries + " " + passportNumber + "\nКем выдан: " + whoGivePassport + "\nКогда выдан: " + whenGivePassport + "\nАдрес проживания: " + town + ", " + street + ", дом " + building + ", квартира" + apartment + "\nДомашний телефон: " + homePhone + "\nМобильный телефон: " + mobilePhone + "\nАдрес электронной почты: " + email + "\n")
+                        .Font(new Font("Times New Roman")).FontSize(14).SetLineSpacing(LineSpacingType.Line, 1.5f);
+                    data.Alignment = Alignment.left;
 
-            word.Paragraph title = document.Content.Paragraphs.Add(ref missing);
+                    text.Append("\tПодтверждаю, что я ознакомлен и полностью согласен с условиями оказания мне библиотечных услуг библиотекой №127 изложенными в «Правилах пользования библиотекой №127», я согласен с тем, что библиотека может отказать мне в обслуживании в случае их нарушения. Также даю свое согласие на обработку моих персональных данных, указанных в настоящей регистрационной карточке.\n\tДанное согласие действует до моего прямого отказа от пользования услугами библиотеки, выраженного мною лично в устной или письменной форме.")
+                        .Font(new Font("Times New Roman")).FontSize(14).SetLineSpacing(LineSpacingType.Line, 1.5f);
+                    text.Alignment = Alignment.both;
 
-            //word.Paragraph title = document.Paragraphs.Add();                    
-            title.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphCenter;
-            title.Range.Font.Name = "Times New Roman";
-            title.Range.Font.Size = 16;
-            title.Range.Bold = 2;
-            title.Range.ParagraphFormat.SpaceAfter = 0;
-            title.Range.ParagraphFormat.SpaceBefore = 0;
-            title.Range.ParagraphFormat.LineSpacingRule = word.WdLineSpacing.wdLineSpace1pt5;
-            title.Range.Text = "Регистрационная карточка читателя"; //\nбиблиотеки №127";
-            title.Range.Text = title.Range.Text + "библиотеки №127";
+                    placeOfSignature.Append("____________ / ____________").Font(new Font("Times New Roman")).FontSize(14).SetLineSpacing(LineSpacingType.Line, 1f);
+                    placeOfSignature.Alignment = Alignment.right;
 
+                    instruction.Append("\t\t\t\t\t\t\t\t\t\tПодпись                 Расшифровка").Font(new Font("Times New Roman")).FontSize(10).Bold();
 
-            //document.Paragraphs.Add();
-            //document.Paragraphs.Add();
-            //word.Range range = document.Range(0, 40);
-            //range.ParagraphFormat.Alignment = word.WdParagraphAlignment.wdAlignParagraphCenter;                  
+                    document.Save();
 
-            //word.Paragraph text = document.Paragraphs.Add();           
-            //text.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphLeft;
-            //text.Range.Font.Name = "Times New Roman";
-            //text.Range.Font.Size = 14;
-            //text.Range.Bold = 0;
-            //text.Range.ParagraphFormat.SpaceAfter = 0;
-            //text.Range.ParagraphFormat.SpaceBefore = 0;
-            //text.Range.ParagraphFormat.LineSpacingRule = word.WdLineSpacing.wdLineSpace1pt5;
-            //text.Range.Text = "Регистрационный номер:\nДата заполнения:\nФамилия:\nИмя:\nОтчество:\nДата рождения:\nСерия и номер паспорта:\nКем выдан:\nКогда выдан:\nАдрес проживания:\nДомашний телефон:\nМобильный телефон:\nАдрес электронной почты:\n";
-
-            //document.Paragraphs.Add();
-
-            //word.Paragraph agreement = document.Paragraphs.Add();
-            //agreement.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphJustify;
-            //agreement.Range.Text = "         Подтверждаю, что я ознакомлен и полностью согласен с условиями оказания мне библиотечных услуг библиотекой №127 изложенными в «Правилах пользования библиотекой №127», я согласен с тем, что библиотека может отказать мне в обслуживании в случае их нарушения. Также даю свое согласие на обработку моих персональных данных, указанных в настоящей регистрационной карточке.\n         Данное согласие действует до моего прямого отказа от пользования услугами библиотеки, выраженного мною лично в устной или письменной форме.";
-            //agreement.Range.Font.Name = "Times New Roman";
-            //agreement.Range.Font.Size = 14;
-            //agreement.Range.ParagraphFormat.SpaceAfter = 0;
-            //agreement.Range.ParagraphFormat.SpaceBefore = 0;
-            //agreement.Range.ParagraphFormat.LineSpacingRule = word.WdLineSpacing.wdLineSpace1pt5;
-            //agreement.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphJustify;
-
-            //document.Paragraphs.Add();
-            //document.Paragraphs.Add();
-
-            //word.Paragraph agreement1 = document.Paragraphs.Add();
-            //agreement1.Range.Text = "Данное согласие действует до моего прямого отказа от пользования услугами библиотеки, выраженного мною лично в устной или письменной форме.";
-            //agreement1.Range.Font.Name = "Times New Roman";
-            //agreement1.Range.Font.Size = 14;
-            //agreement1.Range.ParagraphFormat.SpaceAfter = 0;
-            //agreement1.Range.ParagraphFormat.SpaceBefore = 0;
-            //agreement1.Range.ParagraphFormat.LineSpacingRule = word.WdLineSpacing.wdLineSpace1pt5;
-            //agreement1.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphJustify;
-
-            //document.Paragraphs.Add();
-            //document.Paragraphs.Add();
-
-
-            //word.Paragraph signature = document.Paragraphs.Add();
-            //signature.Range.Text = "____________ / ____________";
-            //signature.Range.Font.Name = "Times New Roman";
-            //signature.Range.Font.Size = 14;
-            //signature.Range.ParagraphFormat.LineSpacingRule = word.WdLineSpacing.wdLineSpaceSingle;
-            //signature.Range.ParagraphFormat.SpaceAfter = 0;
-            //signature.Range.ParagraphFormat.SpaceBefore = 0;
-            //signature.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphRight;
-
-            //document.Paragraphs.Add();
-
-            //word.Paragraph decryptione = document.Paragraphs.Add();
-            //decryptione.Range.Text = "										Подпись               Расшифровка";
-            //decryptione.Format.Alignment = word.WdParagraphAlignment.wdAlignParagraphLeft;
-            //decryptione.Range.Font.Name = "Times New Roman";
-            //decryptione.Range.Font.Size = 10;
-            //decryptione.Range.Font.Bold = 2;
-            //decryptione.Range.ParagraphFormat.SpaceAfter = 0;
-            //decryptione.Range.ParagraphFormat.SpaceBefore = 0;
-            //decryptione.Range.ParagraphFormat.LineSpacingRule = word.WdLineSpacing.wdLineSpaceSingle;
-
-
-            document.SaveAs2(fileName, word.WdSaveFormat.wdFormatDocumentDefault, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
-            object save_changes = false;
-            document.Close(ref save_changes, ref missing, ref missing);
-            application.Quit(ref save_changes, ref missing, ref missing);
+                    if (pdf == true)
+                    {
+                        Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+                        var wordDocument = appWord.Documents.Open(fileName);
+                        oldFileName = fileName;
+                        fileName = fileName.Remove(fileName.Length - 4);
+                        wordDocument.ExportAsFixedFormat(fileName + "pdf", Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF);
+                        wordDocument.Close();
+                        appWord.Quit();
+                        FileInfo fileWord = new FileInfo(oldFileName);
+                        fileWord.Delete();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " " + ex.Message;
+            }
         }
     }
 }
