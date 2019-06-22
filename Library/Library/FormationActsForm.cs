@@ -8,7 +8,8 @@ namespace Library
 {
     public partial class FormationActsForm : Form
     {
-        DataTable dtSelectedRows = new DataTable();
+        private DataTable dtSelectedRows = new DataTable();
+        private DataTable dtSelectedExceptionRows = new DataTable();
         private int selectedCellCount = 0;
 
         public FormationActsForm()
@@ -16,7 +17,7 @@ namespace Library
             InitializeComponent();
         }
 
-        private void FormationActsForm_Load(object sender, EventArgs e)
+        private void FormationActsForm_Load(object sender, EventArgs e) //загрузка формы
         {
             Thread threadListBook = new Thread(ListBookFill);
             threadListBook.Start();
@@ -25,9 +26,15 @@ namespace Library
             dtSelectedRows.Columns.Add(new DataColumn("Cost_Book", typeof(string)));
             dtSelectedRows.Columns.Add(new DataColumn("Total_Number_Copies_Book", typeof(string)));
             dtSelectedRows.Columns.Add(new DataColumn("Total_Cost_Books", typeof(string)));
+
+            dtSelectedExceptionRows.Columns.Add(new DataColumn("ID_Book", typeof(string)));
+            dtSelectedExceptionRows.Columns.Add(new DataColumn("Title_Book_And_Writer", typeof(string)));
+            dtSelectedExceptionRows.Columns.Add(new DataColumn("Cost_Book", typeof(string)));
+            dtSelectedExceptionRows.Columns.Add(new DataColumn("Total_Number_Copies_Book", typeof(string)));
+            dtSelectedExceptionRows.Columns.Add(new DataColumn("Total_Cost_Books", typeof(string)));
         }
 
-        private void ListBookFill()
+        private void ListBookFill() ////заполнение data grid view данными из базы данных
         {
             DBTables dbTables = new DBTables();
 
@@ -40,10 +47,11 @@ namespace Library
                     dbTables.dependency.OnChange += ChangeDataListBook;
 
                     dgvListBook.DataSource = dbTables.DTListBookForAct;
-                    dgvListBook.Columns[0].HeaderText = "Название книги, автор";
-                    dgvListBook.Columns[1].HeaderText = "Цена экземпляра, руб.";
-                    dgvListBook.Columns[2].HeaderText = "Количество экземпляров";
-                    dgvListBook.Columns[3].HeaderText = "Сумма, руб.";
+                    dgvListBook.Columns[0].Visible = false;
+                    dgvListBook.Columns[1].HeaderText = "Название книги, автор";
+                    dgvListBook.Columns[2].HeaderText = "Цена экземпляра, руб.";
+                    dgvListBook.Columns[3].HeaderText = "Количество экземпляров";
+                    dgvListBook.Columns[4].HeaderText = "Сумма, руб.";
                     dgvListBook.ClearSelection();
                     dgvListBook.CurrentCell = null;
                 }
@@ -63,7 +71,7 @@ namespace Library
             }
         }
 
-        private void btnCreateWordAdoptionBook_Click(object sender, EventArgs e)
+        private void btnCreateWordAdoptionBook_Click(object sender, EventArgs e)    //клик по кнопке формирование акта о приемке в формате docx
         {
             selectedCellCount = dgvListBook.GetCellCount(DataGridViewElementStates.Selected);
 
@@ -85,7 +93,7 @@ namespace Library
             }
         }
 
-        private void CreateTableSelectedRows()
+        private void CreateTableSelectedRows()  //запоминание выбранных записей для акта о приемке
         {
             dtSelectedRows.Clear();
 
@@ -97,7 +105,7 @@ namespace Library
             }
         }
 
-        private void btnCreatePdfAdoptionBook_Click(object sender, EventArgs e)
+        private void btnCreatePdfAdoptionBook_Click(object sender, EventArgs e) //клик по кнопке формирование акта о приемке в формате pdf
         {
             selectedCellCount = dgvListBook.GetCellCount(DataGridViewElementStates.Selected);
 
@@ -116,6 +124,72 @@ namespace Library
             {
                 MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnCreateWordExceptionBook_Click(object sender, EventArgs e)   //клик по кнопке формирование акта об исключении в формате docx
+        {
+            selectedCellCount = dgvListBook.GetCellCount(DataGridViewElementStates.Selected);
+
+            if (selectedCellCount > 0)
+            {
+                ActExceptionBookWord actExceptionBookWord = new ActExceptionBookWord();
+                CreateTableSelectedExceptionRows();
+
+                new Thread(() => actExceptionBookWord.CreateActExceptionBookWord(dtSelectedExceptionRows, false)).Start();
+
+                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvListBook.ClearSelection();
+                dgvListBook.CurrentCell = null;
+                selectedCellCount = 0;
+            }
+            else
+            {
+                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CreateTableSelectedExceptionRows() //запоминание выбранных записей для акта об исключении
+        {
+            dtSelectedExceptionRows.Clear();
+
+            for (int i = 0; i < selectedCellCount; i++)
+            {
+                int indexRow = dgvListBook.SelectedCells[i].RowIndex;
+                dtSelectedExceptionRows.Rows.Add(dgvListBook.Rows[indexRow].Cells[0].Value.ToString(), dgvListBook.Rows[indexRow].Cells[1].Value.ToString(),
+                    dgvListBook.Rows[indexRow].Cells[2].Value.ToString(), dgvListBook.Rows[indexRow].Cells[3].Value.ToString(), dgvListBook.Rows[indexRow].Cells[4].Value.ToString());
+            }
+        }
+
+        private void btnCreatePdfExceptionBook_Click(object sender, EventArgs e)    //клик по кнопке формирование акта об исключении в формате docx
+        {
+            selectedCellCount = dgvListBook.GetCellCount(DataGridViewElementStates.Selected);
+
+            if (selectedCellCount > 0)
+            {
+                ActExceptionBookWord actExceptionBookWord = new ActExceptionBookWord();
+                CreateTableSelectedExceptionRows();
+
+                new Thread(() => actExceptionBookWord.CreateActExceptionBookWord(dtSelectedExceptionRows, true)).Start();
+
+                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvListBook.ClearSelection();
+                dgvListBook.CurrentCell = null;
+                selectedCellCount = 0;
+            }
+            else
+            {
+                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnError_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

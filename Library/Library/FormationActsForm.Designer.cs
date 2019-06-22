@@ -33,8 +33,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnError = new System.Windows.Forms.Button();
             this.gbCreateDocument = new System.Windows.Forms.GroupBox();
-            this.btnCreateWordExceptionBook = new System.Windows.Forms.Button();
             this.btnCreatePdfExceptionBook = new System.Windows.Forms.Button();
+            this.btnCreateWordExceptionBook = new System.Windows.Forms.Button();
             this.btnCreatePdfAdoptionBook = new System.Windows.Forms.Button();
             this.btnCreateWordAdoptionBook = new System.Windows.Forms.Button();
             this.dgvListBook = new System.Windows.Forms.DataGridView();
@@ -73,6 +73,7 @@
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Закрыть";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnError
             // 
@@ -83,11 +84,12 @@
             this.btnError.TabIndex = 0;
             this.btnError.Text = "Ошибки";
             this.btnError.UseVisualStyleBackColor = true;
+            this.btnError.Click += new System.EventHandler(this.btnError_Click);
             // 
             // gbCreateDocument
             // 
-            this.gbCreateDocument.Controls.Add(this.btnCreateWordExceptionBook);
             this.gbCreateDocument.Controls.Add(this.btnCreatePdfExceptionBook);
+            this.gbCreateDocument.Controls.Add(this.btnCreateWordExceptionBook);
             this.gbCreateDocument.Controls.Add(this.btnCreatePdfAdoptionBook);
             this.gbCreateDocument.Controls.Add(this.btnCreateWordAdoptionBook);
             this.gbCreateDocument.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -98,25 +100,27 @@
             this.gbCreateDocument.TabStop = false;
             this.gbCreateDocument.Text = "Формирование документов";
             // 
-            // btnCreateWordExceptionBook
-            // 
-            this.btnCreateWordExceptionBook.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCreateWordExceptionBook.Location = new System.Drawing.Point(409, 19);
-            this.btnCreateWordExceptionBook.Name = "btnCreateWordExceptionBook";
-            this.btnCreateWordExceptionBook.Size = new System.Drawing.Size(144, 88);
-            this.btnCreateWordExceptionBook.TabIndex = 3;
-            this.btnCreateWordExceptionBook.Text = "Сформировать акт об исключении из фонда в формате .pdf";
-            this.btnCreateWordExceptionBook.UseVisualStyleBackColor = true;
-            // 
             // btnCreatePdfExceptionBook
             // 
             this.btnCreatePdfExceptionBook.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCreatePdfExceptionBook.Location = new System.Drawing.Point(553, 19);
+            this.btnCreatePdfExceptionBook.Location = new System.Drawing.Point(409, 19);
             this.btnCreatePdfExceptionBook.Name = "btnCreatePdfExceptionBook";
             this.btnCreatePdfExceptionBook.Size = new System.Drawing.Size(144, 88);
-            this.btnCreatePdfExceptionBook.TabIndex = 2;
-            this.btnCreatePdfExceptionBook.Text = "Сформировать акт об исключении из фонда в формате .docx";
+            this.btnCreatePdfExceptionBook.TabIndex = 3;
+            this.btnCreatePdfExceptionBook.Text = "Сформировать акт об исключении из фонда в формате .pdf";
             this.btnCreatePdfExceptionBook.UseVisualStyleBackColor = true;
+            this.btnCreatePdfExceptionBook.Click += new System.EventHandler(this.btnCreatePdfExceptionBook_Click);
+            // 
+            // btnCreateWordExceptionBook
+            // 
+            this.btnCreateWordExceptionBook.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCreateWordExceptionBook.Location = new System.Drawing.Point(553, 19);
+            this.btnCreateWordExceptionBook.Name = "btnCreateWordExceptionBook";
+            this.btnCreateWordExceptionBook.Size = new System.Drawing.Size(144, 88);
+            this.btnCreateWordExceptionBook.TabIndex = 2;
+            this.btnCreateWordExceptionBook.Text = "Сформировать акт об исключении из фонда в формате .docx";
+            this.btnCreateWordExceptionBook.UseVisualStyleBackColor = true;
+            this.btnCreateWordExceptionBook.Click += new System.EventHandler(this.btnCreateWordExceptionBook_Click);
             // 
             // btnCreatePdfAdoptionBook
             // 
@@ -184,8 +188,8 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnError;
         private System.Windows.Forms.GroupBox gbCreateDocument;
-        private System.Windows.Forms.Button btnCreateWordExceptionBook;
         private System.Windows.Forms.Button btnCreatePdfExceptionBook;
+        private System.Windows.Forms.Button btnCreateWordExceptionBook;
         private System.Windows.Forms.Button btnCreatePdfAdoptionBook;
         private System.Windows.Forms.Button btnCreateWordAdoptionBook;
         private System.Windows.Forms.DataGridView dgvListBook;

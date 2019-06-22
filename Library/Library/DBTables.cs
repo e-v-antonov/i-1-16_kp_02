@@ -52,7 +52,7 @@ namespace Library
             "DECRYPTBYKEY([Login_User])), CONVERT([nvarchar] (16), DECRYPTBYKEY([Password_User])), [ID_Role_User], [Role_Name] from [dbo].[User] inner join " +
             "[dbo].[Role_User] on [Role_User_ID] = [ID_Role_User] where [User_Logical_Delete] = 0 and [Role_User_Logical_Delete] = 0";
         private string QRRoleUserForComboBox = "select [ID_Role_User], [Role_Name] from [dbo].[Role_User] where [Role_User_Logical_Delete] = 0";
-        private string QRListBookForAct = "select [Название книги] + ', ' + [Автор], [Стоимость экземпляра книги, руб.], [Кол-во экземпляров], " +
+        private string QRListBookForAct = "select [Инвентарный номер], [Название книги] + ', ' + [Автор], [Стоимость экземпляра книги, руб.], [Кол-во экземпляров], " +
                     "[Сумма стоимости книг, руб.] from [dbo].[Summary_Book]";
         public SqlDependency dependency = new SqlDependency();
 
