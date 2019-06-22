@@ -26,7 +26,7 @@ namespace Library
 
                     var title = document.InsertParagraph();
                     var text = document.InsertParagraph();
-                    var table = document.AddTable(3, 8);
+                    var table = document.AddTable(dtFormular.Rows.Count + 1, 8);
                     table.Design = TableDesign.TableGrid;
                     var mainTable = document.InsertTable(table);
 

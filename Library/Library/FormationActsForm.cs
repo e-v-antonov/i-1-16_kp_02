@@ -34,7 +34,7 @@ namespace Library
             dtSelectedExceptionRows.Columns.Add(new DataColumn("Total_Cost_Books", typeof(string)));
         }
 
-        private void ListBookFill() ////заполнение data grid view данными из базы данных
+        private void ListBookFill() //заполнение data grid view данными из базы данных
         {
             DBTables dbTables = new DBTables();
 
