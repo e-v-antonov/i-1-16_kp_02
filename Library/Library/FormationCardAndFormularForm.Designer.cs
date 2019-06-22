@@ -33,8 +33,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnError = new System.Windows.Forms.Button();
             this.gbCreateDocument = new System.Windows.Forms.GroupBox();
-            this.btnCreateWordFormular = new System.Windows.Forms.Button();
             this.btnCreatePdfFormular = new System.Windows.Forms.Button();
+            this.btnCreateWordFormular = new System.Windows.Forms.Button();
             this.btnPdfRegistrationCard = new System.Windows.Forms.Button();
             this.btnCreateWordRegistrationCard = new System.Windows.Forms.Button();
             this.dgvRegistrationCard = new System.Windows.Forms.DataGridView();
@@ -86,8 +86,8 @@
             // 
             // gbCreateDocument
             // 
-            this.gbCreateDocument.Controls.Add(this.btnCreateWordFormular);
             this.gbCreateDocument.Controls.Add(this.btnCreatePdfFormular);
+            this.gbCreateDocument.Controls.Add(this.btnCreateWordFormular);
             this.gbCreateDocument.Controls.Add(this.btnPdfRegistrationCard);
             this.gbCreateDocument.Controls.Add(this.btnCreateWordRegistrationCard);
             this.gbCreateDocument.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -98,25 +98,27 @@
             this.gbCreateDocument.TabStop = false;
             this.gbCreateDocument.Text = "Формирование документов";
             // 
-            // btnCreateWordFormular
-            // 
-            this.btnCreateWordFormular.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCreateWordFormular.Location = new System.Drawing.Point(745, 19);
-            this.btnCreateWordFormular.Name = "btnCreateWordFormular";
-            this.btnCreateWordFormular.Size = new System.Drawing.Size(144, 88);
-            this.btnCreateWordFormular.TabIndex = 3;
-            this.btnCreateWordFormular.Text = "Сформировать формуляр читателя в формате .pdf";
-            this.btnCreateWordFormular.UseVisualStyleBackColor = true;
-            // 
             // btnCreatePdfFormular
             // 
             this.btnCreatePdfFormular.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCreatePdfFormular.Location = new System.Drawing.Point(889, 19);
+            this.btnCreatePdfFormular.Location = new System.Drawing.Point(745, 19);
             this.btnCreatePdfFormular.Name = "btnCreatePdfFormular";
             this.btnCreatePdfFormular.Size = new System.Drawing.Size(144, 88);
-            this.btnCreatePdfFormular.TabIndex = 2;
-            this.btnCreatePdfFormular.Text = "Сформировать формуляр читателя в формате .docx";
+            this.btnCreatePdfFormular.TabIndex = 3;
+            this.btnCreatePdfFormular.Text = "Сформировать формуляр читателя в формате .pdf";
             this.btnCreatePdfFormular.UseVisualStyleBackColor = true;
+            this.btnCreatePdfFormular.Click += new System.EventHandler(this.btnCreatePdfFormular_Click);
+            // 
+            // btnCreateWordFormular
+            // 
+            this.btnCreateWordFormular.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCreateWordFormular.Location = new System.Drawing.Point(889, 19);
+            this.btnCreateWordFormular.Name = "btnCreateWordFormular";
+            this.btnCreateWordFormular.Size = new System.Drawing.Size(144, 88);
+            this.btnCreateWordFormular.TabIndex = 2;
+            this.btnCreateWordFormular.Text = "Сформировать формуляр читателя в формате .docx";
+            this.btnCreateWordFormular.UseVisualStyleBackColor = true;
+            this.btnCreateWordFormular.Click += new System.EventHandler(this.btnCreateWordFormular_Click);
             // 
             // btnPdfRegistrationCard
             // 
@@ -185,8 +187,8 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnError;
         private System.Windows.Forms.GroupBox gbCreateDocument;
-        private System.Windows.Forms.Button btnCreateWordFormular;
         private System.Windows.Forms.Button btnCreatePdfFormular;
+        private System.Windows.Forms.Button btnCreateWordFormular;
         private System.Windows.Forms.Button btnPdfRegistrationCard;
         private System.Windows.Forms.Button btnCreateWordRegistrationCard;
         private System.Windows.Forms.DataGridView dgvRegistrationCard;

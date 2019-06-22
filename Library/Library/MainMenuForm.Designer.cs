@@ -48,11 +48,11 @@
             this.miUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.miInformationSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.miDocument = new System.Windows.Forms.ToolStripMenuItem();
+            this.miCreatedRegistrationCardAndFormular = new System.Windows.Forms.ToolStripMenuItem();
             this.sstInformation = new System.Windows.Forms.StatusStrip();
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.miCreatedRegistrationCardAndFormular = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -133,7 +133,6 @@
             this.miPublishingBook,
             this.miGenreBook,
             this.miStaffing});
-            this.miHandbook.Enabled = false;
             this.miHandbook.Font = new System.Drawing.Font("Arial", 9F);
             this.miHandbook.Name = "miHandbook";
             this.miHandbook.Size = new System.Drawing.Size(110, 24);
@@ -220,6 +219,13 @@
             this.miDocument.Text = "Формирование документа";
             this.miDocument.Click += new System.EventHandler(this.документToolStripMenuItem_Click);
             // 
+            // miCreatedRegistrationCardAndFormular
+            // 
+            this.miCreatedRegistrationCardAndFormular.Name = "miCreatedRegistrationCardAndFormular";
+            this.miCreatedRegistrationCardAndFormular.Size = new System.Drawing.Size(550, 26);
+            this.miCreatedRegistrationCardAndFormular.Text = "Формирование регистрационной карточки и формуляра читателя";
+            this.miCreatedRegistrationCardAndFormular.Click += new System.EventHandler(this.miCreatedRegistrationCardAndFormular_Click);
+            // 
             // sstInformation
             // 
             this.sstInformation.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -248,13 +254,6 @@
             // timer
             // 
             this.timer.Enabled = true;
-            // 
-            // miCreatedRegistrationCardAndFormular
-            // 
-            this.miCreatedRegistrationCardAndFormular.Name = "miCreatedRegistrationCardAndFormular";
-            this.miCreatedRegistrationCardAndFormular.Size = new System.Drawing.Size(550, 26);
-            this.miCreatedRegistrationCardAndFormular.Text = "Формирование регистрационной карточки и формуляра читателя";
-            this.miCreatedRegistrationCardAndFormular.Click += new System.EventHandler(this.miCreatedRegistrationCardAndFormular_Click);
             // 
             // MainMenuForm
             // 

@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Library
 {
@@ -24,6 +25,8 @@ namespace Library
         private string mobilePhone;
         private string homePhone;
         private string email;
+        private DBTables dbTables = new DBTables();
+        public DataTable dtFormular = new DataTable("Formular_Reader"); 
 
         public FormationCardAndFormularForm()
         {
@@ -90,10 +93,12 @@ namespace Library
             if (dgvRegistrationCard.CurrentRow != null)
             {
                 RegistrationCardWord registrationCardWord = new RegistrationCardWord();
-                DataStorage();
-                new Thread(() => registrationCardWord.CreateRegistrationCard(registrationNumber, dateRegistration, surname, name, patronymic, 
-                    birthday, passportSeries, passportNumber, whoGivePassport, whenGivePassport, town, street, building, apartment, 
+                DataStorageRegistrationCard();
+
+                new Thread(() => registrationCardWord.CreateRegistrationCard(registrationNumber, dateRegistration, surname, name, patronymic,
+                    birthday, passportSeries, passportNumber, whoGivePassport, whenGivePassport, town, street, building, apartment,
                     mobilePhone, homePhone, email, false)).Start();
+
                 MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -107,7 +112,7 @@ namespace Library
             if (dgvRegistrationCard.CurrentRow != null)
             {
                 RegistrationCardWord registrationCardWord = new RegistrationCardWord();
-                DataStorage();
+                DataStorageRegistrationCard();
                 new Thread(() => registrationCardWord.CreateRegistrationCard(registrationNumber, dateRegistration, surname, name, patronymic,
                     birthday, passportSeries, passportNumber, whoGivePassport, whenGivePassport, town, street, building, apartment,
                     mobilePhone, homePhone, email, true)).Start();
@@ -119,7 +124,7 @@ namespace Library
             }
         }
 
-        private void DataStorage()
+        private void DataStorageRegistrationCard()  //запоминание данных для формирования регистрационной карточки
         {
             registrationNumber = dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString();
             dateRegistration = dgvRegistrationCard.CurrentRow.Cells[17].Value.ToString();
@@ -138,6 +143,67 @@ namespace Library
             mobilePhone = dgvRegistrationCard.CurrentRow.Cells[14].Value.ToString();
             homePhone = dgvRegistrationCard.CurrentRow.Cells[13].Value.ToString();
             email = dgvRegistrationCard.CurrentRow.Cells[15].Value.ToString();
+        }
+
+        private void btnCreateWordFormular_Click(object sender, EventArgs e)    //клик по кнопке формирование формуляра в формате docx
+        {
+            if (dgvRegistrationCard.CurrentRow != null)
+            {
+                FormularReaderWord formularReaderWord = new FormularReaderWord();
+                DataStorageFormular();
+
+                new Thread(() => formularReaderWord.CreateFormularReader(registrationNumber, surname, name, patronymic, dtFormular, false)).Start();
+                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCreatePdfFormular_Click(object sender, EventArgs e) //клик по кнопке формирование формуляра в формате pdf
+        {
+            if (dgvRegistrationCard.CurrentRow != null)
+            {
+                FormularReaderWord formularReaderWord = new FormularReaderWord();
+                DataStorageFormular();
+
+                new Thread(() => formularReaderWord.CreateFormularReader(registrationNumber, surname, name, patronymic, dtFormular, true)).Start();
+                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DataStorageFormular()   //запоминание данных для формирования формуляра
+        {
+            registrationNumber = dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString();
+            surname = dgvRegistrationCard.CurrentRow.Cells[1].Value.ToString();
+            name = dgvRegistrationCard.CurrentRow.Cells[2].Value.ToString();
+            patronymic = dgvRegistrationCard.CurrentRow.Cells[3].Value.ToString();
+            passportSeries = dgvRegistrationCard.CurrentRow.Cells[5].Value.ToString();
+            passportNumber = dgvRegistrationCard.CurrentRow.Cells[6].Value.ToString();
+
+            SqlCommand commandFormular = new SqlCommand("", RegistryData.DBConnectionString);
+            commandFormular.CommandText = "select CONVERT([varchar] (10), [Дата выдачи], 104), CONVERT([varchar] (10), [Дата возврата], 104), [Срок выдачи], [dbo].[Book].[ID_Book], [Название книги], [Писатель] from [dbo].[Formular_Registration_List] inner join [dbo].[Book] on [dbo].[Formular_Registration_List].[Название книги] = [dbo].[Book].[Book_Title] where [Паспорт] = '" + passportSeries + " " + passportNumber + "'";
+
+            try
+            {
+                RegistryData.DBConnectionString.Open();
+                dbTables.CommandOpenKey.ExecuteNonQuery();
+                dtFormular.Load(commandFormular.ExecuteReader());
+                dbTables.CommandCloseKey.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + ex.Message;
+            }
+            finally
+            {
+                RegistryData.DBConnectionString.Close();
+            }
         }
     }
 }

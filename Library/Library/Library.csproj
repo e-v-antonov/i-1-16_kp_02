@@ -99,6 +99,7 @@
     <Compile Include="FormularForm.Designer.cs">
       <DependentUpon>FormularForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularReaderWord.cs" />
     <Compile Include="GenreBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
