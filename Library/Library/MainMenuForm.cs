@@ -169,5 +169,11 @@ namespace Library
             FormationCardAndFormularForm formationCardAndFormularForm = new FormationCardAndFormularForm();
             formationCardAndFormularForm.Show(this);
         }
+
+        private void miCreateActs_Click(object sender, EventArgs e)
+        {
+            FormationActsForm formationActsForm = new FormationActsForm();
+            formationActsForm.Show(this);
+        }
     }
 }

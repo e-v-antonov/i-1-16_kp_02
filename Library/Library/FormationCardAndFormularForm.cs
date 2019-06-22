@@ -25,7 +25,6 @@ namespace Library
         private string mobilePhone;
         private string homePhone;
         private string email;
-        private DBTables dbTables = new DBTables();
         public DataTable dtFormular = new DataTable("Formular_Reader"); 
 
         public FormationCardAndFormularForm()
@@ -41,17 +40,17 @@ namespace Library
 
         private void RegistrationCardFill() //заполнение data grid view данными из базы данных
         {
-            DBTables dbTables = new DBTables();
+            DBTables dbTable = new DBTables();
 
             Action action = () =>
             {
                 try
                 {
-                    dbTables.DTRegistrationCard.Clear();
-                    dbTables.DTRegistrationCardFill();
-                    dbTables.dependency.OnChange += ChangeDataRegistrationCard;
+                    dbTable.DTRegistrationCard.Clear();
+                    dbTable.DTRegistrationCardFill();
+                    dbTable.dependency.OnChange += ChangeDataRegistrationCardDocument;
 
-                    dgvRegistrationCard.DataSource = dbTables.DTRegistrationCard;
+                    dgvRegistrationCard.DataSource = dbTable.DTRegistrationCard;
                     dgvRegistrationCard.Columns[0].Visible = false;
                     dgvRegistrationCard.Columns[1].HeaderText = "Фамилия";
                     dgvRegistrationCard.Columns[2].HeaderText = "Имя";
@@ -71,6 +70,7 @@ namespace Library
                     dgvRegistrationCard.Columns[16].HeaderText = "Наличие книги";
                     dgvRegistrationCard.Columns[17].Visible = false;
                     dgvRegistrationCard.ClearSelection();
+                    dgvRegistrationCard.CurrentCell = null;
                 }
                 catch
                 {
@@ -80,7 +80,7 @@ namespace Library
             Invoke(action);
         }
 
-        private void ChangeDataRegistrationCard(object sender, SqlNotificationEventArgs e)  //отслеживание изменения в базе данных
+        private void ChangeDataRegistrationCardDocument(object sender, SqlNotificationEventArgs e)  //отслеживание изменения в базе данных
         {
             if (e.Info != SqlNotificationInfo.Invalid)
             {
@@ -100,6 +100,8 @@ namespace Library
                     mobilePhone, homePhone, email, false)).Start();
 
                 MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvRegistrationCard.ClearSelection();
+                dgvRegistrationCard.CurrentCell = null;
             }
             else
             {
@@ -113,10 +115,14 @@ namespace Library
             {
                 RegistrationCardWord registrationCardWord = new RegistrationCardWord();
                 DataStorageRegistrationCard();
+
                 new Thread(() => registrationCardWord.CreateRegistrationCard(registrationNumber, dateRegistration, surname, name, patronymic,
                     birthday, passportSeries, passportNumber, whoGivePassport, whenGivePassport, town, street, building, apartment,
                     mobilePhone, homePhone, email, true)).Start();
+
                 MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvRegistrationCard.ClearSelection();
+                dgvRegistrationCard.CurrentCell = null;
             }
             else
             {
@@ -154,6 +160,8 @@ namespace Library
 
                 new Thread(() => formularReaderWord.CreateFormularReader(registrationNumber, surname, name, patronymic, dtFormular, false)).Start();
                 MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvRegistrationCard.ClearSelection();
+                dgvRegistrationCard.CurrentCell = null;
             }
             else
             {
@@ -170,6 +178,8 @@ namespace Library
 
                 new Thread(() => formularReaderWord.CreateFormularReader(registrationNumber, surname, name, patronymic, dtFormular, true)).Start();
                 MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvRegistrationCard.ClearSelection();
+                dgvRegistrationCard.CurrentCell = null;
             }
             else
             {
@@ -191,6 +201,7 @@ namespace Library
 
             try
             {
+                 DBTables dbTables = new DBTables();
                 RegistryData.DBConnectionString.Open();
                 dbTables.CommandOpenKey.ExecuteNonQuery();
                 dtFormular.Load(commandFormular.ExecuteReader());
@@ -204,6 +215,16 @@ namespace Library
             {
                 RegistryData.DBConnectionString.Close();
             }
+        }
+
+        private void btnError_Click(object sender, EventArgs e) //клик по кнопке просмотра ошибок
+        {
+            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)  //клик по кнопке закрытия окна
+        {
+            Close();
         }
     }
 }

@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbTitle = new System.Windows.Forms.Label();
             this.pnCancel = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnError = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gbCreateDocument = new System.Windows.Forms.GroupBox();
+            this.btnCreateWordExceptionBook = new System.Windows.Forms.Button();
+            this.btnCreatePdfExceptionBook = new System.Windows.Forms.Button();
+            this.btnCreatePdfAdoptionBook = new System.Windows.Forms.Button();
+            this.btnCreateWordAdoptionBook = new System.Windows.Forms.Button();
+            this.dgvListBook = new System.Windows.Forms.DataGridView();
             this.pnCancel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gbCreateDocument.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListBook)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbTitle
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(700, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Выберите книги";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbTitle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbTitle.Location = new System.Drawing.Point(0, 0);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(700, 24);
+            this.lbTitle.TabIndex = 1;
+            this.lbTitle.Text = "Выберите книги";
+            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pnCancel
             // 
@@ -84,73 +84,76 @@
             this.btnError.Text = "Ошибки";
             this.btnError.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbCreateDocument
             // 
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 304);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 110);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Формирование документов";
+            this.gbCreateDocument.Controls.Add(this.btnCreateWordExceptionBook);
+            this.gbCreateDocument.Controls.Add(this.btnCreatePdfExceptionBook);
+            this.gbCreateDocument.Controls.Add(this.btnCreatePdfAdoptionBook);
+            this.gbCreateDocument.Controls.Add(this.btnCreateWordAdoptionBook);
+            this.gbCreateDocument.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gbCreateDocument.Location = new System.Drawing.Point(0, 304);
+            this.gbCreateDocument.Name = "gbCreateDocument";
+            this.gbCreateDocument.Size = new System.Drawing.Size(700, 110);
+            this.gbCreateDocument.TabIndex = 6;
+            this.gbCreateDocument.TabStop = false;
+            this.gbCreateDocument.Text = "Формирование документов";
             // 
-            // button4
+            // btnCreateWordExceptionBook
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button4.Location = new System.Drawing.Point(409, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 88);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Сформировать акт об исключеии из фонда в формате .pdf";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCreateWordExceptionBook.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCreateWordExceptionBook.Location = new System.Drawing.Point(409, 19);
+            this.btnCreateWordExceptionBook.Name = "btnCreateWordExceptionBook";
+            this.btnCreateWordExceptionBook.Size = new System.Drawing.Size(144, 88);
+            this.btnCreateWordExceptionBook.TabIndex = 3;
+            this.btnCreateWordExceptionBook.Text = "Сформировать акт об исключении из фонда в формате .pdf";
+            this.btnCreateWordExceptionBook.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnCreatePdfExceptionBook
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.Location = new System.Drawing.Point(553, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 88);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Сформировать акт об исключении из фонда в формате .docx";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCreatePdfExceptionBook.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCreatePdfExceptionBook.Location = new System.Drawing.Point(553, 19);
+            this.btnCreatePdfExceptionBook.Name = "btnCreatePdfExceptionBook";
+            this.btnCreatePdfExceptionBook.Size = new System.Drawing.Size(144, 88);
+            this.btnCreatePdfExceptionBook.TabIndex = 2;
+            this.btnCreatePdfExceptionBook.Text = "Сформировать акт об исключении из фонда в формате .docx";
+            this.btnCreatePdfExceptionBook.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCreatePdfAdoptionBook
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.Location = new System.Drawing.Point(147, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 88);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Сформировать акт о приемке книг в формате *.pdf";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCreatePdfAdoptionBook.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCreatePdfAdoptionBook.Location = new System.Drawing.Point(147, 19);
+            this.btnCreatePdfAdoptionBook.Name = "btnCreatePdfAdoptionBook";
+            this.btnCreatePdfAdoptionBook.Size = new System.Drawing.Size(144, 88);
+            this.btnCreatePdfAdoptionBook.TabIndex = 1;
+            this.btnCreatePdfAdoptionBook.Text = "Сформировать акт о приемке книг в формате *.pdf";
+            this.btnCreatePdfAdoptionBook.UseVisualStyleBackColor = true;
+            this.btnCreatePdfAdoptionBook.Click += new System.EventHandler(this.btnCreatePdfAdoptionBook_Click);
             // 
-            // button1
+            // btnCreateWordAdoptionBook
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.Location = new System.Drawing.Point(3, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 88);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Сформировать акт о приемке книг в формате *.docx";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCreateWordAdoptionBook.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCreateWordAdoptionBook.Location = new System.Drawing.Point(3, 19);
+            this.btnCreateWordAdoptionBook.Name = "btnCreateWordAdoptionBook";
+            this.btnCreateWordAdoptionBook.Size = new System.Drawing.Size(144, 88);
+            this.btnCreateWordAdoptionBook.TabIndex = 0;
+            this.btnCreateWordAdoptionBook.Text = "Сформировать акт о приемке книг в формате *.docx";
+            this.btnCreateWordAdoptionBook.UseVisualStyleBackColor = true;
+            this.btnCreateWordAdoptionBook.Click += new System.EventHandler(this.btnCreateWordAdoptionBook_Click);
             // 
-            // dataGridView1
+            // dgvListBook
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 24);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(700, 280);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvListBook.AllowUserToAddRows = false;
+            this.dgvListBook.AllowUserToDeleteRows = false;
+            this.dgvListBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListBook.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListBook.Location = new System.Drawing.Point(0, 24);
+            this.dgvListBook.Name = "dgvListBook";
+            this.dgvListBook.ReadOnly = true;
+            this.dgvListBook.RowTemplate.Height = 24;
+            this.dgvListBook.Size = new System.Drawing.Size(700, 280);
+            this.dgvListBook.TabIndex = 7;
             // 
             // FormationActsForm
             // 
@@ -158,32 +161,33 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(700, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.dgvListBook);
+            this.Controls.Add(this.gbCreateDocument);
             this.Controls.Add(this.pnCancel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbTitle);
             this.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "FormationActsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormationActsForm";
+            this.Text = "Формирование  актов";
+            this.Load += new System.EventHandler(this.FormationActsForm_Load);
             this.pnCancel.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gbCreateDocument.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListBook)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Panel pnCancel;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnError;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox gbCreateDocument;
+        private System.Windows.Forms.Button btnCreateWordExceptionBook;
+        private System.Windows.Forms.Button btnCreatePdfExceptionBook;
+        private System.Windows.Forms.Button btnCreatePdfAdoptionBook;
+        private System.Windows.Forms.Button btnCreateWordAdoptionBook;
+        private System.Windows.Forms.DataGridView dgvListBook;
     }
 }

@@ -33,7 +33,7 @@ namespace Library
                     title.Append("Регистрационная карточка читателя \n библиотеки №127").Font(new Font("Times New Roman")).FontSize(16).Bold().SetLineSpacing(LineSpacingType.Line, 1.5f);
                     title.Alignment = Alignment.center;
 
-                    data.Append("Регистрационный номер: " + registrationNumber + "\nДата заполнения: " + dateRegistration + "\nФамилия: " + surname + "\nИмя: " + name + "\nОтчество: " + patronymic + "\nДата рождения: " + birthday + "\nСерия и номер паспорта: " + passportSeries + " " + passportNumber + "\nКем выдан: " + whoGivePassport + "\nКогда выдан: " + whenGivePassport + "\nАдрес проживания: " + town + ", " + street + ", дом " + building + ", квартира" + apartment + "\nДомашний телефон: " + homePhone + "\nМобильный телефон: " + mobilePhone + "\nАдрес электронной почты: " + email + "\n")
+                    data.Append("Регистрационный номер: " + registrationNumber + "\nДата заполнения: " + dateRegistration + "\nФамилия: " + surname + "\nИмя: " + name + "\nОтчество: " + patronymic + "\nДата рождения: " + birthday + "\nСерия и номер паспорта: " + passportSeries + " " + passportNumber + "\nКем выдан: " + whoGivePassport + "\nКогда выдан: " + whenGivePassport + "\nАдрес проживания: " + town + ", " + street + ", дом " + building + ", квартира " + apartment + "\nДомашний телефон: " + homePhone + "\nМобильный телефон: " + mobilePhone + "\nАдрес электронной почты: " + email + "\n")
                         .Font(new Font("Times New Roman")).FontSize(14).SetLineSpacing(LineSpacingType.Line, 1.5f);
                     data.Alignment = Alignment.left;
 

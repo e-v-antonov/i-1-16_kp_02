@@ -45,7 +45,7 @@ namespace Library
                 }
                 catch
                 {
-
+                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);

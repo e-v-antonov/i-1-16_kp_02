@@ -7,8 +7,8 @@ namespace Library
 {
     class FormularReaderWord
     {
-        string fileName;
-        string oldFileName;
+        private string fileName;
+        private string oldFileName;
 
         public void CreateFormularReader(string registrationNumber, string surname, string name, string patronymic, DataTable dtFormular, bool pdf)
         {

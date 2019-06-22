@@ -53,6 +53,7 @@
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.miCreateActs = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -213,7 +214,8 @@
             // miDocument
             // 
             this.miDocument.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miCreatedRegistrationCardAndFormular});
+            this.miCreatedRegistrationCardAndFormular,
+            this.miCreateActs});
             this.miDocument.Name = "miDocument";
             this.miDocument.Size = new System.Drawing.Size(207, 24);
             this.miDocument.Text = "Формирование документа";
@@ -254,6 +256,13 @@
             // timer
             // 
             this.timer.Enabled = true;
+            // 
+            // miCreateActs
+            // 
+            this.miCreateActs.Name = "miCreateActs";
+            this.miCreateActs.Size = new System.Drawing.Size(550, 26);
+            this.miCreateActs.Text = "Формирование актов о приемке и исключении книг";
+            this.miCreateActs.Click += new System.EventHandler(this.miCreateActs_Click);
             // 
             // MainMenuForm
             // 
@@ -305,6 +314,7 @@
         private System.Windows.Forms.ToolStripMenuItem miIssueBook;
         private System.Windows.Forms.ToolStripMenuItem miReturnBook;
         private System.Windows.Forms.ToolStripMenuItem miCreatedRegistrationCardAndFormular;
+        private System.Windows.Forms.ToolStripMenuItem miCreateActs;
     }
 }
 
