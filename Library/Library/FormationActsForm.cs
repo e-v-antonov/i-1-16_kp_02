@@ -109,14 +109,6 @@ namespace Library
                     }
                 }
             }
-
-
-            //for (int i = 0;  i < selectedCellCount; i++)
-            //{
-            //    int indexRow = dgvListBook.SelectedCells[i].RowIndex;
-            //    dtSelectedRows.Rows.Add(dgvListBook.Rows[indexRow].Cells[0].Value.ToString(), dgvListBook.Rows[indexRow].Cells[1].Value.ToString(), 
-            //        dgvListBook.Rows[indexRow].Cells[2].Value.ToString(), dgvListBook.Rows[indexRow].Cells[3].Value.ToString());
-            //}
         }
 
         private void btnCreatePdfAdoptionBook_Click(object sender, EventArgs e) //клик по кнопке формирование акта о приемке в формате pdf

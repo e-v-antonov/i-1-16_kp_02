@@ -21,7 +21,7 @@ namespace Library
             InitializeComponent();
         }
 
-        private void btnIdentificationReader_Click(object sender, EventArgs e)
+        private void btnIdentificationReader_Click(object sender, EventArgs e)  //клик по кнопке идентификации клиента
         {
             SqlCommand command = new SqlCommand("", RegistryData.DBConnectionString);
             command.CommandText = "select count(*) from [dbo].[Registration_Card_Reader_View] where [Surname_Reader] = '" + tbSurname.Text + "' and [Name_Reader] = '" + tbName.Text + "' and [Patronymic_Reader] = '" + tbPatronymic.Text + "' and [Passport_Series_Reader] = '" + tbPassportSeries.Text + "' and [Passport_Number_Reader] = '" + tbPassportNumber.Text + "'";
@@ -79,7 +79,7 @@ namespace Library
 
         }
 
-        private void BookFill()
+        private void BookFill() //заполнение data grid view данными
         {
             DBTables dbTables = new DBTables();
 
@@ -109,6 +109,7 @@ namespace Library
                     dgvBook.Columns[13].HeaderText = "Доступное количество экземпляров";
                     dgvBook.Columns[14].HeaderText = "Дата регистрации книги";
                     dgvBook.ClearSelection();
+                    dgvBook.CurrentCell = null;
                 }
                 catch
                 {
@@ -225,13 +226,13 @@ namespace Library
             }
         }
 
-        private void btnRegistrationReader_Click(object sender, EventArgs e)
+        private void btnRegistrationReader_Click(object sender, EventArgs e)    //открытие формы для регистрации читателя
         {
             RegistrationCardForm registrationCardForm = new RegistrationCardForm();
             registrationCardForm.Show(this);
         }
 
-        private void dgvBook_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvBook_CellClick(object sender, DataGridViewCellEventArgs e)  //клик по ячейке
         {
             tbTitleBook.Text = dgvBook.CurrentRow.Cells[1].Value.ToString();
             cbWriter.SelectedValue = dgvBook.CurrentRow.Cells[2].Value.ToString();
@@ -246,7 +247,7 @@ namespace Library
             nudNumberDays_ValueChanged(sender, e);
         }
 
-        private void tbTitleBook_TextChanged(object sender, EventArgs e)
+        private void tbTitleBook_TextChanged(object sender, EventArgs e)    //изменение текста в поле ввода
         {
             if (tbTitleBook.TextLength == 0 && cbWriter.Text == "" && cbGenre.Text == "" && cbPublishing.Text == "")
                 btnCheckBook.Enabled = false;
@@ -254,11 +255,11 @@ namespace Library
                 btnCheckBook.Enabled = true;
         }
 
-        private void btnCheckBook_Click(object sender, EventArgs e)
+        private void btnCheckBook_Click(object sender, EventArgs e) //проверка наличия книги
         {
             BookFill();
 
-            if (cbWriter.Text == "" && cbGenre.Text == "" && cbPublishing.Text == "")
+            if (cbWriter.Text == "" && cbGenre.Text == "" && cbPublishing.Text == "")   //поиск по названию
                 for (int i = 0; i < dgvBook.RowCount; i++)
                 {
                     for (int j = 0; j < dgvBook.ColumnCount; j++)
@@ -267,6 +268,7 @@ namespace Library
                             if (dgvBook.Rows[i].Cells[j].Value.ToString().Contains(tbTitleBook.Text))
                             {
                                 dgvBook.Rows[i].Selected = true;
+                                dgvBook.CurrentCell = dgvBook.Rows[i].Cells[1];
                                 tbTitleBook.Text = dgvBook.Rows[i].Cells[1].Value.ToString();
                                 cbWriter.SelectedValue = dgvBook.Rows[i].Cells[2].Value.ToString();
                                 cbPublishing.SelectedValue = dgvBook.Rows[i].Cells[4].Value.ToString();
@@ -279,58 +281,61 @@ namespace Library
                     }
                 }
             else
-                if (tbTitleBook.Text == "" && cbGenre.Text == "" && cbPublishing.Text == "")
-                for (int i = 0; i < dgvBook.RowCount; i++)
-                {
-                    for (int j = 0; j < dgvBook.ColumnCount; j++)
+                if (tbTitleBook.Text == "" && cbGenre.Text == "" && cbPublishing.Text == "")    //поиск автору
+                    for (int i = 0; i < dgvBook.RowCount; i++)
                     {
-                        if (dgvBook.Rows[i].Cells[j].Value != null)
-                            if (dgvBook.Rows[i].Cells[j].Value.ToString().Contains(cbWriter.Text))
-                            {
-                                dgvBook.Rows[i].Selected = true;
-                                break;
-                            }
+                        dgvBook.CurrentCell = null;
+                        for (int j = 0; j < dgvBook.ColumnCount; j++)
+                        {
+                            if (dgvBook.Rows[i].Cells[j].Value != null)
+                                if (dgvBook.Rows[i].Cells[j].Value.ToString().Contains(cbWriter.Text))
+                                {
+                                    dgvBook.Rows[i].Selected = true;
+                                    break;
+                                }
+                        }
                     }
-                }
-            else
-                    if (tbTitleBook.Text == "" && cbWriter.Text == "" && cbPublishing.Text == "")
-                for (int i = 0; i < dgvBook.RowCount; i++)
-                {
-                    for (int j = 0; j < dgvBook.ColumnCount; j++)
-                    {
-                        if (dgvBook.Rows[i].Cells[j].Value != null)
-                            if (dgvBook.Rows[i].Cells[j].Value.ToString().Contains(cbGenre.Text))
+                else
+                    if (tbTitleBook.Text == "" && cbWriter.Text == "" && cbPublishing.Text == "")   //поиск по жанру
+                        for (int i = 0; i < dgvBook.RowCount; i++)
+                        {
+                            dgvBook.CurrentCell = null;
+                            for (int j = 0; j < dgvBook.ColumnCount; j++)
                             {
-                                dgvBook.Rows[i].Selected = true;
-                                break;
+                                if (dgvBook.Rows[i].Cells[j].Value != null)
+                                    if (dgvBook.Rows[i].Cells[j].Value.ToString().Contains(cbGenre.Text))
+                                    {
+                                        dgvBook.Rows[i].Selected = true;
+                                        break;
+                                    }
                             }
-                    }
-                }
-            else
-                        if (tbTitleBook.Text == "" && cbWriter.Text == "" && cbGenre.Text == "")
-                for (int i = 0; i < dgvBook.RowCount; i++)
-                {
-                    for (int j = 0; j < dgvBook.ColumnCount; j++)
-                    {
-                        if (dgvBook.Rows[i].Cells[j].Value != null)
-                            if (dgvBook.Rows[i].Cells[j].Value.ToString().Contains(cbPublishing.Text))
+                        }
+                    else
+                        if (tbTitleBook.Text == "" && cbWriter.Text == "" && cbGenre.Text == "")    //поиск по издательству
+                            for (int i = 0; i < dgvBook.RowCount; i++)
                             {
-                                dgvBook.Rows[i].Selected = true;
-                                break;
+                                dgvBook.CurrentCell = null;
+                                for (int j = 0; j < dgvBook.ColumnCount; j++)
+                                {
+                                    if (dgvBook.Rows[i].Cells[j].Value != null)
+                                        if (dgvBook.Rows[i].Cells[j].Value.ToString().Contains(cbPublishing.Text))
+                                        {
+                                            dgvBook.Rows[i].Selected = true;
+                                            break;
+                                        }
+                                }
                             }
-                    }
-                }
-            else
-            {
-                tbTitleBook.Clear();
-                cbWriter.SelectedIndex = -1;
-                cbGenre.SelectedIndex = -1;
-                cbPublishing.SelectedIndex = -1;
-                MessageBox.Show("Должно быть заполнено только одно поле!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                        else
+                        {
+                            tbTitleBook.Clear();
+                            cbWriter.SelectedIndex = -1;
+                            cbGenre.SelectedIndex = -1;
+                            cbPublishing.SelectedIndex = -1;
+                            MessageBox.Show("Должно быть заполнено только одно поле!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
         }
 
-        private void cbWriter_TextChanged(object sender, EventArgs e)
+        private void cbWriter_TextChanged(object sender, EventArgs e)   //изменение текста в выпадающем списке
         {
             if (cbWriter.Text == "" && cbGenre.Text == "" && cbPublishing.Text == "")
             {
@@ -341,7 +346,7 @@ namespace Library
                 btnCheckBook.Enabled = true;
         }
 
-        private void cbGenre_TextChanged(object sender, EventArgs e)
+        private void cbGenre_TextChanged(object sender, EventArgs e)    //изменение текста в выпадающем списке
         {
             if (cbGenre.Text == "" && cbWriter.Text == "" && cbPublishing.Text == "")
             {
@@ -352,7 +357,7 @@ namespace Library
                 btnCheckBook.Enabled = true;
         }
 
-        private void cbPublishing_TextChanged(object sender, EventArgs e)
+        private void cbPublishing_TextChanged(object sender, EventArgs e)   //изменение текста в выпадающем списке
         {
             if (cbPublishing.Text == "" && cbWriter.Text == "" && cbPublishing.Text == "")
             {
@@ -363,13 +368,13 @@ namespace Library
                 btnCheckBook.Enabled = true;
         }
 
-        private void nudNumberDays_ValueChanged(object sender, EventArgs e)
+        private void nudNumberDays_ValueChanged(object sender, EventArgs e) //изменение текста в выпадающем списке
         {
             dateIssue = dtpDateIssueBook.Value;
             tbDateReturn.Text = dateIssue.AddDays(Convert.ToDouble(nudNumberDays.Value)).ToString("dd.MM.yyyy");
         }
 
-        private void btnIssueBook_Click(object sender, EventArgs e)
+        private void btnIssueBook_Click(object sender, EventArgs e) //клик по кнопке выдать книгу
         {
             SqlCommand commandBookOnHandReader = new SqlCommand("", RegistryData.DBConnectionString);
             SqlCommand commandIDRegistrationCard = new SqlCommand("", RegistryData.DBConnectionString);
@@ -432,14 +437,36 @@ namespace Library
             }
         }
 
-        private void btnError_Click(object sender, EventArgs e)
+        private void btnError_Click(object sender, EventArgs e) //клик по кнопке ошибки
         {
             MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)  //клик по кнопке закрыть
         {
             Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)    //клик по кнопк отмена
+        {
+            dgvBook.Enabled = false; ;
+            tbSurname.Enabled = true; ;
+            tbName.Enabled = true;
+            tbPatronymic.Enabled = true;
+            tbPassportSeries.Enabled = true;
+            tbPassportNumber.Enabled = true;
+            btnIdentificationReader.Enabled = true;
+            btnRegistrationReader.Enabled = true;
+            tbTitleBook.Enabled = false;
+            cbWriter.Enabled = false;
+            cbGenre.Enabled = false;
+            cbPublishing.Enabled = false;
+            nudNumberDays.Enabled = false;
+            dgvBook.DataSource = null;
+            tbTitleBook.Clear();
+            cbGenre.SelectedValue = -1;
+            cbWriter.SelectedValue = -1;
+            cbPublishing.SelectedValue = -1;
         }
     }
 }

@@ -110,7 +110,6 @@
             // 
             // miIssueBook
             // 
-            this.miIssueBook.Enabled = false;
             this.miIssueBook.Name = "miIssueBook";
             this.miIssueBook.Size = new System.Drawing.Size(117, 24);
             this.miIssueBook.Text = "Выдача книги";
@@ -118,7 +117,6 @@
             // 
             // miReturnBook
             // 
-            this.miReturnBook.Enabled = false;
             this.miReturnBook.Name = "miReturnBook";
             this.miReturnBook.Size = new System.Drawing.Size(121, 24);
             this.miReturnBook.Text = "Возврат книги";

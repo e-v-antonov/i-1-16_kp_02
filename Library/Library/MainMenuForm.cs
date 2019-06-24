@@ -36,8 +36,8 @@ namespace Library
                     {
                         case (true):
                             lbsstConnection.Text = RegistryData.DataSourceIP + "\\" + RegistryData.DataSourceServerName + " - " + RegistryData.InitialCatalog;
-                            AuthorizationForm authorizationForm = new AuthorizationForm();
-                            authorizationForm.Show(this);
+                            //AuthorizationForm authorizationForm = new AuthorizationForm();
+                            //authorizationForm.Show(this);
                             break;
                         case (false):
                             lbsstConnection.Text = "Подключение отсутствует!";
