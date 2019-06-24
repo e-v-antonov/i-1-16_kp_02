@@ -16,6 +16,7 @@ namespace Library
         public DataTable DTUsers = new DataTable("User");
         public DataTable DTRoleUser = new DataTable("Role_User");
         public DataTable DTListBookForAct= new DataTable("List_Book_For_Act");
+        public DataTable DTInvenoryBook = new DataTable("Inventory_Book");
         public string QRGenre = "select [ID_Genre_Book], [Genre] from [dbo].[Genre_Book] where [Genre_Book_Logical_Delete] = 0";
         public string QRPublishing = "select [ID_Publishing_Book],[Publishing] from [dbo].[Publishing_Book] where [Publishing_Book_Logical_Delete] = 0";
         public string QRWriterBook = "select [ID_Writer], [Surname_Writer], [Name_Writer], [Patronymic_Writer]  from [dbo].[Writer_Book] where [Writer_Book_Logical_Delete] = 0";
@@ -54,6 +55,8 @@ namespace Library
         private string QRRoleUserForComboBox = "select [ID_Role_User], [Role_Name] from [dbo].[Role_User] where [Role_User_Logical_Delete] = 0";
         private string QRListBookForAct = "select [Инвентарный номер], [Название книги] + ', ' + [Автор], [Стоимость экземпляра книги, руб.], [Кол-во экземпляров], " +
                     "[Сумма стоимости книг, руб.] from [dbo].[Summary_Book]";
+        private string QRInventoryBook = "select [Номер записи], CONVERT(varchar (10), [Дата записи], 104), [Автор], [Название книги], " +
+            "[ISBN номер], [Жанр], [Год издания], [Издательство], [Кол-во страниц] from [dbo].[Inventory_Book]";
         public SqlDependency dependency = new SqlDependency();
 
         private void DataTableFill(DataTable table, string query)
@@ -138,6 +141,11 @@ namespace Library
         public void DTListBookForActFill()
         {
             DataTableFill(DTListBookForAct, QRListBookForAct);
+        }
+
+        public void DTInventoryBookFill()
+        {
+            DataTableFill(DTInvenoryBook, QRInventoryBook);
         }
     }
 }

@@ -175,5 +175,12 @@ namespace Library
             FormationActsForm formationActsForm = new FormationActsForm();
             formationActsForm.Show(this);
         }
+
+        private void miCreateInventoryBook_Click(object sender, EventArgs e)
+        {
+            InventoryBookExcel inventoryBookExcel = new InventoryBookExcel();
+            Thread threadInventoryBookExcel = new Thread(inventoryBookExcel.InventoryBookFill);
+            threadInventoryBookExcel.Start();
+        }
     }
 }
