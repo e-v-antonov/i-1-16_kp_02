@@ -8,13 +8,13 @@ namespace Library
     {
         DBTables dBTables = new DBTables();
 
-        public void InventoryBookFill()
+        public void InventoryBookFill() //заполнение data table
         {
             dBTables.DTInventoryBookFill();
             CreateInventoryBook();
         }
 
-        private void CreateInventoryBook()
+        private void CreateInventoryBook()  //создание документа
         {
             excel.Application application = new excel.Application();
             excel.Workbook workbook = application.Workbooks.Add();

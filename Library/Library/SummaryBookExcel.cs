@@ -8,13 +8,13 @@ namespace Library
     {
         DBTables dBTables = new DBTables();
 
-        public void SummaryBookFill()
+        public void SummaryBookFill()    //заполнение data table
         {
             dBTables.DTSummaryBookfill();
             CreateSummaryBook();
         }
 
-        private void CreateSummaryBook()
+        private void CreateSummaryBook()    //создание документа
         {
             excel.Application application = new excel.Application();
             excel.Workbook workbook = application.Workbooks.Add();
