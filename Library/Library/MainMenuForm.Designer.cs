@@ -50,11 +50,12 @@
             this.miDocument = new System.Windows.Forms.ToolStripMenuItem();
             this.miCreatedRegistrationCardAndFormular = new System.Windows.Forms.ToolStripMenuItem();
             this.miCreateActs = new System.Windows.Forms.ToolStripMenuItem();
+            this.miCreateInventoryBook = new System.Windows.Forms.ToolStripMenuItem();
             this.sstInformation = new System.Windows.Forms.StatusStrip();
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.miCreateInventoryBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.miCreateSummaryBook = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -217,7 +218,8 @@
             this.miDocument.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miCreatedRegistrationCardAndFormular,
             this.miCreateActs,
-            this.miCreateInventoryBook});
+            this.miCreateInventoryBook,
+            this.miCreateSummaryBook});
             this.miDocument.Name = "miDocument";
             this.miDocument.Size = new System.Drawing.Size(207, 24);
             this.miDocument.Text = "Формирование документа";
@@ -226,16 +228,23 @@
             // miCreatedRegistrationCardAndFormular
             // 
             this.miCreatedRegistrationCardAndFormular.Name = "miCreatedRegistrationCardAndFormular";
-            this.miCreatedRegistrationCardAndFormular.Size = new System.Drawing.Size(550, 26);
+            this.miCreatedRegistrationCardAndFormular.Size = new System.Drawing.Size(573, 26);
             this.miCreatedRegistrationCardAndFormular.Text = "Формирование регистрационной карточки и формуляра читателя";
             this.miCreatedRegistrationCardAndFormular.Click += new System.EventHandler(this.miCreatedRegistrationCardAndFormular_Click);
             // 
             // miCreateActs
             // 
             this.miCreateActs.Name = "miCreateActs";
-            this.miCreateActs.Size = new System.Drawing.Size(550, 26);
+            this.miCreateActs.Size = new System.Drawing.Size(573, 26);
             this.miCreateActs.Text = "Формирование актов о приемке и исключении книг";
             this.miCreateActs.Click += new System.EventHandler(this.miCreateActs_Click);
+            // 
+            // miCreateInventoryBook
+            // 
+            this.miCreateInventoryBook.Name = "miCreateInventoryBook";
+            this.miCreateInventoryBook.Size = new System.Drawing.Size(573, 26);
+            this.miCreateInventoryBook.Text = "Сформировать документ \"Инвентарная книга\"";
+            this.miCreateInventoryBook.Click += new System.EventHandler(this.miCreateInventoryBook_Click);
             // 
             // sstInformation
             // 
@@ -266,12 +275,12 @@
             // 
             this.timer.Enabled = true;
             // 
-            // miCreateInventoryBook
+            // miCreateSummaryBook
             // 
-            this.miCreateInventoryBook.Name = "miCreateInventoryBook";
-            this.miCreateInventoryBook.Size = new System.Drawing.Size(550, 26);
-            this.miCreateInventoryBook.Text = "Сформировать документ \"Инвентарная книга\"";
-            this.miCreateInventoryBook.Click += new System.EventHandler(this.miCreateInventoryBook_Click);
+            this.miCreateSummaryBook.Name = "miCreateSummaryBook";
+            this.miCreateSummaryBook.Size = new System.Drawing.Size(573, 26);
+            this.miCreateSummaryBook.Text = "Сформировать документ \"Книга суммарного учета основного фонда\"";
+            this.miCreateSummaryBook.Click += new System.EventHandler(this.miCreateSummaryBook_Click);
             // 
             // MainMenuForm
             // 
@@ -325,6 +334,7 @@
         private System.Windows.Forms.ToolStripMenuItem miCreatedRegistrationCardAndFormular;
         private System.Windows.Forms.ToolStripMenuItem miCreateActs;
         private System.Windows.Forms.ToolStripMenuItem miCreateInventoryBook;
+        private System.Windows.Forms.ToolStripMenuItem miCreateSummaryBook;
     }
 }
 

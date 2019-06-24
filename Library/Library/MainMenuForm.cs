@@ -182,5 +182,12 @@ namespace Library
             Thread threadInventoryBookExcel = new Thread(inventoryBookExcel.InventoryBookFill);
             threadInventoryBookExcel.Start();
         }
+
+        private void miCreateSummaryBook_Click(object sender, EventArgs e)
+        {
+            SummaryBookExcel summaryBookExcel = new SummaryBookExcel();
+            Thread threadSummaryBookExcel = new Thread(summaryBookExcel.SummaryBookFill);
+            threadSummaryBookExcel.Start();
+        }
     }
 }

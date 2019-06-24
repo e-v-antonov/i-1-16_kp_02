@@ -171,6 +171,7 @@
     <Compile Include="ReturnBookForm.Designer.cs">
       <DependentUpon>ReturnBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SummaryBookExcel.cs" />
     <Compile Include="UsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
