@@ -97,12 +97,26 @@ namespace Library
         {
             dtSelectedRows.Clear();
 
-            for (int i = 0;  i < selectedCellCount; i++)
+            for (int i = 0; i < dgvListBook.RowCount; i++)
             {
-                int indexRow = dgvListBook.SelectedCells[i].RowIndex;
-                dtSelectedRows.Rows.Add(dgvListBook.Rows[indexRow].Cells[0].Value.ToString(), dgvListBook.Rows[indexRow].Cells[1].Value.ToString(), 
-                    dgvListBook.Rows[indexRow].Cells[2].Value.ToString(), dgvListBook.Rows[indexRow].Cells[3].Value.ToString());
+                for (int j = 0; j < dgvListBook.ColumnCount; j++)
+                {
+                    if (dgvListBook.Rows[i].Cells[j].Selected == true)
+                    {
+                        dtSelectedRows.Rows.Add(dgvListBook.Rows[i].Cells[1].Value.ToString(), dgvListBook.Rows[i].Cells[2].Value.ToString(),
+                            dgvListBook.Rows[i].Cells[3].Value.ToString(), dgvListBook.Rows[i].Cells[4].Value.ToString());
+                        break;
+                    }
+                }
             }
+
+
+            //for (int i = 0;  i < selectedCellCount; i++)
+            //{
+            //    int indexRow = dgvListBook.SelectedCells[i].RowIndex;
+            //    dtSelectedRows.Rows.Add(dgvListBook.Rows[indexRow].Cells[0].Value.ToString(), dgvListBook.Rows[indexRow].Cells[1].Value.ToString(), 
+            //        dgvListBook.Rows[indexRow].Cells[2].Value.ToString(), dgvListBook.Rows[indexRow].Cells[3].Value.ToString());
+            //}
         }
 
         private void btnCreatePdfAdoptionBook_Click(object sender, EventArgs e) //клик по кнопке формирование акта о приемке в формате pdf
@@ -152,11 +166,17 @@ namespace Library
         {
             dtSelectedExceptionRows.Clear();
 
-            for (int i = 0; i < selectedCellCount; i++)
+            for (int i = 0; i < dgvListBook.RowCount; i++)
             {
-                int indexRow = dgvListBook.SelectedCells[i].RowIndex;
-                dtSelectedExceptionRows.Rows.Add(dgvListBook.Rows[indexRow].Cells[0].Value.ToString(), dgvListBook.Rows[indexRow].Cells[1].Value.ToString(),
-                    dgvListBook.Rows[indexRow].Cells[2].Value.ToString(), dgvListBook.Rows[indexRow].Cells[3].Value.ToString(), dgvListBook.Rows[indexRow].Cells[4].Value.ToString());
+                for (int j = 0; j < dgvListBook.ColumnCount; j++)
+                {
+                    if (dgvListBook.Rows[i].Cells[j].Selected == true)
+                    {
+                        dtSelectedExceptionRows.Rows.Add(dgvListBook.Rows[i].Cells[0].Value.ToString(), dgvListBook.Rows[i].Cells[1].Value.ToString(),
+                            dgvListBook.Rows[i].Cells[2].Value.ToString(), dgvListBook.Rows[i].Cells[3].Value.ToString(), dgvListBook.Rows[i].Cells[4].Value.ToString());
+                        break;
+                    }
+                }
             }
         }
 

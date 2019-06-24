@@ -10,6 +10,7 @@ namespace Library
         DBTables dbTables = new DBTables();        
         private int checkUser = 0;
         public static int userRole = 0;
+        public static string FIODirecor = "";
 
         public AuthorizationForm()
         {
@@ -24,8 +25,10 @@ namespace Library
             {
                 SqlCommand commandSearchUser = new SqlCommand("", RegistryData.DBConnectionString);
                 SqlCommand commandRoleUser = new SqlCommand("", RegistryData.DBConnectionString);
+                SqlCommand commandFIODirector = new SqlCommand("", RegistryData.DBConnectionString);
                 commandSearchUser.CommandText = "select count(*) from[dbo].[User] where CONVERT([nvarchar] (16), DECRYPTBYKEY([Login_User])) = '" + tbLogin.Text + "' and CONVERT([nvarchar] (16), DECRYPTBYKEY([Password_User])) = '" + tbPassword.Text + "'";
                 commandRoleUser.CommandText = "select [Role_User_ID] from [dbo].[User] where CONVERT([nvarchar] (16), DECRYPTBYKEY([Login_User])) = '" + tbLogin.Text + "' and CONVERT([nvarchar] (16), DECRYPTBYKEY([Password_User])) = '" + tbPassword.Text + "'";
+                commandFIODirector.CommandText = "select [Surname_User] + ' ' + [Name_User] + ' ' + [Patronymic_User] from [dbo].[User] where [Role_User_ID] = 3 and [User_Logical_Delete] = 0;";
 
                 try     //нахождение пользователя таким логином и паролем
                 {
@@ -53,6 +56,14 @@ namespace Library
                     userRole = Convert.ToInt32(commandRoleUser.ExecuteScalar().ToString());
                     dbTables.CommandCloseKey.ExecuteNonQuery();                   
                     RegistryData.DBConnectionString.Close();
+
+                    if (userRole == 3)
+                    {
+                        RegistryData.DBConnectionString.Open();
+                        FIODirecor = commandFIODirector.ExecuteScalar().ToString();
+                        RegistryData.DBConnectionString.Close();
+                    }
+
                     MessageBox.Show("Вы авторизовались в информационной системе.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     EnableComponent.EventHandler(true);
                     this.Hide();                       

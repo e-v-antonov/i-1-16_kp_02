@@ -44,7 +44,7 @@ namespace Library
                         totalSum += Convert.ToInt32(dataTable.Rows[i][3].ToString());
                     }
 
-                    text.Append("\tНастоящий акт составил Должность Фамилия Имя Отчество " + DateTime.Now.ToString("dd.MM.yyyy") + " г. для приема в библиотеку книг в количестве " + countBook + " экземпляров на общую сумму " + totalSum + " руб.")
+                    text.Append("\tНастоящий акт составил директор " + AuthorizationForm.FIODirecor +  " " + DateTime.Now.ToString("dd.MM.yyyy") + " г. для приема в библиотеку книг в количестве " + countBook + " экземпляров на общую сумму " + totalSum + " руб.")
                         .Font(new Font("Times New Roman")).FontSize(14).SetLineSpacing(LineSpacingType.Line, 1.5f);
                     text.Alignment = Alignment.both;
 
