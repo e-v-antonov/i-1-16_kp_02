@@ -43,19 +43,17 @@
             this.miWriterBook = new System.Windows.Forms.ToolStripMenuItem();
             this.miPublishingBook = new System.Windows.Forms.ToolStripMenuItem();
             this.miGenreBook = new System.Windows.Forms.ToolStripMenuItem();
-            this.miStaffing = new System.Windows.Forms.ToolStripMenuItem();
-            this.miPost = new System.Windows.Forms.ToolStripMenuItem();
             this.miUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.miInformationSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.miDocument = new System.Windows.Forms.ToolStripMenuItem();
             this.miCreatedRegistrationCardAndFormular = new System.Windows.Forms.ToolStripMenuItem();
             this.miCreateActs = new System.Windows.Forms.ToolStripMenuItem();
             this.miCreateInventoryBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.miCreateSummaryBook = new System.Windows.Forms.ToolStripMenuItem();
             this.sstInformation = new System.Windows.Forms.StatusStrip();
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.miCreateSummaryBook = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.sstInformation.SuspendLayout();
             this.SuspendLayout();
@@ -135,7 +133,7 @@
             this.miWriterBook,
             this.miPublishingBook,
             this.miGenreBook,
-            this.miStaffing});
+            this.miUsers});
             this.miHandbook.Font = new System.Drawing.Font("Arial", 9F);
             this.miHandbook.Name = "miHandbook";
             this.miHandbook.Size = new System.Drawing.Size(110, 24);
@@ -183,26 +181,10 @@
             this.miGenreBook.Text = "Жанры книг...";
             this.miGenreBook.Click += new System.EventHandler(this.miGenreBook_Click);
             // 
-            // miStaffing
-            // 
-            this.miStaffing.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miPost,
-            this.miUsers});
-            this.miStaffing.Name = "miStaffing";
-            this.miStaffing.Size = new System.Drawing.Size(280, 26);
-            this.miStaffing.Text = "Кадровое обеспечение";
-            // 
-            // miPost
-            // 
-            this.miPost.Name = "miPost";
-            this.miPost.Size = new System.Drawing.Size(190, 26);
-            this.miPost.Text = "Должности...";
-            this.miPost.Click += new System.EventHandler(this.miPost_Click);
-            // 
             // miUsers
             // 
             this.miUsers.Name = "miUsers";
-            this.miUsers.Size = new System.Drawing.Size(190, 26);
+            this.miUsers.Size = new System.Drawing.Size(280, 26);
             this.miUsers.Text = "Пользователи...";
             this.miUsers.Click += new System.EventHandler(this.miUsers_Click);
             // 
@@ -223,7 +205,6 @@
             this.miDocument.Name = "miDocument";
             this.miDocument.Size = new System.Drawing.Size(207, 24);
             this.miDocument.Text = "Формирование документа";
-            this.miDocument.Click += new System.EventHandler(this.документToolStripMenuItem_Click);
             // 
             // miCreatedRegistrationCardAndFormular
             // 
@@ -245,6 +226,13 @@
             this.miCreateInventoryBook.Size = new System.Drawing.Size(573, 26);
             this.miCreateInventoryBook.Text = "Сформировать документ \"Инвентарная книга\"";
             this.miCreateInventoryBook.Click += new System.EventHandler(this.miCreateInventoryBook_Click);
+            // 
+            // miCreateSummaryBook
+            // 
+            this.miCreateSummaryBook.Name = "miCreateSummaryBook";
+            this.miCreateSummaryBook.Size = new System.Drawing.Size(573, 26);
+            this.miCreateSummaryBook.Text = "Сформировать документ \"Книга суммарного учета основного фонда\"";
+            this.miCreateSummaryBook.Click += new System.EventHandler(this.miCreateSummaryBook_Click);
             // 
             // sstInformation
             // 
@@ -274,13 +262,6 @@
             // timer
             // 
             this.timer.Enabled = true;
-            // 
-            // miCreateSummaryBook
-            // 
-            this.miCreateSummaryBook.Name = "miCreateSummaryBook";
-            this.miCreateSummaryBook.Size = new System.Drawing.Size(573, 26);
-            this.miCreateSummaryBook.Text = "Сформировать документ \"Книга суммарного учета основного фонда\"";
-            this.miCreateSummaryBook.Click += new System.EventHandler(this.miCreateSummaryBook_Click);
             // 
             // MainMenuForm
             // 
@@ -326,15 +307,13 @@
         private System.Windows.Forms.ToolStripMenuItem miBooks;
         private System.Windows.Forms.ToolStripMenuItem miFormulars;
         private System.Windows.Forms.ToolStripMenuItem miDocument;
-        private System.Windows.Forms.ToolStripMenuItem miStaffing;
-        private System.Windows.Forms.ToolStripMenuItem miPost;
-        private System.Windows.Forms.ToolStripMenuItem miUsers;
         private System.Windows.Forms.ToolStripMenuItem miIssueBook;
         private System.Windows.Forms.ToolStripMenuItem miReturnBook;
         private System.Windows.Forms.ToolStripMenuItem miCreatedRegistrationCardAndFormular;
         private System.Windows.Forms.ToolStripMenuItem miCreateActs;
         private System.Windows.Forms.ToolStripMenuItem miCreateInventoryBook;
         private System.Windows.Forms.ToolStripMenuItem miCreateSummaryBook;
+        private System.Windows.Forms.ToolStripMenuItem miUsers;
     }
 }
 

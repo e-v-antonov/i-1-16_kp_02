@@ -163,21 +163,22 @@ namespace Library
         {
             int currentRow = 0;
 
-            if (button.Name == "btnUpdate")
-                currentRow = Convert.ToInt32(dgvUsers.CurrentRow.Cells[0].Value.ToString());
+            if (button.Name == "btnUpdate") //если это апдейт
+                currentRow = dgvUsers.CurrentCell.RowIndex;
+            //currentRow = Convert.ToInt32(dgvUsers.CurrentRow.Cells[0].Value.ToString());    //запоминаем номер строки
             else
                 currentRow = -1;
 
             for (int i = 0; i < dgvUsers.RowCount; i++)
             {
-                if (i + 1 == currentRow)
-                    continue;
-                else
-                    if ((tbLogin.Text) == (dgvUsers.Rows[i].Cells[4].Value.ToString()))
-                {
-                    uniqueLogin = false;
-                    return uniqueLogin;
-                }
+                if (i == currentRow)    //если равняется номеру строки
+                    continue;   //пропускаем
+                else  //иначе
+                    if ((tbLogin.Text) == (dgvUsers.Rows[i].Cells[4].Value.ToString())) //если логин равняется 
+                    {
+                        uniqueLogin = false;
+                        return uniqueLogin;
+                    }
                 else
                     uniqueLogin = true;
             }
@@ -190,13 +191,13 @@ namespace Library
             int currentRow = 0;
 
             if (button.Name == "btnUpdate")
-                currentRow = Convert.ToInt32(dgvUsers.CurrentRow.Cells[0].Value.ToString());
+                currentRow = dgvUsers.CurrentCell.RowIndex;
             else
                 currentRow = -1;
 
             for (int i = 0; i < dgvUsers.RowCount; i++)
             {
-                if (i + 1 == currentRow)
+                if (i == currentRow)
                     continue;
                 else
                     if ((tbPassword.Text) == (dgvUsers.Rows[i].Cells[5].Value.ToString()))
@@ -258,12 +259,6 @@ namespace Library
                     UserFill();
                     break;
             }
-        }
-
-        private void btnUpdatePost_Click(object sender, EventArgs e) //открытие справочника должности
-        {
-            PostForm postForm = new PostForm();
-            postForm.Show(this);
         }
 
         private void tbSearch_Click(object sender, EventArgs e) //клик по полю поиска

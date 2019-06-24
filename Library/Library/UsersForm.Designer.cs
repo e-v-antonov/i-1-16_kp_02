@@ -40,7 +40,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.btnUpdatePost = new System.Windows.Forms.Button();
             this.cbRole = new System.Windows.Forms.ComboBox();
             this.lbPost = new System.Windows.Forms.Label();
             this.tbRepeatPassword = new System.Windows.Forms.TextBox();
@@ -112,7 +111,7 @@
             this.tbSearch.Location = new System.Drawing.Point(0, 0);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(925, 23);
-            this.tbSearch.TabIndex = 0;
+            this.tbSearch.TabIndex = 10;
             this.tbSearch.Text = "Введите данные пользователя...";
             this.tbSearch.Click += new System.EventHandler(this.tbSearch_Click);
             this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
@@ -135,7 +134,7 @@
             this.btnExit.Location = new System.Drawing.Point(953, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(119, 36);
-            this.btnExit.TabIndex = 1;
+            this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Закрыть";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -156,7 +155,6 @@
             this.gbManipulationData.Controls.Add(this.btnDelete);
             this.gbManipulationData.Controls.Add(this.btnUpdate);
             this.gbManipulationData.Controls.Add(this.btnInsert);
-            this.gbManipulationData.Controls.Add(this.btnUpdatePost);
             this.gbManipulationData.Controls.Add(this.cbRole);
             this.gbManipulationData.Controls.Add(this.lbPost);
             this.gbManipulationData.Controls.Add(this.tbRepeatPassword);
@@ -182,7 +180,7 @@
             // btnDelete
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDelete.Location = new System.Drawing.Point(3, 362);
+            this.btnDelete.Location = new System.Drawing.Point(3, 339);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(258, 23);
             this.btnDelete.TabIndex = 16;
@@ -193,7 +191,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUpdate.Location = new System.Drawing.Point(3, 339);
+            this.btnUpdate.Location = new System.Drawing.Point(3, 316);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(258, 23);
             this.btnUpdate.TabIndex = 15;
@@ -204,24 +202,13 @@
             // btnInsert
             // 
             this.btnInsert.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInsert.Location = new System.Drawing.Point(3, 316);
+            this.btnInsert.Location = new System.Drawing.Point(3, 293);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(258, 23);
             this.btnInsert.TabIndex = 14;
             this.btnInsert.Text = "Добавить пользователя";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
-            // 
-            // btnUpdatePost
-            // 
-            this.btnUpdatePost.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUpdatePost.Location = new System.Drawing.Point(3, 293);
-            this.btnUpdatePost.Name = "btnUpdatePost";
-            this.btnUpdatePost.Size = new System.Drawing.Size(258, 23);
-            this.btnUpdatePost.TabIndex = 13;
-            this.btnUpdatePost.Text = "Редактирование данных должностей";
-            this.btnUpdatePost.UseVisualStyleBackColor = true;
-            this.btnUpdatePost.Click += new System.EventHandler(this.btnUpdatePost_Click);
             // 
             // cbRole
             // 
@@ -362,6 +349,7 @@
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsers.Location = new System.Drawing.Point(264, 48);
+            this.dgvUsers.MultiSelect = false;
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowTemplate.Height = 24;
@@ -411,7 +399,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.Button btnUpdatePost;
         private System.Windows.Forms.ComboBox cbRole;
         private System.Windows.Forms.Label lbPost;
         private System.Windows.Forms.TextBox tbRepeatPassword;

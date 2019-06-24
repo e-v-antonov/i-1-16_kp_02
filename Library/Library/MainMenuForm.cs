@@ -118,21 +118,6 @@ namespace Library
             formularForm.Show(this);
         }
 
-        private void документToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //RegistrationCardWord registrationCardWord = new RegistrationCardWord();
-            //registrationCardWord.CreateDoc();
-
-            //Form1 form1 = new Form1();
-            //form1.Show(this);
-        }
-
-        private void miPost_Click(object sender, EventArgs e)
-        {
-            PostForm postForm = new PostForm();
-            postForm.Show();
-        }
-
         private void miUsers_Click(object sender, EventArgs e)
         {
             UsersForm usersForm = new UsersForm();
