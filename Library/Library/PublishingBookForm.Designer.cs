@@ -223,14 +223,14 @@
         private System.Windows.Forms.GroupBox gbManipulationData;
         private System.Windows.Forms.Panel pnCancel;
         private System.Windows.Forms.TextBox tbPublishing;
-        private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnError;
         private System.Windows.Forms.Label lbNamePublishing;
         private System.Windows.Forms.GroupBox gbSearchPublishing;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.GroupBox gbListPublishing;
+        public System.Windows.Forms.Button btnInsert;
+        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnDelete;
     }
 }

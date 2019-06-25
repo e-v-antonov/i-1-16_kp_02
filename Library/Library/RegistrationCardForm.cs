@@ -34,7 +34,15 @@ namespace Library
 
         public RegistrationCardForm()
         {
-            InitializeComponent();
+            //Program.EnableRegistrationCardForm = this;
+            InitializeComponent();            
+        }
+
+        private void UpdateEnable(bool valueUpdateEnable)   //изменение доступности кнопок
+        {
+            btnInsert.Enabled = valueUpdateEnable;
+            btnUpdate.Enabled = valueUpdateEnable;
+            btnDelete.Enabled = valueUpdateEnable;
         }
 
         private void RegistrationCardForm_Load(object sender, EventArgs e)  //загрузка формы

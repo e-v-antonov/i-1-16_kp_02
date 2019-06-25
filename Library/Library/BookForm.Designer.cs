@@ -261,6 +261,7 @@
             // btnUpdateGenre
             // 
             this.btnUpdateGenre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpdateGenre.Enabled = false;
             this.btnUpdateGenre.Location = new System.Drawing.Point(0, 46);
             this.btnUpdateGenre.Name = "btnUpdateGenre";
             this.btnUpdateGenre.Size = new System.Drawing.Size(266, 23);
@@ -272,6 +273,7 @@
             // btnUpdatePublishing
             // 
             this.btnUpdatePublishing.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpdatePublishing.Enabled = false;
             this.btnUpdatePublishing.Location = new System.Drawing.Point(0, 23);
             this.btnUpdatePublishing.Name = "btnUpdatePublishing";
             this.btnUpdatePublishing.Size = new System.Drawing.Size(266, 23);
@@ -283,6 +285,7 @@
             // btnUpdateWriter
             // 
             this.btnUpdateWriter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpdateWriter.Enabled = false;
             this.btnUpdateWriter.Location = new System.Drawing.Point(0, 0);
             this.btnUpdateWriter.Name = "btnUpdateWriter";
             this.btnUpdateWriter.Size = new System.Drawing.Size(266, 23);
@@ -482,6 +485,7 @@
             // btnInsert
             // 
             this.btnInsert.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnInsert.Enabled = false;
             this.btnInsert.Location = new System.Drawing.Point(0, 0);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(279, 36);
@@ -493,6 +497,7 @@
             // btnDelete
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDelete.Enabled = false;
             this.btnDelete.Location = new System.Drawing.Point(557, 0);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(279, 36);
@@ -504,6 +509,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdate.Enabled = false;
             this.btnUpdate.Location = new System.Drawing.Point(0, 0);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(836, 36);
@@ -580,9 +586,6 @@
         private System.Windows.Forms.TextBox tbDatePublication;
         private System.Windows.Forms.GroupBox gbManipulationData;
         private System.Windows.Forms.Panel pnManipulationButtons;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Panel pnComboBox;
         private System.Windows.Forms.Label lbGenre;
         private System.Windows.Forms.Label lbPublishing;
@@ -601,10 +604,13 @@
         private System.Windows.Forms.Label lbDatePublication;
         private System.Windows.Forms.Label lbBookTitle;
         private System.Windows.Forms.Panel pnUpdateButtons;
-        private System.Windows.Forms.Button btnUpdateGenre;
-        private System.Windows.Forms.Button btnUpdatePublishing;
-        private System.Windows.Forms.Button btnUpdateWriter;
         private System.Windows.Forms.Panel pnTextBox;
         private System.Windows.Forms.DataGridView dgvBook;
+        public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnInsert;
+        public System.Windows.Forms.Button btnUpdateGenre;
+        public System.Windows.Forms.Button btnUpdatePublishing;
+        public System.Windows.Forms.Button btnUpdateWriter;
     }
 }

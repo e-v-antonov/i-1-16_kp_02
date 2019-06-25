@@ -34,6 +34,13 @@ namespace Library
             InitializeComponent();
         }
 
+        private void UpdateEnable(bool valueUpdateEnable)   //изменение доступности кнопок
+        {
+            btnInsert.Enabled = valueUpdateEnable;
+            btnUpdate.Enabled = valueUpdateEnable;
+            btnDelete.Enabled = valueUpdateEnable;
+        }
+
         private void UsersForm_Load(object sender, EventArgs e) //загрузка формы
         {
             Thread threadUser = new Thread(UserFill);

@@ -93,12 +93,7 @@
     <Compile Include="DBConnection.cs" />
     <Compile Include="DBStoredProcedure.cs" />
     <Compile Include="DBTables.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="EnableComponent.cs" />
     <Compile Include="FormationActsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,9 +181,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConnectionForm.resx">
       <DependentUpon>ConnectionForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormationActsForm.resx">
       <DependentUpon>FormationActsForm.cs</DependentUpon>

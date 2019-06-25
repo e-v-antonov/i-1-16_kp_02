@@ -14,7 +14,15 @@ namespace Library
 
         public WriterBookForm()
         {
+            //Program.EnableWriterBookForm = this;
             InitializeComponent();
+        }
+
+        private void UpdateEnable(bool valueUpdateEnable)   //изменение доступности кнопок
+        {
+            btnInsert.Enabled = valueUpdateEnable;
+            btnUpdate.Enabled = valueUpdateEnable;
+            btnDelete.Enabled = valueUpdateEnable;
         }
 
         private void WriterBookForm_Load(object sender, EventArgs e)     //загрузка формы

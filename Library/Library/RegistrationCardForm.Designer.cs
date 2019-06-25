@@ -207,6 +207,7 @@
             // btnDelete
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDelete.Enabled = false;
             this.btnDelete.Location = new System.Drawing.Point(0, 53);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(209, 26);
@@ -218,6 +219,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpdate.Enabled = false;
             this.btnUpdate.Location = new System.Drawing.Point(0, 27);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(209, 26);
@@ -230,6 +232,7 @@
             // 
             this.btnInsert.AutoSize = true;
             this.btnInsert.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInsert.Enabled = false;
             this.btnInsert.Location = new System.Drawing.Point(0, 0);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(209, 27);
@@ -678,9 +681,6 @@
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.TextBox tbSurname;
         private System.Windows.Forms.Label lbSurname;
-        private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.GroupBox gbContactInformation;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label lbEmail;
@@ -702,5 +702,8 @@
         private System.Windows.Forms.Label lbHaveBook;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.DateTimePicker dtpWhenGivePassport;
+        public System.Windows.Forms.Button btnInsert;
+        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnDelete;
     }
 }

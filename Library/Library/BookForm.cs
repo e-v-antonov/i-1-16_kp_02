@@ -16,7 +16,15 @@ namespace Library
 
         public BookForm()
         {
+            //Program.EnableBookForm = this;
             InitializeComponent();
+        }
+
+        private void UpdateEnable(bool valueUpdateEnable)   //изменение доступности кнопок
+        {
+            btnInsert.Enabled = valueUpdateEnable;
+            btnUpdate.Enabled = valueUpdateEnable;
+            btnDelete.Enabled = valueUpdateEnable;
         }
 
         private void BookForm_Load(object sender, EventArgs e)  //загрузка формы

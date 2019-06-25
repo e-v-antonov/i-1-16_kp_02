@@ -427,9 +427,6 @@
         private System.Windows.Forms.Button btnError;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.GroupBox gbManipulationData;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnUpdateBook;
         private System.Windows.Forms.Button btnUpdateReader;
         private System.Windows.Forms.ComboBox cbBook;
@@ -445,5 +442,8 @@
         private System.Windows.Forms.Panel pnComboBox;
         private System.Windows.Forms.DataGridView dgvFormular;
         private System.Windows.Forms.DateTimePicker dtpDateIssue;
+        public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnInsert;
     }
 }

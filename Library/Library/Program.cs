@@ -17,12 +17,6 @@ namespace Library
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainMenuForm());
-        }
-
-        public static class EnableComponent
-        {
-            public delegate void MyEvent(bool valueEnable);
-            public static MyEvent EventHandler;
-        }
+        }        
     }
 }

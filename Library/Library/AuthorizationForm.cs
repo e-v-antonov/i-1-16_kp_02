@@ -65,7 +65,7 @@ namespace Library
                     }
 
                     MessageBox.Show("Вы авторизовались в информационной системе.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    EnableComponent.EventHandler(true);
+                    EnableComponent.EventHandler(userRole);                    
                     this.Hide();                       
                 }
             }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Threading;
 using System.Windows.Forms;
@@ -12,7 +11,15 @@ namespace Library
 
         public PublishingBookForm()
         {
+            //Program.EnablePublishingBookForm = this;
             InitializeComponent();
+        }
+
+        private void UpdateEnable(bool valueUpdateEnable)   //изменение доступности кнопок
+        {
+            btnInsert.Enabled = valueUpdateEnable;
+            btnUpdate.Enabled = valueUpdateEnable;
+            btnDelete.Enabled = valueUpdateEnable;
         }
 
         private void PublishingBookForm_Load(object sender, EventArgs e)    //загрузка формы

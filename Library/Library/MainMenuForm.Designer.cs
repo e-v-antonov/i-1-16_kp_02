@@ -44,7 +44,6 @@
             this.miPublishingBook = new System.Windows.Forms.ToolStripMenuItem();
             this.miGenreBook = new System.Windows.Forms.ToolStripMenuItem();
             this.miUsers = new System.Windows.Forms.ToolStripMenuItem();
-            this.miInformationSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.miDocument = new System.Windows.Forms.ToolStripMenuItem();
             this.miCreatedRegistrationCardAndFormular = new System.Windows.Forms.ToolStripMenuItem();
             this.miCreateActs = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +66,6 @@
             this.miIssueBook,
             this.miReturnBook,
             this.miHandbook,
-            this.miInformationSystem,
             this.miDocument});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -110,6 +108,7 @@
             // 
             // miIssueBook
             // 
+            this.miIssueBook.Enabled = false;
             this.miIssueBook.Name = "miIssueBook";
             this.miIssueBook.Size = new System.Drawing.Size(117, 24);
             this.miIssueBook.Text = "Выдача книги";
@@ -117,6 +116,7 @@
             // 
             // miReturnBook
             // 
+            this.miReturnBook.Enabled = false;
             this.miReturnBook.Name = "miReturnBook";
             this.miReturnBook.Size = new System.Drawing.Size(121, 24);
             this.miReturnBook.Text = "Возврат книги";
@@ -132,6 +132,7 @@
             this.miPublishingBook,
             this.miGenreBook,
             this.miUsers});
+            this.miHandbook.Enabled = false;
             this.miHandbook.Font = new System.Drawing.Font("Arial", 9F);
             this.miHandbook.Name = "miHandbook";
             this.miHandbook.Size = new System.Drawing.Size(110, 24);
@@ -139,6 +140,7 @@
             // 
             // miFormulars
             // 
+            this.miFormulars.Enabled = false;
             this.miFormulars.Name = "miFormulars";
             this.miFormulars.Size = new System.Drawing.Size(280, 26);
             this.miFormulars.Text = "Формуляры...";
@@ -146,6 +148,7 @@
             // 
             // miRegistrationCardReader
             // 
+            this.miRegistrationCardReader.Enabled = false;
             this.miRegistrationCardReader.Name = "miRegistrationCardReader";
             this.miRegistrationCardReader.Size = new System.Drawing.Size(280, 26);
             this.miRegistrationCardReader.Text = "Регистрационные карточки...";
@@ -153,6 +156,7 @@
             // 
             // miBooks
             // 
+            this.miBooks.Enabled = false;
             this.miBooks.Name = "miBooks";
             this.miBooks.Size = new System.Drawing.Size(280, 26);
             this.miBooks.Text = "Книги...";
@@ -160,13 +164,15 @@
             // 
             // miWriterBook
             // 
+            this.miWriterBook.Enabled = false;
             this.miWriterBook.Name = "miWriterBook";
             this.miWriterBook.Size = new System.Drawing.Size(280, 26);
             this.miWriterBook.Text = "Авторы...";
-            this.miWriterBook.Click += new System.EventHandler(this.авторыToolStripMenuItem_Click);
+            this.miWriterBook.Click += new System.EventHandler(this.miWriterBook_Click);
             // 
             // miPublishingBook
             // 
+            this.miPublishingBook.Enabled = false;
             this.miPublishingBook.Name = "miPublishingBook";
             this.miPublishingBook.Size = new System.Drawing.Size(280, 26);
             this.miPublishingBook.Text = "Книжные издательства...";
@@ -174,6 +180,7 @@
             // 
             // miGenreBook
             // 
+            this.miGenreBook.Enabled = false;
             this.miGenreBook.Name = "miGenreBook";
             this.miGenreBook.Size = new System.Drawing.Size(280, 26);
             this.miGenreBook.Text = "Жанры книг...";
@@ -181,17 +188,11 @@
             // 
             // miUsers
             // 
+            this.miUsers.Enabled = false;
             this.miUsers.Name = "miUsers";
             this.miUsers.Size = new System.Drawing.Size(280, 26);
             this.miUsers.Text = "Пользователи...";
             this.miUsers.Click += new System.EventHandler(this.miUsers_Click);
-            // 
-            // miInformationSystem
-            // 
-            this.miInformationSystem.Font = new System.Drawing.Font("Arial", 9F);
-            this.miInformationSystem.Name = "miInformationSystem";
-            this.miInformationSystem.Size = new System.Drawing.Size(88, 24);
-            this.miInformationSystem.Text = "Сведения";
             // 
             // miDocument
             // 
@@ -200,12 +201,14 @@
             this.miCreateActs,
             this.miCreateInventoryBook,
             this.miCreateSummaryBook});
+            this.miDocument.Enabled = false;
             this.miDocument.Name = "miDocument";
             this.miDocument.Size = new System.Drawing.Size(207, 24);
             this.miDocument.Text = "Формирование документа";
             // 
             // miCreatedRegistrationCardAndFormular
             // 
+            this.miCreatedRegistrationCardAndFormular.Enabled = false;
             this.miCreatedRegistrationCardAndFormular.Name = "miCreatedRegistrationCardAndFormular";
             this.miCreatedRegistrationCardAndFormular.Size = new System.Drawing.Size(573, 26);
             this.miCreatedRegistrationCardAndFormular.Text = "Формирование регистрационной карточки и формуляра читателя";
@@ -213,6 +216,7 @@
             // 
             // miCreateActs
             // 
+            this.miCreateActs.Enabled = false;
             this.miCreateActs.Name = "miCreateActs";
             this.miCreateActs.Size = new System.Drawing.Size(573, 26);
             this.miCreateActs.Text = "Формирование актов о приемке и исключении книг";
@@ -220,6 +224,7 @@
             // 
             // miCreateInventoryBook
             // 
+            this.miCreateInventoryBook.Enabled = false;
             this.miCreateInventoryBook.Name = "miCreateInventoryBook";
             this.miCreateInventoryBook.Size = new System.Drawing.Size(573, 26);
             this.miCreateInventoryBook.Text = "Сформировать документ \"Инвентарная книга\"";
@@ -227,6 +232,7 @@
             // 
             // miCreateSummaryBook
             // 
+            this.miCreateSummaryBook.Enabled = false;
             this.miCreateSummaryBook.Name = "miCreateSummaryBook";
             this.miCreateSummaryBook.Size = new System.Drawing.Size(573, 26);
             this.miCreateSummaryBook.Text = "Сформировать документ \"Книга суммарного учета основного фонда\"";
@@ -292,7 +298,6 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ToolStripMenuItem miSystem;
         private System.Windows.Forms.ToolStripMenuItem miHandbook;
-        private System.Windows.Forms.ToolStripMenuItem miInformationSystem;
         private System.Windows.Forms.ToolStripMenuItem miExitProfile;
         private System.Windows.Forms.ToolStripMenuItem miSettings;
         private System.Windows.Forms.ToolStripMenuItem miExitSystem;

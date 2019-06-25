@@ -7,13 +7,20 @@ using System.Windows.Forms;
 namespace Library
 {
     public partial class GenreBookForm : Form
-    {
-       
+    {       
         DBStoredProcedure storedProcedure = new DBStoredProcedure();
 
         public GenreBookForm()
         {
+            //Program.EnableGenreBookForm = this;
             InitializeComponent();
+        }
+
+        private void UpdateEnable(bool valueUpdateEnable)   //изменение доступности кнопок
+        {
+            btnInsert.Enabled = valueUpdateEnable;
+            btnUpdate.Enabled = valueUpdateEnable;
+            btnDelete.Enabled = valueUpdateEnable;
         }
 
         private void GenreBookForm_Load(object sender, EventArgs e) //загрузка формы
