@@ -132,6 +132,16 @@
     <Compile Include="MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageUser.en-US.Designer.cs">
+      <DependentUpon>MessageUser.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MessageUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageUser.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublishingBookForm.cs">
@@ -160,6 +170,12 @@
     <Compile Include="ReturnBookForm.Designer.cs">
       <DependentUpon>ReturnBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsApplication.Designer.cs">
+      <DependentUpon>SettingsApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="SummaryBookExcel.cs" />
     <Compile Include="UsersForm.cs">
       <SubType>Form</SubType>
@@ -173,32 +189,67 @@
     <Compile Include="WriterBookForm.Designer.cs">
       <DependentUpon>WriterBookForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AuthorizationForm.en-US.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookForm.en-US.resx">
+      <DependentUpon>BookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookForm.resx">
       <DependentUpon>BookForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionForm.en-US.resx">
+      <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConnectionForm.resx">
       <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormationActsForm.en-US.resx">
+      <DependentUpon>FormationActsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormationActsForm.resx">
       <DependentUpon>FormationActsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormationCardAndFormularForm.en-US.resx">
+      <DependentUpon>FormationCardAndFormularForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormationCardAndFormularForm.resx">
       <DependentUpon>FormationCardAndFormularForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularForm.en-US.resx">
+      <DependentUpon>FormularForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularForm.resx">
       <DependentUpon>FormularForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GenreBookForm.en-US.resx">
+      <DependentUpon>GenreBookForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GenreBookForm.resx">
       <DependentUpon>GenreBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueBookForm.en-US.resx">
+      <DependentUpon>IssueBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IssueBookForm.resx">
       <DependentUpon>IssueBookForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuForm.en-US.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageUser.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageUser.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageUser.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageUser.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,20 +260,44 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PublishingBookForm.en-US.resx">
+      <DependentUpon>PublishingBookForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PublishingBookForm.resx">
       <DependentUpon>PublishingBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationCardForm.en-US.resx">
+      <DependentUpon>RegistrationCardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationCardForm.resx">
       <DependentUpon>RegistrationCardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.en-US.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnBookForm.en-US.resx">
+      <DependentUpon>ReturnBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReturnBookForm.resx">
       <DependentUpon>ReturnBookForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingsApplication.en-US.resx">
+      <DependentUpon>SettingsApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsApplication.resx">
+      <DependentUpon>SettingsApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersForm.en-US.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WriterBookForm.en-US.resx">
+      <DependentUpon>WriterBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WriterBookForm.resx">
       <DependentUpon>WriterBookForm.cs</DependentUpon>

@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Library
@@ -41,7 +35,7 @@ namespace Library
                 case (false):
                     status = 1;
                     lbsstStatus.Visible = true;
-                    lbsstStatus.Text = "Поиск серверов";
+                    lbsstStatus.Text = MessageUser.ServerSearch;
                     dbConnection.DataTableServers += DTServers;
                     threadGetServers = new Thread(dbConnection.GetServers);
                     threadMessage = new Thread(StatusStripMessage);
@@ -94,16 +88,16 @@ namespace Library
                         switch (status)
                         {
                             case (1):
-                                if (lbsstStatus.Text != "Поиск серверов...")
+                                if (lbsstStatus.Text != MessageUser.ServerSearchTochki)
                                     lbsstStatus.Text += ".";
                                 else
-                                    lbsstStatus.Text = "Поиск серверов";
+                                    lbsstStatus.Text = MessageUser.ServerSearch;
                                 break;
                             case (2):
-                                if (lbsstStatus.Text != "Поиск баз данных...")
+                                if (lbsstStatus.Text != MessageUser.DatabaseSearchTochki)
                                     lbsstStatus.Text += ".";
                                 else
-                                    lbsstStatus.Text = "Поиск баз данных";
+                                    lbsstStatus.Text = MessageUser.DatabaseSearch;
                                 break;
                             case (0):
                                 lbsstStatus.Text = "-";
@@ -123,14 +117,14 @@ namespace Library
         private void btnCheck_Click(object sender, EventArgs e) //проверка данных
         {
             if ((cbAddressServer.SelectedIndex == -1) || (cbNameServer.SelectedIndex == -1) || (tbUserServer.Text == String.Empty) || (tbPasswordServer.Text == String.Empty))
-                MessageBox.Show("Заполните все поля!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.AllMargin, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 dbConnection.ConnectionDS = cbAddressServer.Text + @"\" + cbNameServer.Text;
                 dbConnection.ConnectionUID = tbUserServer.Text;
                 dbConnection.ConnectionPassword = tbPasswordServer.Text;
                 status = 2;
-                lbsstStatus.Text = "Поиск баз данных";
+                lbsstStatus.Text = MessageUser.DatabaseSearch;
                 lbsstStatus.Visible = true;
                 dbConnection.DataTableDatabases += ListDataBases;
                 Thread threadMessageCheck = new Thread(StatusStripMessage);
@@ -161,7 +155,7 @@ namespace Library
         private void btnConnect_Click(object sender, EventArgs e)   //подключение к базе данных
         {
             if ((cbAddressServer.SelectedIndex == -1) || (cbNameServer.SelectedIndex == -1) || (tbUserServer.Text == String.Empty) || (tbPasswordServer.Text == String.Empty) || (cbListDataBase.SelectedIndex == -1))
-                MessageBox.Show("Заполните все поля!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.AllMargin, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 RegistryData registryData = new RegistryData();

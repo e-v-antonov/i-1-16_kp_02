@@ -117,4 +117,301 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gbCreateDocument.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>700, 450</value>
+  </data>
+  <data name="lbTitle.Text" xml:space="preserve">
+    <value>Выберите книги</value>
+  </data>
+  <data name="btnError.Text" xml:space="preserve">
+    <value>Ошибки</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfAdoptionBook.Parent" xml:space="preserve">
+    <value>gbCreateDocument</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordExceptionBook.Name" xml:space="preserve">
+    <value>btnCreateWordExceptionBook</value>
+  </data>
+  <data name="pnCancel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfAdoptionBook.Name" xml:space="preserve">
+    <value>btnCreatePdfAdoptionBook</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormationActsForm</value>
+  </data>
+  <data name="&gt;&gt;btnError.Parent" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="btnCreateWordExceptionBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>553, 19</value>
+  </data>
+  <data name="&gt;&gt;gbCreateDocument.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dgvListBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="btnCreatePdfExceptionBook.Text" xml:space="preserve">
+    <value>Сформировать акт об исключении из фонда в формате .pdf</value>
+  </data>
+  <data name="pnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 36</value>
+  </data>
+  <data name="btnCreateWordAdoptionBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="btnError.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnCreatePdfAdoptionBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 88</value>
+  </data>
+  <data name="btnCreatePdfExceptionBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;gbCreateDocument.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="gbCreateDocument.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 110</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordAdoptionBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgvListBook.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordExceptionBook.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnCreateWordExceptionBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="lbTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;dgvListBook.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnCreatePdfAdoptionBook.Text" xml:space="preserve">
+    <value>Сформировать акт о приемке книг в формате *.pdf</value>
+  </data>
+  <data name="btnCreatePdfAdoptionBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 19</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordAdoptionBook.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="btnCreatePdfAdoptionBook.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfExceptionBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvListBook.Name" xml:space="preserve">
+    <value>dgvListBook</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordExceptionBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnCreateWordExceptionBook.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfExceptionBook.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfAdoptionBook.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="btnExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="btnCreateWordAdoptionBook.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnCreatePdfExceptionBook.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnCreateWordExceptionBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 88</value>
+  </data>
+  <data name="lbTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lbTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnError.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbTitle.Name" xml:space="preserve">
+    <value>lbTitle</value>
+  </data>
+  <data name="dgvListBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 280</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Name" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnError.Name" xml:space="preserve">
+    <value>btnError</value>
+  </data>
+  <data name="btnCreateWordExceptionBook.Text" xml:space="preserve">
+    <value>Сформировать акт об исключении из фонда в формате .docx</value>
+  </data>
+  <data name="lbTitle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="gbCreateDocument.Text" xml:space="preserve">
+    <value>Формирование документов</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 36</value>
+  </data>
+  <data name="dgvListBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 0</value>
+  </data>
+  <data name="btnCreateWordAdoptionBook.Text" xml:space="preserve">
+    <value>Сформировать акт о приемке книг в формате *.docx</value>
+  </data>
+  <data name="btnError.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 36</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;gbCreateDocument.Name" xml:space="preserve">
+    <value>gbCreateDocument</value>
+  </data>
+  <data name="btnCreatePdfAdoptionBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;gbCreateDocument.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Формирование  актов</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordExceptionBook.Parent" xml:space="preserve">
+    <value>gbCreateDocument</value>
+  </data>
+  <data name="pnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 414</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordAdoptionBook.Name" xml:space="preserve">
+    <value>btnCreateWordAdoptionBook</value>
+  </data>
+  <data name="btnCreateWordAdoptionBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 88</value>
+  </data>
+  <data name="&gt;&gt;dgvListBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="gbCreateDocument.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordAdoptionBook.Parent" xml:space="preserve">
+    <value>gbCreateDocument</value>
+  </data>
+  <data name="gbCreateDocument.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 304</value>
+  </data>
+  <data name="&gt;&gt;btnError.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnCreateWordAdoptionBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnCreatePdfExceptionBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 19</value>
+  </data>
+  <data name="&gt;&gt;lbTitle.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnError.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfExceptionBook.Parent" xml:space="preserve">
+    <value>gbCreateDocument</value>
+  </data>
+  <data name="&gt;&gt;lbTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfAdoptionBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnCreatePdfExceptionBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 88</value>
+  </data>
+  <data name="&gt;&gt;btnError.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfExceptionBook.Name" xml:space="preserve">
+    <value>btnCreatePdfExceptionBook</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvListBook.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 24</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

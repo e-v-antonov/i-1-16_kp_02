@@ -52,29 +52,29 @@ namespace Library
 
                     dgvRegistrationCard.DataSource = dbTable.DTRegistrationCard;
                     dgvRegistrationCard.Columns[0].Visible = false;
-                    dgvRegistrationCard.Columns[1].HeaderText = "Фамилия";
-                    dgvRegistrationCard.Columns[2].HeaderText = "Имя";
-                    dgvRegistrationCard.Columns[3].HeaderText = "Отчество";
-                    dgvRegistrationCard.Columns[4].HeaderText = "Дата рождения";
-                    dgvRegistrationCard.Columns[5].HeaderText = "Серия паспорта";
-                    dgvRegistrationCard.Columns[6].HeaderText = "Номер паспорта";
-                    dgvRegistrationCard.Columns[7].HeaderText = "Кем выдан паспорт";
-                    dgvRegistrationCard.Columns[8].HeaderText = "Когда выдан паспорт";
-                    dgvRegistrationCard.Columns[9].HeaderText = "Город";
-                    dgvRegistrationCard.Columns[10].HeaderText = "Улица";
-                    dgvRegistrationCard.Columns[11].HeaderText = "Дом";
-                    dgvRegistrationCard.Columns[12].HeaderText = "Квартира";
-                    dgvRegistrationCard.Columns[14].HeaderText = "Номер мобильного телефона";
-                    dgvRegistrationCard.Columns[13].HeaderText = "Номер домашнего телефона";
-                    dgvRegistrationCard.Columns[15].HeaderText = "Адрес электронной почты";
-                    dgvRegistrationCard.Columns[16].HeaderText = "Наличие книги";
+                    dgvRegistrationCard.Columns[1].HeaderText = MessageUser.Surname;
+                    dgvRegistrationCard.Columns[2].HeaderText = MessageUser.Name;
+                    dgvRegistrationCard.Columns[3].HeaderText = MessageUser.Patronymic;
+                    dgvRegistrationCard.Columns[4].HeaderText = MessageUser.DataBirthday;
+                    dgvRegistrationCard.Columns[5].HeaderText = MessageUser.PassportSeries;
+                    dgvRegistrationCard.Columns[6].HeaderText = MessageUser.PassportNumbers;
+                    dgvRegistrationCard.Columns[7].HeaderText = MessageUser.WhoGivePassport;
+                    dgvRegistrationCard.Columns[8].HeaderText = MessageUser.WhenGivePassport;
+                    dgvRegistrationCard.Columns[9].HeaderText = MessageUser.City;
+                    dgvRegistrationCard.Columns[10].HeaderText = MessageUser.Street;
+                    dgvRegistrationCard.Columns[11].HeaderText = MessageUser.Building;
+                    dgvRegistrationCard.Columns[12].HeaderText = MessageUser.Apartment;
+                    dgvRegistrationCard.Columns[14].HeaderText = MessageUser.MobilePhone;
+                    dgvRegistrationCard.Columns[13].HeaderText = MessageUser.HomePhone;
+                    dgvRegistrationCard.Columns[15].HeaderText = MessageUser.Email;
+                    dgvRegistrationCard.Columns[16].HeaderText = MessageUser.HaveBook;
                     dgvRegistrationCard.Columns[17].Visible = false;
                     dgvRegistrationCard.ClearSelection();
                     dgvRegistrationCard.CurrentCell = null;
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -99,13 +99,13 @@ namespace Library
                     birthday, passportSeries, passportNumber, whoGivePassport, whenGivePassport, town, street, building, apartment,
                     mobilePhone, homePhone, email, false)).Start();
 
-                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MessageUser.DocumentCreateSucc, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvRegistrationCard.ClearSelection();
                 dgvRegistrationCard.CurrentCell = null;
             }
             else
             {
-                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.NeedSelectRow, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -120,13 +120,13 @@ namespace Library
                     birthday, passportSeries, passportNumber, whoGivePassport, whenGivePassport, town, street, building, apartment,
                     mobilePhone, homePhone, email, true)).Start();
 
-                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MessageUser.DocumentCreateSucc, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvRegistrationCard.ClearSelection();
                 dgvRegistrationCard.CurrentCell = null;
             }
             else
             {
-                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.NeedSelectRow, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -159,13 +159,13 @@ namespace Library
                 DataStorageFormular();
 
                 new Thread(() => formularReaderWord.CreateFormularReader(registrationNumber, surname, name, patronymic, dtFormular, false)).Start();
-                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MessageUser.DocumentCreateSucc, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvRegistrationCard.ClearSelection();
                 dgvRegistrationCard.CurrentCell = null;
             }
             else
             {
-                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.NeedSelectRow, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -177,13 +177,13 @@ namespace Library
                 DataStorageFormular();
 
                 new Thread(() => formularReaderWord.CreateFormularReader(registrationNumber, surname, name, patronymic, dtFormular, true)).Start();
-                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MessageUser.DocumentCreateSucc, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvRegistrationCard.ClearSelection();
                 dgvRegistrationCard.CurrentCell = null;
             }
             else
             {
-                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.NeedSelectRow, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

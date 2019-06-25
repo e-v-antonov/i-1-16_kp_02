@@ -14,7 +14,6 @@ namespace Library
 
         public WriterBookForm()
         {
-            //Program.EnableWriterBookForm = this;
             InitializeComponent();
         }
 
@@ -46,9 +45,9 @@ namespace Library
 
                     dgvWriterBook.DataSource = dbTables.DTWriterBook;
                     dgvWriterBook.Columns[0].Visible = false;
-                    dgvWriterBook.Columns[1].HeaderText = "Фамилия";
-                    dgvWriterBook.Columns[2].HeaderText = "Имя";
-                    dgvWriterBook.Columns[3].HeaderText = "Отчество";
+                    dgvWriterBook.Columns[1].HeaderText = MessageUser.Surname;
+                    dgvWriterBook.Columns[2].HeaderText = MessageUser.Name;
+                    dgvWriterBook.Columns[3].HeaderText = MessageUser.Patronymic;
                     dgvWriterBook.ClearSelection();
                 }
                 catch
@@ -94,7 +93,7 @@ namespace Library
 
         private void btnDelete_Click(object sender, EventArgs e)     //кнопка удаления записи
         {
-            switch (MessageBox.Show("Удалить автора " + tbSurnameWriter.Text + " " + tbNameWriter.Text + " " + tbPatronymicWriter.Text + "?", "Удаление автора", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            switch (MessageBox.Show(MessageUser.DeleteUser + " " + tbSurnameWriter.Text + " " + tbNameWriter.Text + " " + tbPatronymicWriter.Text + "?", MessageUser.QuestionDeleteWriter, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
                     storedProcedure.SPWriterBookDelete(Convert.ToInt32(dgvWriterBook.CurrentRow.Cells[0].Value.ToString()));
@@ -109,14 +108,14 @@ namespace Library
 
         private void tbSearch_Enter(object sender, EventArgs e) //поле поиска стало активным
         {
-            if (tbSearch.Text == "Введите данные автора...")
+            if (tbSearch.Text == MessageUser.EnterDataWriter)
                 tbSearch.Clear();
         }
 
         private void tbSearch_Leave(object sender, EventArgs e) //поле поиска больше не в фокусе
         {
             if (tbSearch.Text == "")
-                tbSearch.Text = "Введите данные автора...";
+                tbSearch.Text = MessageUser.EnterDataWriter;
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)   //введение текста в поле поиска
@@ -137,9 +136,9 @@ namespace Library
                     RegistryData.DBConnectionString.Close();
                     dgvWriterBook.DataSource = data;
                     dgvWriterBook.Columns[0].Visible = false;
-                    dgvWriterBook.Columns[1].HeaderText = "Фамилия";
-                    dgvWriterBook.Columns[2].HeaderText = "Имя";
-                    dgvWriterBook.Columns[3].HeaderText = "Отчество";
+                    dgvWriterBook.Columns[1].HeaderText = MessageUser.Surname;
+                    dgvWriterBook.Columns[2].HeaderText = MessageUser.Name;
+                    dgvWriterBook.Columns[3].HeaderText = MessageUser.Patronymic;
                     dgvWriterBook.ClearSelection();
                     break;
 
@@ -163,7 +162,7 @@ namespace Library
 
         private void btnError_Click(object sender, EventArgs e) //кнопка ошибки
         {
-            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+            MessageBox.Show(RegistryData.ErrorMessage, MessageUser.TitleError);
         }
 
         private void btnExit_Click(object sender, EventArgs e)  //кнопка закрытия окна

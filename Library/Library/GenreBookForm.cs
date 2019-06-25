@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Threading;
 using System.Windows.Forms;
@@ -12,7 +11,6 @@ namespace Library
 
         public GenreBookForm()
         {
-            //Program.EnableGenreBookForm = this;
             InitializeComponent();
         }
 
@@ -77,7 +75,7 @@ namespace Library
 
         private void btnDelete_Click(object sender, EventArgs e)    //кнопка удаления записи
         {
-            switch (MessageBox.Show("Удалить жанр книги " + ltbGenre.Text + "?", "Удаление жанра книги", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            switch (MessageBox.Show(MessageUser.QuestionDeleteGenre + " " + ltbGenre.Text + "?", MessageUser.DeleteGenre, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
                     storedProcedure.SPGenreBookDelete(Convert.ToInt32(ltbGenre.SelectedValue.ToString()));
@@ -87,7 +85,7 @@ namespace Library
 
         private void btnError_Click(object sender, EventArgs e) //кнопка ошибки
         {
-            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+            MessageBox.Show(RegistryData.ErrorMessage, MessageUser.TitleError);
         }
 
         private void btnExit_Click(object sender, EventArgs e)  //кнопка закрытия окна
@@ -104,12 +102,12 @@ namespace Library
         private void tbSearch_Leave(object sender, EventArgs e) //поле поиска больше не в фокусе
         {
             if (tbSearch.Text == "")
-                tbSearch.Text = "Введите название жанра...";
+                tbSearch.Text = MessageUser.EnterNameGenre;
         }
 
         private void tbSearch_Enter(object sender, EventArgs e) //поле поиска стало активным
         {
-            if (tbSearch.Text == "Введите название жанра..")
+            if (tbSearch.Text == MessageUser.EnterNameGenre)
                 tbSearch.Clear();
         }
 

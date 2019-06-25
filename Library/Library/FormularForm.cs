@@ -16,7 +16,6 @@ namespace Library
 
         public FormularForm()
         {
-            //Program.EnableFormularForm = this;
             InitializeComponent();
         }
 
@@ -54,19 +53,19 @@ namespace Library
                     dgvFormular.DataSource = dbTables.DTFormular;
                     dgvFormular.Columns[0].Visible = false;
                     dgvFormular.Columns[1].Visible = false;
-                    dgvFormular.Columns[2].HeaderText = "Читатель";
-                    dgvFormular.Columns[3].HeaderText = "Паспортные данные читателя";
+                    dgvFormular.Columns[2].HeaderText = MessageUser.ReaderFormular;
+                    dgvFormular.Columns[3].HeaderText = MessageUser.PassportFormular;
                     dgvFormular.Columns[4].Visible = false;
-                    dgvFormular.Columns[5].HeaderText = "Книга";
-                    dgvFormular.Columns[6].HeaderText = "Дата выдачи книги";
-                    dgvFormular.Columns[7].HeaderText = "Количество дней выдачи";
-                    dgvFormular.Columns[8].HeaderText = "Дата возврата книги";
-                    dgvFormular.Columns[9].HeaderText = "Книга возвращена";
+                    dgvFormular.Columns[5].HeaderText = MessageUser.BookFormular;
+                    dgvFormular.Columns[6].HeaderText = MessageUser.DateIssueBook;
+                    dgvFormular.Columns[7].HeaderText = MessageUser.NumberDaysIssue;
+                    dgvFormular.Columns[8].HeaderText = MessageUser.DateReturnedBook;
+                    dgvFormular.Columns[9].HeaderText = MessageUser.BookReturned;
                     dgvFormular.ClearSelection();
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -99,7 +98,7 @@ namespace Library
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -124,7 +123,7 @@ namespace Library
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -178,11 +177,11 @@ namespace Library
             }
             catch
             {
-                MessageBox.Show("Введен неправильный формат даты!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.WrongFormatDate, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             if (chbBookReturned.Checked == true)
-                MessageBox.Show("Книга не может быть возвращена при ее выдаче!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.BookNotReturned, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 storedProcedure.SPFormularReaderInsert(issueBook, Convert.ToInt32(nudNumberDays.Value), Convert.ToInt32(cbReader.SelectedValue.ToString()), Convert.ToInt32(cbBook.SelectedValue.ToString()));
 
@@ -201,7 +200,7 @@ namespace Library
             }
             catch
             {
-                MessageBox.Show("Введен неправильный формат даты!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.WrongFormatDate, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             int returnedBook = 0;
@@ -222,7 +221,7 @@ namespace Library
 
         private void btnDelete_Click(object sender, EventArgs e)       //кнопка удаления записи
         {
-            switch (MessageBox.Show("Удалить запись формуляра читателя " + cbReader.Text + "?", "Удаление записи формуляра", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            switch (MessageBox.Show(MessageUser.QuestionDeleteFormular + " " + cbReader.Text + "?", MessageUser.DeleteEntryFormular, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
                     storedProcedure.SPFormularReaderDelete(Convert.ToInt32(dgvFormular.CurrentRow.Cells[0].Value.ToString()));
@@ -242,14 +241,14 @@ namespace Library
 
         private void tbSearch_Enter(object sender, EventArgs e) //поле поиска стало активным
         {
-            if (tbSearch.Text == "" + tbSearch.Text + "Введите данные книги....")
+            if (tbSearch.Text == "" + tbSearch.Text + MessageUser.EnterDetailsBook)
                 tbSearch.Clear();
         }
 
         private void tbSearch_Leave(object sender, EventArgs e) //поле поиска больше не в фокусе
         {
             if (tbSearch.Text == "")
-                tbSearch.Text = "" + tbSearch.Text + "Введите данные книги....";
+                tbSearch.Text = "" + tbSearch.Text + MessageUser.EnterDetailsBook;
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)   //введение текста в поле поиска
@@ -284,14 +283,14 @@ namespace Library
                     dgvFormular.DataSource = data;
                     dgvFormular.Columns[0].Visible = false;
                     dgvFormular.Columns[1].Visible = false;
-                    dgvFormular.Columns[2].HeaderText = "Читатель";
-                    dgvFormular.Columns[3].HeaderText = "Паспортные данные читателя";
+                    dgvFormular.Columns[2].HeaderText = MessageUser.ReaderFormular;
+                    dgvFormular.Columns[3].HeaderText = MessageUser.PassportFormular;
                     dgvFormular.Columns[4].Visible = false;
-                    dgvFormular.Columns[5].HeaderText = "Книга";
-                    dgvFormular.Columns[6].HeaderText = "Дата выдачи книги";
-                    dgvFormular.Columns[7].HeaderText = "Количество дней выдачи";
-                    dgvFormular.Columns[8].HeaderText = "Дата возврата книги";
-                    dgvFormular.Columns[9].HeaderText = "Книга возвращена";
+                    dgvFormular.Columns[5].HeaderText = MessageUser.BookFormular;
+                    dgvFormular.Columns[6].HeaderText = MessageUser.DateIssueBook;
+                    dgvFormular.Columns[7].HeaderText = MessageUser.NumberDaysIssue;
+                    dgvFormular.Columns[8].HeaderText = MessageUser.DateReturnedBook;
+                    dgvFormular.Columns[9].HeaderText = MessageUser.BookReturned;
                     dgvFormular.ClearSelection();
                     break;
 

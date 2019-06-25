@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Windows.Forms;
 using Xceed.Words.NET;
 
 namespace Library
@@ -15,7 +16,15 @@ namespace Library
         {
             try
             {
-                fileName = @"D:\Games\Регистрационная карточка " + surname + " " + name + " " + patronymic + " от " + DateTime.Now.ToString("HH.mm.ss_dd.MM.yyyy") + ".docx";
+                if (RegistryData.DirPath == "")
+                {
+                    RegistryData.DirPath = "C:\\Users\\" + SystemInformation.UserName + "\\Documents\\Отчёты";
+                    if (!Directory.Exists(RegistryData.DirPath))
+                        Directory.CreateDirectory(RegistryData.DirPath);
+                }
+
+
+                fileName = RegistryData.DirPath + "\\Регистрационная карточка " + surname + " " + name + " " + patronymic + " от " + DateTime.Now.ToString("HH.mm.ss_dd.MM.yyyy") + ".docx";
 
                 using (DocX document = DocX.Create(fileName))   //формирование документа в формате docx
                 {

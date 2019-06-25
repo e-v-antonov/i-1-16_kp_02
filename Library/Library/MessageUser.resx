@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllMargin" xml:space="preserve">
+    <value>Все поля должны быть заполнены!</value>
+  </data>
+  <data name="AllMarginRegisatration" xml:space="preserve">
+    <value>Должны быть заполнены все поля!</value>
+  </data>
+  <data name="Apartment" xml:space="preserve">
+    <value>Квартира</value>
+  </data>
+  <data name="BookAvailable" xml:space="preserve">
+    <value>Наличие книги в данный момент: Да</value>
+  </data>
+  <data name="BookAvailableNo" xml:space="preserve">
+    <value>Наличие книги в данный момент: Нет</value>
+  </data>
+  <data name="BookFormular" xml:space="preserve">
+    <value>Книга</value>
+  </data>
+  <data name="BookNotReturned" xml:space="preserve">
+    <value>Книга не может быть возвращена при ее выдаче!</value>
+  </data>
+  <data name="BookReturned" xml:space="preserve">
+    <value>Книга возвращена</value>
+  </data>
+  <data name="BookReturnedSucc" xml:space="preserve">
+    <value>Книга успешно возвращена.</value>
+  </data>
+  <data name="BookTitle" xml:space="preserve">
+    <value>Название книги</value>
+  </data>
+  <data name="Building" xml:space="preserve">
+    <value>Дом</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Город</value>
+  </data>
+  <data name="CorrectDate" xml:space="preserve">
+    <value>Введите правильные даты!</value>
+  </data>
+  <data name="CorrectLoginPassword" xml:space="preserve">
+    <value>Проверьте правильность ввода данных! Поля Логин и Пароль должны быть длиною от 8 до 16 символов. Поле Логин н должно содержать русских букв. Поле Пароль должно обязательно содержать хотя бы: одну заглавную английскую букву, одну прописную английскую букву, одну заглавную русскую букву, одну прописную русскую букву, одну цифру, один спецсимвол. Поля Пароль и Повторите пароль должны совпадать.</value>
+  </data>
+  <data name="CounPriceAct" xml:space="preserve">
+    <value>Цена экземпляра, руб.</value>
+  </data>
+  <data name="CountInstanceAct" xml:space="preserve">
+    <value>Количество экземпляров</value>
+  </data>
+  <data name="DatabaseSearch" xml:space="preserve">
+    <value>Поиск баз данных</value>
+  </data>
+  <data name="DatabaseSearchTochki" xml:space="preserve">
+    <value>Поиск баз данных...</value>
+  </data>
+  <data name="DataBirthday" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="DateIssueBook" xml:space="preserve">
+    <value>Дата выдачи книги</value>
+  </data>
+  <data name="DateReturnedBook" xml:space="preserve">
+    <value>Дата возврата книги</value>
+  </data>
+  <data name="DateRistrationBook" xml:space="preserve">
+    <value>Дата регистрации книги</value>
+  </data>
+  <data name="DeleteBookTitle" xml:space="preserve">
+    <value>Удаление данных книги</value>
+  </data>
+  <data name="DeleteEntryFormular" xml:space="preserve">
+    <value>Удаление записи формуляра</value>
+  </data>
+  <data name="DeleteGenre" xml:space="preserve">
+    <value>Удаление жанра книги</value>
+  </data>
+  <data name="DeletePublishing" xml:space="preserve">
+    <value>Удаление книжного издательства</value>
+  </data>
+  <data name="DeleteRegCard" xml:space="preserve">
+    <value>Удаление регистрационной карточки</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Удаление пользователя</value>
+  </data>
+  <data name="DeleteWiter" xml:space="preserve">
+    <value>Удаление автора</value>
+  </data>
+  <data name="DocumentCreateSucc" xml:space="preserve">
+    <value>Документ сформирован успешно.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Адрес электронной почты</value>
+  </data>
+  <data name="EnterDataBook" xml:space="preserve">
+    <value>Введите данные книги...</value>
+  </data>
+  <data name="EnterDataReader" xml:space="preserve">
+    <value>Введите данные вашей регистрационной карты...</value>
+  </data>
+  <data name="EnterDataUser" xml:space="preserve">
+    <value>Введите данные пользователя...</value>
+  </data>
+  <data name="EnterDataWriter" xml:space="preserve">
+    <value>Введите данные автора...</value>
+  </data>
+  <data name="EnterDetailsBook" xml:space="preserve">
+    <value>Введите данные книги...</value>
+  </data>
+  <data name="EnterNameGenre" xml:space="preserve">
+    <value>Введите название жанра...</value>
+  </data>
+  <data name="EnterPublishing" xml:space="preserve">
+    <value>Введите название издательства...</value>
+  </data>
+  <data name="ErrorInsertUpdateBook" xml:space="preserve">
+    <value> Поля Год издания, Количество страниц, Стоимость экземпляра, Общее количество экземпляров должны быть заполнены целыми числами! Проверьте правильность ввода данных!</value>
+  </data>
+  <data name="ErrorLoadingData" xml:space="preserve">
+    <value>Ошибка загрузки данных из базы данных!</value>
+  </data>
+  <data name="ErrorLoginAndPassord" xml:space="preserve">
+    <value>Ошибка проверки логина и пароля пользователя!</value>
+  </data>
+  <data name="ErrorRegCard" xml:space="preserve">
+    <value>Проверьте правильность ввода данных! Поля Серия паспорта и Номер паспорта должны содержать 4 и 6 цифр соответственно. Поля Кем выдан паспорт, Город, Улица не должны содержать других знаков кроме русских букв, цифр, точки, и дефиса. Поле адрес электронной почты обязательно должен содержать знак @ и точку после него. Комбинация серии и номера паспорта, а также номер мобильного телефона и адрес электронной почты должны быть уникальными по отношению к данным в базе данных.</value>
+  </data>
+  <data name="FilledIntegers" xml:space="preserve">
+    <value>Поля Дом и Квартира должны быть заполнены целыми числами! Проверьте правильность ввода данных!</value>
+  </data>
+  <data name="GenreBook" xml:space="preserve">
+    <value>Жанр</value>
+  </data>
+  <data name="HaveBook" xml:space="preserve">
+    <value>Наличие книги</value>
+  </data>
+  <data name="HomePhone" xml:space="preserve">
+    <value>Номер домашнего телефона</value>
+  </data>
+  <data name="LetterPassLog" xml:space="preserve">
+    <value>Логин не должен иметь русских букв! Пароль должен иметь хотя бы одну заглавную английскую и русскую буквы, одну прописную английскую и русскую буквы, цифру, спецсимвол!</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Логин</value>
+  </data>
+  <data name="MinLengthPassLog" xml:space="preserve">
+    <value>Логин и пароль должны иметь минимальную длину 8 символов!</value>
+  </data>
+  <data name="MobilePhone" xml:space="preserve">
+    <value>Номер мобильного телефона</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="NeedSelectRow" xml:space="preserve">
+    <value>Для создания документа необходимо выделить строку!</value>
+  </data>
+  <data name="NoConnection" xml:space="preserve">
+    <value>Подключение отсутствует!</value>
+  </data>
+  <data name="NoReader" xml:space="preserve">
+    <value>Читатель с данными параметрами не зарегистрирован в библиотеке.</value>
+  </data>
+  <data name="NoReaderLibrary" xml:space="preserve">
+    <value>Читатель с данными параметрами не зарегистрирован в библиотеке.</value>
+  </data>
+  <data name="NoUserLoginPassword" xml:space="preserve">
+    <value>Пользователя с данным логин и паролем не обнаружено! Проверьте правильность ввода данных или зарегистрируйтесь.</value>
+  </data>
+  <data name="NumberDaysIssue" xml:space="preserve">
+    <value>Количество дней выдачи</value>
+  </data>
+  <data name="NumberISBN" xml:space="preserve">
+    <value>Номер ISBN</value>
+  </data>
+  <data name="NumberOfInstancesAvailable" xml:space="preserve">
+    <value>Доступное количество экземпляров</value>
+  </data>
+  <data name="NumberOfPages" xml:space="preserve">
+    <value>Количество страниц</value>
+  </data>
+  <data name="OnlyField" xml:space="preserve">
+    <value>Должно быть заполнено только одно поле!</value>
+  </data>
+  <data name="PassportFormular" xml:space="preserve">
+    <value>Паспортные данные читателя</value>
+  </data>
+  <data name="PassportNumbers" xml:space="preserve">
+    <value>Номер паспорта</value>
+  </data>
+  <data name="PassportSeries" xml:space="preserve">
+    <value>Серия паспорта</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="PasswordRepeatPasswordMustMatch" xml:space="preserve">
+    <value>Поля Пароль и Повторите пароль должны совпадать!</value>
+  </data>
+  <data name="Patronymic" xml:space="preserve">
+    <value>Отчество</value>
+  </data>
+  <data name="Post" xml:space="preserve">
+    <value>Роль</value>
+  </data>
+  <data name="PublicationDate" xml:space="preserve">
+    <value>Год издания</value>
+  </data>
+  <data name="PublishingBook" xml:space="preserve">
+    <value>Издательство</value>
+  </data>
+  <data name="QuestionChangeLanguage" xml:space="preserve">
+    <value>Вы действительно хотите изменить язык интерфейса? Приложение будет перезапущено!</value>
+  </data>
+  <data name="QuestionDeleteBook" xml:space="preserve">
+    <value>Удалить данные книги</value>
+  </data>
+  <data name="QuestionDeleteFormular" xml:space="preserve">
+    <value>Удалить запись формуляра читателя</value>
+  </data>
+  <data name="QuestionDeleteGenre" xml:space="preserve">
+    <value>Удалить жанр книги</value>
+  </data>
+  <data name="QuestionDeletePublishing" xml:space="preserve">
+    <value>Удалить книжное издательство</value>
+  </data>
+  <data name="QuestionDeleteRegCard" xml:space="preserve">
+    <value>Удалить регистрационную карточку</value>
+  </data>
+  <data name="QuestionDeleteUser" xml:space="preserve">
+    <value>Удалить пользователя</value>
+  </data>
+  <data name="QuestionDeleteWriter" xml:space="preserve">
+    <value>Удалить автора</value>
+  </data>
+  <data name="ReaderFormular" xml:space="preserve">
+    <value>Читатель</value>
+  </data>
+  <data name="ReaderNoReturnedBook" xml:space="preserve">
+    <value>Данный читатель еще не вернул выданные ему ранее книги.</value>
+  </data>
+  <data name="SearchserverMenu" xml:space="preserve">
+    <value>Определение сервера...</value>
+  </data>
+  <data name="ServerSearch" xml:space="preserve">
+    <value>Поиск серверов</value>
+  </data>
+  <data name="ServerSearchTochki" xml:space="preserve">
+    <value>Поиск серверов...</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Улица</value>
+  </data>
+  <data name="SuccessfullyAuthoriz" xml:space="preserve">
+    <value>Вы авторизовались в информационной системе.</value>
+  </data>
+  <data name="SuccessfulRegistration" xml:space="preserve">
+    <value>Вы успешно зарегистрировались в информационной системе! В данный момент у Вас права Гостя. Обратитесь к системному администратору, чтобы он изменил ваши права. Теперь пройдите авторизацию для работы с информационной системой.</value>
+  </data>
+  <data name="SummAct" xml:space="preserve">
+    <value>Сумма, руб.</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="TheCostOfInstance" xml:space="preserve">
+    <value>Стоимость экземпляра</value>
+  </data>
+  <data name="TitleBookAct" xml:space="preserve">
+    <value>Название книги, автор</value>
+  </data>
+  <data name="TitleError" xml:space="preserve">
+    <value>Ошибки в результате работы информационной системы</value>
+  </data>
+  <data name="TitleLibrary" xml:space="preserve">
+    <value>Библиотека</value>
+  </data>
+  <data name="TotalNumberOfInstances" xml:space="preserve">
+    <value>Общее количество экземпляров</value>
+  </data>
+  <data name="UserAlreadyHave" xml:space="preserve">
+    <value>Пользователь с таким логином уже числится в информационной системе!</value>
+  </data>
+  <data name="UserAlreadyHavePas" xml:space="preserve">
+    <value>Пользователь с таким паролем уже числится в информационной системе!</value>
+  </data>
+  <data name="WhenGivePassport" xml:space="preserve">
+    <value>Когда выдан паспорт</value>
+  </data>
+  <data name="WhoGivePassport" xml:space="preserve">
+    <value>Кем выдан паспорт</value>
+  </data>
+  <data name="WriterBook" xml:space="preserve">
+    <value>Автор</value>
+  </data>
+  <data name="WrongFormatDate" xml:space="preserve">
+    <value>Введен неправильный формат даты!</value>
+  </data>
+  <data name="BookIssue" xml:space="preserve">
+    <value>Книга была успешно выдана читателю.</value>
+  </data>
+</root>

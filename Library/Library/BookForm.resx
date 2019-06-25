@@ -117,4 +117,1165 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbGenre.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="pnManipulationButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tbDatePublication.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;gbManipulationData.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbAvailableCopies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 234</value>
+  </data>
+  <data name="btnUpdatePublishing.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gbSearchAndFiltration.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cbGenre.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="gbManipulationData.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;lbBookTitle.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="&gt;&gt;lbBookTitle.Name" xml:space="preserve">
+    <value>lbBookTitle</value>
+  </data>
+  <data name="&gt;&gt;lbDatePublication.Name" xml:space="preserve">
+    <value>lbDatePublication</value>
+  </data>
+  <data name="&gt;&gt;lbAvailableCopies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbISBN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 133</value>
+  </data>
+  <data name="&gt;&gt;tbNumberPages.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lbCostBook.Text" xml:space="preserve">
+    <value>Стоимость экземпляра, руб</value>
+  </data>
+  <data name="btnInsert.Text" xml:space="preserve">
+    <value>Добавить данные книги</value>
+  </data>
+  <data name="&gt;&gt;tbDatePublication.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btnUpdatePublishing.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbWriter.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lbNumberPages.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="btnUpdateWriter.Text" xml:space="preserve">
+    <value>Редактировать авторов</value>
+  </data>
+  <data name="lbDateRegisration.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pnComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbManipulationData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbAvailableCopies.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbPublishing.Text" xml:space="preserve">
+    <value>Издательство</value>
+  </data>
+  <data name="btnUpdateGenre.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;pnSearch.Name" xml:space="preserve">
+    <value>pnSearch</value>
+  </data>
+  <data name="pnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>969, 32</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateWriter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbSearchAndFiltration.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbCostBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 16</value>
+  </data>
+  <data name="&gt;&gt;lbDateRegisration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbBookTitle.Name" xml:space="preserve">
+    <value>tbBookTitle</value>
+  </data>
+  <data name="btnUpdatePublishing.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tbDateRegistration.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lbDatePublication.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lbPublishing.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dgvBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 48</value>
+  </data>
+  <data name="&gt;&gt;lbPublishing.Parent" xml:space="preserve">
+    <value>pnComboBox</value>
+  </data>
+  <data name="pnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tbCostBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <data name="&gt;&gt;chbFiltration.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbTotalCopies.Name" xml:space="preserve">
+    <value>tbTotalCopies</value>
+  </data>
+  <data name="tbTotalCopies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <data name="tbDatePublication.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 55</value>
+  </data>
+  <data name="&gt;&gt;tbCostBook.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="lbISBN.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbTotalCopies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 211</value>
+  </data>
+  <data name="&gt;&gt;tbAvailableCopies.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbNumberPages.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbPublishing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <data name="pnUpdateButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pnTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="&gt;&gt;pnTextBox.Parent" xml:space="preserve">
+    <value>gbManipulationData</value>
+  </data>
+  <data name="tbAvailableCopies.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 36</value>
+  </data>
+  <data name="lbDatePublication.Text" xml:space="preserve">
+    <value>Год издания</value>
+  </data>
+  <data name="&gt;&gt;btnUpdatePublishing.Parent" xml:space="preserve">
+    <value>pnUpdateButtons</value>
+  </data>
+  <data name="pnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="&gt;&gt;chbFiltration.Name" xml:space="preserve">
+    <value>chbFiltration</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.Name" xml:space="preserve">
+    <value>btnInsert</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>989, 0</value>
+  </data>
+  <data name="tbTotalCopies.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lbNumberPages.Text" xml:space="preserve">
+    <value>Количество страниц</value>
+  </data>
+  <data name="&gt;&gt;gbManipulationData.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbBookTitle.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="btnError.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;pnManipulationButtons.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbISBN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 117</value>
+  </data>
+  <data name="cbGenre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 24</value>
+  </data>
+  <data name="btnInsert.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.Parent" xml:space="preserve">
+    <value>pnSearch</value>
+  </data>
+  <data name="&gt;&gt;lbISBN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateGenre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Удалить данные книги</value>
+  </data>
+  <data name="&gt;&gt;tbNumberPages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="lbISBN.Text" xml:space="preserve">
+    <value>Номер ISBN</value>
+  </data>
+  <data name="tbSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>969, 23</value>
+  </data>
+  <data name="pnTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbBookTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 16</value>
+  </data>
+  <data name="tbNumberPages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 94</value>
+  </data>
+  <data name="pnUpdateButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="dgvBook.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lbWriter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbNumberPages.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;tbDatePublication.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPublishing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 40</value>
+  </data>
+  <data name="&gt;&gt;pnFiltration.Name" xml:space="preserve">
+    <value>pnFiltration</value>
+  </data>
+  <data name="&gt;&gt;lbPublishing.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tbCostBook.Name" xml:space="preserve">
+    <value>tbCostBook</value>
+  </data>
+  <data name="&gt;&gt;tbISBN.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;gbManipulationData.Name" xml:space="preserve">
+    <value>gbManipulationData</value>
+  </data>
+  <data name="lbWriter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbBookTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateWriter.Parent" xml:space="preserve">
+    <value>pnUpdateButtons</value>
+  </data>
+  <data name="lbNumberPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 16</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbBookTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.Name" xml:space="preserve">
+    <value>tbSearch</value>
+  </data>
+  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lbISBN.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;lbDatePublication.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="btnError.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbWriter.Name" xml:space="preserve">
+    <value>lbWriter</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.Parent" xml:space="preserve">
+    <value>pnManipulationButtons</value>
+  </data>
+  <data name="lbDatePublication.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 16</value>
+  </data>
+  <data name="lbAvailableCopies.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tbISBN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbDateRegisration.Name" xml:space="preserve">
+    <value>lbDateRegisration</value>
+  </data>
+  <data name="lbBookTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tbSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbPublishing.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbTotalCopies.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;cbGenre.Name" xml:space="preserve">
+    <value>cbGenre</value>
+  </data>
+  <data name="pnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1108, 36</value>
+  </data>
+  <data name="tbBookTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="tbBookTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <data name="tbSearch.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbDateRegistration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <data name="&gt;&gt;cbWriter.Name" xml:space="preserve">
+    <value>cbWriter</value>
+  </data>
+  <data name="lbTotalCopies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 16</value>
+  </data>
+  <data name="btnUpdateGenre.Text" xml:space="preserve">
+    <value>Редактировать жанры</value>
+  </data>
+  <data name="&gt;&gt;chbFiltration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnUpdateWriter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="pnFiltration.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="cbPublishing.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="chbFiltration.Text" xml:space="preserve">
+    <value>Отфильтровывать</value>
+  </data>
+  <data name="&gt;&gt;tbTotalCopies.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbISBN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <data name="&gt;&gt;lbAvailableCopies.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pnComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 292</value>
+  </data>
+  <data name="&gt;&gt;lbISBN.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="pnTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 273</value>
+  </data>
+  <data name="lbGenre.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbSearch.Text" xml:space="preserve">
+    <value>Введите данные книги...</value>
+  </data>
+  <data name="&gt;&gt;cbPublishing.Parent" xml:space="preserve">
+    <value>pnComboBox</value>
+  </data>
+  <data name="pnSearch.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;lbGenre.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnUpdatePublishing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="lbAvailableCopies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 16</value>
+  </data>
+  <data name="tbBookTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;btnUpdatePublishing.Name" xml:space="preserve">
+    <value>btnUpdatePublishing</value>
+  </data>
+  <data name="btnUpdateGenre.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tbDateRegistration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 289</value>
+  </data>
+  <data name="pnFiltration.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnUpdateWriter.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbWriter.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;gbSearchAndFiltration.Name" xml:space="preserve">
+    <value>gbSearchAndFiltration</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="gbManipulationData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 470</value>
+  </data>
+  <data name="&gt;&gt;pnFiltration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbDateRegistration.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="&gt;&gt;lbISBN.Name" xml:space="preserve">
+    <value>lbISBN</value>
+  </data>
+  <data name="&gt;&gt;lbWriter.Parent" xml:space="preserve">
+    <value>pnComboBox</value>
+  </data>
+  <data name="&gt;&gt;chbFiltration.Parent" xml:space="preserve">
+    <value>pnFiltration</value>
+  </data>
+  <data name="lbAvailableCopies.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnUpdateWriter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <data name="&gt;&gt;cbGenre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateGenre.Parent" xml:space="preserve">
+    <value>pnUpdateButtons</value>
+  </data>
+  <data name="pnManipulationButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>836, 36</value>
+  </data>
+  <data name="lbDateRegisration.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="gbManipulationData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 48</value>
+  </data>
+  <data name="lbISBN.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>pnManipulationButtons</value>
+  </data>
+  <data name="&gt;&gt;tbNumberPages.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="lbBookTitle.Text" xml:space="preserve">
+    <value>Название книги</value>
+  </data>
+  <data name="pnUpdateButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 120</value>
+  </data>
+  <data name="&gt;&gt;btnError.Name" xml:space="preserve">
+    <value>btnError</value>
+  </data>
+  <data name="&gt;&gt;pnManipulationButtons.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="chbFiltration.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="cbPublishing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 56</value>
+  </data>
+  <data name="&gt;&gt;tbNumberPages.Name" xml:space="preserve">
+    <value>tbNumberPages</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbNumberPages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 78</value>
+  </data>
+  <data name="lbDateRegisration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 16</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnDelete.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbGenre.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;pnManipulationButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbWriter.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tbBookTitle.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="chbFiltration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 26</value>
+  </data>
+  <data name="btnError.Text" xml:space="preserve">
+    <value>Ошибки</value>
+  </data>
+  <data name="btnInsert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;pnSearch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnInsert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 36</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbGenre.Parent" xml:space="preserve">
+    <value>pnComboBox</value>
+  </data>
+  <data name="pnTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="dgvBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;tbBookTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbDatePublication.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbWriter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbPublishing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 24</value>
+  </data>
+  <data name="tbDatePublication.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <data name="lbGenre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 16</value>
+  </data>
+  <data name="lbWriter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 36</value>
+  </data>
+  <data name="gbManipulationData.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="gbManipulationData.Text" xml:space="preserve">
+    <value>Манипулирование даннными:</value>
+  </data>
+  <data name="btnError.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 36</value>
+  </data>
+  <data name="pnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbBookTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pnComboBox.Parent" xml:space="preserve">
+    <value>gbManipulationData</value>
+  </data>
+  <data name="tbNumberPages.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;pnFiltration.Parent" xml:space="preserve">
+    <value>gbSearchAndFiltration</value>
+  </data>
+  <data name="chbFiltration.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pnFiltration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>972, 19</value>
+  </data>
+  <data name="lbCostBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 156</value>
+  </data>
+  <data name="lbAvailableCopies.Text" xml:space="preserve">
+    <value>Доступное количество экземпляров</value>
+  </data>
+  <data name="gbSearchAndFiltration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;cbPublishing.Name" xml:space="preserve">
+    <value>cbPublishing</value>
+  </data>
+  <data name="&gt;&gt;tbTotalCopies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbCostBook.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateWriter.Name" xml:space="preserve">
+    <value>btnUpdateWriter</value>
+  </data>
+  <data name="&gt;&gt;lbNumberPages.Name" xml:space="preserve">
+    <value>lbNumberPages</value>
+  </data>
+  <data name="&gt;&gt;btnUpdatePublishing.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gbSearchAndFiltration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbCostBook.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="&gt;&gt;pnTextBox.Name" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="&gt;&gt;lbCostBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnUpdate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;lbWriter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbDatePublication.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnFiltration.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnComboBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cbPublishing.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnUpdateButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lbDateRegisration.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="btnUpdatePublishing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <data name="&gt;&gt;lbNumberPages.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="chbFiltration.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lbDatePublication.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tbAvailableCopies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 250</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateGenre.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnUpdateGenre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <data name="lbGenre.Text" xml:space="preserve">
+    <value>Жанр</value>
+  </data>
+  <data name="lbTotalCopies.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbDateRegistration.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;lbTotalCopies.Name" xml:space="preserve">
+    <value>lbTotalCopies</value>
+  </data>
+  <data name="&gt;&gt;dgvBook.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbAvailableCopies.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="&gt;&gt;pnComboBox.Name" xml:space="preserve">
+    <value>pnComboBox</value>
+  </data>
+  <data name="&gt;&gt;cbGenre.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbAvailableCopies.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbDatePublication.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;tbISBN.Name" xml:space="preserve">
+    <value>tbISBN</value>
+  </data>
+  <data name="&gt;&gt;lbDateRegisration.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnUpdateGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 46</value>
+  </data>
+  <data name="tbISBN.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;lbDatePublication.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbSearchAndFiltration.Text" xml:space="preserve">
+    <value>Поиск и фильтрация:</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
+    <value>btnUpdate</value>
+  </data>
+  <data name="gbSearchAndFiltration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1108, 48</value>
+  </data>
+  <data name="gbSearchAndFiltration.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tbTotalCopies.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="&gt;&gt;cbPublishing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 518</value>
+  </data>
+  <data name="&gt;&gt;lbAvailableCopies.Name" xml:space="preserve">
+    <value>lbAvailableCopies</value>
+  </data>
+  <data name="lbDateRegisration.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnInsert.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;lbTotalCopies.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="lbDateRegisration.Text" xml:space="preserve">
+    <value>Дата регистрации книги</value>
+  </data>
+  <data name="&gt;&gt;btnError.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbTotalCopies.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tbTotalCopies.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbAvailableCopies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbCostBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 172</value>
+  </data>
+  <data name="pnUpdateButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 72</value>
+  </data>
+  <data name="&gt;&gt;btnError.Parent" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="lbBookTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;pnManipulationButtons.Name" xml:space="preserve">
+    <value>pnManipulationButtons</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
+    <value>pnManipulationButtons</value>
+  </data>
+  <data name="&gt;&gt;lbPublishing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnUpdateWriter.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pnFiltration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 26</value>
+  </data>
+  <data name="btnUpdate.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tbAvailableCopies.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbWriter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;lbPublishing.Name" xml:space="preserve">
+    <value>lbPublishing</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Name" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="lbGenre.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbGenre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbCostBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;pnSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbDateRegistration.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbISBN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 16</value>
+  </data>
+  <data name="&gt;&gt;pnUpdateButtons.Name" xml:space="preserve">
+    <value>pnUpdateButtons</value>
+  </data>
+  <data name="&gt;&gt;tbDateRegistration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbISBN.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateGenre.Name" xml:space="preserve">
+    <value>btnUpdateGenre</value>
+  </data>
+  <data name="&gt;&gt;tbBookTitle.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateWriter.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chbFiltration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-19, 0</value>
+  </data>
+  <data name="&gt;&gt;btnError.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbCostBook.Name" xml:space="preserve">
+    <value>lbCostBook</value>
+  </data>
+  <data name="lbWriter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;tbCostBook.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbWriter.Text" xml:space="preserve">
+    <value>Автор</value>
+  </data>
+  <data name="&gt;&gt;dgvBook.Name" xml:space="preserve">
+    <value>dgvBook</value>
+  </data>
+  <data name="&gt;&gt;lbNumberPages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>836, 434</value>
+  </data>
+  <data name="&gt;&gt;lbCostBook.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbPublishing.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lbTotalCopies.Text" xml:space="preserve">
+    <value>Общее количество экземпляров</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnError.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;pnUpdateButtons.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbTotalCopies.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbGenre.Name" xml:space="preserve">
+    <value>lbGenre</value>
+  </data>
+  <data name="lbBookTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lbGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1108, 554</value>
+  </data>
+  <data name="lbCostBook.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>557, 0</value>
+  </data>
+  <data name="&gt;&gt;tbDateRegistration.Name" xml:space="preserve">
+    <value>tbDateRegistration</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="pnManipulationButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 482</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Книги</value>
+  </data>
+  <data name="cbWriter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 24</value>
+  </data>
+  <data name="btnUpdatePublishing.Text" xml:space="preserve">
+    <value>Редактировать издательства</value>
+  </data>
+  <data name="&gt;&gt;tbDatePublication.Name" xml:space="preserve">
+    <value>tbDatePublication</value>
+  </data>
+  <data name="pnComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 192</value>
+  </data>
+  <data name="&gt;&gt;tbAvailableCopies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbGenre.Parent" xml:space="preserve">
+    <value>pnComboBox</value>
+  </data>
+  <data name="&gt;&gt;pnComboBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbTotalCopies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Изменить данные</value>
+  </data>
+  <data name="&gt;&gt;cbWriter.Parent" xml:space="preserve">
+    <value>pnComboBox</value>
+  </data>
+  <data name="&gt;&gt;tbAvailableCopies.Name" xml:space="preserve">
+    <value>tbAvailableCopies</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>BookForm</value>
+  </data>
+  <data name="&gt;&gt;dgvBook.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbPublishing.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnUpdateGenre.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="pnCancel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;gbSearchAndFiltration.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbDateRegisration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 273</value>
+  </data>
+  <data name="&gt;&gt;pnSearch.Parent" xml:space="preserve">
+    <value>gbSearchAndFiltration</value>
+  </data>
+  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>836, 36</value>
+  </data>
+  <data name="btnInsert.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tbISBN.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="&gt;&gt;btnUpdatePublishing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 96</value>
+  </data>
+  <data name="&gt;&gt;cbWriter.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnDelete.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="cbWriter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="lbTotalCopies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 195</value>
+  </data>
+  <data name="&gt;&gt;tbCostBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbCostBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbCostBook.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;lbISBN.Parent" xml:space="preserve">
+    <value>pnTextBox</value>
+  </data>
+  <data name="lbDatePublication.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;pnUpdateButtons.Parent" xml:space="preserve">
+    <value>pnComboBox</value>
+  </data>
+  <data name="btnUpdateWriter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnManipulationButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="tbNumberPages.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lbDatePublication.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 39</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="lbNumberPages.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tbNumberPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 23</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en-US</value>
+  </metadata>
 </root>

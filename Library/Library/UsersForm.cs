@@ -34,13 +34,6 @@ namespace Library
             InitializeComponent();
         }
 
-        private void UpdateEnable(bool valueUpdateEnable)   //изменение доступности кнопок
-        {
-            btnInsert.Enabled = valueUpdateEnable;
-            btnUpdate.Enabled = valueUpdateEnable;
-            btnDelete.Enabled = valueUpdateEnable;
-        }
-
         private void UsersForm_Load(object sender, EventArgs e) //загрузка формы
         {
             Thread threadUser = new Thread(UserFill);
@@ -62,13 +55,13 @@ namespace Library
 
                 dgvUsers.DataSource = dbTables.DTUsers;
                 dgvUsers.Columns[0].Visible = false;
-                dgvUsers.Columns[1].HeaderText = "Фамилия";
-                dgvUsers.Columns[2].HeaderText = "Имя";
-                dgvUsers.Columns[3].HeaderText = "Отчество";
-                dgvUsers.Columns[4].HeaderText = "Логин";
-                dgvUsers.Columns[5].HeaderText = "Пароль";
+                dgvUsers.Columns[1].HeaderText = MessageUser.Surname;
+                dgvUsers.Columns[2].HeaderText = MessageUser.Name;
+                dgvUsers.Columns[3].HeaderText = MessageUser.Patronymic;
+                dgvUsers.Columns[4].HeaderText = MessageUser.Login;
+                dgvUsers.Columns[5].HeaderText = MessageUser.Password;
                 dgvUsers.Columns[6].Visible = false;
-                dgvUsers.Columns[7].HeaderText = "Роль";
+                dgvUsers.Columns[7].HeaderText = MessageUser.Post;
                 dgvUsers.ClearSelection();
             };
             Invoke(action);
@@ -172,7 +165,6 @@ namespace Library
 
             if (button.Name == "btnUpdate") //если это апдейт
                 currentRow = dgvUsers.CurrentCell.RowIndex;
-            //currentRow = Convert.ToInt32(dgvUsers.CurrentRow.Cells[0].Value.ToString());    //запоминаем номер строки
             else
                 currentRow = -1;
 
@@ -208,12 +200,12 @@ namespace Library
                     continue;
                 else
                     if ((tbPassword.Text) == (dgvUsers.Rows[i].Cells[5].Value.ToString()))
-                {
-                    uniquePassword = false;
-                    return uniquePassword;
-                }
-                else
-                    uniquePassword = true;
+                    {
+                        uniquePassword = false;
+                        return uniquePassword;
+                    }
+                    else
+                        uniquePassword = true;
             }
 
             return uniquePassword;
@@ -226,10 +218,7 @@ namespace Library
             if ((tbLogin.TextLength >= 8) && (tbPassword.TextLength >= 8) && CheckUniqueLogin(nameButton) == true && CheckUniquePassword(nameButton) == true && (tbPassword.Text == tbRepeatPassword.Text) && CheckPasswordUpperLatin() == true && CheckPasswordLowerLatin() == true && CheckPasswordUpperCyrill() == true && CheckPasswordLowerCyrill() == true && CheckPasswordNumber() == true && CheckPassworSymbol() == true && CheckLoginCyrill() == false)
                 storedProcedure.SPUserInsert(tbSurname.Text, tbName.Text, tbPatronymic.Text, tbLogin.Text, tbPassword.Text, Convert.ToInt32(cbRole.SelectedValue.ToString()));
             else
-                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + "проверьте правильность ввода данных! Поля Логин и Пароль " +
-                    "должны быть длиною от 8 до 16 символов. Поле Логин н должно содержать русских букв. Поле Пароль должно обязательно содержать " +
-                    "хотя бы: одну заглавную английскую букву, одну прописную английскую букву, одну заглавную русскую букву, одну прописную " +
-                    "русскую букву, одну цифру, один спецсимвол. Поля Пароль и Повторите пароль должны совпадать.";
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " " + MessageUser.CorrectLoginPassword;
 
             UserFill();
         }
@@ -241,17 +230,14 @@ namespace Library
             if ((tbLogin.TextLength >= 8) && (tbPassword.TextLength >= 8) && CheckUniqueLogin(nameButton) == true && CheckUniquePassword(nameButton) == true && (tbPassword.Text == tbRepeatPassword.Text) && CheckPasswordUpperLatin() == true && CheckPasswordLowerLatin() == true && CheckPasswordUpperCyrill() == true && CheckPasswordLowerCyrill() == true && CheckPasswordNumber() == true && CheckPassworSymbol() == true && CheckLoginCyrill() == false)
                 storedProcedure.SPUserUpdate(Convert.ToInt32(dgvUsers.CurrentRow.Cells[0].Value.ToString()), tbSurname.Text, tbName.Text, tbPatronymic.Text, tbLogin.Text, tbPassword.Text, Convert.ToInt32(cbRole.SelectedValue.ToString()));
             else
-                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + "проверьте правильность ввода данных! Поля Логин и Пароль " +
-                    "должны быть длиною от 8 до 16 символов. Поле Логин н должно содержать русских букв. Поле Пароль должно обязательно содержать " +
-                    "хотя бы: одну заглавную английскую букву, одну прописную английскую букву, одну заглавную русскую букву, одну прописную " +
-                    "русскую букву, одну цифру, один спецсимвол. Поля Пароль и Повторите пароль должны совпадать.";
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " " + MessageUser.CorrectLoginPassword;
 
             UserFill();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)    //кнопка удаления записи
         {
-            switch (MessageBox.Show("Удалить пользователя " + tbSurname.Text + " " + tbName.Text + " " + tbPatronymic.Text + "?", "Удаление пользователя", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            switch (MessageBox.Show(MessageUser.QuestionDeleteUser + " " + tbSurname.Text + " " + tbName.Text + " " + tbPatronymic.Text + "?", MessageUser.DeleteUser, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
                     storedProcedure.SPUserDelete(Convert.ToInt32(dgvUsers.CurrentRow.Cells[0].Value.ToString()));
@@ -276,12 +262,12 @@ namespace Library
         private void tbSearch_Leave(object sender, EventArgs e) //поле поиска больше не в фокусе
         {
             if (tbSearch.Text == "")
-                tbSearch.Text = "Введите данные пользователя...";
+                tbSearch.Text = MessageUser.EnterDataUser;
         }
 
         private void tbSearch_Enter(object sender, EventArgs e) //клик по полю поиска
         {
-            if (tbSearch.Text == "Введите данные пользователя...")
+            if (tbSearch.Text == MessageUser.EnterDataUser)
                 tbSearch.Clear();
         }
 
@@ -308,13 +294,13 @@ namespace Library
 
                     dgvUsers.DataSource = data;
                     dgvUsers.Columns[0].Visible = false;
-                    dgvUsers.Columns[1].HeaderText = "Фамилия";
-                    dgvUsers.Columns[2].HeaderText = "Имя";
-                    dgvUsers.Columns[3].HeaderText = "Отчество";
-                    dgvUsers.Columns[4].HeaderText = "Логин";
-                    dgvUsers.Columns[5].HeaderText = "Пароль";
+                    dgvUsers.Columns[1].HeaderText = MessageUser.Surname;
+                    dgvUsers.Columns[2].HeaderText = MessageUser.Name;
+                    dgvUsers.Columns[3].HeaderText = MessageUser.Patronymic;
+                    dgvUsers.Columns[4].HeaderText = MessageUser.Login;
+                    dgvUsers.Columns[5].HeaderText = MessageUser.Password;
                     dgvUsers.Columns[6].Visible = false;
-                    dgvUsers.Columns[7].HeaderText = "Роль";
+                    dgvUsers.Columns[7].HeaderText = MessageUser.Post;
                     dgvUsers.ClearSelection();
                     break;
 
@@ -339,7 +325,7 @@ namespace Library
 
         private void btnError_Click(object sender, EventArgs e) //кнопка ошибк
         {
-            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+            MessageBox.Show(RegistryData.ErrorMessage, MessageUser.TitleError);
         }
 
         private void btnExit_Click(object sender, EventArgs e)  //кнопка закрыть

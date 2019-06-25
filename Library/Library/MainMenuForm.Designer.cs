@@ -29,10 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.miSystem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miExitProfile = new System.Windows.Forms.ToolStripMenuItem();
+            this.miAuthorization = new System.Windows.Forms.ToolStripMenuItem();
             this.miSettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.miSettingApplication = new System.Windows.Forms.ToolStripMenuItem();
+            this.miSettingConnection = new System.Windows.Forms.ToolStripMenuItem();
+            this.miExitProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.miExitSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.miIssueBook = new System.Windows.Forms.ToolStripMenuItem();
             this.miReturnBook = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,59 +71,67 @@
             this.miReturnBook,
             this.miHandbook,
             this.miDocument});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(800, 28);
-            this.menuStrip.TabIndex = 0;
             // 
             // miSystem
             // 
             this.miSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miExitProfile,
+            this.miAuthorization,
             this.miSettings,
+            this.miExitProfile,
             this.miExitSystem});
-            this.miSystem.Font = new System.Drawing.Font("Arial", 9F);
+            resources.ApplyResources(this.miSystem, "miSystem");
             this.miSystem.Name = "miSystem";
-            this.miSystem.Size = new System.Drawing.Size(80, 24);
-            this.miSystem.Text = "Система";
             // 
-            // miExitProfile
+            // miAuthorization
             // 
-            this.miExitProfile.Enabled = false;
-            this.miExitProfile.Name = "miExitProfile";
-            this.miExitProfile.Size = new System.Drawing.Size(394, 26);
-            this.miExitProfile.Text = "Выход из профиля";
-            this.miExitProfile.Click += new System.EventHandler(this.miExitProfile_Click);
+            this.miAuthorization.Name = "miAuthorization";
+            resources.ApplyResources(this.miAuthorization, "miAuthorization");
+            this.miAuthorization.Click += new System.EventHandler(this.miAuthorization_Click);
             // 
             // miSettings
             // 
-            this.miSettings.Enabled = false;
+            this.miSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miSettingApplication,
+            this.miSettingConnection});
+            resources.ApplyResources(this.miSettings, "miSettings");
             this.miSettings.Name = "miSettings";
-            this.miSettings.Size = new System.Drawing.Size(394, 26);
-            this.miSettings.Text = "Настройки";
-            this.miSettings.Click += new System.EventHandler(this.miSettings_Click);
+            // 
+            // miSettingApplication
+            // 
+            resources.ApplyResources(this.miSettingApplication, "miSettingApplication");
+            this.miSettingApplication.Name = "miSettingApplication";
+            this.miSettingApplication.Click += new System.EventHandler(this.miSettingApplication_Click);
+            // 
+            // miSettingConnection
+            // 
+            resources.ApplyResources(this.miSettingConnection, "miSettingConnection");
+            this.miSettingConnection.Name = "miSettingConnection";
+            this.miSettingConnection.Click += new System.EventHandler(this.miSettingConnection_Click);
+            // 
+            // miExitProfile
+            // 
+            resources.ApplyResources(this.miExitProfile, "miExitProfile");
+            this.miExitProfile.Name = "miExitProfile";
+            this.miExitProfile.Click += new System.EventHandler(this.miExitProfile_Click);
             // 
             // miExitSystem
             // 
             this.miExitSystem.Name = "miExitSystem";
-            this.miExitSystem.Size = new System.Drawing.Size(394, 26);
-            this.miExitSystem.Text = "Завершить работу информационной системы";
+            resources.ApplyResources(this.miExitSystem, "miExitSystem");
             this.miExitSystem.Click += new System.EventHandler(this.miExitSystem_Click);
             // 
             // miIssueBook
             // 
-            this.miIssueBook.Enabled = false;
+            resources.ApplyResources(this.miIssueBook, "miIssueBook");
             this.miIssueBook.Name = "miIssueBook";
-            this.miIssueBook.Size = new System.Drawing.Size(117, 24);
-            this.miIssueBook.Text = "Выдача книги";
             this.miIssueBook.Click += new System.EventHandler(this.miIssueBook_Click);
             // 
             // miReturnBook
             // 
-            this.miReturnBook.Enabled = false;
+            resources.ApplyResources(this.miReturnBook, "miReturnBook");
             this.miReturnBook.Name = "miReturnBook";
-            this.miReturnBook.Size = new System.Drawing.Size(121, 24);
-            this.miReturnBook.Text = "Возврат книги";
             this.miReturnBook.Click += new System.EventHandler(this.miReturnBook_Click);
             // 
             // miHandbook
@@ -132,66 +144,49 @@
             this.miPublishingBook,
             this.miGenreBook,
             this.miUsers});
-            this.miHandbook.Enabled = false;
-            this.miHandbook.Font = new System.Drawing.Font("Arial", 9F);
+            resources.ApplyResources(this.miHandbook, "miHandbook");
             this.miHandbook.Name = "miHandbook";
-            this.miHandbook.Size = new System.Drawing.Size(110, 24);
-            this.miHandbook.Text = "Справочники";
             // 
             // miFormulars
             // 
-            this.miFormulars.Enabled = false;
+            resources.ApplyResources(this.miFormulars, "miFormulars");
             this.miFormulars.Name = "miFormulars";
-            this.miFormulars.Size = new System.Drawing.Size(280, 26);
-            this.miFormulars.Text = "Формуляры...";
             this.miFormulars.Click += new System.EventHandler(this.miFormulars_Click);
             // 
             // miRegistrationCardReader
             // 
-            this.miRegistrationCardReader.Enabled = false;
+            resources.ApplyResources(this.miRegistrationCardReader, "miRegistrationCardReader");
             this.miRegistrationCardReader.Name = "miRegistrationCardReader";
-            this.miRegistrationCardReader.Size = new System.Drawing.Size(280, 26);
-            this.miRegistrationCardReader.Text = "Регистрационные карточки...";
             this.miRegistrationCardReader.Click += new System.EventHandler(this.miRegistrationCardReader_Click);
             // 
             // miBooks
             // 
-            this.miBooks.Enabled = false;
+            resources.ApplyResources(this.miBooks, "miBooks");
             this.miBooks.Name = "miBooks";
-            this.miBooks.Size = new System.Drawing.Size(280, 26);
-            this.miBooks.Text = "Книги...";
             this.miBooks.Click += new System.EventHandler(this.miBooks_Click);
             // 
             // miWriterBook
             // 
-            this.miWriterBook.Enabled = false;
+            resources.ApplyResources(this.miWriterBook, "miWriterBook");
             this.miWriterBook.Name = "miWriterBook";
-            this.miWriterBook.Size = new System.Drawing.Size(280, 26);
-            this.miWriterBook.Text = "Авторы...";
             this.miWriterBook.Click += new System.EventHandler(this.miWriterBook_Click);
             // 
             // miPublishingBook
             // 
-            this.miPublishingBook.Enabled = false;
+            resources.ApplyResources(this.miPublishingBook, "miPublishingBook");
             this.miPublishingBook.Name = "miPublishingBook";
-            this.miPublishingBook.Size = new System.Drawing.Size(280, 26);
-            this.miPublishingBook.Text = "Книжные издательства...";
             this.miPublishingBook.Click += new System.EventHandler(this.miPublishingBook_Click);
             // 
             // miGenreBook
             // 
-            this.miGenreBook.Enabled = false;
+            resources.ApplyResources(this.miGenreBook, "miGenreBook");
             this.miGenreBook.Name = "miGenreBook";
-            this.miGenreBook.Size = new System.Drawing.Size(280, 26);
-            this.miGenreBook.Text = "Жанры книг...";
             this.miGenreBook.Click += new System.EventHandler(this.miGenreBook_Click);
             // 
             // miUsers
             // 
-            this.miUsers.Enabled = false;
+            resources.ApplyResources(this.miUsers, "miUsers");
             this.miUsers.Name = "miUsers";
-            this.miUsers.Size = new System.Drawing.Size(280, 26);
-            this.miUsers.Text = "Пользователи...";
             this.miUsers.Click += new System.EventHandler(this.miUsers_Click);
             // 
             // miDocument
@@ -201,41 +196,31 @@
             this.miCreateActs,
             this.miCreateInventoryBook,
             this.miCreateSummaryBook});
-            this.miDocument.Enabled = false;
+            resources.ApplyResources(this.miDocument, "miDocument");
             this.miDocument.Name = "miDocument";
-            this.miDocument.Size = new System.Drawing.Size(207, 24);
-            this.miDocument.Text = "Формирование документа";
             // 
             // miCreatedRegistrationCardAndFormular
             // 
-            this.miCreatedRegistrationCardAndFormular.Enabled = false;
+            resources.ApplyResources(this.miCreatedRegistrationCardAndFormular, "miCreatedRegistrationCardAndFormular");
             this.miCreatedRegistrationCardAndFormular.Name = "miCreatedRegistrationCardAndFormular";
-            this.miCreatedRegistrationCardAndFormular.Size = new System.Drawing.Size(573, 26);
-            this.miCreatedRegistrationCardAndFormular.Text = "Формирование регистрационной карточки и формуляра читателя";
             this.miCreatedRegistrationCardAndFormular.Click += new System.EventHandler(this.miCreatedRegistrationCardAndFormular_Click);
             // 
             // miCreateActs
             // 
-            this.miCreateActs.Enabled = false;
+            resources.ApplyResources(this.miCreateActs, "miCreateActs");
             this.miCreateActs.Name = "miCreateActs";
-            this.miCreateActs.Size = new System.Drawing.Size(573, 26);
-            this.miCreateActs.Text = "Формирование актов о приемке и исключении книг";
             this.miCreateActs.Click += new System.EventHandler(this.miCreateActs_Click);
             // 
             // miCreateInventoryBook
             // 
-            this.miCreateInventoryBook.Enabled = false;
+            resources.ApplyResources(this.miCreateInventoryBook, "miCreateInventoryBook");
             this.miCreateInventoryBook.Name = "miCreateInventoryBook";
-            this.miCreateInventoryBook.Size = new System.Drawing.Size(573, 26);
-            this.miCreateInventoryBook.Text = "Сформировать документ \"Инвентарная книга\"";
             this.miCreateInventoryBook.Click += new System.EventHandler(this.miCreateInventoryBook_Click);
             // 
             // miCreateSummaryBook
             // 
-            this.miCreateSummaryBook.Enabled = false;
+            resources.ApplyResources(this.miCreateSummaryBook, "miCreateSummaryBook");
             this.miCreateSummaryBook.Name = "miCreateSummaryBook";
-            this.miCreateSummaryBook.Size = new System.Drawing.Size(573, 26);
-            this.miCreateSummaryBook.Text = "Сформировать документ \"Книга суммарного учета основного фонда\"";
             this.miCreateSummaryBook.Click += new System.EventHandler(this.miCreateSummaryBook_Click);
             // 
             // sstInformation
@@ -244,24 +229,18 @@
             this.sstInformation.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbsstDateTime,
             this.lbsstConnection});
-            this.sstInformation.Location = new System.Drawing.Point(0, 425);
+            resources.ApplyResources(this.sstInformation, "sstInformation");
             this.sstInformation.Name = "sstInformation";
-            this.sstInformation.Size = new System.Drawing.Size(800, 25);
-            this.sstInformation.TabIndex = 1;
-            this.sstInformation.Text = "statusStrip1";
             // 
             // lbsstDateTime
             // 
-            this.lbsstDateTime.Font = new System.Drawing.Font("Arial", 9F);
+            resources.ApplyResources(this.lbsstDateTime, "lbsstDateTime");
             this.lbsstDateTime.Name = "lbsstDateTime";
-            this.lbsstDateTime.Size = new System.Drawing.Size(140, 20);
-            this.lbsstDateTime.Text = "00:00:00/00.00.0000";
             // 
             // lbsstConnection
             // 
             this.lbsstConnection.Name = "lbsstConnection";
-            this.lbsstConnection.Size = new System.Drawing.Size(15, 20);
-            this.lbsstConnection.Text = "-";
+            resources.ApplyResources(this.lbsstConnection, "lbsstConnection");
             // 
             // timer
             // 
@@ -269,16 +248,13 @@
             // 
             // MainMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.sstInformation);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainMenuForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Главное меню";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenuForm_FormClosing);
             this.Load += new System.EventHandler(this.MainMenu_Load);
@@ -317,6 +293,9 @@
         private System.Windows.Forms.ToolStripMenuItem miCreateInventoryBook;
         private System.Windows.Forms.ToolStripMenuItem miCreateSummaryBook;
         private System.Windows.Forms.ToolStripMenuItem miUsers;
+        private System.Windows.Forms.ToolStripMenuItem miAuthorization;
+        private System.Windows.Forms.ToolStripMenuItem miSettingApplication;
+        private System.Windows.Forms.ToolStripMenuItem miSettingConnection;
     }
 }
 

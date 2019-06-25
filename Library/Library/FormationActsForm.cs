@@ -48,16 +48,16 @@ namespace Library
 
                     dgvListBook.DataSource = dbTables.DTListBookForAct;
                     dgvListBook.Columns[0].Visible = false;
-                    dgvListBook.Columns[1].HeaderText = "Название книги, автор";
-                    dgvListBook.Columns[2].HeaderText = "Цена экземпляра, руб.";
-                    dgvListBook.Columns[3].HeaderText = "Количество экземпляров";
-                    dgvListBook.Columns[4].HeaderText = "Сумма, руб.";
+                    dgvListBook.Columns[1].HeaderText = MessageUser.TitleBookAct;
+                    dgvListBook.Columns[2].HeaderText = MessageUser.CounPriceAct;
+                    dgvListBook.Columns[3].HeaderText = MessageUser.CountInstanceAct;
+                    dgvListBook.Columns[4].HeaderText = MessageUser.SummAct;
                     dgvListBook.ClearSelection();
                     dgvListBook.CurrentCell = null;
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -82,14 +82,14 @@ namespace Library
 
                 new Thread(() => actAdoptionBookWord.CreateActAdoptionBookWord(dtSelectedRows, false)).Start();
 
-                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MessageUser.DocumentCreateSucc, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvListBook.ClearSelection();
                 dgvListBook.CurrentCell = null;
                 selectedCellCount = 0;
             }
             else
             {
-                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.NeedSelectRow, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -122,13 +122,13 @@ namespace Library
 
                 new Thread(() => actAdoptionBookWord.CreateActAdoptionBookWord(dtSelectedRows, true)).Start();
 
-                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MessageUser.DocumentCreateSucc, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvListBook.ClearSelection();
                 dgvListBook.CurrentCell = null;
             }
             else
             {
-                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.NeedSelectRow, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -143,14 +143,14 @@ namespace Library
 
                 new Thread(() => actExceptionBookWord.CreateActExceptionBookWord(dtSelectedExceptionRows, false)).Start();
 
-                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MessageUser.DocumentCreateSucc, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvListBook.ClearSelection();
                 dgvListBook.CurrentCell = null;
                 selectedCellCount = 0;
             }
             else
             {
-                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.NeedSelectRow, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -183,20 +183,20 @@ namespace Library
 
                 new Thread(() => actExceptionBookWord.CreateActExceptionBookWord(dtSelectedExceptionRows, true)).Start();
 
-                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MessageUser.DocumentCreateSucc, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvListBook.ClearSelection();
                 dgvListBook.CurrentCell = null;
                 selectedCellCount = 0;
             }
             else
             {
-                MessageBox.Show("Для создания документа необходимо выделить строку!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.NeedSelectRow, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnError_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+            MessageBox.Show(RegistryData.ErrorMessage, MessageUser.TitleError);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

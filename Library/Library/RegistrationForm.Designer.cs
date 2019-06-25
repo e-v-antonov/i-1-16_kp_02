@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbSurname = new System.Windows.Forms.Label();
             this.tbSurname = new System.Windows.Forms.TextBox();
@@ -47,151 +48,88 @@
             // 
             // lbTitle
             // 
-            this.lbTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbTitle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbTitle.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.lbTitle, "lbTitle");
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(311, 32);
-            this.lbTitle.TabIndex = 1;
-            this.lbTitle.Text = "Регистрация";
-            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbSurname
             // 
-            this.lbSurname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbSurname.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSurname.Location = new System.Drawing.Point(0, 32);
+            resources.ApplyResources(this.lbSurname, "lbSurname");
             this.lbSurname.Name = "lbSurname";
-            this.lbSurname.Size = new System.Drawing.Size(311, 24);
-            this.lbSurname.TabIndex = 2;
-            this.lbSurname.Text = "Фамилия:";
             // 
             // tbSurname
             // 
-            this.tbSurname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbSurname.Location = new System.Drawing.Point(0, 56);
+            resources.ApplyResources(this.tbSurname, "tbSurname");
             this.tbSurname.Name = "tbSurname";
-            this.tbSurname.Size = new System.Drawing.Size(311, 23);
-            this.tbSurname.TabIndex = 4;
             // 
             // lbName
             // 
-            this.lbName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbName.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbName.Location = new System.Drawing.Point(0, 79);
+            resources.ApplyResources(this.lbName, "lbName");
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(311, 24);
-            this.lbName.TabIndex = 5;
-            this.lbName.Text = "Имя:";
             // 
             // tbName
             // 
-            this.tbName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbName.Location = new System.Drawing.Point(0, 103);
+            resources.ApplyResources(this.tbName, "tbName");
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(311, 23);
-            this.tbName.TabIndex = 6;
             // 
             // lbPatronymic
             // 
-            this.lbPatronymic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbPatronymic.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbPatronymic.Location = new System.Drawing.Point(0, 126);
+            resources.ApplyResources(this.lbPatronymic, "lbPatronymic");
             this.lbPatronymic.Name = "lbPatronymic";
-            this.lbPatronymic.Size = new System.Drawing.Size(311, 24);
-            this.lbPatronymic.TabIndex = 7;
-            this.lbPatronymic.Text = "Отчество:";
             // 
             // tbPatronymic
             // 
-            this.tbPatronymic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbPatronymic.Location = new System.Drawing.Point(0, 150);
+            resources.ApplyResources(this.tbPatronymic, "tbPatronymic");
             this.tbPatronymic.Name = "tbPatronymic";
-            this.tbPatronymic.Size = new System.Drawing.Size(311, 23);
-            this.tbPatronymic.TabIndex = 8;
             // 
             // lbLogin
             // 
-            this.lbLogin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbLogin.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbLogin.Location = new System.Drawing.Point(0, 173);
+            resources.ApplyResources(this.lbLogin, "lbLogin");
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(311, 24);
-            this.lbLogin.TabIndex = 9;
-            this.lbLogin.Text = "Логин:";
             // 
             // tbLogin
             // 
-            this.tbLogin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbLogin.Location = new System.Drawing.Point(0, 197);
+            resources.ApplyResources(this.tbLogin, "tbLogin");
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(311, 23);
-            this.tbLogin.TabIndex = 10;
             // 
             // lbPassword
             // 
-            this.lbPassword.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbPassword.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbPassword.Location = new System.Drawing.Point(0, 220);
+            resources.ApplyResources(this.lbPassword, "lbPassword");
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(311, 24);
-            this.lbPassword.TabIndex = 11;
-            this.lbPassword.Text = "Пароль:";
             // 
             // tbPassword
             // 
-            this.tbPassword.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbPassword.Location = new System.Drawing.Point(0, 244);
+            resources.ApplyResources(this.tbPassword, "tbPassword");
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(311, 23);
-            this.tbPassword.TabIndex = 12;
             // 
             // lbRepeatPassword
             // 
-            this.lbRepeatPassword.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbRepeatPassword.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbRepeatPassword.Location = new System.Drawing.Point(0, 267);
+            resources.ApplyResources(this.lbRepeatPassword, "lbRepeatPassword");
             this.lbRepeatPassword.Name = "lbRepeatPassword";
-            this.lbRepeatPassword.Size = new System.Drawing.Size(311, 24);
-            this.lbRepeatPassword.TabIndex = 13;
-            this.lbRepeatPassword.Text = "Повторите пароль:";
             // 
             // tbRepeatPassword
             // 
-            this.tbRepeatPassword.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbRepeatPassword.Location = new System.Drawing.Point(0, 291);
+            resources.ApplyResources(this.tbRepeatPassword, "tbRepeatPassword");
             this.tbRepeatPassword.Name = "tbRepeatPassword";
-            this.tbRepeatPassword.Size = new System.Drawing.Size(311, 23);
-            this.tbRepeatPassword.TabIndex = 14;
             // 
             // btnRegistration
             // 
-            this.btnRegistration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegistration.Location = new System.Drawing.Point(0, 314);
+            resources.ApplyResources(this.btnRegistration, "btnRegistration");
             this.btnRegistration.Name = "btnRegistration";
-            this.btnRegistration.Size = new System.Drawing.Size(311, 23);
-            this.btnRegistration.TabIndex = 15;
-            this.btnRegistration.Text = "Зарегестрироваться";
             this.btnRegistration.UseVisualStyleBackColor = true;
             this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
             // 
             // btnAuthorization
             // 
-            this.btnAuthorization.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAuthorization.Location = new System.Drawing.Point(0, 337);
+            resources.ApplyResources(this.btnAuthorization, "btnAuthorization");
             this.btnAuthorization.Name = "btnAuthorization";
-            this.btnAuthorization.Size = new System.Drawing.Size(311, 23);
-            this.btnAuthorization.TabIndex = 16;
-            this.btnAuthorization.Text = "Авторизация";
             this.btnAuthorization.UseVisualStyleBackColor = true;
             this.btnAuthorization.Click += new System.EventHandler(this.btnAuthorization_Click);
             // 
             // RegistrationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(311, 358);
             this.Controls.Add(this.btnAuthorization);
             this.Controls.Add(this.btnRegistration);
             this.Controls.Add(this.tbRepeatPassword);
@@ -207,10 +145,7 @@
             this.Controls.Add(this.tbSurname);
             this.Controls.Add(this.lbSurname);
             this.Controls.Add(this.lbTitle);
-            this.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "RegistrationForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
 

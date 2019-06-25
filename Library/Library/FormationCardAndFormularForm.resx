@@ -117,4 +117,301 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gbCreateDocument.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="btnCreateWordRegistrationCard.Text" xml:space="preserve">
+    <value>Сформировать регистрационную карточку читателя в формате *.docx</value>
+  </data>
+  <data name="lbTitle.Text" xml:space="preserve">
+    <value>Выберите читателя</value>
+  </data>
+  <data name="btnError.Text" xml:space="preserve">
+    <value>Ошибки</value>
+  </data>
+  <data name="btnError.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1036, 24</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordFormular.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordFormular.Name" xml:space="preserve">
+    <value>btnCreateWordFormular</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnCreateWordRegistrationCard.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnCreatePdfFormular.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 88</value>
+  </data>
+  <data name="pnCancel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="btnPdfRegistrationCard.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dgvRegistrationCard.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormationCardAndFormularForm</value>
+  </data>
+  <data name="&gt;&gt;btnError.Parent" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="&gt;&gt;gbCreateDocument.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnError.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordRegistrationCard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1036, 36</value>
+  </data>
+  <data name="btnCreateWordFormular.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="btnCreateWordFormular.Location" type="System.Drawing.Point, System.Drawing">
+    <value>889, 19</value>
+  </data>
+  <data name="&gt;&gt;dgvRegistrationCard.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnError.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dgvRegistrationCard.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;gbCreateDocument.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordRegistrationCard.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="btnCreatePdfFormular.Text" xml:space="preserve">
+    <value>Сформировать формуляр читателя в формате .pdf</value>
+  </data>
+  <data name="gbCreateDocument.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1036, 110</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfFormular.Name" xml:space="preserve">
+    <value>btnCreatePdfFormular</value>
+  </data>
+  <data name="&gt;&gt;lbTitle.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnCreateWordRegistrationCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 88</value>
+  </data>
+  <data name="&gt;&gt;lbTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnError.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dgvRegistrationCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="btnCreateWordRegistrationCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="lbTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnCreatePdfFormular.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 19</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfFormular.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 484</value>
+  </data>
+  <data name="btnCreateWordRegistrationCard.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;btnPdfRegistrationCard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="btnCreateWordFormular.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 88</value>
+  </data>
+  <data name="&gt;&gt;dgvRegistrationCard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnPdfRegistrationCard.Text" xml:space="preserve">
+    <value>Сформировать регистрационную карточку читателя в формате *.pdf</value>
+  </data>
+  <data name="pnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnPdfRegistrationCard.Name" xml:space="preserve">
+    <value>btnPdfRegistrationCard</value>
+  </data>
+  <data name="lbTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfFormular.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbTitle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordRegistrationCard.Parent" xml:space="preserve">
+    <value>gbCreateDocument</value>
+  </data>
+  <data name="lbTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordRegistrationCard.Name" xml:space="preserve">
+    <value>btnCreateWordRegistrationCard</value>
+  </data>
+  <data name="btnExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordFormular.Parent" xml:space="preserve">
+    <value>gbCreateDocument</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbTitle.Name" xml:space="preserve">
+    <value>lbTitle</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnPdfRegistrationCard.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnPdfRegistrationCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 19</value>
+  </data>
+  <data name="&gt;&gt;btnError.Name" xml:space="preserve">
+    <value>btnError</value>
+  </data>
+  <data name="&gt;&gt;btnCreateWordFormular.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbCreateDocument.Text" xml:space="preserve">
+    <value>Формирование документов</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 36</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>917, 0</value>
+  </data>
+  <data name="dgvRegistrationCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1036, 350</value>
+  </data>
+  <data name="btnError.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 36</value>
+  </data>
+  <data name="&gt;&gt;dgvRegistrationCard.Name" xml:space="preserve">
+    <value>dgvRegistrationCard</value>
+  </data>
+  <data name="&gt;&gt;gbCreateDocument.Name" xml:space="preserve">
+    <value>gbCreateDocument</value>
+  </data>
+  <data name="&gt;&gt;btnPdfRegistrationCard.Parent" xml:space="preserve">
+    <value>gbCreateDocument</value>
+  </data>
+  <data name="&gt;&gt;gbCreateDocument.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Формирование регистрационных карточек и формуляров читателей</value>
+  </data>
+  <data name="lbTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgvRegistrationCard.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnPdfRegistrationCard.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gbCreateDocument.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="gbCreateDocument.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 374</value>
+  </data>
+  <data name="&gt;&gt;btnError.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCreatePdfFormular.Parent" xml:space="preserve">
+    <value>gbCreateDocument</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="btnCreatePdfFormular.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="btnCreateWordFormular.Text" xml:space="preserve">
+    <value>Сформировать формуляр читателя в формате .docx</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1036, 520</value>
+  </data>
+  <data name="btnCreatePdfFormular.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnPdfRegistrationCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 88</value>
+  </data>
+  <data name="btnCreateWordFormular.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Name" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

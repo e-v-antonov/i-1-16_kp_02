@@ -34,7 +34,6 @@ namespace Library
 
         public RegistrationCardForm()
         {
-            //Program.EnableRegistrationCardForm = this;
             InitializeComponent();            
         }
 
@@ -66,28 +65,28 @@ namespace Library
 
                     dgvRegistrationCard.DataSource = dbTables.DTRegistrationCard;
                     dgvRegistrationCard.Columns[0].Visible = false;
-                    dgvRegistrationCard.Columns[1].HeaderText = "Фамилия";
-                    dgvRegistrationCard.Columns[2].HeaderText = "Имя";
-                    dgvRegistrationCard.Columns[3].HeaderText = "Отчество";
-                    dgvRegistrationCard.Columns[4].HeaderText = "Дата рождения";
-                    dgvRegistrationCard.Columns[5].HeaderText = "Серия паспорта";
-                    dgvRegistrationCard.Columns[6].HeaderText = "Номер паспорта";
-                    dgvRegistrationCard.Columns[7].HeaderText = "Кем выдан паспорт";
-                    dgvRegistrationCard.Columns[8].HeaderText = "Когда выдан паспорт";
-                    dgvRegistrationCard.Columns[9].HeaderText = "Город";
-                    dgvRegistrationCard.Columns[10].HeaderText = "Улица";
-                    dgvRegistrationCard.Columns[11].HeaderText = "Дом";
-                    dgvRegistrationCard.Columns[12].HeaderText = "Квартира";
-                    dgvRegistrationCard.Columns[13].HeaderText = "Номер мобильного телефона";
-                    dgvRegistrationCard.Columns[14].HeaderText = "Номер домашнего телефона";
-                    dgvRegistrationCard.Columns[15].HeaderText = "Адрес электронной почты";
-                    dgvRegistrationCard.Columns[16].HeaderText = "Наличие книги";
+                    dgvRegistrationCard.Columns[1].HeaderText = MessageUser.Surname;
+                    dgvRegistrationCard.Columns[2].HeaderText = MessageUser.Name;
+                    dgvRegistrationCard.Columns[3].HeaderText = MessageUser.Patronymic;
+                    dgvRegistrationCard.Columns[4].HeaderText = MessageUser.DataBirthday;
+                    dgvRegistrationCard.Columns[5].HeaderText = MessageUser.PassportSeries;
+                    dgvRegistrationCard.Columns[6].HeaderText = MessageUser.PassportNumbers;
+                    dgvRegistrationCard.Columns[7].HeaderText = MessageUser.WhoGivePassport;
+                    dgvRegistrationCard.Columns[8].HeaderText = MessageUser.WhenGivePassport;
+                    dgvRegistrationCard.Columns[9].HeaderText = MessageUser.City;
+                    dgvRegistrationCard.Columns[10].HeaderText = MessageUser.Street;
+                    dgvRegistrationCard.Columns[11].HeaderText = MessageUser.Building;
+                    dgvRegistrationCard.Columns[12].HeaderText = MessageUser.Apartment;
+                    dgvRegistrationCard.Columns[14].HeaderText = MessageUser.MobilePhone;
+                    dgvRegistrationCard.Columns[13].HeaderText = MessageUser.HomePhone;
+                    dgvRegistrationCard.Columns[15].HeaderText = MessageUser.Email;
+                    dgvRegistrationCard.Columns[16].HeaderText = MessageUser.HaveBook;
                     dgvRegistrationCard.Columns[17].Visible = false;
                     dgvRegistrationCard.ClearSelection();
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -120,9 +119,9 @@ namespace Library
             tbEmail.Text = dgvRegistrationCard.CurrentRow.Cells[15].Value.ToString();
 
             if (dgvRegistrationCard.CurrentRow.Cells[16].Value.ToString() == "1")
-                lbHaveBook.Text = "Наличие книги в данный момент: Да";
+                lbHaveBook.Text = MessageUser.BookAvailable;
             else
-                lbHaveBook.Text = "Наличие книги в данный момент: Нет";
+                lbHaveBook.Text = MessageUser.BookAvailableNo;
         }
 
         private bool CheckPassportSeries()  //функция проверки серии паспорта
@@ -282,7 +281,7 @@ namespace Library
             }
             catch
             {
-                MessageBox.Show("Введите правильные даты!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.CorrectDate, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             if (CheckPassportSeries() == false && CheckPassportNumber() == false && CheckWhoGivePassport() == false && CheckTown() == false && CheckStreet() == false && CheckEmail() == false && UniquePassportSeiesNumber(nameButton) == true && UniqueMobile(nameButton) == true && UniqueEmailAddress(nameButton) == true)
@@ -294,13 +293,10 @@ namespace Library
                 }
                 catch
                 {
-                    RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " Поля Дом и Квартира должны быть заполнены целыми числами! Проверьте правильность ввода данных!";
+                    RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " " + MessageUser.FilledIntegers;
                 }
             else
-                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + "Проверьте правильность ввода данных! Поля Серия паспорта и " +
-                    "Номер паспорта должны содержать 4 и 6 цифр соответственно.\n Поля Кем выдан паспорт, Город, Улица не должны содержать других " +
-                    "знаков кроме русских букв, цифр, точки, и дефиса.\n Поле адрес электронной почты обязательно должен содержать знак @ и точку после него.\n " +
-                    "Комбинация серии и номера паспорта, а также номер мобильного телефона и адрес электронной почты должны быть уникальными по отношению к данным в базе данных.";
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " " + MessageUser.ErrorRegCard;
 
             tbSurname.Clear();
             tbName.Clear();
@@ -334,7 +330,7 @@ namespace Library
             }
             catch
             {
-                MessageBox.Show("Введите правильные даты!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.CorrectDate, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             if (CheckPassportSeries() == false && CheckPassportNumber() == false && CheckWhoGivePassport() == false && CheckTown() == false && CheckStreet() == false && CheckEmail() == false && UniquePassportSeiesNumber(nameButton) == true && UniqueMobile(nameButton) == true && UniqueEmailAddress(nameButton) == true)
@@ -346,12 +342,10 @@ namespace Library
                 }
                 catch
                 {
-                    RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " Поля Дом и Квартира должны быть заполнены числами! Проверьте правильность ввода данных!";
+                    RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " " + MessageUser.FilledIntegers;
                 }
             else
-                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + "Проверьте правильность ввода данных! Поля Серия паспорта и " +
-                    "Номер паспорта должны содержать 4 и 6 цифр соответственно.\n Поля Кем выдан паспорт, Город, Улица не должны содержать других " +
-                    "знаков кроме русских букв, цифр, точки, и дефиса.\n Поле адрес электронной почты обязательно должен содержать знак @ и точку после него.";
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " " + MessageUser.ErrorRegCard;
 
             tbSurname.Clear();
             tbName.Clear();
@@ -374,7 +368,7 @@ namespace Library
 
         private void btnDelete_Click(object sender, EventArgs e)    //кнопка удаления записи
         {
-            switch (MessageBox.Show("Удалить регистрационную карточку " + tbSurname.Text + " " + tbName.Text + " " + tbPatronymic.Text + "?", "Удаление регистрационной карточки", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            switch (MessageBox.Show(MessageUser.QuestionDeleteRegCard + " " + tbSurname.Text + " " + tbName.Text + " " + tbPatronymic.Text + "?", MessageUser.DeleteRegCard, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
                     storedProcedure.SPRegistrationCardReaderDelete(Convert.ToInt32(dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString()));
@@ -401,14 +395,14 @@ namespace Library
 
         private void tbSearch_Enter(object sender, EventArgs e) //поле поиска стало активным
         {
-            if (tbSearch.Text == "Введите данные автора...")
+            if (tbSearch.Text == MessageUser.EnterDataReader)
                 tbSearch.Clear();
         }
 
         private void tbSearch_Leave(object sender, EventArgs e) //поле поиска больше не в фокусе
         {
             if (tbSearch.Text == "")
-                tbSearch.Text = "Введите данные автора...";
+                tbSearch.Text = MessageUser.EnterDataReader;
         }
 
         private void tbSearch_Click(object sender, EventArgs e) //клик по полю поиска
@@ -445,22 +439,22 @@ namespace Library
 
                     dgvRegistrationCard.DataSource = data;
                     dgvRegistrationCard.Columns[0].Visible = false;
-                    dgvRegistrationCard.Columns[1].HeaderText = "Фамилия";
-                    dgvRegistrationCard.Columns[2].HeaderText = "Имя";
-                    dgvRegistrationCard.Columns[3].HeaderText = "Отчество";
-                    dgvRegistrationCard.Columns[4].HeaderText = "Дата рождения";
-                    dgvRegistrationCard.Columns[5].HeaderText = "Серия паспорта";
-                    dgvRegistrationCard.Columns[6].HeaderText = "Номер паспорта";
-                    dgvRegistrationCard.Columns[7].HeaderText = "Кем выдан паспорт";
-                    dgvRegistrationCard.Columns[8].HeaderText = "Когда выдан паспорт";
-                    dgvRegistrationCard.Columns[9].HeaderText = "Город";
-                    dgvRegistrationCard.Columns[10].HeaderText = "Улица";
-                    dgvRegistrationCard.Columns[11].HeaderText = "Дом";
-                    dgvRegistrationCard.Columns[12].HeaderText = "Квартира";
-                    dgvRegistrationCard.Columns[13].HeaderText = "Номер мобильного телефона";
-                    dgvRegistrationCard.Columns[14].HeaderText = "Номер домашнего телефона";
-                    dgvRegistrationCard.Columns[15].HeaderText = "Адрес электронной почты";
-                    dgvRegistrationCard.Columns[16].HeaderText = "Наличие книги";
+                    dgvRegistrationCard.Columns[1].HeaderText = MessageUser.Surname;
+                    dgvRegistrationCard.Columns[2].HeaderText = MessageUser.Name;
+                    dgvRegistrationCard.Columns[3].HeaderText = MessageUser.Patronymic;
+                    dgvRegistrationCard.Columns[4].HeaderText = MessageUser.DataBirthday;
+                    dgvRegistrationCard.Columns[5].HeaderText = MessageUser.PassportSeries;
+                    dgvRegistrationCard.Columns[6].HeaderText = MessageUser.PassportNumbers;
+                    dgvRegistrationCard.Columns[7].HeaderText = MessageUser.WhoGivePassport;
+                    dgvRegistrationCard.Columns[8].HeaderText = MessageUser.WhenGivePassport;
+                    dgvRegistrationCard.Columns[9].HeaderText = MessageUser.City;
+                    dgvRegistrationCard.Columns[10].HeaderText = MessageUser.Street;
+                    dgvRegistrationCard.Columns[11].HeaderText = MessageUser.Building;
+                    dgvRegistrationCard.Columns[12].HeaderText = MessageUser.Apartment;
+                    dgvRegistrationCard.Columns[14].HeaderText = MessageUser.MobilePhone;
+                    dgvRegistrationCard.Columns[13].HeaderText = MessageUser.HomePhone;
+                    dgvRegistrationCard.Columns[15].HeaderText = MessageUser.Email;
+                    dgvRegistrationCard.Columns[16].HeaderText = MessageUser.HaveBook;
                     dgvRegistrationCard.ClearSelection();
                     break;
 
@@ -485,7 +479,7 @@ namespace Library
 
         private void btnError_Click(object sender, EventArgs e) //кнопка ошибки
         {
-            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+            MessageBox.Show(RegistryData.ErrorMessage, MessageUser.TitleError);
         }
 
         private void btnExit_Click(object sender, EventArgs e)  //кнопка закрыть
@@ -495,7 +489,6 @@ namespace Library
 
         private void dgvRegistrationCard_Click(object sender, EventArgs e)  //клик по data grid view
         {
-            //RegistrationCardFill();
         }
     }
 }

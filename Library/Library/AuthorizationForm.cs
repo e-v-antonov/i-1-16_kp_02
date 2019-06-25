@@ -14,13 +14,15 @@ namespace Library
 
         public AuthorizationForm()
         {
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+            //System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
             InitializeComponent();
         }
 
         private void btnAuthorization_Click(object sender, EventArgs e) //клик по кнопке авторизация
         {
             if (tbLogin.TextLength == 0 || tbPassword.TextLength == 0)  //проверка заполненности полей
-                MessageBox.Show("Все поля должны быть заполнены!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.AllMargin, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 SqlCommand commandSearchUser = new SqlCommand("", RegistryData.DBConnectionString);
@@ -39,7 +41,7 @@ namespace Library
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка проверки логина и пароля пользователя!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoginAndPassord, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -47,7 +49,7 @@ namespace Library
                 }
 
                 if (checkUser == 0)
-                    MessageBox.Show("Пользователя с данным логин и паролем не обнаружено! Проверьте правильность ввода данных или зарегистрируйтесь.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.NoUserLoginPassword, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else     //установление роли данного пользователя
                 {
 
@@ -64,7 +66,7 @@ namespace Library
                         RegistryData.DBConnectionString.Close();
                     }
 
-                    MessageBox.Show("Вы авторизовались в информационной системе.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(MessageUser.SuccessfullyAuthoriz, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     EnableComponent.EventHandler(userRole);                    
                     this.Hide();                       
                 }

@@ -23,12 +23,12 @@ namespace Library
             InitializeComponent();
         }
 
-        private void btnReturnBook_Click(object sender, EventArgs e)
+        private void btnReturnBook_Click(object sender, EventArgs e)    //клик по кнопке возврата книги
         {
             SqlCommand commandReader = new SqlCommand("", RegistryData.DBConnectionString);
             commandReader.CommandText = "select count(*) from [dbo].[Registration_Card_Reader_View] where [Surname_Reader] = '" + tbSurname.Text + "' and [Name_Reader] = '" + tbName.Text + "' and [Patronymic_Reader] = '" + tbPatronymic.Text + "' and [Passport_Series_Reader] = '" + tbPassportSeries.Text + "' and [Passport_Number_Reader] = '" + tbPassportNumber.Text + "'";
 
-            try
+            try    //проверка наличия читателя
             {
                 RegistryData.DBConnectionString.Open();
                 DBTables dbTables = new DBTables();
@@ -39,16 +39,15 @@ namespace Library
             catch (Exception ex)
             {
                 RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + ex.Message;
-                MessageBox.Show("Читатель с данными параметрами не зарегистрирован в библиотеке.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 RegistryData.DBConnectionString.Close();
             }
 
-            if (countReader == 0)
+            if (countReader == 0)   //если такого чиитателя нет
             {
-                MessageBox.Show("Читатель с данными параметрами не зарегистрирован в библиотеке.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.NoReaderLibrary, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbSurname.Clear();
                 tbName.Clear();
                 tbPatronymic.Clear();
@@ -57,29 +56,43 @@ namespace Library
             }
             else
             {
-                SqlCommand commandIDReader = new SqlCommand("", RegistryData.DBConnectionString);
-                commandIDReader.CommandText = "select [ID_Registration_Card_Reader] from [dbo].[Registration_Card_Reader_View] where [Surname_Reader] = '" + tbSurname.Text + "' and [Name_Reader] = '" + tbName.Text + "' and [Patronymic_Reader] = '" + tbPatronymic.Text + "' and [Passport_Series_Reader] = '" + tbPassportSeries.Text + "' and [Passport_Number_Reader] = '" + tbPassportNumber.Text + "'";
-                RegistryData.DBConnectionString.Open();
-                DBTables dbTables = new DBTables();
-                dbTables.CommandOpenKey.ExecuteNonQuery();
-                idReader = Convert.ToInt32(commandIDReader.ExecuteScalar().ToString());
-                dbTables.CommandCloseKey.ExecuteNonQuery();
+                try
+                {
+                    SqlCommand commandIDReader = new SqlCommand("", RegistryData.DBConnectionString);
+                    commandIDReader.CommandText = "select [ID_Registration_Card_Reader] from [dbo].[Registration_Card_Reader_View] where [Surname_Reader] = '" + tbSurname.Text + "' and [Name_Reader] = '" + tbName.Text + "' and [Patronymic_Reader] = '" + tbPatronymic.Text + "' and [Passport_Series_Reader] = '" + tbPassportSeries.Text + "' and [Passport_Number_Reader] = '" + tbPassportNumber.Text + "'";
+                    RegistryData.DBConnectionString.Open();
+                    DBTables dbTables = new DBTables();
+                    dbTables.CommandOpenKey.ExecuteNonQuery();
+                    idReader = Convert.ToInt32(commandIDReader.ExecuteScalar().ToString());
+                    dbTables.CommandCloseKey.ExecuteNonQuery();
 
-                SqlCommand commandIDFormular = new SqlCommand("", RegistryData.DBConnectionString);
-                commandIDFormular.CommandText = "select [ID_Formular_Reader] from [dbo].[Formular_Reader] where [Book_Returned] = 0 and [Registration_Card_Reader_ID] = " + idReader.ToString();
-                idFormular = Convert.ToInt32(commandIDFormular.ExecuteScalar().ToString());
-                RegistryData.DBConnectionString.Close();
+                    SqlCommand commandIDFormular = new SqlCommand("", RegistryData.DBConnectionString);
+                    commandIDFormular.CommandText = "select [ID_Formular_Reader] from [dbo].[Formular_Reader] where [Book_Returned] = 0 and [Registration_Card_Reader_ID] = " + idReader.ToString();
+                    idFormular = Convert.ToInt32(commandIDFormular.ExecuteScalar().ToString());
+                }
+                catch (Exception ex)
+                {
+                    RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + ex.Message;
+                }
+                finally
+                {
+                    RegistryData.DBConnectionString.Close();
+                }
 
-                storedProcedure.SPFormularReturnBookUpdate(idFormular);                
+                if (idFormular > 0)
+                {
+                    storedProcedure.SPFormularReturnBookUpdate(idFormular);
+                    MessageBox.Show(MessageUser.BookReturnedSucc, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
-        private void btnError_Click(object sender, EventArgs e)
+        private void btnError_Click(object sender, EventArgs e) //клик по кнопке ошибки
         {
-            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+            MessageBox.Show(RegistryData.ErrorMessage, MessageUser.TitleError);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e) //клик по кнопке закрыть
         {
             Close();
         }

@@ -55,25 +55,25 @@ namespace Library
 
                     dgvBook.DataSource = dbTables.DTBook;
                     dgvBook.Columns[0].Visible = false;
-                    dgvBook.Columns[1].HeaderText = "Название книги";
+                    dgvBook.Columns[1].HeaderText = MessageUser.BookTitle;
                     dgvBook.Columns[2].Visible = false;
-                    dgvBook.Columns[3].HeaderText = "Автор";
+                    dgvBook.Columns[3].HeaderText = MessageUser.WriterBook;
                     dgvBook.Columns[4].Visible = false;
-                    dgvBook.Columns[5].HeaderText = "Жанр";
+                    dgvBook.Columns[5].HeaderText = MessageUser.GenreBook;
                     dgvBook.Columns[6].Visible = false;
-                    dgvBook.Columns[7].HeaderText = "Издательство";
-                    dgvBook.Columns[8].HeaderText = "Год издания";
-                    dgvBook.Columns[9].HeaderText = "Количество страниц";
-                    dgvBook.Columns[10].HeaderText = "Номер ISBN";
-                    dgvBook.Columns[11].HeaderText = "Стоимость экземпляра";
-                    dgvBook.Columns[12].HeaderText = "Общее количество экземпляров";
-                    dgvBook.Columns[13].HeaderText = "Доступное количество экземпляров";
-                    dgvBook.Columns[14].HeaderText = "Дата регистрации книги";
+                    dgvBook.Columns[7].HeaderText = MessageUser.PublishingBook;
+                    dgvBook.Columns[8].HeaderText = MessageUser.PublicationDate;
+                    dgvBook.Columns[9].HeaderText = MessageUser.NumberOfPages;
+                    dgvBook.Columns[10].HeaderText = MessageUser.NumberISBN;
+                    dgvBook.Columns[11].HeaderText = MessageUser.TheCostOfInstance;
+                    dgvBook.Columns[12].HeaderText = MessageUser.TotalNumberOfInstances;
+                    dgvBook.Columns[13].HeaderText = MessageUser.NumberOfInstancesAvailable;
+                    dgvBook.Columns[14].HeaderText = MessageUser.DateRistrationBook;
                     dgvBook.ClearSelection();
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -121,7 +121,7 @@ namespace Library
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -146,7 +146,7 @@ namespace Library
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -171,7 +171,7 @@ namespace Library
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -215,7 +215,7 @@ namespace Library
             }
             catch
             {
-                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " Поля Год издания, Количество страниц, Стоимость экземпляра, Общее количество экземпляров должны быть заполнены целыми числами! Проверьте правильность " + tbSearch.Text + "ода данных!";
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + MessageUser.ErrorInsertUpdateBook;
             }
 
             tbBookTitle.Clear();
@@ -246,7 +246,7 @@ namespace Library
             }
             catch
             {
-                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " Поля Год издания, Количество страниц, Стоимость экземпляра, Общее количество экземпляров должны быть заполнены целыми числами! Проверьте правильность " + tbSearch.Text + "ода данных!";
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + MessageUser.ErrorInsertUpdateBook;
             }
 
             tbBookTitle.Clear();
@@ -264,7 +264,7 @@ namespace Library
 
         private void btnDelete_Click(object sender, EventArgs e)    //кнопка удаления записи
         {
-            switch (MessageBox.Show("Удалить данные книги " + tbBookTitle.Text + "?", "Удаление данных книги", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            switch (MessageBox.Show(MessageUser.QuestionDeleteBook + " " + tbBookTitle.Text + "?", MessageUser.DeleteBookTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
                     storedProcedure.SPBookDelete(Convert.ToInt32(dgvBook.CurrentRow.Cells[0].Value.ToString()));
@@ -290,14 +290,14 @@ namespace Library
 
         private void tbSearch_Enter(object sender, EventArgs e) //поле поиска стало активным
         {
-            if (tbSearch.Text == "" + tbSearch.Text + "Введите данные книги...")
+            if (tbSearch.Text == "" + tbSearch.Text + MessageUser.EnterDetailsBook)
                 tbSearch.Clear();
         }
 
         private void tbSearch_Leave(object sender, EventArgs e) //поле поиска больше не в фокусе
         {
             if (tbSearch.Text == "")
-                tbSearch.Text = "" + tbSearch.Text + "Введите данные книги...";
+                tbSearch.Text = "" + tbSearch.Text + MessageUser.EnterDetailsBook;
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)   //введение текста в поле поиска
@@ -325,20 +325,20 @@ namespace Library
 
                     dgvBook.DataSource = data;
                     dgvBook.Columns[0].Visible = false;
-                    dgvBook.Columns[1].HeaderText = "Название книги";
+                    dgvBook.Columns[1].HeaderText = MessageUser.BookTitle;
                     dgvBook.Columns[2].Visible = false;
-                    dgvBook.Columns[3].HeaderText = "Автор";
+                    dgvBook.Columns[3].HeaderText = MessageUser.WriterBook;
                     dgvBook.Columns[4].Visible = false;
-                    dgvBook.Columns[5].HeaderText = "Жанр";
+                    dgvBook.Columns[5].HeaderText = MessageUser.GenreBook;
                     dgvBook.Columns[6].Visible = false;
-                    dgvBook.Columns[7].HeaderText = "Издательство";
-                    dgvBook.Columns[8].HeaderText = "Год издания";
-                    dgvBook.Columns[9].HeaderText = "Количество страниц";
-                    dgvBook.Columns[10].HeaderText = "Номер ISBN";
-                    dgvBook.Columns[11].HeaderText = "Стоимость экземпляра";
-                    dgvBook.Columns[12].HeaderText = "Общее количество экземпляров";
-                    dgvBook.Columns[13].HeaderText = "Доступное количество экземпляров";
-                    dgvBook.Columns[14].HeaderText = "Дата регистрации книги";
+                    dgvBook.Columns[7].HeaderText = MessageUser.PublishingBook;
+                    dgvBook.Columns[8].HeaderText = MessageUser.PublicationDate;
+                    dgvBook.Columns[9].HeaderText = MessageUser.NumberOfPages;
+                    dgvBook.Columns[10].HeaderText = MessageUser.NumberISBN;
+                    dgvBook.Columns[11].HeaderText = MessageUser.TheCostOfInstance;
+                    dgvBook.Columns[12].HeaderText = MessageUser.TotalNumberOfInstances;
+                    dgvBook.Columns[13].HeaderText = MessageUser.NumberOfInstancesAvailable;
+                    dgvBook.Columns[14].HeaderText = MessageUser.DateRistrationBook;
                     dgvBook.ClearSelection();
                     break;
 
@@ -381,7 +381,7 @@ namespace Library
 
         private void btnError_Click(object sender, EventArgs e) //кнопка ошибки
         {
-            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+            MessageBox.Show(RegistryData.ErrorMessage, MessageUser.TitleError);
         }
 
         private void btnExit_Click(object sender, EventArgs e)   //кнопка закрыть

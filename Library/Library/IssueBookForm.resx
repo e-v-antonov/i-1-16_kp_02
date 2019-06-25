@@ -117,4 +117,1384 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>943, 0</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 36</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnError.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnError.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnError.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 36</value>
+  </data>
+  <data name="btnError.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnError.Text" xml:space="preserve">
+    <value>Ошибки</value>
+  </data>
+  <data name="&gt;&gt;btnError.Name" xml:space="preserve">
+    <value>btnError</value>
+  </data>
+  <data name="&gt;&gt;btnError.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnError.Parent" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnError.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnCancel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="pnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 520</value>
+  </data>
+  <data name="pnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1062, 36</value>
+  </data>
+  <data name="pnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Name" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnRegistrationReader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnRegistrationReader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="btnRegistrationReader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 23</value>
+  </data>
+  <data name="btnRegistrationReader.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnRegistrationReader.Text" xml:space="preserve">
+    <value>Регистрация читателя</value>
+  </data>
+  <data name="&gt;&gt;btnRegistrationReader.Name" xml:space="preserve">
+    <value>btnRegistrationReader</value>
+  </data>
+  <data name="&gt;&gt;btnRegistrationReader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRegistrationReader.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnRegistrationReader.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnIdentificationReader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnIdentificationReader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnIdentificationReader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 23</value>
+  </data>
+  <data name="btnIdentificationReader.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnIdentificationReader.Text" xml:space="preserve">
+    <value>Идентификация читателя</value>
+  </data>
+  <data name="&gt;&gt;btnIdentificationReader.Name" xml:space="preserve">
+    <value>btnIdentificationReader</value>
+  </data>
+  <data name="&gt;&gt;btnIdentificationReader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnIdentificationReader.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnIdentificationReader.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 19</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 50</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>gbSearchReader</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbPassportNumber.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbPassportNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="tbPassportNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 23</value>
+  </data>
+  <data name="tbPassportNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tbPassportNumber.Name" xml:space="preserve">
+    <value>tbPassportNumber</value>
+  </data>
+  <data name="&gt;&gt;tbPassportNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPassportNumber.Parent" xml:space="preserve">
+    <value>pnPassportNumber</value>
+  </data>
+  <data name="&gt;&gt;tbPassportNumber.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbPassportNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbPassportNumber.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbPassportNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbPassportNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 16</value>
+  </data>
+  <data name="lbPassportNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lbPassportNumber.Text" xml:space="preserve">
+    <value>Номер паспорта</value>
+  </data>
+  <data name="&gt;&gt;lbPassportNumber.Name" xml:space="preserve">
+    <value>lbPassportNumber</value>
+  </data>
+  <data name="&gt;&gt;lbPassportNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPassportNumber.Parent" xml:space="preserve">
+    <value>pnPassportNumber</value>
+  </data>
+  <data name="&gt;&gt;lbPassportNumber.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnPassportNumber.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnPassportNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>583, 19</value>
+  </data>
+  <data name="pnPassportNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 50</value>
+  </data>
+  <data name="pnPassportNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pnPassportNumber.Name" xml:space="preserve">
+    <value>pnPassportNumber</value>
+  </data>
+  <data name="&gt;&gt;pnPassportNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnPassportNumber.Parent" xml:space="preserve">
+    <value>gbSearchReader</value>
+  </data>
+  <data name="&gt;&gt;pnPassportNumber.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbPassportSeries.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbPassportSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="tbPassportSeries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 23</value>
+  </data>
+  <data name="tbPassportSeries.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tbPassportSeries.Name" xml:space="preserve">
+    <value>tbPassportSeries</value>
+  </data>
+  <data name="&gt;&gt;tbPassportSeries.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPassportSeries.Parent" xml:space="preserve">
+    <value>pnPassportSeries</value>
+  </data>
+  <data name="&gt;&gt;tbPassportSeries.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbPassportSeries.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbPassportSeries.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbPassportSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbPassportSeries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 16</value>
+  </data>
+  <data name="lbPassportSeries.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lbPassportSeries.Text" xml:space="preserve">
+    <value>Серия паспорта</value>
+  </data>
+  <data name="&gt;&gt;lbPassportSeries.Name" xml:space="preserve">
+    <value>lbPassportSeries</value>
+  </data>
+  <data name="&gt;&gt;lbPassportSeries.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPassportSeries.Parent" xml:space="preserve">
+    <value>pnPassportSeries</value>
+  </data>
+  <data name="&gt;&gt;lbPassportSeries.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnPassportSeries.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnPassportSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 19</value>
+  </data>
+  <data name="pnPassportSeries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 50</value>
+  </data>
+  <data name="pnPassportSeries.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnPassportSeries.Name" xml:space="preserve">
+    <value>pnPassportSeries</value>
+  </data>
+  <data name="&gt;&gt;pnPassportSeries.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnPassportSeries.Parent" xml:space="preserve">
+    <value>gbSearchReader</value>
+  </data>
+  <data name="&gt;&gt;pnPassportSeries.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tbPatronymic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbPatronymic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="tbPatronymic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 23</value>
+  </data>
+  <data name="tbPatronymic.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tbPatronymic.Name" xml:space="preserve">
+    <value>tbPatronymic</value>
+  </data>
+  <data name="&gt;&gt;tbPatronymic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbPatronymic.Parent" xml:space="preserve">
+    <value>pnPatronymic</value>
+  </data>
+  <data name="&gt;&gt;tbPatronymic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbPatronymic.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbPatronymic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbPatronymic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbPatronymic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 16</value>
+  </data>
+  <data name="lbPatronymic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lbPatronymic.Text" xml:space="preserve">
+    <value>Отчество</value>
+  </data>
+  <data name="&gt;&gt;lbPatronymic.Name" xml:space="preserve">
+    <value>lbPatronymic</value>
+  </data>
+  <data name="&gt;&gt;lbPatronymic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPatronymic.Parent" xml:space="preserve">
+    <value>pnPatronymic</value>
+  </data>
+  <data name="&gt;&gt;lbPatronymic.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnPatronymic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnPatronymic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 19</value>
+  </data>
+  <data name="pnPatronymic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 50</value>
+  </data>
+  <data name="pnPatronymic.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pnPatronymic.Name" xml:space="preserve">
+    <value>pnPatronymic</value>
+  </data>
+  <data name="&gt;&gt;pnPatronymic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnPatronymic.Parent" xml:space="preserve">
+    <value>gbSearchReader</value>
+  </data>
+  <data name="&gt;&gt;pnPatronymic.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tbName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="tbName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 23</value>
+  </data>
+  <data name="tbName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tbName.Name" xml:space="preserve">
+    <value>tbName</value>
+  </data>
+  <data name="&gt;&gt;tbName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbName.Parent" xml:space="preserve">
+    <value>pnName</value>
+  </data>
+  <data name="&gt;&gt;tbName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 16</value>
+  </data>
+  <data name="lbName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lbName.Text" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="&gt;&gt;lbName.Name" xml:space="preserve">
+    <value>lbName</value>
+  </data>
+  <data name="&gt;&gt;lbName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbName.Parent" xml:space="preserve">
+    <value>pnName</value>
+  </data>
+  <data name="&gt;&gt;lbName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 19</value>
+  </data>
+  <data name="pnName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 50</value>
+  </data>
+  <data name="pnName.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnName.Name" xml:space="preserve">
+    <value>pnName</value>
+  </data>
+  <data name="&gt;&gt;pnName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnName.Parent" xml:space="preserve">
+    <value>gbSearchReader</value>
+  </data>
+  <data name="&gt;&gt;pnName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tbSurname.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbSurname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="tbSurname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 23</value>
+  </data>
+  <data name="tbSurname.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tbSurname.Name" xml:space="preserve">
+    <value>tbSurname</value>
+  </data>
+  <data name="&gt;&gt;tbSurname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbSurname.Parent" xml:space="preserve">
+    <value>pnSurname</value>
+  </data>
+  <data name="&gt;&gt;tbSurname.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbSurname.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbSurname.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbSurname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbSurname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 16</value>
+  </data>
+  <data name="lbSurname.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbSurname.Text" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="&gt;&gt;lbSurname.Name" xml:space="preserve">
+    <value>lbSurname</value>
+  </data>
+  <data name="&gt;&gt;lbSurname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbSurname.Parent" xml:space="preserve">
+    <value>pnSurname</value>
+  </data>
+  <data name="&gt;&gt;lbSurname.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnSurname.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnSurname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="pnSurname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 50</value>
+  </data>
+  <data name="pnSurname.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnSurname.Name" xml:space="preserve">
+    <value>pnSurname</value>
+  </data>
+  <data name="&gt;&gt;pnSurname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnSurname.Parent" xml:space="preserve">
+    <value>gbSearchReader</value>
+  </data>
+  <data name="&gt;&gt;pnSurname.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="gbSearchReader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gbSearchReader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gbSearchReader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1062, 72</value>
+  </data>
+  <data name="gbSearchReader.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="gbSearchReader.Text" xml:space="preserve">
+    <value>Поиск читателя</value>
+  </data>
+  <data name="&gt;&gt;gbSearchReader.Name" xml:space="preserve">
+    <value>gbSearchReader</value>
+  </data>
+  <data name="&gt;&gt;gbSearchReader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbSearchReader.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbSearchReader.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dgvBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dgvBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dgvBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 59</value>
+  </data>
+  <data name="dgvBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1056, 314</value>
+  </data>
+  <data name="dgvBook.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;dgvBook.Name" xml:space="preserve">
+    <value>dgvBook</value>
+  </data>
+  <data name="&gt;&gt;dgvBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvBook.Parent" xml:space="preserve">
+    <value>gbSearchBook</value>
+  </data>
+  <data name="&gt;&gt;dgvBook.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnCheckBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnCheckBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnCheckBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 0</value>
+  </data>
+  <data name="btnCheckBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 45</value>
+  </data>
+  <data name="btnCheckBook.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnCheckBook.Text" xml:space="preserve">
+    <value>Проверить наличие книги</value>
+  </data>
+  <data name="&gt;&gt;btnCheckBook.Name" xml:space="preserve">
+    <value>btnCheckBook</value>
+  </data>
+  <data name="&gt;&gt;btnCheckBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCheckBook.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;btnCheckBook.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbPublishing.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cbPublishing.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbPublishing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="cbPublishing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 24</value>
+  </data>
+  <data name="cbPublishing.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbPublishing.Name" xml:space="preserve">
+    <value>cbPublishing</value>
+  </data>
+  <data name="&gt;&gt;cbPublishing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbPublishing.Parent" xml:space="preserve">
+    <value>pnPublishing</value>
+  </data>
+  <data name="&gt;&gt;cbPublishing.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbPublishing.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbPublishing.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbPublishing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbPublishing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 16</value>
+  </data>
+  <data name="lbPublishing.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbPublishing.Text" xml:space="preserve">
+    <value>Выберите издательство</value>
+  </data>
+  <data name="&gt;&gt;lbPublishing.Name" xml:space="preserve">
+    <value>lbPublishing</value>
+  </data>
+  <data name="&gt;&gt;lbPublishing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPublishing.Parent" xml:space="preserve">
+    <value>pnPublishing</value>
+  </data>
+  <data name="&gt;&gt;lbPublishing.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnPublishing.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnPublishing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>677, 0</value>
+  </data>
+  <data name="pnPublishing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 40</value>
+  </data>
+  <data name="pnPublishing.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pnPublishing.Name" xml:space="preserve">
+    <value>pnPublishing</value>
+  </data>
+  <data name="&gt;&gt;pnPublishing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnPublishing.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;pnPublishing.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbGenre.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cbGenre.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="cbGenre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 24</value>
+  </data>
+  <data name="cbGenre.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbGenre.Name" xml:space="preserve">
+    <value>cbGenre</value>
+  </data>
+  <data name="&gt;&gt;cbGenre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbGenre.Parent" xml:space="preserve">
+    <value>pnGenre</value>
+  </data>
+  <data name="&gt;&gt;cbGenre.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbGenre.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbGenre.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbGenre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 16</value>
+  </data>
+  <data name="lbGenre.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbGenre.Text" xml:space="preserve">
+    <value>Выберите жанр</value>
+  </data>
+  <data name="&gt;&gt;lbGenre.Name" xml:space="preserve">
+    <value>lbGenre</value>
+  </data>
+  <data name="&gt;&gt;lbGenre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbGenre.Parent" xml:space="preserve">
+    <value>pnGenre</value>
+  </data>
+  <data name="&gt;&gt;lbGenre.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnGenre.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 0</value>
+  </data>
+  <data name="pnGenre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 40</value>
+  </data>
+  <data name="pnGenre.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnGenre.Name" xml:space="preserve">
+    <value>pnGenre</value>
+  </data>
+  <data name="&gt;&gt;pnGenre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnGenre.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;pnGenre.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbWriter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cbWriter.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbWriter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="cbWriter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 24</value>
+  </data>
+  <data name="cbWriter.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbWriter.Name" xml:space="preserve">
+    <value>cbWriter</value>
+  </data>
+  <data name="&gt;&gt;cbWriter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbWriter.Parent" xml:space="preserve">
+    <value>pnWriter</value>
+  </data>
+  <data name="&gt;&gt;cbWriter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbWriter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbWriter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbWriter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbWriter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 16</value>
+  </data>
+  <data name="lbWriter.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbWriter.Text" xml:space="preserve">
+    <value>Выберите автора</value>
+  </data>
+  <data name="&gt;&gt;lbWriter.Name" xml:space="preserve">
+    <value>lbWriter</value>
+  </data>
+  <data name="&gt;&gt;lbWriter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbWriter.Parent" xml:space="preserve">
+    <value>pnWriter</value>
+  </data>
+  <data name="&gt;&gt;lbWriter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnWriter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnWriter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 0</value>
+  </data>
+  <data name="pnWriter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 40</value>
+  </data>
+  <data name="pnWriter.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pnWriter.Name" xml:space="preserve">
+    <value>pnWriter</value>
+  </data>
+  <data name="&gt;&gt;pnWriter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnWriter.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;pnWriter.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tbTitleBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbTitleBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tbTitleBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="tbTitleBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 23</value>
+  </data>
+  <data name="tbTitleBook.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tbTitleBook.Name" xml:space="preserve">
+    <value>tbTitleBook</value>
+  </data>
+  <data name="&gt;&gt;tbTitleBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbTitleBook.Parent" xml:space="preserve">
+    <value>pnTitleBook</value>
+  </data>
+  <data name="&gt;&gt;tbTitleBook.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbTitleBook.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbTitleBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbTitleBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbTitleBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 16</value>
+  </data>
+  <data name="lbTitleBook.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbTitleBook.Text" xml:space="preserve">
+    <value>Введите название</value>
+  </data>
+  <data name="&gt;&gt;lbTitleBook.Name" xml:space="preserve">
+    <value>lbTitleBook</value>
+  </data>
+  <data name="&gt;&gt;lbTitleBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbTitleBook.Parent" xml:space="preserve">
+    <value>pnTitleBook</value>
+  </data>
+  <data name="&gt;&gt;lbTitleBook.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnTitleBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnTitleBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnTitleBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 40</value>
+  </data>
+  <data name="pnTitleBook.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnTitleBook.Name" xml:space="preserve">
+    <value>pnTitleBook</value>
+  </data>
+  <data name="&gt;&gt;pnTitleBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnTitleBook.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;pnTitleBook.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel11.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="panel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1056, 40</value>
+  </data>
+  <data name="panel11.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panel11.Name" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;panel11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel11.Parent" xml:space="preserve">
+    <value>gbSearchBook</value>
+  </data>
+  <data name="&gt;&gt;panel11.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbSearchBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbSearchBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 72</value>
+  </data>
+  <data name="gbSearchBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1062, 376</value>
+  </data>
+  <data name="gbSearchBook.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="gbSearchBook.Text" xml:space="preserve">
+    <value>Поиск книги</value>
+  </data>
+  <data name="&gt;&gt;gbSearchBook.Name" xml:space="preserve">
+    <value>gbSearchBook</value>
+  </data>
+  <data name="&gt;&gt;gbSearchBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbSearchBook.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbSearchBook.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnCancel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 23</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>panel15</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnIssueBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnIssueBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnIssueBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnIssueBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 23</value>
+  </data>
+  <data name="btnIssueBook.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnIssueBook.Text" xml:space="preserve">
+    <value>Выдать книгу</value>
+  </data>
+  <data name="&gt;&gt;btnIssueBook.Name" xml:space="preserve">
+    <value>btnIssueBook</value>
+  </data>
+  <data name="&gt;&gt;btnIssueBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnIssueBook.Parent" xml:space="preserve">
+    <value>panel15</value>
+  </data>
+  <data name="&gt;&gt;btnIssueBook.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel15.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>618, 19</value>
+  </data>
+  <data name="panel15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 50</value>
+  </data>
+  <data name="panel15.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panel15.Name" xml:space="preserve">
+    <value>panel15</value>
+  </data>
+  <data name="&gt;&gt;panel15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel15.Parent" xml:space="preserve">
+    <value>gbIssueBook</value>
+  </data>
+  <data name="&gt;&gt;panel15.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbDateReturn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbDateReturn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="tbDateReturn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 23</value>
+  </data>
+  <data name="tbDateReturn.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tbDateReturn.Name" xml:space="preserve">
+    <value>tbDateReturn</value>
+  </data>
+  <data name="&gt;&gt;tbDateReturn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbDateReturn.Parent" xml:space="preserve">
+    <value>pnDateRetirnBook</value>
+  </data>
+  <data name="&gt;&gt;tbDateReturn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbDateReturnBook.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbDateReturnBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbDateReturnBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbDateReturnBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 16</value>
+  </data>
+  <data name="lbDateReturnBook.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbDateReturnBook.Text" xml:space="preserve">
+    <value>Дата возврата книги</value>
+  </data>
+  <data name="&gt;&gt;lbDateReturnBook.Name" xml:space="preserve">
+    <value>lbDateReturnBook</value>
+  </data>
+  <data name="&gt;&gt;lbDateReturnBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbDateReturnBook.Parent" xml:space="preserve">
+    <value>pnDateRetirnBook</value>
+  </data>
+  <data name="&gt;&gt;lbDateReturnBook.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnDateRetirnBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnDateRetirnBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>413, 19</value>
+  </data>
+  <data name="pnDateRetirnBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 50</value>
+  </data>
+  <data name="pnDateRetirnBook.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pnDateRetirnBook.Name" xml:space="preserve">
+    <value>pnDateRetirnBook</value>
+  </data>
+  <data name="&gt;&gt;pnDateRetirnBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnDateRetirnBook.Parent" xml:space="preserve">
+    <value>gbIssueBook</value>
+  </data>
+  <data name="&gt;&gt;pnDateRetirnBook.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="nudNumberDays.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="nudNumberDays.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="nudNumberDays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="nudNumberDays.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 23</value>
+  </data>
+  <data name="nudNumberDays.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;nudNumberDays.Name" xml:space="preserve">
+    <value>nudNumberDays</value>
+  </data>
+  <data name="&gt;&gt;nudNumberDays.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudNumberDays.Parent" xml:space="preserve">
+    <value>pnNumberDays</value>
+  </data>
+  <data name="&gt;&gt;nudNumberDays.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbNumberDays.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbNumberDays.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbNumberDays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbNumberDays.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 16</value>
+  </data>
+  <data name="lbNumberDays.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbNumberDays.Text" xml:space="preserve">
+    <value>Количество дней выдачи</value>
+  </data>
+  <data name="&gt;&gt;lbNumberDays.Name" xml:space="preserve">
+    <value>lbNumberDays</value>
+  </data>
+  <data name="&gt;&gt;lbNumberDays.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbNumberDays.Parent" xml:space="preserve">
+    <value>pnNumberDays</value>
+  </data>
+  <data name="&gt;&gt;lbNumberDays.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnNumberDays.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnNumberDays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 19</value>
+  </data>
+  <data name="pnNumberDays.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 50</value>
+  </data>
+  <data name="pnNumberDays.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnNumberDays.Name" xml:space="preserve">
+    <value>pnNumberDays</value>
+  </data>
+  <data name="&gt;&gt;pnNumberDays.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnNumberDays.Parent" xml:space="preserve">
+    <value>gbIssueBook</value>
+  </data>
+  <data name="&gt;&gt;pnNumberDays.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dtpDateIssueBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dtpDateIssueBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dtpDateIssueBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="dtpDateIssueBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 23</value>
+  </data>
+  <data name="dtpDateIssueBook.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;dtpDateIssueBook.Name" xml:space="preserve">
+    <value>dtpDateIssueBook</value>
+  </data>
+  <data name="&gt;&gt;dtpDateIssueBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpDateIssueBook.Parent" xml:space="preserve">
+    <value>pnDateIssueBook</value>
+  </data>
+  <data name="&gt;&gt;dtpDateIssueBook.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbDateIssueBook.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbDateIssueBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbDateIssueBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbDateIssueBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 16</value>
+  </data>
+  <data name="lbDateIssueBook.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbDateIssueBook.Text" xml:space="preserve">
+    <value>Дата выдачи книги</value>
+  </data>
+  <data name="&gt;&gt;lbDateIssueBook.Name" xml:space="preserve">
+    <value>lbDateIssueBook</value>
+  </data>
+  <data name="&gt;&gt;lbDateIssueBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbDateIssueBook.Parent" xml:space="preserve">
+    <value>pnDateIssueBook</value>
+  </data>
+  <data name="&gt;&gt;lbDateIssueBook.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnDateIssueBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnDateIssueBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="pnDateIssueBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 50</value>
+  </data>
+  <data name="pnDateIssueBook.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pnDateIssueBook.Name" xml:space="preserve">
+    <value>pnDateIssueBook</value>
+  </data>
+  <data name="&gt;&gt;pnDateIssueBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnDateIssueBook.Parent" xml:space="preserve">
+    <value>gbIssueBook</value>
+  </data>
+  <data name="&gt;&gt;pnDateIssueBook.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbIssueBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="gbIssueBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 448</value>
+  </data>
+  <data name="gbIssueBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1062, 72</value>
+  </data>
+  <data name="gbIssueBook.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="gbIssueBook.Text" xml:space="preserve">
+    <value>Настройка длительности выдачи</value>
+  </data>
+  <data name="&gt;&gt;gbIssueBook.Name" xml:space="preserve">
+    <value>gbIssueBook</value>
+  </data>
+  <data name="&gt;&gt;gbIssueBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbIssueBook.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbIssueBook.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1062, 556</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Выдача книги</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>IssueBookForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

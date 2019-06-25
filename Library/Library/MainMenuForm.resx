@@ -120,10 +120,439 @@
   <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="miAuthorization.Size" type="System.Drawing.Size, System.Drawing">
+    <value>394, 26</value>
+  </data>
+  <data name="miAuthorization.Text" xml:space="preserve">
+    <value>Авторизация</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="miSettingApplication.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miSettingApplication.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 26</value>
+  </data>
+  <data name="miSettingApplication.Text" xml:space="preserve">
+    <value>Настройки приложения</value>
+  </data>
+  <data name="miSettingConnection.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miSettingConnection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 26</value>
+  </data>
+  <data name="miSettingConnection.Text" xml:space="preserve">
+    <value>Настройки подключения</value>
+  </data>
+  <data name="miSettings.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>394, 26</value>
+  </data>
+  <data name="miSettings.Text" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="miExitProfile.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miExitProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>394, 26</value>
+  </data>
+  <data name="miExitProfile.Text" xml:space="preserve">
+    <value>Выход из профиля</value>
+  </data>
+  <data name="miExitSystem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>394, 26</value>
+  </data>
+  <data name="miExitSystem.Text" xml:space="preserve">
+    <value>Завершить работу информационной системы</value>
+  </data>
+  <data name="miSystem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="miSystem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 24</value>
+  </data>
+  <data name="miSystem.Text" xml:space="preserve">
+    <value>Система</value>
+  </data>
+  <data name="miIssueBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miIssueBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 24</value>
+  </data>
+  <data name="miIssueBook.Text" xml:space="preserve">
+    <value>Выдача книги</value>
+  </data>
+  <data name="miReturnBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miReturnBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="miReturnBook.Text" xml:space="preserve">
+    <value>Возврат книги</value>
+  </data>
+  <data name="miFormulars.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miFormulars.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 26</value>
+  </data>
+  <data name="miFormulars.Text" xml:space="preserve">
+    <value>Формуляры...</value>
+  </data>
+  <data name="miRegistrationCardReader.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miRegistrationCardReader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 26</value>
+  </data>
+  <data name="miRegistrationCardReader.Text" xml:space="preserve">
+    <value>Регистрационные карточки...</value>
+  </data>
+  <data name="miBooks.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miBooks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 26</value>
+  </data>
+  <data name="miBooks.Text" xml:space="preserve">
+    <value>Книги...</value>
+  </data>
+  <data name="miWriterBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miWriterBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 26</value>
+  </data>
+  <data name="miWriterBook.Text" xml:space="preserve">
+    <value>Авторы...</value>
+  </data>
+  <data name="miPublishingBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miPublishingBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 26</value>
+  </data>
+  <data name="miPublishingBook.Text" xml:space="preserve">
+    <value>Книжные издательства...</value>
+  </data>
+  <data name="miGenreBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miGenreBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 26</value>
+  </data>
+  <data name="miGenreBook.Text" xml:space="preserve">
+    <value>Жанры книг...</value>
+  </data>
+  <data name="miUsers.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miUsers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 26</value>
+  </data>
+  <data name="miUsers.Text" xml:space="preserve">
+    <value>Пользователи...</value>
+  </data>
+  <data name="miHandbook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miHandbook.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="miHandbook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 24</value>
+  </data>
+  <data name="miHandbook.Text" xml:space="preserve">
+    <value>Справочники</value>
+  </data>
+  <data name="miCreatedRegistrationCardAndFormular.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miCreatedRegistrationCardAndFormular.Size" type="System.Drawing.Size, System.Drawing">
+    <value>573, 26</value>
+  </data>
+  <data name="miCreatedRegistrationCardAndFormular.Text" xml:space="preserve">
+    <value>Формирование регистрационной карточки и формуляра читателя</value>
+  </data>
+  <data name="miCreateActs.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miCreateActs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>573, 26</value>
+  </data>
+  <data name="miCreateActs.Text" xml:space="preserve">
+    <value>Формирование актов о приемке и исключении книг</value>
+  </data>
+  <data name="miCreateInventoryBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miCreateInventoryBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>573, 26</value>
+  </data>
+  <data name="miCreateInventoryBook.Text" xml:space="preserve">
+    <value>Сформировать документ "Инвентарная книга"</value>
+  </data>
+  <data name="miCreateSummaryBook.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miCreateSummaryBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>573, 26</value>
+  </data>
+  <data name="miCreateSummaryBook.Text" xml:space="preserve">
+    <value>Сформировать документ "Книга суммарного учета основного фонда"</value>
+  </data>
+  <data name="miDocument.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="miDocument.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 24</value>
+  </data>
+  <data name="miDocument.Text" xml:space="preserve">
+    <value>Формирование документов</value>
+  </data>
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 28</value>
+  </data>
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="sstInformation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>152, 17</value>
   </metadata>
+  <data name="lbsstDateTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="lbsstDateTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 20</value>
+  </data>
+  <data name="lbsstDateTime.Text" xml:space="preserve">
+    <value>00:00:00/00.00.0000</value>
+  </data>
+  <data name="lbsstConnection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 20</value>
+  </data>
+  <data name="lbsstConnection.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="sstInformation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 425</value>
+  </data>
+  <data name="sstInformation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 25</value>
+  </data>
+  <data name="sstInformation.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="sstInformation.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;sstInformation.Name" xml:space="preserve">
+    <value>sstInformation</value>
+  </data>
+  <data name="&gt;&gt;sstInformation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sstInformation.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;sstInformation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>289, 17</value>
   </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Главное меню</value>
+  </data>
+  <data name="&gt;&gt;miSystem.Name" xml:space="preserve">
+    <value>miSystem</value>
+  </data>
+  <data name="&gt;&gt;miSystem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miAuthorization.Name" xml:space="preserve">
+    <value>miAuthorization</value>
+  </data>
+  <data name="&gt;&gt;miAuthorization.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miSettings.Name" xml:space="preserve">
+    <value>miSettings</value>
+  </data>
+  <data name="&gt;&gt;miSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miSettingApplication.Name" xml:space="preserve">
+    <value>miSettingApplication</value>
+  </data>
+  <data name="&gt;&gt;miSettingApplication.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miSettingConnection.Name" xml:space="preserve">
+    <value>miSettingConnection</value>
+  </data>
+  <data name="&gt;&gt;miSettingConnection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miExitProfile.Name" xml:space="preserve">
+    <value>miExitProfile</value>
+  </data>
+  <data name="&gt;&gt;miExitProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miExitSystem.Name" xml:space="preserve">
+    <value>miExitSystem</value>
+  </data>
+  <data name="&gt;&gt;miExitSystem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miIssueBook.Name" xml:space="preserve">
+    <value>miIssueBook</value>
+  </data>
+  <data name="&gt;&gt;miIssueBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miReturnBook.Name" xml:space="preserve">
+    <value>miReturnBook</value>
+  </data>
+  <data name="&gt;&gt;miReturnBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miHandbook.Name" xml:space="preserve">
+    <value>miHandbook</value>
+  </data>
+  <data name="&gt;&gt;miHandbook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miFormulars.Name" xml:space="preserve">
+    <value>miFormulars</value>
+  </data>
+  <data name="&gt;&gt;miFormulars.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miRegistrationCardReader.Name" xml:space="preserve">
+    <value>miRegistrationCardReader</value>
+  </data>
+  <data name="&gt;&gt;miRegistrationCardReader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miBooks.Name" xml:space="preserve">
+    <value>miBooks</value>
+  </data>
+  <data name="&gt;&gt;miBooks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miWriterBook.Name" xml:space="preserve">
+    <value>miWriterBook</value>
+  </data>
+  <data name="&gt;&gt;miWriterBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miPublishingBook.Name" xml:space="preserve">
+    <value>miPublishingBook</value>
+  </data>
+  <data name="&gt;&gt;miPublishingBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miGenreBook.Name" xml:space="preserve">
+    <value>miGenreBook</value>
+  </data>
+  <data name="&gt;&gt;miGenreBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miUsers.Name" xml:space="preserve">
+    <value>miUsers</value>
+  </data>
+  <data name="&gt;&gt;miUsers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miDocument.Name" xml:space="preserve">
+    <value>miDocument</value>
+  </data>
+  <data name="&gt;&gt;miDocument.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miCreatedRegistrationCardAndFormular.Name" xml:space="preserve">
+    <value>miCreatedRegistrationCardAndFormular</value>
+  </data>
+  <data name="&gt;&gt;miCreatedRegistrationCardAndFormular.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miCreateActs.Name" xml:space="preserve">
+    <value>miCreateActs</value>
+  </data>
+  <data name="&gt;&gt;miCreateActs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miCreateInventoryBook.Name" xml:space="preserve">
+    <value>miCreateInventoryBook</value>
+  </data>
+  <data name="&gt;&gt;miCreateInventoryBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miCreateSummaryBook.Name" xml:space="preserve">
+    <value>miCreateSummaryBook</value>
+  </data>
+  <data name="&gt;&gt;miCreateSummaryBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbsstDateTime.Name" xml:space="preserve">
+    <value>lbsstDateTime</value>
+  </data>
+  <data name="&gt;&gt;lbsstDateTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbsstConnection.Name" xml:space="preserve">
+    <value>lbsstConnection</value>
+  </data>
+  <data name="&gt;&gt;lbsstConnection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timer.Name" xml:space="preserve">
+    <value>timer</value>
+  </data>
+  <data name="&gt;&gt;timer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainMenuForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

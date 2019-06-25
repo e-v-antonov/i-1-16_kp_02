@@ -20,7 +20,7 @@ namespace Library
         public void MainMenu_Load(object sender, EventArgs e)   //загрузка формы
         {
             lbsstConnection.Visible = true;
-            lbsstConnection.Text = "Определение сервера...";
+            lbsstConnection.Text = MessageUser.SearchserverMenu;
             dbConnection.ConnectionState += InformationConnection;
             threadCheckConnection = new Thread(dbConnection.CheckConnection);
             threadCheckConnection.Start();
@@ -42,6 +42,9 @@ namespace Library
                     miUsers.Enabled = true;
                     miExitProfile.Enabled = true;
                     miSettings.Enabled = true;
+                    miSettingApplication.Enabled = true;
+                    miSettingConnection.Enabled = true;
+                    miAuthorization.Enabled = false;
                     break;
 
                 case 2:
@@ -49,7 +52,7 @@ namespace Library
                     miRegistrationCardReader.Enabled = true;
                     miBooks.Enabled = true;
                     miExitProfile.Enabled = true;
-                    miSettings.Enabled = true;
+                    miAuthorization.Enabled = false;
                     break;
 
                 case 3:
@@ -60,6 +63,8 @@ namespace Library
                     miCreateActs.Enabled = true;
                     miExitProfile.Enabled = true;
                     miSettings.Enabled = true;
+                    miSettingApplication.Enabled = true;
+                    miAuthorization.Enabled = false;
                     break;
 
                 case 4:
@@ -74,6 +79,8 @@ namespace Library
                     miCreateSummaryBook.Enabled = true;
                     miExitProfile.Enabled = true;
                     miSettings.Enabled = true;
+                    miSettingApplication.Enabled = true;
+                    miAuthorization.Enabled = false;
                     break;
 
                 case 5:
@@ -87,6 +94,8 @@ namespace Library
                     miCreatedRegistrationCardAndFormular.Enabled = true;
                     miExitProfile.Enabled = true;
                     miSettings.Enabled = true;
+                    miSettingApplication.Enabled = true;
+                    miAuthorization.Enabled = false;
                     break;
             }
         }
@@ -105,7 +114,7 @@ namespace Library
                             authorizationForm.Show(this);
                             break;
                         case (false):
-                            lbsstConnection.Text = "Подключение отсутствует!";
+                            lbsstConnection.Text = MessageUser.NoConnection;
 
                             foreach (Form f in Application.OpenForms)
                             {
@@ -124,12 +133,6 @@ namespace Library
             {
                 threadCheckConnection.Abort();
             }
-        }
-                
-        private void miSettings_Click(object sender, EventArgs e)   //открытие окна подключения к базе данных
-        {
-            ConnectionForm connectionFormOpen = new ConnectionForm();
-            connectionFormOpen.Show(this);
         }
 
         private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)    //закрытие формы
@@ -243,6 +246,10 @@ namespace Library
                     miUsers.Enabled = false;
                     miExitProfile.Enabled = false;
                     miSettings.Enabled = false;
+                    miSettings.Enabled = false;
+                    miSettingApplication.Enabled = false;
+                    miSettingConnection.Enabled = false;
+                    miAuthorization.Enabled = true;
                     break;
 
                 case 2:
@@ -251,6 +258,7 @@ namespace Library
                     miBooks.Enabled = false;
                     miExitProfile.Enabled = false;
                     miSettings.Enabled = false;
+                    miAuthorization.Enabled = true;
                     break;
 
                 case 3:
@@ -261,6 +269,8 @@ namespace Library
                     miCreateActs.Enabled = false;
                     miExitProfile.Enabled = false;
                     miSettings.Enabled = false;
+                    miSettingApplication.Enabled = false;
+                    miAuthorization.Enabled = true;
                     break;
 
                 case 4:
@@ -276,6 +286,8 @@ namespace Library
                     miCreateSummaryBook.Enabled = false;
                     miExitProfile.Enabled = false;
                     miSettings.Enabled = false;
+                    miSettingApplication.Enabled = false;
+                    miAuthorization.Enabled = true;
                     break;
 
                 case 5:
@@ -289,6 +301,8 @@ namespace Library
                     miCreatedRegistrationCardAndFormular.Enabled = false;
                     miExitProfile.Enabled = false;
                     miSettings.Enabled = false;
+                    miSettingApplication.Enabled = false;
+                    miAuthorization.Enabled = true;
                     break;
             }
             AuthorizationForm authorizationForm = new AuthorizationForm();
@@ -315,11 +329,29 @@ namespace Library
             threadInventoryBookExcel.Start();
         }
 
-        private void miCreateSummaryBook_Click(object sender, EventArgs e)  //формирования документа Книга сумммарного учета
+        private void miCreateSummaryBook_Click(object sender, EventArgs e)  //формирования документа Книга суммарного учета
         {
             SummaryBookExcel summaryBookExcel = new SummaryBookExcel();
             Thread threadSummaryBookExcel = new Thread(summaryBookExcel.SummaryBookFill);
             threadSummaryBookExcel.Start();
+        }
+
+        private void miAuthorization_Click(object sender, EventArgs e)  //открытие окна авторизации
+        {
+            AuthorizationForm authorizationForm = new AuthorizationForm();
+            authorizationForm.Show(this);
+        }
+
+        private void miSettingApplication_Click(object sender, EventArgs e) //открытие окна настройки приложения
+        {
+            SettingsApplication settingsApplication = new SettingsApplication();
+            settingsApplication.Show(this);
+        }
+
+        private void miSettingConnection_Click(object sender, EventArgs e)  //открытие окна настройки подключения к БД
+        {
+            ConnectionForm connectionFormOpen = new ConnectionForm();
+            connectionFormOpen.Show(this);
         }
     }
 }

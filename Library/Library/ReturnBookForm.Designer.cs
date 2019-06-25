@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnBookForm));
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbPassportNumber = new System.Windows.Forms.TextBox();
             this.lbPassportNumber = new System.Windows.Forms.Label();
@@ -59,191 +60,120 @@
             // 
             this.panel6.Controls.Add(this.tbPassportNumber);
             this.panel6.Controls.Add(this.lbPassportNumber);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 160);
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(238, 50);
-            this.panel6.TabIndex = 5;
             // 
             // tbPassportNumber
             // 
-            this.tbPassportNumber.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbPassportNumber.Location = new System.Drawing.Point(0, 16);
+            resources.ApplyResources(this.tbPassportNumber, "tbPassportNumber");
             this.tbPassportNumber.Name = "tbPassportNumber";
-            this.tbPassportNumber.Size = new System.Drawing.Size(238, 23);
-            this.tbPassportNumber.TabIndex = 3;
             // 
             // lbPassportNumber
             // 
-            this.lbPassportNumber.AutoSize = true;
-            this.lbPassportNumber.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbPassportNumber.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.lbPassportNumber, "lbPassportNumber");
             this.lbPassportNumber.Name = "lbPassportNumber";
-            this.lbPassportNumber.Size = new System.Drawing.Size(117, 16);
-            this.lbPassportNumber.TabIndex = 1;
-            this.lbPassportNumber.Text = "Номер паспорта";
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.tbPassportSeries);
             this.panel5.Controls.Add(this.lbPassportSeries);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 120);
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(238, 40);
-            this.panel5.TabIndex = 4;
             // 
             // tbPassportSeries
             // 
-            this.tbPassportSeries.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbPassportSeries.Location = new System.Drawing.Point(0, 16);
+            resources.ApplyResources(this.tbPassportSeries, "tbPassportSeries");
             this.tbPassportSeries.Name = "tbPassportSeries";
-            this.tbPassportSeries.Size = new System.Drawing.Size(238, 23);
-            this.tbPassportSeries.TabIndex = 3;
             // 
             // lbPassportSeries
             // 
-            this.lbPassportSeries.AutoSize = true;
-            this.lbPassportSeries.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbPassportSeries.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.lbPassportSeries, "lbPassportSeries");
             this.lbPassportSeries.Name = "lbPassportSeries";
-            this.lbPassportSeries.Size = new System.Drawing.Size(116, 16);
-            this.lbPassportSeries.TabIndex = 1;
-            this.lbPassportSeries.Text = "Серия паспорта";
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.tbPatronymic);
             this.panel4.Controls.Add(this.lbPatronymic);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 80);
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(238, 40);
-            this.panel4.TabIndex = 3;
             // 
             // tbPatronymic
             // 
-            this.tbPatronymic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbPatronymic.Location = new System.Drawing.Point(0, 16);
+            resources.ApplyResources(this.tbPatronymic, "tbPatronymic");
             this.tbPatronymic.Name = "tbPatronymic";
-            this.tbPatronymic.Size = new System.Drawing.Size(238, 23);
-            this.tbPatronymic.TabIndex = 3;
             // 
             // lbPatronymic
             // 
-            this.lbPatronymic.AutoSize = true;
-            this.lbPatronymic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbPatronymic.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.lbPatronymic, "lbPatronymic");
             this.lbPatronymic.Name = "lbPatronymic";
-            this.lbPatronymic.Size = new System.Drawing.Size(70, 16);
-            this.lbPatronymic.TabIndex = 1;
-            this.lbPatronymic.Text = "Отчество";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.tbName);
             this.panel3.Controls.Add(this.lbName);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 40);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(238, 40);
-            this.panel3.TabIndex = 2;
             // 
             // tbName
             // 
-            this.tbName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbName.Location = new System.Drawing.Point(0, 16);
+            resources.ApplyResources(this.tbName, "tbName");
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(238, 23);
-            this.tbName.TabIndex = 3;
             // 
             // lbName
             // 
-            this.lbName.AutoSize = true;
-            this.lbName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbName.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.lbName, "lbName");
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(36, 16);
-            this.lbName.TabIndex = 1;
-            this.lbName.Text = "Имя";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.tbSurname);
             this.panel2.Controls.Add(this.lbSurname);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(238, 40);
-            this.panel2.TabIndex = 1;
             // 
             // tbSurname
             // 
-            this.tbSurname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbSurname.Location = new System.Drawing.Point(0, 16);
+            resources.ApplyResources(this.tbSurname, "tbSurname");
             this.tbSurname.Name = "tbSurname";
-            this.tbSurname.Size = new System.Drawing.Size(238, 23);
-            this.tbSurname.TabIndex = 2;
             // 
             // lbSurname
             // 
-            this.lbSurname.AutoSize = true;
-            this.lbSurname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbSurname.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.lbSurname, "lbSurname");
             this.lbSurname.Name = "lbSurname";
-            this.lbSurname.Size = new System.Drawing.Size(69, 16);
-            this.lbSurname.TabIndex = 0;
-            this.lbSurname.Text = "Фамилия";
             // 
             // pnCancel
             // 
             this.pnCancel.Controls.Add(this.btnExit);
             this.pnCancel.Controls.Add(this.btnError);
-            this.pnCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnCancel.Location = new System.Drawing.Point(0, 255);
+            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Name = "pnCancel";
-            this.pnCancel.Size = new System.Drawing.Size(238, 36);
-            this.pnCancel.TabIndex = 8;
             // 
             // btnExit
             // 
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.Location = new System.Drawing.Point(119, 0);
+            resources.ApplyResources(this.btnExit, "btnExit");
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(119, 36);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "Закрыть";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnError
             // 
-            this.btnError.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnError.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.btnError, "btnError");
             this.btnError.Name = "btnError";
-            this.btnError.Size = new System.Drawing.Size(119, 36);
-            this.btnError.TabIndex = 0;
-            this.btnError.Text = "Ошибки";
             this.btnError.UseVisualStyleBackColor = true;
             this.btnError.Click += new System.EventHandler(this.btnError_Click);
             // 
             // btnReturnBook
             // 
-            this.btnReturnBook.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnReturnBook.Location = new System.Drawing.Point(0, 210);
+            resources.ApplyResources(this.btnReturnBook, "btnReturnBook");
             this.btnReturnBook.Name = "btnReturnBook";
-            this.btnReturnBook.Size = new System.Drawing.Size(238, 45);
-            this.btnReturnBook.TabIndex = 9;
-            this.btnReturnBook.Text = "Оформить возврат книги";
             this.btnReturnBook.UseVisualStyleBackColor = true;
             this.btnReturnBook.Click += new System.EventHandler(this.btnReturnBook_Click);
             // 
             // ReturnBookForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(238, 291);
             this.Controls.Add(this.btnReturnBook);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -251,10 +181,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnCancel);
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "ReturnBookForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Возврат книги";
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);

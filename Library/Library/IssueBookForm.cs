@@ -45,7 +45,7 @@ namespace Library
 
             if (countReader == 0)
             {
-                MessageBox.Show("Читатель с данными параметрами не зарегистрирован в библиотеке.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.NoReader, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tbSurname.Clear();
                 tbName.Clear();
                 tbPatronymic.Clear();
@@ -94,26 +94,26 @@ namespace Library
 
                     dgvBook.DataSource = dbTables.DTBook;
                     dgvBook.Columns[0].Visible = false;
-                    dgvBook.Columns[1].HeaderText = "Название книги";
+                    dgvBook.Columns[1].HeaderText = MessageUser.BookTitle;
                     dgvBook.Columns[2].Visible = false;
-                    dgvBook.Columns[3].HeaderText = "Автор";
+                    dgvBook.Columns[3].HeaderText = MessageUser.WriterBook;
                     dgvBook.Columns[4].Visible = false;
-                    dgvBook.Columns[5].HeaderText = "Жанр";
+                    dgvBook.Columns[5].HeaderText = MessageUser.GenreBook;
                     dgvBook.Columns[6].Visible = false;
-                    dgvBook.Columns[7].HeaderText = "Издательство";
-                    dgvBook.Columns[8].HeaderText = "Год издания";
-                    dgvBook.Columns[9].HeaderText = "Количество страниц";
-                    dgvBook.Columns[10].HeaderText = "Номер ISBN";
-                    dgvBook.Columns[11].HeaderText = "Стоимость экземпляра";
-                    dgvBook.Columns[12].HeaderText = "Общее количество экземпляров";
-                    dgvBook.Columns[13].HeaderText = "Доступное количество экземпляров";
-                    dgvBook.Columns[14].HeaderText = "Дата регистрации книги";
+                    dgvBook.Columns[7].HeaderText = MessageUser.PublishingBook;
+                    dgvBook.Columns[8].HeaderText = MessageUser.PublicationDate;
+                    dgvBook.Columns[9].HeaderText = MessageUser.NumberOfPages;
+                    dgvBook.Columns[10].HeaderText = MessageUser.NumberISBN;
+                    dgvBook.Columns[11].HeaderText = MessageUser.TheCostOfInstance;
+                    dgvBook.Columns[12].HeaderText = MessageUser.TotalNumberOfInstances;
+                    dgvBook.Columns[13].HeaderText = MessageUser.NumberOfInstancesAvailable;
+                    dgvBook.Columns[14].HeaderText = MessageUser.DateRistrationBook;
                     dgvBook.ClearSelection();
                     dgvBook.CurrentCell = null;
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -146,7 +146,7 @@ namespace Library
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -171,7 +171,7 @@ namespace Library
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -196,7 +196,7 @@ namespace Library
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка загрузки данных из базы данных!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MessageUser.ErrorLoadingData, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             };
             Invoke(action);
@@ -331,7 +331,7 @@ namespace Library
                             cbWriter.SelectedIndex = -1;
                             cbGenre.SelectedIndex = -1;
                             cbPublishing.SelectedIndex = -1;
-                            MessageBox.Show("Должно быть заполнено только одно поле!", "Ошибки в результате работы информационной системы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(MessageUser.OnlyField, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
         }
 
@@ -401,14 +401,14 @@ namespace Library
 
             if (bookOnReader == 1)
             {
-                MessageBox.Show("Данный читатель еще не вернул выданные ему ранее книги.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.ReaderNoReturnedBook, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 issueBook = dtpDateIssueBook.Value.ToString("yyyy-MM-dd");
 
                 storedProcedure.SPFormularReaderInsert(issueBook, Convert.ToInt32(nudNumberDays.Value), idRegistrationCardReader, Convert.ToInt32(dgvBook.CurrentRow.Cells[0].Value.ToString()));
-                //MessageBox.Show("Книга была успешно выдана читателю.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.BookIssue, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btnIssueBook.Enabled = false;
                 nudNumberDays.Enabled = false;
                 dgvBook.DataSource = null;
@@ -439,7 +439,7 @@ namespace Library
 
         private void btnError_Click(object sender, EventArgs e) //клик по кнопке ошибки
         {
-            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+            MessageBox.Show(RegistryData.ErrorMessage, MessageUser.TitleError);
         }
 
         private void btnExit_Click(object sender, EventArgs e)  //клик по кнопке закрыть

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 using Microsoft.Win32;
 
 namespace Library
@@ -9,6 +11,7 @@ namespace Library
         public static string DataSourceIP = "", DataSourceServerName = "", InitialCatalog = "", UserID = "", UserPassword = "";
         public static string ErrorMessage = "Application start: " + DateTime.Now.ToLongDateString();
         public static SqlConnection DBConnectionString = new SqlConnection();
+        public static string DirPath = "";
 
         public void GetRegistry()   //получение данных из реестра
         {
@@ -56,6 +59,31 @@ namespace Library
             {
                 ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + ex.Message;
             }
+        }
+
+        public void ConfigurationGet()  //получение данных о конфигурации приложения из реестра
+        {
+            RegistryKey registry = Registry.CurrentUser;
+            RegistryKey keyRegistry = registry.CreateSubKey("Library");
+            RegistryKey subKey = registry.CreateSubKey("Configuration");
+
+            try
+            {                
+                DirPath = subKey.GetValue("DirPath").ToString();
+            }
+            catch
+            {
+                subKey.SetValue("DirPath", "Empty");
+            }
+        }
+
+        public void ConfigurationSet(string Path)   //отправка данных о конфигурации приложения из реестра
+        {
+            RegistryKey registry = Registry.CurrentUser;
+            RegistryKey keyRegistry = registry.CreateSubKey("Library");
+            RegistryKey subKey = registry.CreateSubKey("Configuration");
+            subKey.SetValue("DirPath", Path);
+            ConfigurationGet();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using excel = Microsoft.Office.Interop.Excel;
 
@@ -80,7 +81,7 @@ namespace Library
 
                 application.ActiveWindow.View = excel.XlWindowView.xlPageBreakPreview;
 
-                MessageBox.Show("Документ сформирован успешно.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MessageUser.DocumentCreateSucc, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -88,7 +89,14 @@ namespace Library
             }
             finally
             {
-                workbook.SaveAs(@"D:\Games\Книга суммарного учета основного фонда от " + DateTime.Now.ToString("HH.mm.ss_dd.MM.yyyy") + ".xlsx", application.DefaultSaveFormat);
+                if (RegistryData.DirPath == "")
+                {
+                    RegistryData.DirPath = "C:\\Users\\" + SystemInformation.UserName + "\\Documents\\Отчёты";
+                    if (!Directory.Exists(RegistryData.DirPath))
+                        Directory.CreateDirectory(RegistryData.DirPath);
+                }
+
+                workbook.SaveAs(RegistryData.DirPath + "\\Книга суммарного учета основного фонда от " + DateTime.Now.ToString("HH.mm.ss_dd.MM.yyyy") + ".xlsx", application.DefaultSaveFormat);
                 workbook.Close();
                 application.Quit();
             }

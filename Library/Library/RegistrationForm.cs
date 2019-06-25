@@ -27,7 +27,7 @@ namespace Library
         private bool CheckOccupancyTextBox()    //функция проверки количества символов в полях для ввода
         {
             if (tbSurname.TextLength == 0 || tbName.TextLength == 0 || tbPatronymic.TextLength == 0 || tbPassword.TextLength == 0 || tbRepeatPassword.TextLength == 0)
-                MessageBox.Show("Должны быть заполнены все поля!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.AllMarginRegisatration, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 return true;
 
@@ -37,7 +37,7 @@ namespace Library
         private bool CheckCoincidencePasswords()    //функция проверки одинаковости полей пароль и поторить пароль
         {
             if (tbPassword.Text != tbRepeatPassword.Text)
-                MessageBox.Show("Поля Пароль и Повторите пароль должны совпадать!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.PasswordRepeatPasswordMustMatch, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 return true;
 
@@ -47,7 +47,7 @@ namespace Library
         private bool CheckLenghtLoginPassword() //функция проверки длины логина и пароля
         {
             if ((tbLogin.TextLength < 8) || (tbPassword.TextLength < 8))
-                MessageBox.Show("Логин и пароль должны иметь минимальную длину 8 символов!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.MinLengthPassLog, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 return true;
 
@@ -57,7 +57,7 @@ namespace Library
         private bool CheckTextLoginPassword()   //функция проверки
         {
             if (usersForm.CheckPasswordUpperLatin() == true || usersForm.CheckPasswordLowerLatin() == true || usersForm.CheckPasswordUpperCyrill() == true || usersForm.CheckPasswordLowerCyrill() == true || usersForm.CheckPasswordNumber() == true || usersForm.CheckPassworSymbol() == true || usersForm.CheckLoginCyrill() == false)
-                MessageBox.Show("Логин не должен иметь русских букв! Пароль должен иметь хотя бы одну заглавную английскую и русскую буквы, одну прописную английскую и русскую буквы, цифру, спецсимвол!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.LetterPassLog, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 return true;
 
@@ -76,7 +76,7 @@ namespace Library
             RegistryData.DBConnectionString.Close();
 
             if (uniqueLogin != 0)
-                MessageBox.Show("Пользователь с таким логином уже числится в информационной системе!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.UserAlreadyHave, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 return true;
 
@@ -95,7 +95,7 @@ namespace Library
             RegistryData.DBConnectionString.Close();
 
             if (uniquePassword != 0)
-                MessageBox.Show("Пользователь с таким паролем уже числится в информационной системе!", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(MessageUser.UserAlreadyHavePas, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 return true;
 
@@ -107,9 +107,7 @@ namespace Library
             if (CheckOccupancyTextBox() == true && CheckCoincidencePasswords() == true && CheckLenghtLoginPassword() == true && CheckTextLoginPassword() == true && CheckUniqueLogin() == true && CheckUniquePassword() == true)
             {
                 storedProcedure.SPUserInsert(tbSurname.Text, tbName.Text, tbPatronymic.Text, tbLogin.Text, tbPassword.Text, 2);
-                MessageBox.Show("Вы успешно зарегистрировались в информационной системе! В данный момент у Вас права Гостя. " +
-                    "Обратитесь к системному администратору, чтобы он изменил ваши права. Теперь пройдите авторизацию для " +
-                    "работы с информационной системой.", "Библиотека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MessageUser.SuccessfulRegistration, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnAuthorization_Click(sender, e);
             }
         }        

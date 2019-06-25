@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularForm));
             this.gbSearchAndFiltration = new System.Windows.Forms.GroupBox();
             this.pnSearch = new System.Windows.Forms.Panel();
             this.tbSearch = new System.Windows.Forms.TextBox();
@@ -69,31 +70,20 @@
             // 
             this.gbSearchAndFiltration.Controls.Add(this.pnSearch);
             this.gbSearchAndFiltration.Controls.Add(this.pnFiltration);
-            this.gbSearchAndFiltration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbSearchAndFiltration.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.gbSearchAndFiltration, "gbSearchAndFiltration");
             this.gbSearchAndFiltration.Name = "gbSearchAndFiltration";
-            this.gbSearchAndFiltration.Size = new System.Drawing.Size(1073, 48);
-            this.gbSearchAndFiltration.TabIndex = 4;
             this.gbSearchAndFiltration.TabStop = false;
-            this.gbSearchAndFiltration.Text = "Поиск и фильтрация:";
             // 
             // pnSearch
             // 
             this.pnSearch.Controls.Add(this.tbSearch);
-            this.pnSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnSearch.Location = new System.Drawing.Point(3, 19);
+            resources.ApplyResources(this.pnSearch, "pnSearch");
             this.pnSearch.Name = "pnSearch";
-            this.pnSearch.Size = new System.Drawing.Size(934, 32);
-            this.pnSearch.TabIndex = 2;
             // 
             // tbSearch
             // 
-            this.tbSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbSearch.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.tbSearch, "tbSearch");
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(934, 23);
-            this.tbSearch.TabIndex = 0;
-            this.tbSearch.Text = "Введите данные книги...";
             this.tbSearch.Click += new System.EventHandler(this.tbSearch_Click);
             this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
             this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
@@ -102,21 +92,13 @@
             // pnFiltration
             // 
             this.pnFiltration.Controls.Add(this.chbFiltration);
-            this.pnFiltration.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnFiltration.Location = new System.Drawing.Point(937, 19);
+            resources.ApplyResources(this.pnFiltration, "pnFiltration");
             this.pnFiltration.Name = "pnFiltration";
-            this.pnFiltration.Size = new System.Drawing.Size(133, 26);
-            this.pnFiltration.TabIndex = 3;
             // 
             // chbFiltration
             // 
-            this.chbFiltration.AutoSize = true;
-            this.chbFiltration.Dock = System.Windows.Forms.DockStyle.Right;
-            this.chbFiltration.Location = new System.Drawing.Point(-19, 0);
+            resources.ApplyResources(this.chbFiltration, "chbFiltration");
             this.chbFiltration.Name = "chbFiltration";
-            this.chbFiltration.Size = new System.Drawing.Size(152, 26);
-            this.chbFiltration.TabIndex = 1;
-            this.chbFiltration.Text = "Отфильтровывать";
             this.chbFiltration.UseVisualStyleBackColor = true;
             this.chbFiltration.CheckedChanged += new System.EventHandler(this.chbFiltration_CheckedChanged);
             // 
@@ -124,31 +106,20 @@
             // 
             this.pnCancel.Controls.Add(this.btnError);
             this.pnCancel.Controls.Add(this.btnExit);
-            this.pnCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnCancel.Location = new System.Drawing.Point(0, 481);
+            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Name = "pnCancel";
-            this.pnCancel.Size = new System.Drawing.Size(1073, 36);
-            this.pnCancel.TabIndex = 5;
             // 
             // btnError
             // 
-            this.btnError.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnError.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.btnError, "btnError");
             this.btnError.Name = "btnError";
-            this.btnError.Size = new System.Drawing.Size(119, 36);
-            this.btnError.TabIndex = 1;
-            this.btnError.Text = "Ошибки";
             this.btnError.UseVisualStyleBackColor = true;
             this.btnError.Click += new System.EventHandler(this.btnError_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.Location = new System.Drawing.Point(954, 0);
+            resources.ApplyResources(this.btnExit, "btnExit");
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(119, 36);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "Закрыть";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -165,44 +136,28 @@
             this.gbManipulationData.Controls.Add(this.lbNumberDays);
             this.gbManipulationData.Controls.Add(this.dtpDateIssue);
             this.gbManipulationData.Controls.Add(this.lbDateIssue);
-            this.gbManipulationData.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gbManipulationData.Location = new System.Drawing.Point(0, 48);
+            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
             this.gbManipulationData.Name = "gbManipulationData";
-            this.gbManipulationData.Size = new System.Drawing.Size(280, 433);
-            this.gbManipulationData.TabIndex = 6;
             this.gbManipulationData.TabStop = false;
-            this.gbManipulationData.Text = "Манипулирование данными:";
             // 
             // btnDelete
             // 
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDelete.Location = new System.Drawing.Point(3, 334);
+            resources.ApplyResources(this.btnDelete, "btnDelete");
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(274, 23);
-            this.btnDelete.TabIndex = 16;
-            this.btnDelete.Text = "Удалить запись формуляра";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUpdate.Location = new System.Drawing.Point(3, 311);
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(274, 23);
-            this.btnUpdate.TabIndex = 15;
-            this.btnUpdate.Text = "Изменить запись";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
-            this.btnInsert.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInsert.Location = new System.Drawing.Point(3, 288);
+            resources.ApplyResources(this.btnInsert, "btnInsert");
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(274, 23);
-            this.btnInsert.TabIndex = 14;
-            this.btnInsert.Text = "Добавить запись формуляра";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -214,108 +169,67 @@
             this.pnComboBox.Controls.Add(this.lbBook);
             this.pnComboBox.Controls.Add(this.cbReader);
             this.pnComboBox.Controls.Add(this.lbReader);
-            this.pnComboBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnComboBox.Location = new System.Drawing.Point(3, 156);
+            resources.ApplyResources(this.pnComboBox, "pnComboBox");
             this.pnComboBox.Name = "pnComboBox";
-            this.pnComboBox.Size = new System.Drawing.Size(274, 132);
-            this.pnComboBox.TabIndex = 17;
             // 
             // btnUpdateBook
             // 
-            this.btnUpdateBook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUpdateBook.Location = new System.Drawing.Point(0, 103);
+            resources.ApplyResources(this.btnUpdateBook, "btnUpdateBook");
             this.btnUpdateBook.Name = "btnUpdateBook";
-            this.btnUpdateBook.Size = new System.Drawing.Size(274, 23);
-            this.btnUpdateBook.TabIndex = 13;
-            this.btnUpdateBook.Text = "Редактировать данные книги";
             this.btnUpdateBook.UseVisualStyleBackColor = true;
             this.btnUpdateBook.Click += new System.EventHandler(this.btnUpdateBook_Click);
             // 
             // btnUpdateReader
             // 
-            this.btnUpdateReader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUpdateReader.Location = new System.Drawing.Point(0, 80);
+            resources.ApplyResources(this.btnUpdateReader, "btnUpdateReader");
             this.btnUpdateReader.Name = "btnUpdateReader";
-            this.btnUpdateReader.Size = new System.Drawing.Size(274, 23);
-            this.btnUpdateReader.TabIndex = 12;
-            this.btnUpdateReader.Text = "Редактировать данные читателя";
             this.btnUpdateReader.UseVisualStyleBackColor = true;
             this.btnUpdateReader.Click += new System.EventHandler(this.btnUpdateReader_Click);
             // 
             // cbBook
             // 
-            this.cbBook.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(this.cbBook, "cbBook");
             this.cbBook.FormattingEnabled = true;
-            this.cbBook.Location = new System.Drawing.Point(0, 56);
             this.cbBook.Name = "cbBook";
-            this.cbBook.Size = new System.Drawing.Size(274, 24);
-            this.cbBook.TabIndex = 9;
             this.cbBook.DropDown += new System.EventHandler(this.cbBook_DropDown);
             // 
             // lbBook
             // 
-            this.lbBook.AutoSize = true;
-            this.lbBook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbBook.Location = new System.Drawing.Point(0, 40);
+            resources.ApplyResources(this.lbBook, "lbBook");
             this.lbBook.Name = "lbBook";
-            this.lbBook.Size = new System.Drawing.Size(45, 16);
-            this.lbBook.TabIndex = 11;
-            this.lbBook.Text = "Книга";
             // 
             // cbReader
             // 
-            this.cbReader.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(this.cbReader, "cbReader");
             this.cbReader.FormattingEnabled = true;
-            this.cbReader.Location = new System.Drawing.Point(0, 16);
             this.cbReader.Name = "cbReader";
-            this.cbReader.Size = new System.Drawing.Size(274, 24);
-            this.cbReader.TabIndex = 8;
             this.cbReader.DropDown += new System.EventHandler(this.cbReader_DropDown);
             // 
             // lbReader
             // 
-            this.lbReader.AutoSize = true;
-            this.lbReader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbReader.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.lbReader, "lbReader");
             this.lbReader.Name = "lbReader";
-            this.lbReader.Size = new System.Drawing.Size(70, 16);
-            this.lbReader.TabIndex = 10;
-            this.lbReader.Text = "Читатель";
             // 
             // chbBookReturned
             // 
-            this.chbBookReturned.AutoSize = true;
-            this.chbBookReturned.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chbBookReturned.Location = new System.Drawing.Point(3, 136);
+            resources.ApplyResources(this.chbBookReturned, "chbBookReturned");
             this.chbBookReturned.Name = "chbBookReturned";
-            this.chbBookReturned.Size = new System.Drawing.Size(274, 20);
-            this.chbBookReturned.TabIndex = 7;
-            this.chbBookReturned.Text = "Книга возвращена";
             this.chbBookReturned.UseVisualStyleBackColor = true;
             // 
             // tbDateReturn
             // 
-            this.tbDateReturn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbDateReturn.Location = new System.Drawing.Point(3, 113);
+            resources.ApplyResources(this.tbDateReturn, "tbDateReturn");
             this.tbDateReturn.Name = "tbDateReturn";
             this.tbDateReturn.ReadOnly = true;
-            this.tbDateReturn.Size = new System.Drawing.Size(274, 23);
-            this.tbDateReturn.TabIndex = 4;
             // 
             // lbDateReturn
             // 
-            this.lbDateReturn.AutoSize = true;
-            this.lbDateReturn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbDateReturn.Location = new System.Drawing.Point(3, 97);
+            resources.ApplyResources(this.lbDateReturn, "lbDateReturn");
             this.lbDateReturn.Name = "lbDateReturn";
-            this.lbDateReturn.Size = new System.Drawing.Size(142, 16);
-            this.lbDateReturn.TabIndex = 5;
-            this.lbDateReturn.Text = "Дата возврата книги";
             // 
             // nudNumberDays
             // 
-            this.nudNumberDays.Dock = System.Windows.Forms.DockStyle.Top;
-            this.nudNumberDays.Location = new System.Drawing.Point(3, 74);
+            resources.ApplyResources(this.nudNumberDays, "nudNumberDays");
             this.nudNumberDays.Maximum = new decimal(new int[] {
             365,
             0,
@@ -327,8 +241,6 @@
             0,
             0});
             this.nudNumberDays.Name = "nudNumberDays";
-            this.nudNumberDays.Size = new System.Drawing.Size(274, 23);
-            this.nudNumberDays.TabIndex = 0;
             this.nudNumberDays.Value = new decimal(new int[] {
             1,
             0,
@@ -338,35 +250,22 @@
             // 
             // lbNumberDays
             // 
-            this.lbNumberDays.AutoSize = true;
-            this.lbNumberDays.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbNumberDays.Location = new System.Drawing.Point(3, 58);
+            resources.ApplyResources(this.lbNumberDays, "lbNumberDays");
             this.lbNumberDays.Name = "lbNumberDays";
-            this.lbNumberDays.Size = new System.Drawing.Size(172, 16);
-            this.lbNumberDays.TabIndex = 3;
-            this.lbNumberDays.Text = "Количество дней выдачи";
             // 
             // dtpDateIssue
             // 
-            this.dtpDateIssue.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(this.dtpDateIssue, "dtpDateIssue");
             this.dtpDateIssue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateIssue.Location = new System.Drawing.Point(3, 35);
             this.dtpDateIssue.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtpDateIssue.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpDateIssue.Name = "dtpDateIssue";
-            this.dtpDateIssue.Size = new System.Drawing.Size(274, 23);
-            this.dtpDateIssue.TabIndex = 18;
             this.dtpDateIssue.ValueChanged += new System.EventHandler(this.dtpDateIssue_ValueChanged);
             // 
             // lbDateIssue
             // 
-            this.lbDateIssue.AutoSize = true;
-            this.lbDateIssue.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbDateIssue.Location = new System.Drawing.Point(3, 19);
+            resources.ApplyResources(this.lbDateIssue, "lbDateIssue");
             this.lbDateIssue.Name = "lbDateIssue";
-            this.lbDateIssue.Size = new System.Drawing.Size(131, 16);
-            this.lbDateIssue.TabIndex = 1;
-            this.lbDateIssue.Text = "Дата выдачи книги";
             // 
             // dgvFormular
             // 
@@ -375,30 +274,23 @@
             this.dgvFormular.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFormular.BackgroundColor = System.Drawing.Color.White;
             this.dgvFormular.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFormular.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFormular.Location = new System.Drawing.Point(280, 48);
+            resources.ApplyResources(this.dgvFormular, "dgvFormular");
             this.dgvFormular.Name = "dgvFormular";
             this.dgvFormular.ReadOnly = true;
             this.dgvFormular.RowTemplate.Height = 24;
-            this.dgvFormular.Size = new System.Drawing.Size(793, 433);
-            this.dgvFormular.TabIndex = 7;
             this.dgvFormular.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFormular_CellClick);
             this.dgvFormular.Click += new System.EventHandler(this.dgvFormular_Click);
             // 
             // FormularForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1073, 517);
             this.Controls.Add(this.dgvFormular);
             this.Controls.Add(this.gbManipulationData);
             this.Controls.Add(this.pnCancel);
             this.Controls.Add(this.gbSearchAndFiltration);
-            this.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "FormularForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Формуляры";
             this.Load += new System.EventHandler(this.FormularForm_Load);
             this.gbSearchAndFiltration.ResumeLayout(false);
             this.pnSearch.ResumeLayout(false);

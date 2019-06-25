@@ -2,6 +2,7 @@
 using System.IO;
 using Xceed.Words.NET;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Library
 {
@@ -14,11 +15,18 @@ namespace Library
         {
             try
             {
-                fileName = @"D:\Games\Формуляр " + surname + " " + name + " " + patronymic + " от " + DateTime.Now.ToString("HH.mm.ss_dd.MM.yyyy") + ".docx";
+                if (RegistryData.DirPath == "")
+                {
+                    RegistryData.DirPath = "C:\\Users\\" + SystemInformation.UserName + "\\Documents\\Отчёты";
+                    if (!Directory.Exists(RegistryData.DirPath))
+                        Directory.CreateDirectory(RegistryData.DirPath);
+                }
+
+                fileName = RegistryData.DirPath + "\\Формуляр " + surname + " " + name + " " + patronymic + " от " + DateTime.Now.ToString("HH.mm.ss_dd.MM.yyyy") + ".docx";
 
                 using (DocX document = DocX.Create(fileName))   //формирование документа в формате docx
                 {
-                    document.PageLayout.Orientation = Orientation.Landscape;
+                    document.PageLayout.Orientation = Xceed.Words.NET.Orientation.Landscape;
                     document.MarginTop = 28.3f;
                     document.MarginLeft = 56.6f;
                     document.MarginRight = 33.96f;

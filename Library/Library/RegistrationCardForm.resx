@@ -117,4 +117,1363 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;lbEmail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbBuilding.Name" xml:space="preserve">
+    <value>tbBuilding</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;gbManipulationData.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbName.Name" xml:space="preserve">
+    <value>lbName</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tbSurname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="dtpBirthday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 152</value>
+  </data>
+  <data name="&gt;&gt;lbTown.Parent" xml:space="preserve">
+    <value>gbPlaceResidence</value>
+  </data>
+  <data name="gbSearchAndFiltration.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;gbContactInformation.Parent" xml:space="preserve">
+    <value>gbManipulationData</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gbManipulationData.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;gbContactInformation.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbBuilding.Parent" xml:space="preserve">
+    <value>gbPlaceResidence</value>
+  </data>
+  <data name="tbTown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="lbWhoGivePassport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 16</value>
+  </data>
+  <data name="mtbHomePhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 16</value>
+  </data>
+  <data name="gbSearchAndFiltration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbApartment.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;lbApartment.Name" xml:space="preserve">
+    <value>lbApartment</value>
+  </data>
+  <data name="&gt;&gt;lbPassportSeries.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="gbContactInformation.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="pnSearch.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbTown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="tbStreet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="gbPersonalData.Text" xml:space="preserve">
+    <value>Личные данные:</value>
+  </data>
+  <data name="&gt;&gt;tbBuilding.Parent" xml:space="preserve">
+    <value>gbPlaceResidence</value>
+  </data>
+  <data name="lbWhenGivePassport.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="tbBuilding.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;pnSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbMobilePhone.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dgvRegistrationCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 48</value>
+  </data>
+  <data name="lbTown.Text" xml:space="preserve">
+    <value>Город</value>
+  </data>
+  <data name="&gt;&gt;lbWhenGivePassport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnInsert.Text" xml:space="preserve">
+    <value>Добавить регистрационную карточку</value>
+  </data>
+  <data name="&gt;&gt;tbTown.Name" xml:space="preserve">
+    <value>tbTown</value>
+  </data>
+  <data name="lbBirthday.Text" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="tbPatronymic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbWhoGivePassport.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;pnButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPassportNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 16</value>
+  </data>
+  <data name="lbName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 16</value>
+  </data>
+  <data name="tbPatronymic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 113</value>
+  </data>
+  <data name="&gt;&gt;tbApartment.Name" xml:space="preserve">
+    <value>tbApartment</value>
+  </data>
+  <data name="&gt;&gt;lbHomeTelephone.Name" xml:space="preserve">
+    <value>lbHomeTelephone</value>
+  </data>
+  <data name="lbWhoGivePassport.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="pnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1155, 36</value>
+  </data>
+  <data name="&gt;&gt;tbWhoGivePassport.Name" xml:space="preserve">
+    <value>tbWhoGivePassport</value>
+  </data>
+  <data name="lbPassportSeries.Text" xml:space="preserve">
+    <value>Серия паспорта</value>
+  </data>
+  <data name="lbSurname.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbBuilding.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbBirthday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbPassportData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 19</value>
+  </data>
+  <data name="tbSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="&gt;&gt;dtpBirthday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbPassportSeries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="gbPlaceResidence.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 156</value>
+  </data>
+  <data name="lbBuilding.Text" xml:space="preserve">
+    <value>Дом</value>
+  </data>
+  <data name="pnButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="lbSurname.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbStreet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>pnButtons</value>
+  </data>
+  <data name="chbFiltration.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gbSearchAndFiltration.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dtpBirthday.Name" xml:space="preserve">
+    <value>dtpBirthday</value>
+  </data>
+  <data name="&gt;&gt;dgvRegistrationCard.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbApartment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="lbWhenGivePassport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 16</value>
+  </data>
+  <data name="&gt;&gt;chbFiltration.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbHomeTelephone.Parent" xml:space="preserve">
+    <value>gbContactInformation</value>
+  </data>
+  <data name="lbTown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="tbName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="lbApartment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 16</value>
+  </data>
+  <data name="&gt;&gt;tbEmail.Parent" xml:space="preserve">
+    <value>gbContactInformation</value>
+  </data>
+  <data name="tbPassportSeries.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="dtpBirthday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="lbHaveBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 16</value>
+  </data>
+  <data name="&gt;&gt;lbSurname.Name" xml:space="preserve">
+    <value>lbSurname</value>
+  </data>
+  <data name="gbManipulationData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1155, 178</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mtbMobilePhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="lbName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 36</value>
+  </data>
+  <data name="gbPlaceResidence.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbHomeTelephone.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="dtpBirthday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="tbPassportNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="&gt;&gt;dtpWhenGivePassport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="&gt;&gt;chbFiltration.Name" xml:space="preserve">
+    <value>chbFiltration</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.Name" xml:space="preserve">
+    <value>btnInsert</value>
+  </data>
+  <data name="&gt;&gt;tbEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbContactInformation.Name" xml:space="preserve">
+    <value>gbContactInformation</value>
+  </data>
+  <data name="&gt;&gt;lbWhoGivePassport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbStreet.Name" xml:space="preserve">
+    <value>tbStreet</value>
+  </data>
+  <data name="&gt;&gt;mtbHomePhone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbEmail.Name" xml:space="preserve">
+    <value>lbEmail</value>
+  </data>
+  <data name="btnError.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;lbName.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tbApartment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 152</value>
+  </data>
+  <data name="&gt;&gt;lbWhenGivePassport.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnCancel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="gbContactInformation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnInsert.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.Parent" xml:space="preserve">
+    <value>pnSearch</value>
+  </data>
+  <data name="tbPassportNumber.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;gbContactInformation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbBuilding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="lbHaveBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>943, 19</value>
+  </data>
+  <data name="&gt;&gt;dgvRegistrationCard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbPlaceResidence.Location" type="System.Drawing.Point, System.Drawing">
+    <value>473, 19</value>
+  </data>
+  <data name="&gt;&gt;lbPatronymic.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tbSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>925, 23</value>
+  </data>
+  <data name="tbSurname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 35</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chbFiltration.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="tbEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 113</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1036, 0</value>
+  </data>
+  <data name="&gt;&gt;lbPassportSeries.Name" xml:space="preserve">
+    <value>lbPassportSeries</value>
+  </data>
+  <data name="lbTown.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lbHaveBook.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;pnFiltration.Name" xml:space="preserve">
+    <value>pnFiltration</value>
+  </data>
+  <data name="&gt;&gt;lbPassportSeries.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbStreet.Text" xml:space="preserve">
+    <value>Улица</value>
+  </data>
+  <data name="&gt;&gt;gbManipulationData.Name" xml:space="preserve">
+    <value>gbManipulationData</value>
+  </data>
+  <data name="gbPlaceResidence.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;gbPassportData.Parent" xml:space="preserve">
+    <value>gbManipulationData</value>
+  </data>
+  <data name="lbEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 97</value>
+  </data>
+  <data name="gbPersonalData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 156</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.Name" xml:space="preserve">
+    <value>tbSearch</value>
+  </data>
+  <data name="&gt;&gt;gbPersonalData.Name" xml:space="preserve">
+    <value>gbPersonalData</value>
+  </data>
+  <data name="lbSurname.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gbPassportData.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lbName.Text" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="tbTown.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 53</value>
+  </data>
+  <data name="&gt;&gt;gbManipulationData.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tbName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;mtbMobilePhone.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;mtbMobilePhone.Name" xml:space="preserve">
+    <value>mtbMobilePhone</value>
+  </data>
+  <data name="&gt;&gt;lbHaveBook.Parent" xml:space="preserve">
+    <value>gbManipulationData</value>
+  </data>
+  <data name="&gt;&gt;tbApartment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnButtons.Name" xml:space="preserve">
+    <value>pnButtons</value>
+  </data>
+  <data name="&gt;&gt;dtpWhenGivePassport.Name" xml:space="preserve">
+    <value>dtpWhenGivePassport</value>
+  </data>
+  <data name="&gt;&gt;gbPlaceResidence.Name" xml:space="preserve">
+    <value>gbPlaceResidence</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.Parent" xml:space="preserve">
+    <value>pnButtons</value>
+  </data>
+  <data name="lbApartment.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="tbBuilding.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;tbPassportNumber.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tbPassportSeries.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbTown.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tbSurname.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dtpWhenGivePassport.Parent" xml:space="preserve">
+    <value>gbPassportData</value>
+  </data>
+  <data name="tbSearch.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="mtbMobilePhone.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;tbEmail.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;chbFiltration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbEmail.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;tbStreet.Parent" xml:space="preserve">
+    <value>gbPlaceResidence</value>
+  </data>
+  <data name="lbEmail.Text" xml:space="preserve">
+    <value>Адрес электронной почты</value>
+  </data>
+  <data name="btnError.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pnFiltration.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbApartment.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tbName.Name" xml:space="preserve">
+    <value>tbName</value>
+  </data>
+  <data name="chbFiltration.Text" xml:space="preserve">
+    <value>Отфильтровывать</value>
+  </data>
+  <data name="&gt;&gt;mtbMobilePhone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbPersonalData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbPassportNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;tbWhoGivePassport.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbSurname.Text" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="mtbHomePhone.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;tbSurname.Parent" xml:space="preserve">
+    <value>gbPersonalData</value>
+  </data>
+  <data name="tbSearch.Text" xml:space="preserve">
+    <value>Введите данные регистрационной карточки...</value>
+  </data>
+  <data name="&gt;&gt;lbHomeTelephone.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tbSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnButtons.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbPatronymic.Name" xml:space="preserve">
+    <value>tbPatronymic</value>
+  </data>
+  <data name="lbHaveBook.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="dgvRegistrationCard.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;lbWhenGivePassport.Name" xml:space="preserve">
+    <value>lbWhenGivePassport</value>
+  </data>
+  <data name="lbMobilePhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 16</value>
+  </data>
+  <data name="&gt;&gt;gbPassportData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnFiltration.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbBuilding.Name" xml:space="preserve">
+    <value>lbBuilding</value>
+  </data>
+  <data name="&gt;&gt;tbName.Parent" xml:space="preserve">
+    <value>gbPersonalData</value>
+  </data>
+  <data name="gbSearchAndFiltration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1155, 48</value>
+  </data>
+  <data name="&gt;&gt;tbPatronymic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbStreet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="&gt;&gt;lbApartment.Parent" xml:space="preserve">
+    <value>gbPlaceResidence</value>
+  </data>
+  <data name="lbPatronymic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 97</value>
+  </data>
+  <data name="&gt;&gt;pnFiltration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbWhoGivePassport.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dtpWhenGivePassport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="lbHomeTelephone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="mtbHomePhone.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;mtbHomePhone.Parent" xml:space="preserve">
+    <value>gbContactInformation</value>
+  </data>
+  <data name="lbPatronymic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 16</value>
+  </data>
+  <data name="lbPassportSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="&gt;&gt;chbFiltration.Parent" xml:space="preserve">
+    <value>pnFiltration</value>
+  </data>
+  <data name="lbStreet.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;lbPatronymic.Parent" xml:space="preserve">
+    <value>gbPersonalData</value>
+  </data>
+  <data name="lbTown.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gbManipulationData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 408</value>
+  </data>
+  <data name="tbApartment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="&gt;&gt;pnButtons.Parent" xml:space="preserve">
+    <value>gbManipulationData</value>
+  </data>
+  <data name="&gt;&gt;tbPassportNumber.Name" xml:space="preserve">
+    <value>tbPassportNumber</value>
+  </data>
+  <data name="tbStreet.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbPassportSeries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 35</value>
+  </data>
+  <data name="&gt;&gt;lbBuilding.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbEmail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnError.Name" xml:space="preserve">
+    <value>btnError</value>
+  </data>
+  <data name="&gt;&gt;lbPatronymic.Name" xml:space="preserve">
+    <value>lbPatronymic</value>
+  </data>
+  <data name="gbPersonalData.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;tbStreet.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="&gt;&gt;tbStreet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbApartment.Parent" xml:space="preserve">
+    <value>gbPlaceResidence</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbTown.Name" xml:space="preserve">
+    <value>lbTown</value>
+  </data>
+  <data name="lbBuilding.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="tbPatronymic.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnDelete.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;gbPlaceResidence.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbMobilePhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="&gt;&gt;lbHaveBook.Name" xml:space="preserve">
+    <value>lbHaveBook</value>
+  </data>
+  <data name="chbFiltration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 26</value>
+  </data>
+  <data name="btnError.Text" xml:space="preserve">
+    <value>Ошибки</value>
+  </data>
+  <data name="&gt;&gt;lbStreet.Name" xml:space="preserve">
+    <value>lbStreet</value>
+  </data>
+  <data name="lbPassportSeries.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gbContactInformation.Text" xml:space="preserve">
+    <value>Контактные данные:</value>
+  </data>
+  <data name="dgvRegistrationCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1155, 360</value>
+  </data>
+  <data name="btnInsert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;gbSearchAndFiltration.Name" xml:space="preserve">
+    <value>gbSearchAndFiltration</value>
+  </data>
+  <data name="btnInsert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 27</value>
+  </data>
+  <data name="&gt;&gt;gbPersonalData.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbHomeTelephone.Text" xml:space="preserve">
+    <value>Номер мобильного телефона</value>
+  </data>
+  <data name="tbSurname.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbSurname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mtbHomePhone.Name" xml:space="preserve">
+    <value>mtbHomePhone</value>
+  </data>
+  <data name="&gt;&gt;gbPlaceResidence.Parent" xml:space="preserve">
+    <value>gbManipulationData</value>
+  </data>
+  <data name="dtpWhenGivePassport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 152</value>
+  </data>
+  <data name="&gt;&gt;pnSearch.Name" xml:space="preserve">
+    <value>pnSearch</value>
+  </data>
+  <data name="mtbHomePhone.Mask" xml:space="preserve">
+    <value>0(000)000-00-00</value>
+  </data>
+  <data name="tbApartment.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;lbPatronymic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPassportSeries.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbBirthday.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tbPassportSeries.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 26</value>
+  </data>
+  <data name="&gt;&gt;lbName.Parent" xml:space="preserve">
+    <value>gbPersonalData</value>
+  </data>
+  <data name="gbManipulationData.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="gbManipulationData.Text" xml:space="preserve">
+    <value>Манипулирование данными:</value>
+  </data>
+  <data name="btnError.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 36</value>
+  </data>
+  <data name="pnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mtbMobilePhone.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbTown.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lbBirthday.Name" xml:space="preserve">
+    <value>lbBirthday</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gbPassportData.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnFiltration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>928, 19</value>
+  </data>
+  <data name="&gt;&gt;tbTown.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tbWhoGivePassport.Parent" xml:space="preserve">
+    <value>gbPassportData</value>
+  </data>
+  <data name="&gt;&gt;mtbHomePhone.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tbTown.Parent" xml:space="preserve">
+    <value>gbPlaceResidence</value>
+  </data>
+  <data name="&gt;&gt;lbStreet.Parent" xml:space="preserve">
+    <value>gbPlaceResidence</value>
+  </data>
+  <data name="btnInsert.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbBuilding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 16</value>
+  </data>
+  <data name="&gt;&gt;lbPassportSeries.Parent" xml:space="preserve">
+    <value>gbPassportData</value>
+  </data>
+  <data name="&gt;&gt;lbHaveBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbPassportData.Name" xml:space="preserve">
+    <value>gbPassportData</value>
+  </data>
+  <data name="&gt;&gt;pnFiltration.Parent" xml:space="preserve">
+    <value>gbSearchAndFiltration</value>
+  </data>
+  <data name="&gt;&gt;tbWhoGivePassport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbTown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbHaveBook.Text" xml:space="preserve">
+    <value>Наличие книги в данный момент: Нет</value>
+  </data>
+  <data name="lbEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 16</value>
+  </data>
+  <data name="&gt;&gt;gbSearchAndFiltration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbBuilding.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbApartment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbTown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 35</value>
+  </data>
+  <data name="&gt;&gt;lbEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPatronymic.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnInsert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbHomeTelephone.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gbPlaceResidence.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbPatronymic.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="mtbHomePhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
+    <value>pnButtons</value>
+  </data>
+  <data name="&gt;&gt;dtpBirthday.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbWhoGivePassport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbWhoGivePassport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 97</value>
+  </data>
+  <data name="&gt;&gt;lbSurname.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;dgvRegistrationCard.Name" xml:space="preserve">
+    <value>dgvRegistrationCard</value>
+  </data>
+  <data name="&gt;&gt;tbPatronymic.Parent" xml:space="preserve">
+    <value>gbPersonalData</value>
+  </data>
+  <data name="&gt;&gt;lbBirthday.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chbFiltration.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbBirthday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>RegistrationCardForm</value>
+  </data>
+  <data name="dtpBirthday.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;mtbMobilePhone.Parent" xml:space="preserve">
+    <value>gbContactInformation</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8pt</value>
+  </data>
+  <data name="&gt;&gt;tbName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnFiltration.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbTown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPassportNumber.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbName.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dtpWhenGivePassport.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbPassportNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbWhoGivePassport.Text" xml:space="preserve">
+    <value>Кем выдан паспорт</value>
+  </data>
+  <data name="lbStreet.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="mtbMobilePhone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 35</value>
+  </data>
+  <data name="gbSearchAndFiltration.Text" xml:space="preserve">
+    <value>Поиск и фильтрация:</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
+    <value>btnUpdate</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Удалить регистрационную карточку</value>
+  </data>
+  <data name="&gt;&gt;tbPassportSeries.Parent" xml:space="preserve">
+    <value>gbPassportData</value>
+  </data>
+  <data name="gbSearchAndFiltration.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbEmail.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbWhoGivePassport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="&gt;&gt;lbPassportNumber.Parent" xml:space="preserve">
+    <value>gbPassportData</value>
+  </data>
+  <data name="pnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 586</value>
+  </data>
+  <data name="&gt;&gt;tbPassportNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbStreet.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lbMobilePhone.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnInsert.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gbPersonalData.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbBuilding.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 97</value>
+  </data>
+  <data name="&gt;&gt;lbWhenGivePassport.Parent" xml:space="preserve">
+    <value>gbPassportData</value>
+  </data>
+  <data name="&gt;&gt;gbPassportData.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbPassportNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="lbSurname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 16</value>
+  </data>
+  <data name="lbBirthday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 16</value>
+  </data>
+  <data name="lbWhenGivePassport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gbPassportData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 156</value>
+  </data>
+  <data name="&gt;&gt;btnError.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbHaveBook.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbMobilePhone.Parent" xml:space="preserve">
+    <value>gbContactInformation</value>
+  </data>
+  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lbPassportNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbMobilePhone.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;lbSurname.Parent" xml:space="preserve">
+    <value>gbPersonalData</value>
+  </data>
+  <data name="&gt;&gt;btnError.Parent" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="&gt;&gt;lbEmail.Parent" xml:space="preserve">
+    <value>gbContactInformation</value>
+  </data>
+  <data name="lbPatronymic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dtpWhenGivePassport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;gbManipulationData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbMobilePhone.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;tbBuilding.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnFiltration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 26</value>
+  </data>
+  <data name="btnUpdate.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbPatronymic.Text" xml:space="preserve">
+    <value>Отчество</value>
+  </data>
+  <data name="&gt;&gt;tbPassportSeries.Name" xml:space="preserve">
+    <value>tbPassportSeries</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Name" xml:space="preserve">
+    <value>pnCancel</value>
+  </data>
+  <data name="tbStreet.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lbWhoGivePassport.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbBuilding.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mtbMobilePhone.Mask" xml:space="preserve">
+    <value>0(000)000-00-00</value>
+  </data>
+  <data name="&gt;&gt;lbWhoGivePassport.Parent" xml:space="preserve">
+    <value>gbPassportData</value>
+  </data>
+  <data name="tbSurname.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tbStreet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="gbPassportData.Text" xml:space="preserve">
+    <value>Паспортные данные:</value>
+  </data>
+  <data name="tbApartment.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbWhoGivePassport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;pnSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbBirthday.Parent" xml:space="preserve">
+    <value>gbPersonalData</value>
+  </data>
+  <data name="lbHomeTelephone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 16</value>
+  </data>
+  <data name="lbPassportSeries.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="gbPersonalData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="gbPlaceResidence.Text" xml:space="preserve">
+    <value>Место проживания:</value>
+  </data>
+  <data name="&gt;&gt;dtpBirthday.Parent" xml:space="preserve">
+    <value>gbPersonalData</value>
+  </data>
+  <data name="chbFiltration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-24, 0</value>
+  </data>
+  <data name="&gt;&gt;btnError.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPassportNumber.Text" xml:space="preserve">
+    <value>Номер паспорта</value>
+  </data>
+  <data name="dtpWhenGivePassport.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;lbApartment.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbSurname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btnError.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lbSurname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="lbStreet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 16</value>
+  </data>
+  <data name="&gt;&gt;tbPassportNumber.Parent" xml:space="preserve">
+    <value>gbPassportData</value>
+  </data>
+  <data name="&gt;&gt;tbName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lbPassportNumber.Name" xml:space="preserve">
+    <value>lbPassportNumber</value>
+  </data>
+  <data name="lbStreet.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbWhenGivePassport.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tbName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="&gt;&gt;tbSurname.Name" xml:space="preserve">
+    <value>tbSurname</value>
+  </data>
+  <data name="lbApartment.Text" xml:space="preserve">
+    <value>Квартира</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1155, 622</value>
+  </data>
+  <data name="lbPassportNumber.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;lbMobilePhone.Name" xml:space="preserve">
+    <value>lbMobilePhone</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="&gt;&gt;pnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Регистрационные карточки читателей</value>
+  </data>
+  <data name="gbContactInformation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>708, 19</value>
+  </data>
+  <data name="&gt;&gt;dgvRegistrationCard.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbPassportNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tbPassportNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 74</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Изменить данные</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gbContactInformation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 156</value>
+  </data>
+  <data name="lbBirthday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 136</value>
+  </data>
+  <data name="lbBuilding.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbPassportSeries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 16</value>
+  </data>
+  <data name="tbWhoGivePassport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 113</value>
+  </data>
+  <data name="lbWhenGivePassport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 136</value>
+  </data>
+  <data name="&gt;&gt;gbPersonalData.Parent" xml:space="preserve">
+    <value>gbManipulationData</value>
+  </data>
+  <data name="pnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>925, 26</value>
+  </data>
+  <data name="lbBirthday.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbWhenGivePassport.Text" xml:space="preserve">
+    <value>Когда выдан паспорт</value>
+  </data>
+  <data name="&gt;&gt;lbWhoGivePassport.Name" xml:space="preserve">
+    <value>lbWhoGivePassport</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnUpdate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>943, 35</value>
+  </data>
+  <data name="&gt;&gt;gbSearchAndFiltration.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnSearch.Parent" xml:space="preserve">
+    <value>gbSearchAndFiltration</value>
+  </data>
+  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 26</value>
+  </data>
+  <data name="lbHomeTelephone.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnInsert.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tbEmail.Name" xml:space="preserve">
+    <value>tbEmail</value>
+  </data>
+  <data name="pnButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 85</value>
+  </data>
+  <data name="tbBuilding.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 113</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbHomeTelephone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnDelete.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvRegistrationCard.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tbPassportSeries.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;lbMobilePhone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbPatronymic.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tbTown.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lbHaveBook.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tbPatronymic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="lbMobilePhone.Text" xml:space="preserve">
+    <value>Номер домашнего телефона</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="lbApartment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 136</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

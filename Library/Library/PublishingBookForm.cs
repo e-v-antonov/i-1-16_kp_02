@@ -11,7 +11,6 @@ namespace Library
 
         public PublishingBookForm()
         {
-            //Program.EnablePublishingBookForm = this;
             InitializeComponent();
         }
 
@@ -77,7 +76,7 @@ namespace Library
 
         private void btnDelete_Click(object sender, EventArgs e)    //кнопка удаления записи
         {
-            switch (MessageBox.Show("Удалить книжное издательство " + ltbPublishing.Text + "?", "Удаление книжного издательства", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            switch (MessageBox.Show(MessageUser.QuestionDeletePublishing + " " + ltbPublishing.Text + "?", MessageUser.DeletePublishing, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
                     storedProcedure.SPPublishingBookDelete(Convert.ToInt32(ltbPublishing.SelectedValue.ToString()));
@@ -87,7 +86,7 @@ namespace Library
 
         private void btnError_Click(object sender, EventArgs e) //кнопка ошибки
         {
-            MessageBox.Show(RegistryData.ErrorMessage, "Ошибки в результате работы информационной системы");
+            MessageBox.Show(RegistryData.ErrorMessage, MessageUser.TitleError);
         }
 
         private void btnExit_Click(object sender, EventArgs e)   //кнопка закрытия окна
@@ -104,12 +103,12 @@ namespace Library
         private void tbSearch_Leave(object sender, EventArgs e) //поле поиска больше не в фокусе
         {
             if (tbPublishing.Text == "")
-                tbPublishing.Text = "Введите название издательства...";
+                tbPublishing.Text = MessageUser.EnterPublishing;
         }
 
         private void tbSearch_Enter(object sender, EventArgs e) //поле поиска стало активным
         {
-            if (tbPublishing.Text == "Введите название издательства..")
+            if (tbPublishing.Text == MessageUser.EnterPublishing)
                 tbPublishing.Clear();
         }
 
