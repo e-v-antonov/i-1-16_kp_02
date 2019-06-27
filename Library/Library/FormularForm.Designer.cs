@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularForm));
             this.gbSearchAndFiltration = new System.Windows.Forms.GroupBox();
             this.pnSearch = new System.Windows.Forms.Panel();
@@ -38,6 +39,8 @@
             this.btnError = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.gbManipulationData = new System.Windows.Forms.GroupBox();
+            this.pnRefreshData = new System.Windows.Forms.Panel();
+            this.btnRefreshData = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
@@ -56,11 +59,13 @@
             this.dtpDateIssue = new System.Windows.Forms.DateTimePicker();
             this.lbDateIssue = new System.Windows.Forms.Label();
             this.dgvFormular = new System.Windows.Forms.DataGridView();
+            this.ttRefreshData = new System.Windows.Forms.ToolTip(this.components);
             this.gbSearchAndFiltration.SuspendLayout();
             this.pnSearch.SuspendLayout();
             this.pnFiltration.SuspendLayout();
             this.pnCancel.SuspendLayout();
             this.gbManipulationData.SuspendLayout();
+            this.pnRefreshData.SuspendLayout();
             this.pnComboBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumberDays)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormular)).BeginInit();
@@ -125,6 +130,7 @@
             // 
             // gbManipulationData
             // 
+            this.gbManipulationData.Controls.Add(this.pnRefreshData);
             this.gbManipulationData.Controls.Add(this.btnDelete);
             this.gbManipulationData.Controls.Add(this.btnUpdate);
             this.gbManipulationData.Controls.Add(this.btnInsert);
@@ -139,6 +145,19 @@
             resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
             this.gbManipulationData.Name = "gbManipulationData";
             this.gbManipulationData.TabStop = false;
+            // 
+            // pnRefreshData
+            // 
+            this.pnRefreshData.Controls.Add(this.btnRefreshData);
+            resources.ApplyResources(this.pnRefreshData, "pnRefreshData");
+            this.pnRefreshData.Name = "pnRefreshData";
+            // 
+            // btnRefreshData
+            // 
+            resources.ApplyResources(this.btnRefreshData, "btnRefreshData");
+            this.btnRefreshData.Name = "btnRefreshData";
+            this.btnRefreshData.UseVisualStyleBackColor = true;
+            this.btnRefreshData.Click += new System.EventHandler(this.btnRefreshData_Click);
             // 
             // btnDelete
             // 
@@ -300,6 +319,7 @@
             this.pnCancel.ResumeLayout(false);
             this.gbManipulationData.ResumeLayout(false);
             this.gbManipulationData.PerformLayout();
+            this.pnRefreshData.ResumeLayout(false);
             this.pnComboBox.ResumeLayout(false);
             this.pnComboBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumberDays)).EndInit();
@@ -337,5 +357,8 @@
         public System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Panel pnRefreshData;
+        private System.Windows.Forms.Button btnRefreshData;
+        private System.Windows.Forms.ToolTip ttRefreshData;
     }
 }

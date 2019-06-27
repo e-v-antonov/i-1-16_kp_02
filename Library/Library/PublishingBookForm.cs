@@ -79,7 +79,14 @@ namespace Library
             switch (MessageBox.Show(MessageUser.QuestionDeletePublishing + " " + ltbPublishing.Text + "?", MessageUser.DeletePublishing, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
-                    storedProcedure.SPPublishingBookDelete(Convert.ToInt32(ltbPublishing.SelectedValue.ToString()));
+                    if (AuthorizationForm.userRole == 1)
+                    {
+                        storedProcedure.SPPublishingBookDelete(Convert.ToInt32(ltbPublishing.SelectedValue.ToString()));
+                    }
+                    else
+                    {
+                        storedProcedure.SPPublishingBookLogicalDelete(Convert.ToInt32(ltbPublishing.SelectedValue.ToString()));
+                    }
                     break;
             }
         }

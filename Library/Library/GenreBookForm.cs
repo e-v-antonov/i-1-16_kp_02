@@ -78,7 +78,14 @@ namespace Library
             switch (MessageBox.Show(MessageUser.QuestionDeleteGenre + " " + ltbGenre.Text + "?", MessageUser.DeleteGenre, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
-                    storedProcedure.SPGenreBookDelete(Convert.ToInt32(ltbGenre.SelectedValue.ToString()));
+                    if (AuthorizationForm.userRole == 1)
+                    {
+                        storedProcedure.SPGenreBookDelete(Convert.ToInt32(ltbGenre.SelectedValue.ToString()));
+                    }
+                    else
+                    {
+                        storedProcedure.SPGenreBookLogicalDelete(Convert.ToInt32(ltbGenre.SelectedValue.ToString()));
+                    }
                     break;
             }
         }

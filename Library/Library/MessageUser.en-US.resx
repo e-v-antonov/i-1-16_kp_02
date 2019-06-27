@@ -262,7 +262,7 @@
     <value>Login</value>
   </data>
   <data name="MinLengthPassLog" xml:space="preserve">
-    <value>Login and password must have a minimum length of 8 characters!</value>
+    <value>Login and password must have a minimum length of 8 characters and a maximum of 16 characters!</value>
   </data>
   <data name="MobilePhone" xml:space="preserve">
     <value>Mobile phone number</value>
@@ -416,5 +416,8 @@
   </data>
   <data name="BookIssue" xml:space="preserve">
     <value>The book was successfully issued to the reader.</value>
+  </data>
+  <data name="BookNoInLibrary" xml:space="preserve">
+    <value>The book with these parameters is not listed in the library.</value>
   </data>
 </root>

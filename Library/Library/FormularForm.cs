@@ -17,6 +17,8 @@ namespace Library
         public FormularForm()
         {
             InitializeComponent();
+            ToolTip ttRefreshData = new ToolTip();
+            ttRefreshData.SetToolTip(btnRefreshData, "Обновление данных на форме");
         }
 
         private void UpdateEnable(bool valueUpdateEnable)   //изменение доступности кнопок
@@ -224,7 +226,14 @@ namespace Library
             switch (MessageBox.Show(MessageUser.QuestionDeleteFormular + " " + cbReader.Text + "?", MessageUser.DeleteEntryFormular, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
-                    storedProcedure.SPFormularReaderDelete(Convert.ToInt32(dgvFormular.CurrentRow.Cells[0].Value.ToString()));
+                    if (AuthorizationForm.userRole == 1)
+                    {
+                        storedProcedure.SPFormularReaderDelete(Convert.ToInt32(dgvFormular.CurrentRow.Cells[0].Value.ToString()));
+                    }
+                    else
+                    {
+                        storedProcedure.SPFormularReaderLogicalDelete(Convert.ToInt32(dgvFormular.CurrentRow.Cells[0].Value.ToString()));
+                    }
                     FormularFill();
                     dtpDateIssue.Value = DateTime.Now;
                     nudNumberDays.Value = 1;
@@ -348,6 +357,13 @@ namespace Library
         private void dgvFormular_Click(object sender, EventArgs e)  //клик по полю data grid view
         {
             //FormularFill();
+        }
+
+        private void btnRefreshData_Click(object sender, EventArgs e)   //принудительное обновление данных на форме
+        {
+            FormularFill();
+            ReaderFill();
+            BookFill();
         }
     }
 }

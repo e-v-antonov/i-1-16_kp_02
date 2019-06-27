@@ -51,9 +51,9 @@
             // 
             // pnCancel
             // 
-            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Controls.Add(this.btnExit);
             this.pnCancel.Controls.Add(this.btnError);
+            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Name = "pnCancel";
             // 
             // btnExit
@@ -72,11 +72,11 @@
             // 
             // gbCreateDocument
             // 
-            resources.ApplyResources(this.gbCreateDocument, "gbCreateDocument");
             this.gbCreateDocument.Controls.Add(this.btnCreatePdfExceptionBook);
             this.gbCreateDocument.Controls.Add(this.btnCreateWordExceptionBook);
             this.gbCreateDocument.Controls.Add(this.btnCreatePdfAdoptionBook);
             this.gbCreateDocument.Controls.Add(this.btnCreateWordAdoptionBook);
+            resources.ApplyResources(this.gbCreateDocument, "gbCreateDocument");
             this.gbCreateDocument.Name = "gbCreateDocument";
             this.gbCreateDocument.TabStop = false;
             // 
@@ -110,12 +110,12 @@
             // 
             // dgvListBook
             // 
-            resources.ApplyResources(this.dgvListBook, "dgvListBook");
             this.dgvListBook.AllowUserToAddRows = false;
             this.dgvListBook.AllowUserToDeleteRows = false;
             this.dgvListBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListBook.BackgroundColor = System.Drawing.Color.White;
             this.dgvListBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvListBook, "dgvListBook");
             this.dgvListBook.Name = "dgvListBook";
             this.dgvListBook.ReadOnly = true;
             this.dgvListBook.RowTemplate.Height = 24;

@@ -262,10 +262,8 @@ namespace Library
             if (cbWriter.Text == "" && cbGenre.Text == "" && cbPublishing.Text == "")   //поиск по названию
                 for (int i = 0; i < dgvBook.RowCount; i++)
                 {
-                    for (int j = 0; j < dgvBook.ColumnCount; j++)
-                    {
-                        if (dgvBook.Rows[i].Cells[j].Value != null)
-                            if (dgvBook.Rows[i].Cells[j].Value.ToString().Contains(tbTitleBook.Text))
+                        if (dgvBook.Rows[i].Cells[1].Value != null)
+                            if (dgvBook.Rows[i].Cells[1].Value.ToString().Contains(tbTitleBook.Text))
                             {
                                 dgvBook.Rows[i].Selected = true;
                                 dgvBook.CurrentCell = dgvBook.Rows[i].Cells[1];
@@ -278,7 +276,11 @@ namespace Library
                                 nudNumberDays_ValueChanged(sender, e);
                                 break;
                             }
-                    }
+                            else
+                            {
+                                if (i == dgvBook.RowCount - 1)
+                                    MessageBox.Show(MessageUser.BookNoInLibrary, MessageUser.TitleError, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                 }
             else
                 if (tbTitleBook.Text == "" && cbGenre.Text == "" && cbPublishing.Text == "")    //поиск автору

@@ -34,7 +34,9 @@ namespace Library
 
         public RegistrationCardForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            ToolTip ttRefreshData = new ToolTip();
+            ttRefreshData.SetToolTip(btnRefreshData, "Обновление данных на форме");
         }
 
         private void UpdateEnable(bool valueUpdateEnable)   //изменение доступности кнопок
@@ -371,7 +373,14 @@ namespace Library
             switch (MessageBox.Show(MessageUser.QuestionDeleteRegCard + " " + tbSurname.Text + " " + tbName.Text + " " + tbPatronymic.Text + "?", MessageUser.DeleteRegCard, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
-                    storedProcedure.SPRegistrationCardReaderDelete(Convert.ToInt32(dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString()));
+                    if (AuthorizationForm.userRole == 1)
+                    {
+                        storedProcedure.SPRegistrationCardReaderDelete(Convert.ToInt32(dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString()));
+                    }
+                    else
+                    {
+                        storedProcedure.SPRegistrationCardReaderLogicalDeletee(Convert.ToInt32(dgvRegistrationCard.CurrentRow.Cells[0].Value.ToString()));
+                    }
                     tbSurname.Clear();
                     tbName.Clear();
                     tbPatronymic.Clear();
@@ -489,6 +498,11 @@ namespace Library
 
         private void dgvRegistrationCard_Click(object sender, EventArgs e)  //клик по data grid view
         {
+        }
+
+        private void btnRefreshData_Click(object sender, EventArgs e)   //принудительное обновление данных на форме
+        {
+            RegistrationCardFill();
         }
     }
 }

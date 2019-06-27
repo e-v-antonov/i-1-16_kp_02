@@ -96,7 +96,14 @@ namespace Library
             switch (MessageBox.Show(MessageUser.DeleteUser + " " + tbSurnameWriter.Text + " " + tbNameWriter.Text + " " + tbPatronymicWriter.Text + "?", MessageUser.QuestionDeleteWriter, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
-                    storedProcedure.SPWriterBookDelete(Convert.ToInt32(dgvWriterBook.CurrentRow.Cells[0].Value.ToString()));
+                    if (AuthorizationForm.userRole == 1)
+                    {
+                        storedProcedure.SPWriterBookDelete(Convert.ToInt32(dgvWriterBook.CurrentRow.Cells[0].Value.ToString()));
+                    }
+                    else
+                    {
+                        storedProcedure.SPWriterBookLogicalDeletee(Convert.ToInt32(dgvWriterBook.CurrentRow.Cells[0].Value.ToString()));
+                    }
                     break;
             }
         }

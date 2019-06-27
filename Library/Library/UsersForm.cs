@@ -32,6 +32,8 @@ namespace Library
         public UsersForm()
         {
             InitializeComponent();
+            ToolTip ttRefreshData = new ToolTip();
+            ttRefreshData.SetToolTip(btnRefreshData, "Обновление данных на форме");
         }
 
         private void UsersForm_Load(object sender, EventArgs e) //загрузка формы
@@ -331,6 +333,11 @@ namespace Library
         private void btnExit_Click(object sender, EventArgs e)  //кнопка закрыть
         {
             Close();
+        }
+
+        private void btnRefreshData_Click(object sender, EventArgs e)   //принудительное обновление данных на форме
+        {
+            UserFill();
         }
     }
 }

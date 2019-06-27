@@ -33,11 +33,13 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnError = new System.Windows.Forms.Button();
             this.gbSearchAndFiltration = new System.Windows.Forms.GroupBox();
-            this.pnFiltration = new System.Windows.Forms.Panel();
-            this.chbFiltration = new System.Windows.Forms.CheckBox();
             this.pnSearch = new System.Windows.Forms.Panel();
             this.tbSearch = new System.Windows.Forms.TextBox();
+            this.pnFiltration = new System.Windows.Forms.Panel();
+            this.chbFiltration = new System.Windows.Forms.CheckBox();
             this.gbManipulationData = new System.Windows.Forms.GroupBox();
+            this.pnRefreshData = new System.Windows.Forms.Panel();
+            this.btnRefreshData = new System.Windows.Forms.Button();
             this.pnButtons = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -80,9 +82,10 @@
             this.dgvRegistrationCard = new System.Windows.Forms.DataGridView();
             this.pnCancel.SuspendLayout();
             this.gbSearchAndFiltration.SuspendLayout();
-            this.pnFiltration.SuspendLayout();
             this.pnSearch.SuspendLayout();
+            this.pnFiltration.SuspendLayout();
             this.gbManipulationData.SuspendLayout();
+            this.pnRefreshData.SuspendLayout();
             this.pnButtons.SuspendLayout();
             this.gbContactInformation.SuspendLayout();
             this.gbPlaceResidence.SuspendLayout();
@@ -93,9 +96,9 @@
             // 
             // pnCancel
             // 
-            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Controls.Add(this.btnExit);
             this.pnCancel.Controls.Add(this.btnError);
+            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Name = "pnCancel";
             // 
             // btnExit
@@ -114,29 +117,16 @@
             // 
             // gbSearchAndFiltration
             // 
-            resources.ApplyResources(this.gbSearchAndFiltration, "gbSearchAndFiltration");
-            this.gbSearchAndFiltration.Controls.Add(this.pnFiltration);
             this.gbSearchAndFiltration.Controls.Add(this.pnSearch);
+            this.gbSearchAndFiltration.Controls.Add(this.pnFiltration);
+            resources.ApplyResources(this.gbSearchAndFiltration, "gbSearchAndFiltration");
             this.gbSearchAndFiltration.Name = "gbSearchAndFiltration";
             this.gbSearchAndFiltration.TabStop = false;
             // 
-            // pnFiltration
-            // 
-            resources.ApplyResources(this.pnFiltration, "pnFiltration");
-            this.pnFiltration.Controls.Add(this.chbFiltration);
-            this.pnFiltration.Name = "pnFiltration";
-            // 
-            // chbFiltration
-            // 
-            resources.ApplyResources(this.chbFiltration, "chbFiltration");
-            this.chbFiltration.Name = "chbFiltration";
-            this.chbFiltration.UseVisualStyleBackColor = true;
-            this.chbFiltration.CheckedChanged += new System.EventHandler(this.chbFiltration_CheckedChanged);
-            // 
             // pnSearch
             // 
-            resources.ApplyResources(this.pnSearch, "pnSearch");
             this.pnSearch.Controls.Add(this.tbSearch);
+            resources.ApplyResources(this.pnSearch, "pnSearch");
             this.pnSearch.Name = "pnSearch";
             // 
             // tbSearch
@@ -148,24 +138,51 @@
             this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
             this.tbSearch.Leave += new System.EventHandler(this.tbSearch_Leave);
             // 
+            // pnFiltration
+            // 
+            this.pnFiltration.Controls.Add(this.chbFiltration);
+            resources.ApplyResources(this.pnFiltration, "pnFiltration");
+            this.pnFiltration.Name = "pnFiltration";
+            // 
+            // chbFiltration
+            // 
+            resources.ApplyResources(this.chbFiltration, "chbFiltration");
+            this.chbFiltration.Name = "chbFiltration";
+            this.chbFiltration.UseVisualStyleBackColor = true;
+            this.chbFiltration.CheckedChanged += new System.EventHandler(this.chbFiltration_CheckedChanged);
+            // 
             // gbManipulationData
             // 
-            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
+            this.gbManipulationData.Controls.Add(this.pnRefreshData);
             this.gbManipulationData.Controls.Add(this.pnButtons);
             this.gbManipulationData.Controls.Add(this.lbHaveBook);
             this.gbManipulationData.Controls.Add(this.gbContactInformation);
             this.gbManipulationData.Controls.Add(this.gbPlaceResidence);
             this.gbManipulationData.Controls.Add(this.gbPassportData);
             this.gbManipulationData.Controls.Add(this.gbPersonalData);
+            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
             this.gbManipulationData.Name = "gbManipulationData";
             this.gbManipulationData.TabStop = false;
             // 
+            // pnRefreshData
+            // 
+            this.pnRefreshData.Controls.Add(this.btnRefreshData);
+            resources.ApplyResources(this.pnRefreshData, "pnRefreshData");
+            this.pnRefreshData.Name = "pnRefreshData";
+            // 
+            // btnRefreshData
+            // 
+            resources.ApplyResources(this.btnRefreshData, "btnRefreshData");
+            this.btnRefreshData.Name = "btnRefreshData";
+            this.btnRefreshData.UseVisualStyleBackColor = true;
+            this.btnRefreshData.Click += new System.EventHandler(this.btnRefreshData_Click);
+            // 
             // pnButtons
             // 
-            resources.ApplyResources(this.pnButtons, "pnButtons");
             this.pnButtons.Controls.Add(this.btnDelete);
             this.pnButtons.Controls.Add(this.btnUpdate);
             this.pnButtons.Controls.Add(this.btnInsert);
+            resources.ApplyResources(this.pnButtons, "pnButtons");
             this.pnButtons.Name = "pnButtons";
             // 
             // btnDelete
@@ -196,13 +213,13 @@
             // 
             // gbContactInformation
             // 
-            resources.ApplyResources(this.gbContactInformation, "gbContactInformation");
             this.gbContactInformation.Controls.Add(this.tbEmail);
             this.gbContactInformation.Controls.Add(this.lbEmail);
             this.gbContactInformation.Controls.Add(this.mtbHomePhone);
             this.gbContactInformation.Controls.Add(this.lbMobilePhone);
             this.gbContactInformation.Controls.Add(this.mtbMobilePhone);
             this.gbContactInformation.Controls.Add(this.lbHomeTelephone);
+            resources.ApplyResources(this.gbContactInformation, "gbContactInformation");
             this.gbContactInformation.Name = "gbContactInformation";
             this.gbContactInformation.TabStop = false;
             // 
@@ -238,7 +255,6 @@
             // 
             // gbPlaceResidence
             // 
-            resources.ApplyResources(this.gbPlaceResidence, "gbPlaceResidence");
             this.gbPlaceResidence.Controls.Add(this.tbApartment);
             this.gbPlaceResidence.Controls.Add(this.lbApartment);
             this.gbPlaceResidence.Controls.Add(this.tbBuilding);
@@ -247,6 +263,7 @@
             this.gbPlaceResidence.Controls.Add(this.lbStreet);
             this.gbPlaceResidence.Controls.Add(this.tbTown);
             this.gbPlaceResidence.Controls.Add(this.lbTown);
+            resources.ApplyResources(this.gbPlaceResidence, "gbPlaceResidence");
             this.gbPlaceResidence.Name = "gbPlaceResidence";
             this.gbPlaceResidence.TabStop = false;
             // 
@@ -292,7 +309,6 @@
             // 
             // gbPassportData
             // 
-            resources.ApplyResources(this.gbPassportData, "gbPassportData");
             this.gbPassportData.Controls.Add(this.dtpWhenGivePassport);
             this.gbPassportData.Controls.Add(this.lbWhenGivePassport);
             this.gbPassportData.Controls.Add(this.tbWhoGivePassport);
@@ -301,6 +317,7 @@
             this.gbPassportData.Controls.Add(this.lbPassportNumber);
             this.gbPassportData.Controls.Add(this.tbPassportSeries);
             this.gbPassportData.Controls.Add(this.lbPassportSeries);
+            resources.ApplyResources(this.gbPassportData, "gbPassportData");
             this.gbPassportData.Name = "gbPassportData";
             this.gbPassportData.TabStop = false;
             // 
@@ -349,7 +366,6 @@
             // 
             // gbPersonalData
             // 
-            resources.ApplyResources(this.gbPersonalData, "gbPersonalData");
             this.gbPersonalData.Controls.Add(this.dtpBirthday);
             this.gbPersonalData.Controls.Add(this.lbBirthday);
             this.gbPersonalData.Controls.Add(this.tbPatronymic);
@@ -358,6 +374,7 @@
             this.gbPersonalData.Controls.Add(this.lbName);
             this.gbPersonalData.Controls.Add(this.tbSurname);
             this.gbPersonalData.Controls.Add(this.lbSurname);
+            resources.ApplyResources(this.gbPersonalData, "gbPersonalData");
             this.gbPersonalData.Name = "gbPersonalData";
             this.gbPersonalData.TabStop = false;
             // 
@@ -406,12 +423,12 @@
             // 
             // dgvRegistrationCard
             // 
-            resources.ApplyResources(this.dgvRegistrationCard, "dgvRegistrationCard");
             this.dgvRegistrationCard.AllowUserToAddRows = false;
             this.dgvRegistrationCard.AllowUserToDeleteRows = false;
             this.dgvRegistrationCard.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRegistrationCard.BackgroundColor = System.Drawing.Color.White;
             this.dgvRegistrationCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvRegistrationCard, "dgvRegistrationCard");
             this.dgvRegistrationCard.Name = "dgvRegistrationCard";
             this.dgvRegistrationCard.ReadOnly = true;
             this.dgvRegistrationCard.RowTemplate.Height = 24;
@@ -431,12 +448,13 @@
             this.Load += new System.EventHandler(this.RegistrationCardForm_Load);
             this.pnCancel.ResumeLayout(false);
             this.gbSearchAndFiltration.ResumeLayout(false);
-            this.pnFiltration.ResumeLayout(false);
-            this.pnFiltration.PerformLayout();
             this.pnSearch.ResumeLayout(false);
             this.pnSearch.PerformLayout();
+            this.pnFiltration.ResumeLayout(false);
+            this.pnFiltration.PerformLayout();
             this.gbManipulationData.ResumeLayout(false);
             this.gbManipulationData.PerformLayout();
+            this.pnRefreshData.ResumeLayout(false);
             this.pnButtons.ResumeLayout(false);
             this.pnButtons.PerformLayout();
             this.gbContactInformation.ResumeLayout(false);
@@ -503,5 +521,7 @@
         public System.Windows.Forms.Button btnInsert;
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Panel pnRefreshData;
+        private System.Windows.Forms.Button btnRefreshData;
     }
 }

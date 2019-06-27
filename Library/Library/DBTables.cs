@@ -49,7 +49,7 @@ namespace Library
         private string QRBookForComboBox = "select [ID_Book], [Book_Title] from [dbo].[Book] where [Book_Logical_Delete] = 0";
         private string QRReaderForComboBox = "select [ID_Registration_Card_Reader], [Surname_Reader] + ' ' + [Name_Reader] + ' ' + " +
             "[Patronymic_Reader] + ', ' +  CONVERT([nvarchar] (4), DECRYPTBYKEY([Passport_Series_Reader])) + ' ' + CONVERT([nvarchar] (6), " +
-            "DECRYPTBYKEY([Passport_Number_Reader])) as \"Reader\" from [dbo].[Registration_Card_Reader]";
+            "DECRYPTBYKEY([Passport_Number_Reader])) as \"Reader\" from [dbo].[Registration_Card_Reader] where [Registration_Card_Reader_Logical_Delete] = 0";
         public string QRUsers = "select [ID_User], [Surname_User], [Name_User], [Patronymic_User], CONVERT([nvarchar] (16), " +
             "DECRYPTBYKEY([Login_User])), CONVERT([nvarchar] (16), DECRYPTBYKEY([Password_User])), [ID_Role_User], [Role_Name] from [dbo].[User] inner join " +
             "[dbo].[Role_User] on [Role_User_ID] = [ID_Role_User] where [User_Logical_Delete] = 0 and [Role_User_Logical_Delete] = 0";
@@ -89,57 +89,90 @@ namespace Library
 
         public void DTGenreFill()
         {
-            DataTableFill(DTGenre, QRGenre);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTGenre, QRGenre.Remove(55));
+            else
+                DataTableFill(DTGenre, QRGenre);
         }
 
         public void DTPublishingFill()
         {
-            DataTableFill(DTPublishing, QRPublishing);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTPublishing, QRPublishing.Remove(69));
+            else
+                DataTableFill(DTPublishing, QRPublishing);
         }
 
         public void DTWriterBookFill()
         {
-            DataTableFill(DTWriterBook, QRWriterBook);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTWriterBook, QRWriterBook.Remove(98));
+            else
+                DataTableFill(DTWriterBook, QRWriterBook);
         }
 
         public void DTBookFill()
         {
-            DataTableFill(DTBook, QRBook);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTBook, QRBook.Remove(694));
+            else
+                DataTableFill(DTBook, QRBook);
         }
 
         public void DTWriterForComboBoxFill()
         {
-            DataTableFill(DTWriterBook, QRWriterForComboBox);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTWriterBook, QRWriterForComboBox.Remove(129));
+            else
+                DataTableFill(DTWriterBook, QRWriterForComboBox);
         }
 
         public void DTRegistrationCardFill()
         {
-            DataTableFill(DTRegistrationCard, QRRegistrationCard);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTRegistrationCard, QRRegistrationCard.Remove(766));
+            else
+                DataTableFill(DTRegistrationCard, QRRegistrationCard);
         }
 
         public void DTFormularFill()
         {
-            DataTableFill(DTFormular, QRFormular);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTFormular, QRFormular.Remove(710));
+            else
+                DataTableFill(DTFormular, QRFormular);
         }
 
         public void DTBookForComboBoxFill()
         {
-            DataTableFill(DTBook, QRBookForComboBox);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTBook, QRBookForComboBox.Remove(48));
+            else
+                DataTableFill(DTBook, QRBookForComboBox);
         }
 
         public void DTReaderForComboBoxFill()
         {
-            DataTableFill(DTRegistrationCard, QRReaderForComboBox);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTRegistrationCard, QRReaderForComboBox.Remove(302));
+            else
+                DataTableFill(DTRegistrationCard, QRReaderForComboBox);
         }
 
         public void DTUsersFill()
         {
-            DataTableFill(DTUsers, QRUsers);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTUsers, QRUsers.Remove(287));
+            else
+                DataTableFill(DTUsers, QRUsers);
         }
 
         public void DTRoleUserForComboBox()
         {
-            DataTableFill(DTRoleUser, QRRoleUserForComboBox);
+            if (AuthorizationForm.userRole == 1)
+                DataTableFill(DTRoleUser, QRRoleUserForComboBox.Remove(57));
+            else
+                DataTableFill(DTRoleUser, QRRoleUserForComboBox);
         }
 
         public void DTListBookForActFill()

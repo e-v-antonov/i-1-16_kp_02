@@ -30,14 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersForm));
             this.gbSearchAndFiltration = new System.Windows.Forms.GroupBox();
-            this.pnFiltration = new System.Windows.Forms.Panel();
-            this.chbFiltration = new System.Windows.Forms.CheckBox();
             this.pnSearch = new System.Windows.Forms.Panel();
             this.tbSearch = new System.Windows.Forms.TextBox();
+            this.pnFiltration = new System.Windows.Forms.Panel();
+            this.chbFiltration = new System.Windows.Forms.CheckBox();
             this.pnCancel = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnError = new System.Windows.Forms.Button();
             this.gbManipulationData = new System.Windows.Forms.GroupBox();
+            this.pnRefreshData = new System.Windows.Forms.Panel();
+            this.btnRefreshData = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
@@ -57,38 +59,26 @@
             this.lbSurname = new System.Windows.Forms.Label();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.gbSearchAndFiltration.SuspendLayout();
-            this.pnFiltration.SuspendLayout();
             this.pnSearch.SuspendLayout();
+            this.pnFiltration.SuspendLayout();
             this.pnCancel.SuspendLayout();
             this.gbManipulationData.SuspendLayout();
+            this.pnRefreshData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // gbSearchAndFiltration
             // 
-            resources.ApplyResources(this.gbSearchAndFiltration, "gbSearchAndFiltration");
-            this.gbSearchAndFiltration.Controls.Add(this.pnFiltration);
             this.gbSearchAndFiltration.Controls.Add(this.pnSearch);
+            this.gbSearchAndFiltration.Controls.Add(this.pnFiltration);
+            resources.ApplyResources(this.gbSearchAndFiltration, "gbSearchAndFiltration");
             this.gbSearchAndFiltration.Name = "gbSearchAndFiltration";
             this.gbSearchAndFiltration.TabStop = false;
             // 
-            // pnFiltration
-            // 
-            resources.ApplyResources(this.pnFiltration, "pnFiltration");
-            this.pnFiltration.Controls.Add(this.chbFiltration);
-            this.pnFiltration.Name = "pnFiltration";
-            // 
-            // chbFiltration
-            // 
-            resources.ApplyResources(this.chbFiltration, "chbFiltration");
-            this.chbFiltration.Name = "chbFiltration";
-            this.chbFiltration.UseVisualStyleBackColor = true;
-            this.chbFiltration.CheckedChanged += new System.EventHandler(this.chbFiltration_CheckedChanged);
-            // 
             // pnSearch
             // 
-            resources.ApplyResources(this.pnSearch, "pnSearch");
             this.pnSearch.Controls.Add(this.tbSearch);
+            resources.ApplyResources(this.pnSearch, "pnSearch");
             this.pnSearch.Name = "pnSearch";
             // 
             // tbSearch
@@ -100,11 +90,24 @@
             this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
             this.tbSearch.Leave += new System.EventHandler(this.tbSearch_Leave);
             // 
+            // pnFiltration
+            // 
+            this.pnFiltration.Controls.Add(this.chbFiltration);
+            resources.ApplyResources(this.pnFiltration, "pnFiltration");
+            this.pnFiltration.Name = "pnFiltration";
+            // 
+            // chbFiltration
+            // 
+            resources.ApplyResources(this.chbFiltration, "chbFiltration");
+            this.chbFiltration.Name = "chbFiltration";
+            this.chbFiltration.UseVisualStyleBackColor = true;
+            this.chbFiltration.CheckedChanged += new System.EventHandler(this.chbFiltration_CheckedChanged);
+            // 
             // pnCancel
             // 
-            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Controls.Add(this.btnExit);
             this.pnCancel.Controls.Add(this.btnError);
+            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Name = "pnCancel";
             // 
             // btnExit
@@ -123,7 +126,7 @@
             // 
             // gbManipulationData
             // 
-            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
+            this.gbManipulationData.Controls.Add(this.pnRefreshData);
             this.gbManipulationData.Controls.Add(this.btnDelete);
             this.gbManipulationData.Controls.Add(this.btnUpdate);
             this.gbManipulationData.Controls.Add(this.btnInsert);
@@ -141,8 +144,22 @@
             this.gbManipulationData.Controls.Add(this.lbName);
             this.gbManipulationData.Controls.Add(this.tbSurname);
             this.gbManipulationData.Controls.Add(this.lbSurname);
+            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
             this.gbManipulationData.Name = "gbManipulationData";
             this.gbManipulationData.TabStop = false;
+            // 
+            // pnRefreshData
+            // 
+            this.pnRefreshData.Controls.Add(this.btnRefreshData);
+            resources.ApplyResources(this.pnRefreshData, "pnRefreshData");
+            this.pnRefreshData.Name = "pnRefreshData";
+            // 
+            // btnRefreshData
+            // 
+            resources.ApplyResources(this.btnRefreshData, "btnRefreshData");
+            this.btnRefreshData.Name = "btnRefreshData";
+            this.btnRefreshData.UseVisualStyleBackColor = true;
+            this.btnRefreshData.Click += new System.EventHandler(this.btnRefreshData_Click);
             // 
             // btnDelete
             // 
@@ -238,12 +255,12 @@
             // 
             // dgvUsers
             // 
-            resources.ApplyResources(this.dgvUsers, "dgvUsers");
             this.dgvUsers.AllowUserToAddRows = false;
             this.dgvUsers.AllowUserToDeleteRows = false;
             this.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsers.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvUsers, "dgvUsers");
             this.dgvUsers.MultiSelect = false;
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
@@ -262,13 +279,14 @@
             this.Name = "UsersForm";
             this.Load += new System.EventHandler(this.UsersForm_Load);
             this.gbSearchAndFiltration.ResumeLayout(false);
-            this.pnFiltration.ResumeLayout(false);
-            this.pnFiltration.PerformLayout();
             this.pnSearch.ResumeLayout(false);
             this.pnSearch.PerformLayout();
+            this.pnFiltration.ResumeLayout(false);
+            this.pnFiltration.PerformLayout();
             this.pnCancel.ResumeLayout(false);
             this.gbManipulationData.ResumeLayout(false);
             this.gbManipulationData.PerformLayout();
+            this.pnRefreshData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.ResumeLayout(false);
 
@@ -303,5 +321,7 @@
         private System.Windows.Forms.TextBox tbSurname;
         private System.Windows.Forms.Label lbSurname;
         private System.Windows.Forms.DataGridView dgvUsers;
+        private System.Windows.Forms.Panel pnRefreshData;
+        private System.Windows.Forms.Button btnRefreshData;
     }
 }

@@ -267,7 +267,14 @@ namespace Library
             switch (MessageBox.Show(MessageUser.QuestionDeleteBook + " " + tbBookTitle.Text + "?", MessageUser.DeleteBookTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 case DialogResult.Yes:
-                    storedProcedure.SPBookDelete(Convert.ToInt32(dgvBook.CurrentRow.Cells[0].Value.ToString()));
+                    if (AuthorizationForm.userRole == 1)
+                    {
+                        storedProcedure.SPBookDelete(Convert.ToInt32(dgvBook.CurrentRow.Cells[0].Value.ToString()));
+                    }
+                    else
+                    {
+                        storedProcedure.SPBookLogicalDelete(Convert.ToInt32(dgvBook.CurrentRow.Cells[0].Value.ToString()));
+                    }
                     tbBookTitle.Clear();
                     tbDatePublication.Clear();
                     tbNumberPages.Clear();

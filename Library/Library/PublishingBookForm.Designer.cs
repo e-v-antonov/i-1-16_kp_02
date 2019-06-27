@@ -58,12 +58,12 @@
             // 
             // gbManipulationData
             // 
-            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
             this.gbManipulationData.Controls.Add(this.btnDelete);
             this.gbManipulationData.Controls.Add(this.btnUpdate);
             this.gbManipulationData.Controls.Add(this.btnInsert);
             this.gbManipulationData.Controls.Add(this.tbPublishing);
             this.gbManipulationData.Controls.Add(this.lbNamePublishing);
+            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
             this.gbManipulationData.Name = "gbManipulationData";
             this.gbManipulationData.TabStop = false;
             // 
@@ -100,9 +100,9 @@
             // 
             // pnCancel
             // 
-            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Controls.Add(this.btnExit);
             this.pnCancel.Controls.Add(this.btnError);
+            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Name = "pnCancel";
             // 
             // btnExit
@@ -121,8 +121,8 @@
             // 
             // gbSearchPublishing
             // 
-            resources.ApplyResources(this.gbSearchPublishing, "gbSearchPublishing");
             this.gbSearchPublishing.Controls.Add(this.tbSearch);
+            resources.ApplyResources(this.gbSearchPublishing, "gbSearchPublishing");
             this.gbSearchPublishing.Name = "gbSearchPublishing";
             this.gbSearchPublishing.TabStop = false;
             // 
@@ -137,8 +137,8 @@
             // 
             // gbListPublishing
             // 
-            resources.ApplyResources(this.gbListPublishing, "gbListPublishing");
             this.gbListPublishing.Controls.Add(this.ltbPublishing);
+            resources.ApplyResources(this.gbListPublishing, "gbListPublishing");
             this.gbListPublishing.Name = "gbListPublishing";
             this.gbListPublishing.TabStop = false;
             // 

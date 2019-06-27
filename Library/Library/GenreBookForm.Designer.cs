@@ -57,12 +57,12 @@
             // 
             // gbManipulationData
             // 
-            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
             this.gbManipulationData.Controls.Add(this.btnDelete);
             this.gbManipulationData.Controls.Add(this.btnUpdate);
             this.gbManipulationData.Controls.Add(this.btnInsert);
             this.gbManipulationData.Controls.Add(this.tbGenre);
             this.gbManipulationData.Controls.Add(this.lbNameGenre);
+            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
             this.gbManipulationData.Name = "gbManipulationData";
             this.gbManipulationData.TabStop = false;
             // 
@@ -99,9 +99,9 @@
             // 
             // pnCancel
             // 
-            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Controls.Add(this.btnExit);
             this.pnCancel.Controls.Add(this.btnError);
+            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Name = "pnCancel";
             // 
             // btnExit
@@ -120,8 +120,8 @@
             // 
             // gbSearchGenre
             // 
-            resources.ApplyResources(this.gbSearchGenre, "gbSearchGenre");
             this.gbSearchGenre.Controls.Add(this.tbSearch);
+            resources.ApplyResources(this.gbSearchGenre, "gbSearchGenre");
             this.gbSearchGenre.Name = "gbSearchGenre";
             this.gbSearchGenre.TabStop = false;
             // 
@@ -136,8 +136,8 @@
             // 
             // gbListGenre
             // 
-            resources.ApplyResources(this.gbListGenre, "gbListGenre");
             this.gbListGenre.Controls.Add(this.ltbGenre);
+            resources.ApplyResources(this.gbListGenre, "gbListGenre");
             this.gbListGenre.Name = "gbListGenre";
             this.gbListGenre.TabStop = false;
             // 

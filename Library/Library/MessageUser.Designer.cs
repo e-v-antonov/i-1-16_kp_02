@@ -124,6 +124,15 @@ namespace Library {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Книга с данными параметрами не числится в библиотеке..
+        /// </summary>
+        internal static string BookNoInLibrary {
+            get {
+                return ResourceManager.GetString("BookNoInLibrary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Книга не может быть возвращена при ее выдаче!.
         /// </summary>
         internal static string BookNotReturned {
@@ -502,7 +511,7 @@ namespace Library {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Логин и пароль должны иметь минимальную длину 8 символов!.
+        ///   Ищет локализованную строку, похожую на Логин и пароль должны иметь минимальную длину 8 символов, а максимальную 16 символов!.
         /// </summary>
         internal static string MinLengthPassLog {
             get {

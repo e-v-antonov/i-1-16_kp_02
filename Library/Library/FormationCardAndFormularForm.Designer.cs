@@ -51,9 +51,9 @@
             // 
             // pnCancel
             // 
-            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Controls.Add(this.btnExit);
             this.pnCancel.Controls.Add(this.btnError);
+            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Name = "pnCancel";
             // 
             // btnExit
@@ -72,11 +72,11 @@
             // 
             // gbCreateDocument
             // 
-            resources.ApplyResources(this.gbCreateDocument, "gbCreateDocument");
             this.gbCreateDocument.Controls.Add(this.btnCreatePdfFormular);
             this.gbCreateDocument.Controls.Add(this.btnCreateWordFormular);
             this.gbCreateDocument.Controls.Add(this.btnPdfRegistrationCard);
             this.gbCreateDocument.Controls.Add(this.btnCreateWordRegistrationCard);
+            resources.ApplyResources(this.gbCreateDocument, "gbCreateDocument");
             this.gbCreateDocument.Name = "gbCreateDocument";
             this.gbCreateDocument.TabStop = false;
             // 
@@ -110,12 +110,12 @@
             // 
             // dgvRegistrationCard
             // 
-            resources.ApplyResources(this.dgvRegistrationCard, "dgvRegistrationCard");
             this.dgvRegistrationCard.AllowUserToAddRows = false;
             this.dgvRegistrationCard.AllowUserToDeleteRows = false;
             this.dgvRegistrationCard.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRegistrationCard.BackgroundColor = System.Drawing.Color.White;
             this.dgvRegistrationCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvRegistrationCard, "dgvRegistrationCard");
             this.dgvRegistrationCard.MultiSelect = false;
             this.dgvRegistrationCard.Name = "dgvRegistrationCard";
             this.dgvRegistrationCard.ReadOnly = true;

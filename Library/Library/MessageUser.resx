@@ -262,7 +262,7 @@
     <value>Логин</value>
   </data>
   <data name="MinLengthPassLog" xml:space="preserve">
-    <value>Логин и пароль должны иметь минимальную длину 8 символов!</value>
+    <value>Логин и пароль должны иметь минимальную длину 8 символов, а максимальную 16 символов!</value>
   </data>
   <data name="MobilePhone" xml:space="preserve">
     <value>Номер мобильного телефона</value>
@@ -416,5 +416,8 @@
   </data>
   <data name="BookIssue" xml:space="preserve">
     <value>Книга была успешно выдана читателю.</value>
+  </data>
+  <data name="BookNoInLibrary" xml:space="preserve">
+    <value>Книга с данными параметрами не числится в библиотеке.</value>
   </data>
 </root>

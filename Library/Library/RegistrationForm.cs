@@ -34,7 +34,7 @@ namespace Library
             return false;
         }
 
-        private bool CheckCoincidencePasswords()    //функция проверки одинаковости полей пароль и поторить пароль
+        private bool CheckCoincidencePasswords()    //функция проверки одинаковости полей пароль и повторить пароль
         {
             if (tbPassword.Text != tbRepeatPassword.Text)
                 MessageBox.Show(MessageUser.PasswordRepeatPasswordMustMatch, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -46,7 +46,7 @@ namespace Library
 
         private bool CheckLenghtLoginPassword() //функция проверки длины логина и пароля
         {
-            if ((tbLogin.TextLength < 8) || (tbPassword.TextLength < 8))
+            if ((tbLogin.TextLength < 8) || (tbPassword.TextLength < 8) || (tbLogin.TextLength > 16) || (tbPassword.TextLength > 16))
                 MessageBox.Show(MessageUser.MinLengthPassLog, MessageUser.TitleLibrary, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 return true;

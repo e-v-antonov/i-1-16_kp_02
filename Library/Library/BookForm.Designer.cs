@@ -85,16 +85,16 @@
             // 
             // gbSearchAndFiltration
             // 
-            resources.ApplyResources(this.gbSearchAndFiltration, "gbSearchAndFiltration");
             this.gbSearchAndFiltration.Controls.Add(this.pnSearch);
             this.gbSearchAndFiltration.Controls.Add(this.pnFiltration);
+            resources.ApplyResources(this.gbSearchAndFiltration, "gbSearchAndFiltration");
             this.gbSearchAndFiltration.Name = "gbSearchAndFiltration";
             this.gbSearchAndFiltration.TabStop = false;
             // 
             // pnSearch
             // 
-            resources.ApplyResources(this.pnSearch, "pnSearch");
             this.pnSearch.Controls.Add(this.tbSearch);
+            resources.ApplyResources(this.pnSearch, "pnSearch");
             this.pnSearch.Name = "pnSearch";
             // 
             // tbSearch
@@ -108,8 +108,8 @@
             // 
             // pnFiltration
             // 
-            resources.ApplyResources(this.pnFiltration, "pnFiltration");
             this.pnFiltration.Controls.Add(this.chbFiltration);
+            resources.ApplyResources(this.pnFiltration, "pnFiltration");
             this.pnFiltration.Name = "pnFiltration";
             // 
             // chbFiltration
@@ -121,9 +121,9 @@
             // 
             // pnCancel
             // 
-            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Controls.Add(this.btnError);
             this.pnCancel.Controls.Add(this.btnExit);
+            resources.ApplyResources(this.pnCancel, "pnCancel");
             this.pnCancel.Name = "pnCancel";
             // 
             // btnError
@@ -175,15 +175,14 @@
             // 
             // gbManipulationData
             // 
-            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
             this.gbManipulationData.Controls.Add(this.pnComboBox);
             this.gbManipulationData.Controls.Add(this.pnTextBox);
+            resources.ApplyResources(this.gbManipulationData, "gbManipulationData");
             this.gbManipulationData.Name = "gbManipulationData";
             this.gbManipulationData.TabStop = false;
             // 
             // pnComboBox
             // 
-            resources.ApplyResources(this.pnComboBox, "pnComboBox");
             this.pnComboBox.Controls.Add(this.pnUpdateButtons);
             this.pnComboBox.Controls.Add(this.cbGenre);
             this.pnComboBox.Controls.Add(this.lbGenre);
@@ -191,14 +190,15 @@
             this.pnComboBox.Controls.Add(this.lbPublishing);
             this.pnComboBox.Controls.Add(this.cbWriter);
             this.pnComboBox.Controls.Add(this.lbWriter);
+            resources.ApplyResources(this.pnComboBox, "pnComboBox");
             this.pnComboBox.Name = "pnComboBox";
             // 
             // pnUpdateButtons
             // 
-            resources.ApplyResources(this.pnUpdateButtons, "pnUpdateButtons");
             this.pnUpdateButtons.Controls.Add(this.btnUpdateGenre);
             this.pnUpdateButtons.Controls.Add(this.btnUpdatePublishing);
             this.pnUpdateButtons.Controls.Add(this.btnUpdateWriter);
+            resources.ApplyResources(this.pnUpdateButtons, "pnUpdateButtons");
             this.pnUpdateButtons.Name = "pnUpdateButtons";
             // 
             // btnUpdateGenre
@@ -239,7 +239,6 @@
             // 
             // pnTextBox
             // 
-            resources.ApplyResources(this.pnTextBox, "pnTextBox");
             this.pnTextBox.Controls.Add(this.tbDateRegistration);
             this.pnTextBox.Controls.Add(this.lbDateRegisration);
             this.pnTextBox.Controls.Add(this.tbAvailableCopies);
@@ -256,12 +255,13 @@
             this.pnTextBox.Controls.Add(this.lbDatePublication);
             this.pnTextBox.Controls.Add(this.tbBookTitle);
             this.pnTextBox.Controls.Add(this.lbBookTitle);
+            resources.ApplyResources(this.pnTextBox, "pnTextBox");
             this.pnTextBox.Name = "pnTextBox";
             // 
             // tbDateRegistration
             // 
-            resources.ApplyResources(this.tbDateRegistration, "tbDateRegistration");
             this.tbDateRegistration.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.tbDateRegistration, "tbDateRegistration");
             this.tbDateRegistration.Name = "tbDateRegistration";
             this.tbDateRegistration.ReadOnly = true;
             // 
@@ -328,10 +328,10 @@
             // 
             // pnManipulationButtons
             // 
-            resources.ApplyResources(this.pnManipulationButtons, "pnManipulationButtons");
             this.pnManipulationButtons.Controls.Add(this.btnInsert);
             this.pnManipulationButtons.Controls.Add(this.btnDelete);
             this.pnManipulationButtons.Controls.Add(this.btnUpdate);
+            resources.ApplyResources(this.pnManipulationButtons, "pnManipulationButtons");
             this.pnManipulationButtons.Name = "pnManipulationButtons";
             // 
             // btnInsert
@@ -357,12 +357,12 @@
             // 
             // dgvBook
             // 
-            resources.ApplyResources(this.dgvBook, "dgvBook");
             this.dgvBook.AllowUserToAddRows = false;
             this.dgvBook.AllowUserToDeleteRows = false;
             this.dgvBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBook.BackgroundColor = System.Drawing.Color.White;
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvBook, "dgvBook");
             this.dgvBook.Name = "dgvBook";
             this.dgvBook.ReadOnly = true;
             this.dgvBook.RowTemplate.Height = 24;
